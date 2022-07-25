@@ -1,0 +1,11 @@
+strings:
+    inputs: NotesManager/Resources/en.lproj
+    filter: .+\.strings$
+    outputs:
+        templateName: structured-swift5
+        output: NotesManager/SwiftGen/strings.swift
+xcassets:
+    inputs: NotesManager/Resources/Assets.xcassets
+    outputs:
+        templateName: swift5
+        output: NotesManager/SwiftGen/assets.swift
