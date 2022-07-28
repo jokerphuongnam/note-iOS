@@ -73,5 +73,5 @@ Terms
 Privacy
 NotesManager.xcodeproj/xcuserdata/pnam.xcuserdatad/xcschemes/xcschememanagement.plist
 Pods/
-release.xcconfig
 NotesManager/SwiftGen
+Prod.xcconfig

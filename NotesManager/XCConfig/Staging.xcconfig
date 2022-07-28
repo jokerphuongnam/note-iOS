@@ -1,0 +1,11 @@
+//
+//  Staging.xcconfig
+//  NotesManager Staging
+//
+//  Created by pnam on 28/07/2022.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+BASE_URL = "notes-api-staging.herokuapp.com"
