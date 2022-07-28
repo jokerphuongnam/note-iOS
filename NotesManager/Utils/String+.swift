@@ -11,4 +11,6 @@ extension String {
     static func infoKey(_ key: String) -> String {
         ((Bundle.main.infoDictionary?[key] as? String)?.replacingOccurrences(of: "\\", with: ""))!
     }
+    
+    static let baseUrl: Self = .infoKey("Base Url")
 }
