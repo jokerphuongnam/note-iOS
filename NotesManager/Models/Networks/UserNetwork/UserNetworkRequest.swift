@@ -21,4 +21,8 @@ extension UserNetworkRequest {
     var httpHeaderFields: HTTPHeaders {
         [:]
     }
+    
+    var interceptor: Interceptor? {
+        nil
+    }
 }

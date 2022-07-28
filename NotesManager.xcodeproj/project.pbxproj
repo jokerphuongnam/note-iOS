@@ -109,6 +109,14 @@
 		A8B2088E2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2088C2892683800DC7FA6 /* NoteNetworkRequest.swift */; };
 		A8B2088F2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2088C2892683800DC7FA6 /* NoteNetworkRequest.swift */; };
 		A8B208902892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2088C2892683800DC7FA6 /* NoteNetworkRequest.swift */; };
+		A8B2089428926C5E00DC7FA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089328926C5E00DC7FA6 /* User.swift */; };
+		A8B2089528926C5E00DC7FA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089328926C5E00DC7FA6 /* User.swift */; };
+		A8B2089628926C5E00DC7FA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089328926C5E00DC7FA6 /* User.swift */; };
+		A8B2089728926C5E00DC7FA6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089328926C5E00DC7FA6 /* User.swift */; };
+		A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
+		A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
+		A8B2089B28926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
+		A8B2089C28926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
 		B734C077EC7426D133002905 /* Pods_NotesManager_NotesManager_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9722BD69E25D43A6FA4D206E /* Pods_NotesManager_NotesManager_Staging.framework */; };
 		DFD91BB4571CB9E85923B2FF /* Pods_NotesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B13E15988130F218AD1A7 /* Pods_NotesManager.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +142,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = A8AB9CC5288E547A00939E9D;
 			remoteInfo = NotesManager;
+		};
+		A8B2089128926B7E00DC7FA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A8AB9CBE288E547A00939E9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8AB9D03288E561300939E9D;
+			remoteInfo = "NotesManager Staging";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -194,6 +209,8 @@
 		A8B208822892682100DC7FA6 /* UserNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkRequest.swift; sourceTree = "<group>"; };
 		A8B208872892682C00DC7FA6 /* NoteNetwork+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteNetwork+Rx.swift"; sourceTree = "<group>"; };
 		A8B2088C2892683800DC7FA6 /* NoteNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNetworkRequest.swift; sourceTree = "<group>"; };
+		A8B2089328926C5E00DC7FA6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A8B2089828926D9F00DC7FA6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AA129073F338D0ED4A26E571 /* Pods-NotesManager.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugprod.xcconfig"; sourceTree = "<group>"; };
 		AE1C38614CF7E8C93AB5537A /* Pods-NotesManager.debugstaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugstaging.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugstaging.xcconfig"; sourceTree = "<group>"; };
 		B2FFD19359E4078179C76A07 /* Pods-NotesManager-NotesManager Staging.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager-NotesManager Staging/Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -435,6 +452,7 @@
 		A8B20857289266BA00DC7FA6 /* Domains */ = {
 			isa = PBXGroup;
 			children = (
+				A8B2089328926C5E00DC7FA6 /* User.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -492,6 +510,7 @@
 		A8B20871289267A800DC7FA6 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
+				A8B2089828926D9F00DC7FA6 /* Login.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -501,6 +520,29 @@
 			children = (
 			);
 			path = Requests;
+			sourceTree = "<group>";
+		};
+		A8B2089D28927D3000DC7FA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8B2089E28927D4300DC7FA6 /* Networks */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A8B2089E28927D4300DC7FA6 /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+				A8B2089F28927D5700DC7FA6 /* UserNetwork */,
+			);
+			path = Networks;
+			sourceTree = "<group>";
+		};
+		A8B2089F28927D5700DC7FA6 /* UserNetwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UserNetwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -561,6 +603,7 @@
 			);
 			dependencies = (
 				A8AB9CE8288E547C00939E9D /* PBXTargetDependency */,
+				A8B2089228926B7E00DC7FA6 /* PBXTargetDependency */,
 			);
 			name = NotesManagerUITests;
 			productName = NotesManagerUITests;
@@ -603,11 +646,11 @@
 					};
 					A8AB9CDB288E547C00939E9D = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = A8AB9CC5288E547A00939E9D;
+						TestTargetID = A8AB9D03288E561300939E9D;
 					};
 					A8AB9CE5288E547C00939E9D = {
 						CreatedOnToolsVersion = 13.4.1;
-						TestTargetID = A8AB9CC5288E547A00939E9D;
+						TestTargetID = A8AB9D03288E561300939E9D;
 					};
 				};
 			};
@@ -909,6 +952,7 @@
 				A8B2084928925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8B2087E2892681600DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8AB9CCA288E547A00939E9D /* AppDelegate.swift in Sources */,
+				A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8B2084528925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8A7709F288E5A6000F03C5C /* strings.swift in Sources */,
@@ -916,6 +960,7 @@
 				A8B2083528925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B2084D28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A8B2082D28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
+				A8B2089428926C5E00DC7FA6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -933,12 +978,14 @@
 				A8B20876289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A8AB9CE1288E547C00939E9D /* NotesManagerTests.swift in Sources */,
 				A8B2087B289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
+				A8B2089628926C5E00DC7FA6 /* User.swift in Sources */,
 				A8B2083728925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B208802892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8B208692892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
 				A8B2082F28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
 				A8B2083328925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8B2084F28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
+				A8B2089B28926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8B2088F2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */,
 				A8B2083B28925B0F00DC7FA6 /* String+.swift in Sources */,
 				A8B2084728925B0F00DC7FA6 /* View+.swift in Sources */,
@@ -966,6 +1013,7 @@
 				A8B2084C28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8B208812892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8AB9CED288E547C00939E9D /* NotesManagerUITestsLaunchTests.swift in Sources */,
+				A8B2089C28926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8B208652892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8B2084828925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8A770A2288E5A6000F03C5C /* strings.swift in Sources */,
@@ -973,6 +1021,7 @@
 				A8B2083828925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B2085028925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A8B2083028925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
+				A8B2089728926C5E00DC7FA6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -995,6 +1044,7 @@
 				A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8B2087F2892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8AB9D06288E561300939E9D /* AppDelegate.swift in Sources */,
+				A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8B208632892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8A770A0288E5A6000F03C5C /* strings.swift in Sources */,
@@ -1002,6 +1052,7 @@
 				A8B2083628925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A8B2082E28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
+				A8B2089528926C5E00DC7FA6 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1022,6 +1073,11 @@
 			isa = PBXTargetDependency;
 			target = A8AB9CC5288E547A00939E9D /* NotesManager */;
 			targetProxy = A8AB9CE7288E547C00939E9D /* PBXContainerItemProxy */;
+		};
+		A8B2089228926B7E00DC7FA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8AB9D03288E561300939E9D /* NotesManager Staging */;
+			targetProxy = A8B2089128926B7E00DC7FA6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1233,7 +1289,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager.app/NotesManager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager Staging.app/NotesManager Staging";
 			};
 			name = DebugProd;
 		};
@@ -1253,7 +1309,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager.app/NotesManager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager Staging.app/NotesManager Staging";
 			};
 			name = ReleaseProd;
 		};
@@ -1271,7 +1327,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NotesManager;
+				TEST_TARGET_NAME = "NotesManager Staging";
 			};
 			name = DebugProd;
 		};
@@ -1289,7 +1345,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NotesManager;
+				TEST_TARGET_NAME = "NotesManager Staging";
 			};
 			name = ReleaseProd;
 		};
@@ -1479,7 +1535,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager.app/NotesManager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager Staging.app/NotesManager Staging";
 			};
 			name = DebugStaging;
 		};
@@ -1497,7 +1553,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NotesManager;
+				TEST_TARGET_NAME = "NotesManager Staging";
 			};
 			name = DebugStaging;
 		};
@@ -1627,7 +1683,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager.app/NotesManager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NotesManager Staging.app/NotesManager Staging";
 			};
 			name = ReleaseStaging;
 		};
@@ -1645,7 +1701,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NotesManager;
+				TEST_TARGET_NAME = "NotesManager Staging";
 			};
 			name = ReleaseStaging;
 		};

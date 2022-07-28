@@ -13,7 +13,7 @@ extension AFNoteNetwork: ReactiveCompatible {
 }
 
 extension Reactive where Base: AFNoteNetwork {
-    func send<T: Request>(request: T) -> Single<ApiResponse<T.Response>> {
+    func send<T: Request>(request: T) -> Single<T.Response> {
         Single.create { observer in
             let request = base.send(request: request) { result in
                 switch result {

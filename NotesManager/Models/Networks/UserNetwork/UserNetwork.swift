@@ -9,7 +9,7 @@
 @_implementationOnly import Alamofire
 
 protocol UserNetwork {
-    
+    func login(email: String, password: String) -> Single<LoginRequest.Response>
 }
 
 final class AFUserNetwork: UserNetwork, BaseAFNetwork {
@@ -17,5 +17,9 @@ final class AFUserNetwork: UserNetwork, BaseAFNetwork {
     
     init(session: Session) {
         self.session = session
+    }
+    
+    func login(email: String, password: String) -> Single<LoginResponse> {
+        rx.send(request: LoginRequest(email: email, password: password))
     }
 }

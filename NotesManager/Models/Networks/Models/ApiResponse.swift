@@ -5,16 +5,16 @@
 //  Created by pnam on 28/07/2022.
 //
 
-@frozen public struct ApiResponse<Data: Decodable>: Decodable {
-    var status: Bool
-    var message: String
-    var data: Data!
+@frozen public struct ApiResponse<T: Decodable>: Decodable {
+    let statusCode: Int
+    let status: Bool
+    let message: String
+    let data: T!
 }
 
 private extension ApiResponse {
     private enum CodingKeys: String, CodingKey {
-        case status = "status"
-        case message = "message"
-        case data = "data"
+        case statusCode = "status_code"
+        case status, message, data
     }
 }

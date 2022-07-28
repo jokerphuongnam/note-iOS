@@ -8,22 +8,26 @@
 import Foundation
 
 struct ResponseError: Decodable {
+    let statusCode: Int?
     let status: Bool?
     let message: String?
 
-    init(_ status: Bool) {
+    init(_ status: Bool, statusCode: Int? = nil) {
         self.status = status
+        self.statusCode = statusCode
         message = nil
     }
 
-    init(_ message: String) {
-        status = nil
+    init(_ message: String, statusCode: Int? = nil) {
         self.message = message
+        self.statusCode = statusCode
+        status = nil
     }
     
-    init(status: Bool, message: String) {
+    init(status: Bool, message: String, statusCode: Int? = nil) {
         self.status = status
         self.message = message
+        self.statusCode = statusCode
     }
 }
 

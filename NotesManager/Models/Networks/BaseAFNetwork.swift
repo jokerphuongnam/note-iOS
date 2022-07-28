@@ -16,7 +16,7 @@ extension BaseAFNetwork {
     @discardableResult
     func send<T: Request>(
         request: T,
-        completion: @escaping (Result<ApiResponse<T.Response>, ApiError>) -> ()
+        completion: @escaping (Result<T.Response, ApiError>) -> ()
     ) -> DataRequest {
         session.request(
             request.url,
@@ -71,15 +71,15 @@ extension BaseAFNetwork {
                     do {
                         let res = try JSONDecoder().decode(ApiResponse<T.Response>.self, from: data)
                         if res.status {
-                            completion(.success(res))
+                            completion(.success(res.data))
                         } else {
-                            completion(.failure(.unknownError(.init(status: res.status, message: res.message))))
+                            completion(.failure(.unknownError(.init(status: res.status, message: res.message, statusCode: statusCode))))
                         }
                     } catch  {
-                        completion(.failure(.unknownError(ResponseError(error.localizedDescription))))
+                        completion(.failure(.unknownError(ResponseError(error.localizedDescription, statusCode: statusCode))))
                     }
                 default:
-                    completion(.failure(.otherError(.init(false))))
+                    completion(.failure(.otherError(.init(false, statusCode: statusCode))))
                 }
             }
         }
