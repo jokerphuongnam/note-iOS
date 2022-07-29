@@ -34,7 +34,7 @@ extension BaseAFNetwork {
         }
         .responseDecodable(of: T.Response.self) { [weak self] response in
             guard self != nil else {
-                completion(.failure(ApiError.dataNotExist))
+                completion(.failure(.dataNotExist))
                 return
             }
             guard let data = response.data else {
