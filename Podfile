@@ -26,13 +26,12 @@ target 'NotesManager' do
       use_frameworks!
     end
     
-    target 'NotesManagerTests' do
+    target 'NotesManager StagingTests' do
       inherit! :search_paths
       # Pods for testing
-    end
-
-    target 'NotesManagerUITests' do
-      # Pods for testing
+      pod 'Mocker', '~> 2.5.4'
+      pod 'RxTest', '6.0.0'
+      pod 'RxBlocking', '6.0.0'
     end
 
 end

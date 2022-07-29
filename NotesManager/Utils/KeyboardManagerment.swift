@@ -9,7 +9,7 @@
 
 #if targetEnvironment(simulator)
 #else
-class KeyboardManagerment {
+final class KeyboardManagerment {
     private typealias TextFields = [UITextField]
     private var textFields: TextFields
     private weak var scrollView: UIScrollView!

@@ -48,6 +48,16 @@
                ReferencedContainer = "container:NotesManager.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "A8B208B12892AE0700DC7FA6"
+               BuildableName = "NotesManager StagingTests.xctest"
+               BlueprintName = "NotesManager StagingTests"
+               ReferencedContainer = "container:NotesManager.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -7,8 +7,10 @@
 
 @_implementationOnly import Alamofire
 
+// MARK: - UserNetworkRequest
 protocol UserNetworkRequest: Request {}
 
+// MARK: - Default UserNetworkRequest
 extension UserNetworkRequest {
     var baseURL: URL {
         URL(string: .baseUrl)!

@@ -7,7 +7,7 @@
 
 @_implementationOnly import Alamofire
 
-protocol Request where Self.Response: Decodable {
+protocol Request where Self.Response: Codable {
     associatedtype Response
 
     var baseURL: URL { get }

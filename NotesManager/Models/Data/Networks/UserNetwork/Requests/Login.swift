@@ -24,18 +24,16 @@ struct LoginRequest: UserNetworkRequest {
     }
 }
 
-struct LoginResponse: Decodable {
+struct LoginResponse {
     let id, email, password, name: String
-        let gender: String
-        let v: Int
-        let token: String
+    let gender: String
+    let token: String
 }
 
-private extension LoginResponse {
+extension LoginResponse: Codable {
     private enum CodingKeys: String, CodingKey {
-    case id = "_id"
-    case email, password, name, gender
-    case v = "__v"
-    case token
-}
+        case id = "_id"
+        case email, password, name, gender
+        case token
+    }
 }
