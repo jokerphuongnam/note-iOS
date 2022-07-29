@@ -38,6 +38,8 @@ class UserNetworkTests: XCTestCase {
         try super.tearDownWithError()
     }
     
+    // MARK: - login
+    
     /// Given
     /// - email, password are provided
     /// - mock success reponse for API calling
@@ -100,7 +102,7 @@ class UserNetworkTests: XCTestCase {
     
     /// Given
     /// - email, password are provided
-    /// - mock success reponse for API calling
+    /// - mock error for API calling
     /// When: call login
     /// Then:
     /// - Call API with login error
@@ -126,10 +128,107 @@ class UserNetworkTests: XCTestCase {
         XCTAssertEqual(email, mockSession.parameters?["email"] as? String)
         XCTAssertEqual(password, mockSession.parameters?["password"] as? String)
     }
+    
+    // MARK: - register
+    
+    /// Given
+    /// - email, password are provided
+    /// - mock success reponse for API calling
+    /// When: call login
+    /// Then:
+    /// - Call API with correct parameters
+    func test_register() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "register"
+        let email = "test@gmail.com", password = "12345678"
+        let statusCode = 200
+        let registerResponse = RegisterResponse(id: "id", email: email, name: "Fake name", gender: "Fake gender")
+        let apiRegisterResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: registerResponse)
+        let dataResult = try JSONEncoder().encode(apiRegisterResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.post: dataResult])
+        mock.register()
+        
+        /// When
+        let register = sut.register(email: email, password: password).asObservable()
+        _ = try? register.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(email, mockSession.parameters?["email"] as? String)
+        XCTAssertEqual(password, mockSession.parameters?["password"] as? String)
+    }
+    
+    /// Given
+    /// - email, password are provided
+    /// - mock success reponse for API calling
+    /// When: call login
+    /// Then:
+    /// - Call API with correct response
+    func test_register_loginSuccess() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "register"
+        let email = "test@gmail.com", password = "12345678"
+        let statusCode = 200
+        let registerResponse = RegisterResponse(id: "id", email: email, name: "Fake name", gender: "Fake gender")
+        let apiRegisterResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: registerResponse)
+        let dataResult = try JSONEncoder().encode(apiRegisterResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.post: dataResult])
+        mock.register()
+        
+        /// When
+        let register = sut.register(email: email, password: password).asObservable()
+        let response = try register.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(email, mockSession.parameters?["email"] as? String)
+        XCTAssertEqual(password, mockSession.parameters?["password"] as? String)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(registerResponse, response!)
+    }
+    
+    /// Given
+    /// - email, password are provided
+    /// - mock error for API calling
+    /// When: call login
+    /// Then:
+    /// - Call API with login error
+    func test_register_registerError() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "register"
+        let email = "test@gmail.com", password = "12345678"
+        let statusCode = 200
+        let apiLoginResponse = ApiResponse<LoginResponse>(statusCode: statusCode, status: false, message: "", data: nil)
+        let dataResult = try JSONEncoder().encode(apiLoginResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.post: dataResult])
+        mock.register()
+        
+        /// When
+        let register = sut.register(email: email, password: password).asObservable()
+        let responseBlocking = register.toBlocking()
+        
+        /// Then
+        XCTAssertThrowsError(try responseBlocking.first())
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(email, mockSession.parameters?["email"] as? String)
+        XCTAssertEqual(password, mockSession.parameters?["password"] as? String)
+    }
 }
 
 extension LoginResponse: Equatable {
     static func == (lhs: LoginResponse, rhs: LoginResponse) -> Bool {
         (lhs.id, lhs.email, lhs.password, lhs.name, lhs.gender, lhs.token) == (rhs.id, rhs.email, rhs.password, rhs.name, rhs.gender, rhs.token)
+    }
+}
+
+extension RegisterResponse: Equatable {
+    static func == (lhs: RegisterResponse, rhs: RegisterResponse) -> Bool {
+        (lhs.id, lhs.email, lhs.name, lhs.gender) == (rhs.id, rhs.email, rhs.name, rhs.gender)
     }
 }
