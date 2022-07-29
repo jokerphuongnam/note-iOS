@@ -35,6 +35,9 @@
 		A80A95FF2893D4DC00F044D9 /* UserNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B208822892682100DC7FA6 /* UserNetworkRequest.swift */; };
 		A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2087D2892681600DC7FA6 /* UserNetwork+Rx.swift */; };
 		A80A96012893D52500F044D9 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2086B2892677C00DC7FA6 /* ApiResponse.swift */; };
+		A80A96052893EC8200F044D9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A96042893EC8200F044D9 /* Register.swift */; };
+		A80A96062893EC8200F044D9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A96042893EC8200F044D9 /* Register.swift */; };
+		A80A96072893EC8200F044D9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A96042893EC8200F044D9 /* Register.swift */; };
 		A8A77095288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A77096288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A7709B288E5A6000F03C5C /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A77099288E5A6000F03C5C /* assets.swift */; };
@@ -131,6 +134,7 @@
 		9F2F9BC9ADE27755A1CD5D50 /* Pods-NotesManager.releaseprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.releaseprod.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.releaseprod.xcconfig"; sourceTree = "<group>"; };
 		A1972484568C2DC87E9278F5 /* Pods-NotesManager-NotesManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager-NotesManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-NotesManager-NotesManagerUITests/Pods-NotesManager-NotesManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A80A95E12893CCAC00F044D9 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
+		A80A96042893EC8200F044D9 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		A8A77097288E59E800F03C5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A8A77099288E5A6000F03C5C /* assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
 		A8A7709A288E5A6000F03C5C /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
@@ -443,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B2089828926D9F00DC7FA6 /* Login.swift */,
+				A80A96042893EC8200F044D9 /* Register.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -842,6 +847,7 @@
 				A8A7709B288E5A6000F03C5C /* assets.swift in Sources */,
 				A8B208672892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
 				A8B20879289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
+				A80A96052893EC8200F044D9 /* Register.swift in Sources */,
 				A8B2085D2892675500DC7FA6 /* Request.swift in Sources */,
 				A8B2084128925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
@@ -873,6 +879,7 @@
 				A8A7709C288E5A6000F03C5C /* assets.swift in Sources */,
 				A8B208682892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
 				A8B2087A289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
+				A80A96062893EC8200F044D9 /* Register.swift in Sources */,
 				A8B2085E2892675500DC7FA6 /* Request.swift in Sources */,
 				A8B2084228925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
@@ -912,6 +919,7 @@
 				A80A95E72893D4A200F044D9 /* strings.swift in Sources */,
 				A80A95EA2893D4B900F044D9 /* User.swift in Sources */,
 				A80A95FF2893D4DC00F044D9 /* UserNetworkRequest.swift in Sources */,
+				A80A96072893EC8200F044D9 /* Register.swift in Sources */,
 				A80A95F02893D4CB00F044D9 /* String+.swift in Sources */,
 				A80A95F62893D4CF00F044D9 /* ApiError.swift in Sources */,
 				A80A95F82893D4CF00F044D9 /* BaseAFNetwork.swift in Sources */,

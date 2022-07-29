@@ -12,6 +12,8 @@
 protocol UserNetwork {
     // MARK: - login
     func login(email: String, password: String) -> Single<LoginRequest.Response>
+    // MARK: - register
+    func register(email: String, password: String) -> Single<RegisterRequest.Response>
 }
 
 // MARK: - AFUserNetwork
@@ -26,5 +28,10 @@ final class AFUserNetwork: UserNetwork, BaseAFNetwork {
     // MARK: - login
     func login(email: String, password: String) -> Single<LoginResponse> {
         rx.send(request: LoginRequest(email: email, password: password))
+    }
+    
+    // MARK: - register
+    func register(email: String, password: String) -> Single<RegisterResponse> {
+        rx.send(request: RegisterRequest(email: email, password: password))
     }
 }
