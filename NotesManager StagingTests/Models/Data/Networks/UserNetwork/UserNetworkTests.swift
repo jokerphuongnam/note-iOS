@@ -52,13 +52,12 @@ class UserNetworkTests: XCTestCase {
         let statusCode = 200
         let loginResponse = LoginResponse(id: "id", email: email, password: password, name: "Fake name", gender: "Fake gender", token: "Fake token")
         let apiLoginResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: loginResponse)
-        let dataResult = try JSONEncoder().encode(loginResponse)
+        let dataResult = try JSONEncoder().encode(apiLoginResponse)
         let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.post: dataResult])
         mock.register()
         
         /// When
         let login = sut.login(email: email, password: password).asObservable()
-        
         _ = try? login.toBlocking().first()
         
         /// Then

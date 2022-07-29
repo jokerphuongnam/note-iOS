@@ -37,50 +37,29 @@ extension BaseAFNetwork {
                 completion(.failure(ApiError.dataNotExist))
                 return
             }
-            switch response.error {
-            case .some(let error):
-                if let error = error.underlyingError as? URLError {
-                    switch error.code {
-                    case .timedOut:
-                        completion(.failure(.timeout))
-                    default:
-                        completion(.failure(.unknownError(ResponseError(error.localizedDescription))))
+            guard let data = response.data else {
+                completion(.failure(.dataNotExist))
+                return
+            }
+            
+            guard let statusCode = response.response?.statusCode else {
+                completion(.failure(.statusCodeNotExist))
+                return
+            }
+            switch statusCode {
+            case 200..<500:
+                do {
+                    let res = try JSONDecoder().decode(ApiResponse<T.Response>.self, from: data)
+                    if res.status {
+                        completion(.success(res.data))
+                    } else {
+                        completion(.failure(.unknownError(.init(status: res.status, message: res.message, statusCode: statusCode))))
                     }
-                    return
-                } else {
-                    switch error {
-                    case .sessionTaskFailed(error: let err):
-                        completion(.failure(.connectionFailed(err)))
-                    default:
-                        completion(.failure(.unknownError(ResponseError(error.localizedDescription))))
-                    }
-                    return
+                } catch  {
+                    completion(.failure(.unknownError(ResponseError(error.localizedDescription, statusCode: statusCode))))
                 }
-            case .none:
-                guard let data = response.data else {
-                    completion(.failure(.dataNotExist))
-                    return
-                }
-
-                guard let statusCode = response.response?.statusCode else {
-                    completion(.failure(.statusCodeNotExist))
-                    return
-                }
-                switch statusCode {
-                case 200..<500:
-                    do {
-                        let res = try JSONDecoder().decode(ApiResponse<T.Response>.self, from: data)
-                        if res.status {
-                            completion(.success(res.data))
-                        } else {
-                            completion(.failure(.unknownError(.init(status: res.status, message: res.message, statusCode: statusCode))))
-                        }
-                    } catch  {
-                        completion(.failure(.unknownError(ResponseError(error.localizedDescription, statusCode: statusCode))))
-                    }
-                default:
-                    completion(.failure(.otherError(.init(false, statusCode: statusCode))))
-                }
+            default:
+                completion(.failure(.otherError(.init(false, statusCode: statusCode))))
             }
         }
     }
