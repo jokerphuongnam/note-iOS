@@ -13,6 +13,7 @@ final class MockSession: Session {
     var expectedDataType: String?
     var method: HTTPMethod?
     var parameters: Parameters?
+    var httpHeaders: HTTPHeaders?
     
     @discardableResult
     override func request(
@@ -28,6 +29,7 @@ final class MockSession: Session {
         self.expectedDataType = String(describing: expectedDataType.self)
         self.method = method
         self.parameters = parameters
+        self.httpHeaders = headers
         return super.request(
             convertible,
             method: method,

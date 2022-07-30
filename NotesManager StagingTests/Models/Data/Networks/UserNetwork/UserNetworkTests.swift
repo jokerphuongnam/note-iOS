@@ -134,7 +134,7 @@ class UserNetworkTests: XCTestCase {
     /// Given
     /// - email, password are provided
     /// - mock success reponse for API calling
-    /// When: call login
+    /// When: call register
     /// Then:
     /// - Call API with correct parameters
     func test_register() throws {
@@ -163,10 +163,10 @@ class UserNetworkTests: XCTestCase {
     /// Given
     /// - email, password are provided
     /// - mock success reponse for API calling
-    /// When: call login
+    /// When: call register
     /// Then:
     /// - Call API with correct response
-    func test_register_loginSuccess() throws {
+    func test_register_registerSuccess() throws {
         /// Given
         let baseUrl = String.baseUrl
         let endPoint = "register"
@@ -194,7 +194,7 @@ class UserNetworkTests: XCTestCase {
     /// Given
     /// - email, password are provided
     /// - mock error for API calling
-    /// When: call login
+    /// When: call register
     /// Then:
     /// - Call API with login error
     func test_register_registerError() throws {
@@ -202,9 +202,9 @@ class UserNetworkTests: XCTestCase {
         let baseUrl = String.baseUrl
         let endPoint = "register"
         let email = "test@gmail.com", password = "12345678"
-        let statusCode = 200
-        let apiLoginResponse = ApiResponse<LoginResponse>(statusCode: statusCode, status: false, message: "", data: nil)
-        let dataResult = try JSONEncoder().encode(apiLoginResponse)
+        let statusCode = 404
+        let apiRegisterResponse = ApiResponse<LoginResponse>(statusCode: statusCode, status: false, message: "", data: nil)
+        let dataResult = try JSONEncoder().encode(apiRegisterResponse)
         let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.post: dataResult])
         mock.register()
         
@@ -218,6 +218,94 @@ class UserNetworkTests: XCTestCase {
         XCTAssertEqual(2, mockSession.parameters?.count)
         XCTAssertEqual(email, mockSession.parameters?["email"] as? String)
         XCTAssertEqual(password, mockSession.parameters?["password"] as? String)
+    }
+    
+    // MARK: - fetch access token
+    
+    /// Given
+    /// - token are provided
+    /// - mock success reponse for API calling
+    /// When: call fetch access token
+    /// Then:
+    /// - Call API with correct parameters
+    func test_fetchAccessToken() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "get-access-token"
+        let loginToken = "fake request token"
+        let statusCode = 200
+        let fetchAccessTokenResponse: FetchAccessTokenResponse = "fake response token"
+        let apiFecthAccessTokenResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: fetchAccessTokenResponse)
+        let dataResult = try JSONEncoder().encode(apiFecthAccessTokenResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.get: dataResult])
+        mock.register()
+        
+        /// When
+        let fetchAccessToken = sut.fetchAccessToken(loginToken: loginToken).asObservable()
+        _ = try? fetchAccessToken.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(1, mockSession.httpHeaders?.count)
+        XCTAssertEqual("Bearer \(loginToken)", mockSession.httpHeaders?["Authorization"] as? String)
+    }
+    
+    /// Given
+    /// - email, password are provided
+    /// - mock success reponse for API calling
+    /// When: call login
+    /// Then:
+    /// - Call API with correct response
+    func test_fetchAccessToken_fecthAccessTokenSuccess() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "get-access-token"
+        let loginToken = "fake request token"
+        let statusCode = 200
+        let fetchAccessTokenResponse: FetchAccessTokenResponse = "fake response token"
+        let apiFecthAccessTokenResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: fetchAccessTokenResponse)
+        let dataResult = try JSONEncoder().encode(apiFecthAccessTokenResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.get: dataResult])
+        mock.register()
+        
+        /// When
+        let fetchAccessToken = sut.fetchAccessToken(loginToken: loginToken).asObservable()
+        let response = try fetchAccessToken.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(1, mockSession.httpHeaders?.count)
+        XCTAssertEqual("Bearer \(loginToken)", mockSession.httpHeaders?["Authorization"] as? String)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(fetchAccessTokenResponse, response!)
+    }
+    
+    /// Given
+    /// - email, password are provided
+    /// - mock error for API calling
+    /// When: call login
+    /// Then:
+    /// - Call API with login error
+    func test_fetchAccessToken_fetchAccessTokenError() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "get-access-token"
+        let loginToken = "fake request token"
+        let statusCode = 404
+        let apiFecthAccessTokenResponse = ApiResponse<FetchAccessTokenResponse>(statusCode: statusCode, status: false, message: "", data: nil)
+        let dataResult = try JSONEncoder().encode(apiFecthAccessTokenResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.get: dataResult])
+        mock.register()
+        
+        /// When
+        let fetchAccessToken = sut.fetchAccessToken(loginToken: loginToken).asObservable()
+        let responseBlocking = fetchAccessToken.toBlocking()
+        
+        /// Then
+        XCTAssertThrowsError(try responseBlocking.first())
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(1, mockSession.httpHeaders?.count)
+        XCTAssertEqual("Bearer \(loginToken)", mockSession.httpHeaders?["Authorization"] as? String)
     }
 }
 
