@@ -38,6 +38,9 @@
 		A80A96052893EC8200F044D9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A96042893EC8200F044D9 /* Register.swift */; };
 		A80A96062893EC8200F044D9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A96042893EC8200F044D9 /* Register.swift */; };
 		A80A96072893EC8200F044D9 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A96042893EC8200F044D9 /* Register.swift */; };
+		A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
+		A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
+		A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
 		A8A77095288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A77096288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A7709B288E5A6000F03C5C /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A77099288E5A6000F03C5C /* assets.swift */; };
@@ -135,6 +138,7 @@
 		A1972484568C2DC87E9278F5 /* Pods-NotesManager-NotesManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager-NotesManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-NotesManager-NotesManagerUITests/Pods-NotesManager-NotesManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A80A95E12893CCAC00F044D9 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		A80A96042893EC8200F044D9 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		A80A960828941A1400F044D9 /* FetchAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccessToken.swift; sourceTree = "<group>"; };
 		A8A77097288E59E800F03C5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A8A77099288E5A6000F03C5C /* assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
 		A8A7709A288E5A6000F03C5C /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
@@ -407,7 +411,6 @@
 				A8B2085A2892673A00DC7FA6 /* NoteNetwork */,
 				A8B2085B2892674100DC7FA6 /* Models */,
 				A8B2085C2892675500DC7FA6 /* Request.swift */,
-				A8B208612892676000DC7FA6 /* ApiError.swift */,
 				A8B208662892676F00DC7FA6 /* BaseAFNetwork.swift */,
 			);
 			path = Networks;
@@ -428,6 +431,7 @@
 			isa = PBXGroup;
 			children = (
 				A8B2086B2892677C00DC7FA6 /* ApiResponse.swift */,
+				A8B208612892676000DC7FA6 /* ApiError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,6 +452,7 @@
 			children = (
 				A8B2089828926D9F00DC7FA6 /* Login.swift */,
 				A80A96042893EC8200F044D9 /* Register.swift */,
+				A80A960828941A1400F044D9 /* FetchAccessToken.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -865,6 +870,7 @@
 				A8A7709F288E5A6000F03C5C /* strings.swift in Sources */,
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
 				A8B2083528925B0F00DC7FA6 /* MoveXError.swift in Sources */,
+				A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8B2084D28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A8B2082D28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
 				A8B2089428926C5E00DC7FA6 /* User.swift in Sources */,
@@ -897,6 +903,7 @@
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8B2083628925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
+				A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A80A95E42893D45900F044D9 /* UserNetwork.swift in Sources */,
 				A8B2082E28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
 				A8B2089528926C5E00DC7FA6 /* User.swift in Sources */,
@@ -933,6 +940,7 @@
 				A80A95F72893D4CF00F044D9 /* Request.swift in Sources */,
 				A80A95FE2893D4DC00F044D9 /* UserNetwork.swift in Sources */,
 				A80A95EB2893D4BF00F044D9 /* Login.swift in Sources */,
+				A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8B208C22892BC4A00DC7FA6 /* UserNetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

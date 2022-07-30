@@ -13,7 +13,6 @@ struct RegisterRequest: UserNetworkRequest {
     var method: HTTPMethod = .post
     var path: String = "register"
     var encoding: URLEncoding { .httpBody }
-    var url: URL { baseURL.appendingPathComponent(path) }
     var parameters: Parameters
     
     init(email: String, password: String) {

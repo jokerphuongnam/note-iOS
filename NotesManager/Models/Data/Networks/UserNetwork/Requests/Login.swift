@@ -13,7 +13,6 @@ struct LoginRequest: UserNetworkRequest {
     var method: HTTPMethod = .post
     var path: String = "login"
     var encoding: URLEncoding { .httpBody }
-    var url: URL { baseURL.appendingPathComponent(path) }
     var parameters: Parameters
     
     init(email: String, password: String) {
@@ -25,7 +24,7 @@ struct LoginRequest: UserNetworkRequest {
 }
 
 struct LoginResponse {
-    let id, email, password, name: String
+    let id, email, name: String
     let gender: String
     let token: String
 }
@@ -33,7 +32,7 @@ struct LoginResponse {
 extension LoginResponse: Codable {
     private enum CodingKeys: String, CodingKey {
         case id = "_id"
-        case email, password, name, gender
+        case email, name, gender
         case token
     }
 }

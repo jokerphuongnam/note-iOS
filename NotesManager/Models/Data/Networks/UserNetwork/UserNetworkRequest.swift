@@ -24,7 +24,15 @@ extension UserNetworkRequest {
         [:]
     }
     
+    var parameters: Parameters {
+        [:]
+    }
+    
     var interceptor: Interceptor? {
         nil
+    }
+    
+    var url: URL {
+        baseURL.appendingPathComponent(path)
     }
 }
