@@ -52,7 +52,7 @@ class UserNetworkTests: XCTestCase {
         let endPoint = "login"
         let email = "test@gmail.com", password = "12345678"
         let statusCode = 200
-        let loginResponse = LoginResponse(id: "id", email: email, password: password, name: "Fake name", gender: "Fake gender", token: "Fake token")
+        let loginResponse = LoginResponse(id: "id", email: email, name: "Fake name", gender: "Fake gender", token: "Fake token")
         let apiLoginResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: loginResponse)
         let dataResult = try JSONEncoder().encode(apiLoginResponse)
         let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.post: dataResult])
@@ -81,7 +81,7 @@ class UserNetworkTests: XCTestCase {
         let endPoint = "login"
         let email = "test@gmail.com", password = "12345678"
         let statusCode = 200
-        let loginResponse = LoginResponse(id: "id", email: email, password: password, name: "Fake name", gender: "Fake gender", token: "Fake token")
+        let loginResponse = LoginResponse(id: "id", email: email, name: "Fake name", gender: "Fake gender", token: "Fake token")
         let apiLoginResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: loginResponse)
         let dataResult = try JSONEncoder().encode(apiLoginResponse)
         let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.post: dataResult])
@@ -223,7 +223,7 @@ class UserNetworkTests: XCTestCase {
 
 extension LoginResponse: Equatable {
     static func == (lhs: LoginResponse, rhs: LoginResponse) -> Bool {
-        (lhs.id, lhs.email, lhs.password, lhs.name, lhs.gender, lhs.token) == (rhs.id, rhs.email, rhs.password, rhs.name, rhs.gender, rhs.token)
+        (lhs.id, lhs.email, lhs.name, lhs.gender, lhs.token) == (rhs.id, rhs.email, rhs.name, rhs.gender, rhs.token)
     }
 }
 
