@@ -196,7 +196,7 @@ class UserNetworkTests: XCTestCase {
     /// - mock error for API calling
     /// When: call register
     /// Then:
-    /// - Call API with login error
+    /// - Call API with register error
     func test_register_registerError() throws {
         /// Given
         let baseUrl = String.baseUrl
@@ -223,7 +223,7 @@ class UserNetworkTests: XCTestCase {
     // MARK: - fetch access token
     
     /// Given
-    /// - token are provided
+    /// - login token are provided
     /// - mock success reponse for API calling
     /// When: call fetch access token
     /// Then:
@@ -251,9 +251,9 @@ class UserNetworkTests: XCTestCase {
     }
     
     /// Given
-    /// - email, password are provided
+    /// - login token are provided
     /// - mock success reponse for API calling
-    /// When: call login
+    /// When: call fetch access token
     /// Then:
     /// - Call API with correct response
     func test_fetchAccessToken_fecthAccessTokenSuccess() throws {
@@ -281,11 +281,11 @@ class UserNetworkTests: XCTestCase {
     }
     
     /// Given
-    /// - email, password are provided
+    /// - login token are provided
     /// - mock error for API calling
-    /// When: call login
+    /// When: call fetch access token
     /// Then:
-    /// - Call API with login error
+    /// - Call API with access token error
     func test_fetchAccessToken_fetchAccessTokenError() throws {
         /// Given
         let baseUrl = String.baseUrl
@@ -307,6 +307,153 @@ class UserNetworkTests: XCTestCase {
         XCTAssertEqual(1, mockSession.httpHeaders?.count)
         XCTAssertEqual("Bearer \(loginToken)", mockSession.httpHeaders?["Authorization"] as? String)
     }
+    
+    // MARK: - update profile
+    
+    /// Given
+    /// - name are provided
+    /// - mock success reponse for API calling
+    /// When: call update profile
+    /// Then:
+    /// - Call API with correct parameters
+    func test_updateProfile_nameParameter() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "update-profile"
+        let name = "Test user", gender = "Test male"
+        let statusCode = 200
+        let updateProfileResponse = UpdateProfileResponse(id: "id", email: "testemail@gmail.com", name: name, gender: gender)
+        let apiUpdateProfileResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: updateProfileResponse)
+        let dataResult = try JSONEncoder().encode(apiUpdateProfileResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let updateProfile = sut.updateProfile(name: name, gender: nil).asObservable()
+        _ = try updateProfile.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(1, mockSession.parameters?.count)
+        XCTAssertEqual(name, mockSession.parameters?["name"] as? String)
+    }
+    
+    /// Given
+    /// - gender are provided
+    /// - mock success reponse for API calling
+    /// When: call update profile
+    /// Then:
+    /// - Call API with correct parameters
+    func test_updateProfile_genderParameter() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "update-profile"
+        let name = "Test user", gender = "Test male"
+        let statusCode = 200
+        let updateProfileResponse = UpdateProfileResponse(id: "id", email: "testemail@gmail.com", name: name, gender: gender)
+        let apiUpdateProfileResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: updateProfileResponse)
+        let dataResult = try JSONEncoder().encode(apiUpdateProfileResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let updateProfile = sut.updateProfile(name: nil, gender: gender).asObservable()
+        _ = try updateProfile.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(1, mockSession.parameters?.count)
+        XCTAssertEqual(gender, mockSession.parameters?["gender"] as? String)
+    }
+    
+    /// Given
+    /// - name, gender are provided
+    /// - mock success reponse for API calling
+    /// When: call update profile
+    /// Then:
+    /// - Call API with correct parameters
+    func test_updateProfile_fullParameters() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "update-profile"
+        let name = "Test user", gender = "Test male"
+        let statusCode = 200
+        let updateProfileResponse = UpdateProfileResponse(id: "id", email: "testemail@gmail.com", name: name, gender: gender)
+        let apiUpdateProfileResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: updateProfileResponse)
+        let dataResult = try JSONEncoder().encode(apiUpdateProfileResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let updateProfile = sut.updateProfile(name: name, gender: gender).asObservable()
+        _ = try updateProfile.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(name, mockSession.parameters?["name"] as? String)
+        XCTAssertEqual(gender, mockSession.parameters?["gender"] as? String)
+    }
+    
+    /// Given
+    /// - name, gender are provided
+    /// - mock success reponse for API calling
+    /// When: call update profile
+    /// Then:
+    /// - Call API with correct response
+    func test_updateProfile_updateProfileSuccess() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "update-profile"
+        let name = "Test user", gender = "Test male"
+        let statusCode = 200
+        let updateProfileResponse = UpdateProfileResponse(id: "id", email: "testemail@gmail.com", name: name, gender: gender)
+        let apiUpdateProfileResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: updateProfileResponse)
+        let dataResult = try JSONEncoder().encode(apiUpdateProfileResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let updateProfile = sut.updateProfile(name: name, gender: gender).asObservable()
+        let response = try updateProfile.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(name, mockSession.parameters?["name"] as? String)
+        XCTAssertEqual(gender, mockSession.parameters?["gender"] as? String)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(updateProfileResponse, response!)
+    }
+    
+    /// Given
+    /// - name, gender are provided
+    /// - mock error for API calling
+    /// When: call update profile
+    /// Then:
+    /// - Call API with login error
+    func test_updateProfile_updateProfileError() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "update-profile"
+        let name = "Test user", gender = "Test male"
+        let statusCode = 404
+        let apiUpdateProfileResponse = ApiResponse<UpdateProfileResponse>(statusCode: statusCode, status: false, message: "", data: nil)
+        let dataResult = try JSONEncoder().encode(apiUpdateProfileResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let updateProfile = sut.updateProfile(name: name, gender: gender).asObservable()
+        let responseBlocking = updateProfile.toBlocking()
+        
+        /// Then
+        XCTAssertThrowsError(try responseBlocking.first())
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(name, mockSession.parameters?["name"] as? String)
+        XCTAssertEqual(gender, mockSession.parameters?["gender"] as? String)
+    }
 }
 
 extension LoginResponse: Equatable {
@@ -317,6 +464,12 @@ extension LoginResponse: Equatable {
 
 extension RegisterResponse: Equatable {
     static func == (lhs: RegisterResponse, rhs: RegisterResponse) -> Bool {
+        (lhs.id, lhs.email, lhs.name, lhs.gender) == (rhs.id, rhs.email, rhs.name, rhs.gender)
+    }
+}
+
+extension UpdateProfileResponse: Equatable {
+    static func == (lhs: UpdateProfileResponse, rhs: UpdateProfileResponse) -> Bool {
         (lhs.id, lhs.email, lhs.name, lhs.gender) == (rhs.id, rhs.email, rhs.name, rhs.gender)
     }
 }
