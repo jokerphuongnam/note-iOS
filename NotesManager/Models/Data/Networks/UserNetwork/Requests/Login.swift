@@ -12,7 +12,7 @@ struct LoginRequest: UserNetworkRequest {
     
     var method: HTTPMethod = .post
     var path: String = "login"
-    var encoding: URLEncoding { .httpBody }
+    var encoding: URLEncoding = .httpBody
     var parameters: Parameters
     
     init(email: String, password: String) {
