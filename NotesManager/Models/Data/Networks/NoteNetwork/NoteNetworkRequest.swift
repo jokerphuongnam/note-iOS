@@ -7,11 +7,13 @@
 
 @_implementationOnly import Alamofire
 
+// MARK: - UserNetworkRequest
 protocol NoteNetworkRequest: Request {}
 
+// MARK: - Default UserNetworkRequest
 extension NoteNetworkRequest {
     var baseURL: URL {
-        URL(string: "\(String.baseUrl)notes/")!
+        URL(string: .baseUrl)!
     }
     
     var encoding: URLEncoding {
@@ -20,5 +22,17 @@ extension NoteNetworkRequest {
     
     var httpHeaderFields: HTTPHeaders {
         [:]
+    }
+    
+    var parameters: Parameters {
+        [:]
+    }
+    
+    var interceptor: Interceptor? {
+        nil
+    }
+    
+    var url: URL {
+        baseURL.appendingPathComponent(path)
     }
 }

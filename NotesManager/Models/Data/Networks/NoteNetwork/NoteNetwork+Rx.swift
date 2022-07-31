@@ -8,10 +8,12 @@
 @_implementationOnly import RxSwift
 @_implementationOnly import Alamofire
 
+// MARK: - ReactiveCompatible
 extension AFNoteNetwork: ReactiveCompatible {
 
 }
 
+// MARK: - AFUserNetwork
 extension Reactive where Base: AFNoteNetwork {
     func send<T: Request>(request: T) -> Single<T.Response> {
         Single.create { observer in
