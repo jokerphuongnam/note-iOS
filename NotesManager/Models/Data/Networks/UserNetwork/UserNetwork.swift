@@ -16,6 +16,8 @@ protocol UserNetwork {
     func register(email: String, password: String) -> Single<RegisterRequest.Response>
     // MARK: - fetch access token
     func fetchAccessToken(loginToken: String) -> Single<FetchAccessTokenRequest.Response>
+    // MARK: - update profile
+    func updateProfile(name: String?, gender: String?) -> Single<UpdateProfileRequest.Response>
 }
 
 // MARK: - AFUserNetwork
@@ -40,5 +42,10 @@ final class AFUserNetwork: UserNetwork, BaseAFNetwork {
     // MARK: - fetch access token
     func fetchAccessToken(loginToken: String) -> Single<FetchAccessTokenRequest.Response> {
         rx.send(request: FetchAccessTokenRequest(loginToken: loginToken))
+    }
+    
+    // MARK: - update profile
+    func updateProfile(name: String?, gender: String?) -> Single<UpdateProfileRequest.Response> {
+        rx.send(request: UpdateProfileRequest(name: name, gender: gender))
     }
 }

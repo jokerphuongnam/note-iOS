@@ -41,6 +41,9 @@
 		A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
 		A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
 		A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
+		A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
+		A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
+		A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
 		A8A77095288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A77096288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A7709B288E5A6000F03C5C /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A77099288E5A6000F03C5C /* assets.swift */; };
@@ -139,6 +142,7 @@
 		A80A95E12893CCAC00F044D9 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		A80A96042893EC8200F044D9 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		A80A960828941A1400F044D9 /* FetchAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccessToken.swift; sourceTree = "<group>"; };
+		A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		A8A77097288E59E800F03C5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A8A77099288E5A6000F03C5C /* assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
 		A8A7709A288E5A6000F03C5C /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
@@ -453,6 +457,7 @@
 				A8B2089828926D9F00DC7FA6 /* Login.swift */,
 				A80A96042893EC8200F044D9 /* Register.swift */,
 				A80A960828941A1400F044D9 /* FetchAccessToken.swift */,
+				A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -858,6 +863,7 @@
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A8B208882892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
+				A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2083128925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8B2086C2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
 				A8B2083928925B0F00DC7FA6 /* String+.swift in Sources */,
@@ -891,6 +897,7 @@
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8B2083228925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
+				A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2086D2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
 				A8B2083A28925B0F00DC7FA6 /* String+.swift in Sources */,
 				A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
@@ -916,6 +923,7 @@
 			files = (
 				A80A95E82893D4A600F044D9 /* AppDelegate.swift in Sources */,
 				A80A95E62893D4A000F044D9 /* assets.swift in Sources */,
+				A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A80A95E92893D4A800F044D9 /* SceneDelegate.swift in Sources */,
 				A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */,
 				A80A95F12893D4CB00F044D9 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,

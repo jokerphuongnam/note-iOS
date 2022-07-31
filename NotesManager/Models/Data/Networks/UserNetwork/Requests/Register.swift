@@ -12,7 +12,7 @@ struct RegisterRequest: UserNetworkRequest {
     
     var method: HTTPMethod = .post
     var path: String = "register"
-    var encoding: URLEncoding { .httpBody }
+    var encoding: URLEncoding = .httpBody
     var parameters: Parameters
     
     init(email: String, password: String) {
