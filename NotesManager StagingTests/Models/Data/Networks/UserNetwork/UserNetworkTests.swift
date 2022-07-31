@@ -454,6 +454,97 @@ class UserNetworkTests: XCTestCase {
         XCTAssertEqual(name, mockSession.parameters?["name"] as? String)
         XCTAssertEqual(gender, mockSession.parameters?["gender"] as? String)
     }
+    
+    // MARK: - change password
+    
+    /// Given
+    /// - oldPassword, newPassword are provided
+    /// - mock success reponse for API calling
+    /// When: call change password
+    /// Then:
+    /// - Call API with correct parameters
+    func test_changePassword() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "change-password"
+        let oldPassword = "oldPassword", newPassword = "newPassword"
+        let statusCode = 200
+        let changePasswordResponse = ChangePasswordResponse(id: "id", email: "fakeemail@gmail.com", name: "Fake name", gender: "Fake gender")
+        let apiChangePasswordResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: changePasswordResponse)
+        let dataResult = try JSONEncoder().encode(apiChangePasswordResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let changePassword = sut.changePassword(oldPassword: oldPassword, newPassword: newPassword)
+        _ = try? changePassword.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(oldPassword, mockSession.parameters?["old_password"] as? String)
+        XCTAssertEqual(newPassword, mockSession.parameters?["new_password"] as? String)
+    }
+    
+    /// Given
+    /// - oldPassword, newPassword are provided
+    /// - mock success reponse for API calling
+    /// When: call change password
+    /// Then:
+    /// - Call API with correct response
+    func test_changePassword_changePasswordSuccess() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "change-password"
+        let oldPassword = "oldPassword", newPassword = "newPassword"
+        let statusCode = 200
+        let changePasswordResponse = ChangePasswordResponse(id: "id", email: "fakeemail@gmail.com", name: "Fake name", gender: "Fake gender")
+        let apiChangePasswordResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: changePasswordResponse)
+        let dataResult = try JSONEncoder().encode(apiChangePasswordResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let changePassword = sut.changePassword(oldPassword: oldPassword, newPassword: newPassword)
+        let response = try changePassword.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(oldPassword, mockSession.parameters?["old_password"] as? String)
+        XCTAssertEqual(newPassword, mockSession.parameters?["new_password"] as? String)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(changePasswordResponse, response!)
+    }
+    
+    /// Given
+    /// - oldPassword, newPassword are provided
+    /// - mock error for API calling
+    /// When: call change password
+    /// Then:
+    /// - Call API with change password error
+    func test_changePassword_changePasswordError() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "change-password"
+        let oldPassword = "oldPassword", newPassword = "newPassword"
+        let statusCode = 404
+        let apiChangePasswordResponse = ApiResponse<ChangePasswordResponse>(statusCode: statusCode, status: false, message: "", data: nil)
+        let dataResult = try JSONEncoder().encode(apiChangePasswordResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
+        mock.register()
+        
+        /// When
+        let changePassword = sut.changePassword(oldPassword: oldPassword, newPassword: newPassword)
+        let responseBlocking = changePassword.toBlocking()
+        
+        /// Then
+        XCTAssertThrowsError(try responseBlocking.first())
+        XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
+        XCTAssertEqual(2, mockSession.parameters?.count)
+        XCTAssertEqual(oldPassword, mockSession.parameters?["old_password"] as? String)
+        XCTAssertEqual(newPassword, mockSession.parameters?["new_password"] as? String)
+    }
 }
 
 extension LoginResponse: Equatable {
@@ -470,6 +561,12 @@ extension RegisterResponse: Equatable {
 
 extension UpdateProfileResponse: Equatable {
     static func == (lhs: UpdateProfileResponse, rhs: UpdateProfileResponse) -> Bool {
+        (lhs.id, lhs.email, lhs.name, lhs.gender) == (rhs.id, rhs.email, rhs.name, rhs.gender)
+    }
+}
+
+extension ChangePasswordResponse: Equatable {
+    static func == (lhs: ChangePasswordResponse, rhs: ChangePasswordResponse) -> Bool {
         (lhs.id, lhs.email, lhs.name, lhs.gender) == (rhs.id, rhs.email, rhs.name, rhs.gender)
     }
 }
