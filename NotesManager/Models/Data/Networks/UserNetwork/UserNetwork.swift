@@ -18,6 +18,8 @@ protocol UserNetwork {
     func fetchAccessToken(loginToken: String) -> Single<FetchAccessTokenRequest.Response>
     // MARK: - update profile
     func updateProfile(name: String?, gender: String?) -> Single<UpdateProfileRequest.Response>
+    // MARK: - change password
+    func changePassword(oldPassword:String, newPassword: String) -> Single<ChangePasswordRequest.Response>
 }
 
 // MARK: - AFUserNetwork
@@ -47,5 +49,10 @@ final class AFUserNetwork: UserNetwork, BaseAFNetwork {
     // MARK: - update profile
     func updateProfile(name: String?, gender: String?) -> Single<UpdateProfileRequest.Response> {
         rx.send(request: UpdateProfileRequest(name: name, gender: gender))
+    }
+    
+    // MARK: - change password
+    func changePassword(oldPassword: String, newPassword: String) -> Single<ChangePasswordRequest.Response> {
+        rx.send(request: ChangePasswordRequest(oldPassword: oldPassword, newPassword: newPassword))
     }
 }

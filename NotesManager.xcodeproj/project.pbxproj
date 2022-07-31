@@ -44,6 +44,9 @@
 		A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
 		A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
 		A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
+		A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */; };
+		A8A539CC289668DC00FE0FB5 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */; };
+		A8A539CD289668DC00FE0FB5 /* ChangePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */; };
 		A8A77095288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A77096288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A7709B288E5A6000F03C5C /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A77099288E5A6000F03C5C /* assets.swift */; };
@@ -143,6 +146,7 @@
 		A80A96042893EC8200F044D9 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		A80A960828941A1400F044D9 /* FetchAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccessToken.swift; sourceTree = "<group>"; };
 		A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
+		A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		A8A77097288E59E800F03C5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A8A77099288E5A6000F03C5C /* assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
 		A8A7709A288E5A6000F03C5C /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
@@ -458,6 +462,7 @@
 				A80A96042893EC8200F044D9 /* Register.swift */,
 				A80A960828941A1400F044D9 /* FetchAccessToken.swift */,
 				A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */,
+				A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -873,6 +878,7 @@
 				A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8B2084528925B0F00DC7FA6 /* View+.swift in Sources */,
+				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8A7709F288E5A6000F03C5C /* strings.swift in Sources */,
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
 				A8B2083528925B0F00DC7FA6 /* MoveXError.swift in Sources */,
@@ -907,6 +913,7 @@
 				A8B208632892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8A770A0288E5A6000F03C5C /* strings.swift in Sources */,
+				A8A539CC289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8B2083628925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
@@ -943,6 +950,7 @@
 				A80A95F22893D4CB00F044D9 /* Font+Constraint.swift in Sources */,
 				A80A95EF2893D4CB00F044D9 /* MoveXError.swift in Sources */,
 				A80A95ED2893D4CB00F044D9 /* Color+.swift in Sources */,
+				A8A539CD289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A80A95FA2893D4D500F044D9 /* NoteNetworkRequest.swift in Sources */,
 				A80A95FB2893D4D500F044D9 /* NoteNetwork.swift in Sources */,
 				A80A95F72893D4CF00F044D9 /* Request.swift in Sources */,
