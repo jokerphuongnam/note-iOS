@@ -46,7 +46,6 @@ struct NoteResponse {
     let title, description: String?
     let color: String
     let createAt, updateAt: Int64
-    let userID: String
 }
 
 typealias NotesResponse = NoteResponse
@@ -59,6 +58,5 @@ extension NoteResponse: Codable {
         case color
         case createAt = "create_at"
         case updateAt = "update_at"
-        case userID = "user_id"
     }
 }
