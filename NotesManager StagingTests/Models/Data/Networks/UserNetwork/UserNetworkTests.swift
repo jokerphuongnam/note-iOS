@@ -14,7 +14,7 @@ import XCTest
 @_implementationOnly import RxBlocking
 @_implementationOnly import Mocker
 
-class AFUserNetworkTests: XCTestCase {
+final class AFUserNetworkTests: XCTestCase {
     private var mockSession: MockSession!
     private var sut: AFUserNetwork!
     private var disposeBag: DisposeBag!

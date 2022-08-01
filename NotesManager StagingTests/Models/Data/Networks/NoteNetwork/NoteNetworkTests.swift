@@ -14,7 +14,7 @@ import XCTest
 @_implementationOnly import RxBlocking
 @_implementationOnly import Mocker
 
-class AFNoteNetworkTests: XCTestCase {
+final class AFNoteNetworkTests: XCTestCase {
 
     override func setUpWithError() throws {
         try super.setUpWithError()
