@@ -6,6 +6,7 @@
 //
 
 @_implementationOnly import UIKit
+@_implementationOnly import Alamofire
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,6 +21,33 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         self.window = window
         window.makeKeyAndVisible()
+        
+        test()
+    }
+    
+    private let network: NoteNetwork = AFNoteNetwork(
+        session: {
+            let configuration = URLSessionConfiguration.default
+            let timeout = 60
+            configuration.timeoutIntervalForResource = TimeInterval(timeout)
+            configuration.timeoutIntervalForRequest = TimeInterval(timeout)
+            configuration.waitsForConnectivity = true
+            configuration.allowsCellularAccess = false
+            configuration.allowsConstrainedNetworkAccess = false
+            configuration.allowsExpensiveNetworkAccess = false
+            return Session(configuration: configuration)
+        }()
+    )
+    
+    private func test() {
+        network.deleteNote(id: "62e752e37bfdedbe665f4a0b")
+            .subscribe { response in
+                print(response)
+            } onFailure: { e in
+                print(e)
+            } onDisposed: {
+                
+            }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

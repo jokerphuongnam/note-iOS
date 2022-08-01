@@ -16,6 +16,8 @@ protocol NoteNetwork {
     func inserNote(title: String?, description: String?) -> Single<InsertNoteRequest.Response>
     // MARK: - update note
     func updateNote(id: String, title: String?, description: String?) -> Single<UpdateNoteRequest.Response>
+    // MARK: - delete note
+    func deleteNote(id: String) -> Single<DeleteNoteRequest.Response>
 }
 
 // MARK: - AFNoteNetwork
@@ -40,5 +42,10 @@ final class AFNoteNetwork: NoteNetwork, BaseAFNetwork {
     // MARK: - update note
     func updateNote(id: String, title: String?, description: String?) -> Single<UpdateNoteRequest.Response> {
         rx.send(request: UpdateNoteRequest(id: id, title: title, description: description))
+    }
+    
+    // MARK: - delete note
+    func deleteNote(id: String) -> Single<DeleteNoteRequest.Response> {
+        rx.send(request: DeleteNoteRequest(id: id))
     }
 }
