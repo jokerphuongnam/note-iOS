@@ -14,10 +14,9 @@ import XCTest
 @_implementationOnly import RxBlocking
 @_implementationOnly import Mocker
 
-class AFUserNetworkTests: XCTestCase {
+final class AFUserNetworkTests: XCTestCase {
     private var mockSession: MockSession!
     private var sut: AFUserNetwork!
-    private var disposeBag: DisposeBag!
     private var scheduler: TestScheduler!
     
     override func setUpWithError() throws {
@@ -27,13 +26,11 @@ class AFUserNetworkTests: XCTestCase {
         mockSession = .init(configuration: configuration)
         sut = AFUserNetwork(session: mockSession)
         scheduler = TestScheduler(initialClock: 0)
-        disposeBag = DisposeBag()
     }
     
     override func tearDownWithError() throws {
         mockSession = nil
         sut = nil
-        disposeBag = nil
         scheduler = nil
         try super.tearDownWithError()
     }
@@ -372,7 +369,7 @@ class AFUserNetworkTests: XCTestCase {
     /// When: call update profile
     /// Then:
     /// - Call API with correct parameters
-    func test_updateProfile_fullParameters() throws {
+    func test_updateProfile() throws {
         /// Given
         let baseUrl = String.baseUrl
         let endPoint = "update-profile"
@@ -431,7 +428,7 @@ class AFUserNetworkTests: XCTestCase {
     /// - mock error for API calling
     /// When: call update profile
     /// Then:
-    /// - Call API with login error
+    /// - Call API with update profile error
     func test_updateProfile_updateProfileError() throws {
         /// Given
         let baseUrl = String.baseUrl

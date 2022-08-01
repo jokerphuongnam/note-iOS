@@ -16,6 +16,10 @@ extension NoteNetworkRequest {
         URL(string: .baseUrl)!
     }
     
+    var path: String {
+        "notes"
+    }
+    
     var encoding: URLEncoding {
         .default
     }
