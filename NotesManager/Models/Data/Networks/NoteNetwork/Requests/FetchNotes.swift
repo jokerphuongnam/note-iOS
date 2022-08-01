@@ -11,6 +11,7 @@ struct FetchNotesRequest: NoteNetworkRequest {
     typealias Response = FetchNotesResponse
     
     var method: HTTPMethod = .get
+    var path: String = "notes"
     var encoding: URLEncoding = .queryString
     var parameters: Parameters
     

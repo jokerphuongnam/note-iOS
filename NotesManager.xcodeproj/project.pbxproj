@@ -44,6 +44,9 @@
 		A84F1B952897849A005683EB /* FetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84F1B942897849A005683EB /* FetchNotes.swift */; };
 		A84F1B962897849A005683EB /* FetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84F1B942897849A005683EB /* FetchNotes.swift */; };
 		A84F1B972897849A005683EB /* FetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84F1B942897849A005683EB /* FetchNotes.swift */; };
+		A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
+		A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
+		A8A370B62897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
 		A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
 		A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
 		A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
@@ -150,6 +153,7 @@
 		A80A96042893EC8200F044D9 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		A80A960828941A1400F044D9 /* FetchAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccessToken.swift; sourceTree = "<group>"; };
 		A84F1B942897849A005683EB /* FetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotes.swift; sourceTree = "<group>"; };
+		A8A370B32897C055004E94F0 /* InsertNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNote.swift; sourceTree = "<group>"; };
 		A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		A8A539D0289670A400FE0FB5 /* NoteNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNetworkTests.swift; sourceTree = "<group>"; };
@@ -271,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				A84F1B942897849A005683EB /* FetchNotes.swift */,
+				A8A370B32897C055004E94F0 /* InsertNote.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -884,6 +889,7 @@
 				A84F1B952897849A005683EB /* FetchNotes.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
+				A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */,
 				A8B208882892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2083128925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
@@ -920,6 +926,7 @@
 				A84F1B962897849A005683EB /* FetchNotes.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
+				A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */,
 				A8B2083228925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2086D2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
@@ -965,6 +972,7 @@
 				A80A95F62893D4CF00F044D9 /* ApiError.swift in Sources */,
 				A80A95F82893D4CF00F044D9 /* BaseAFNetwork.swift in Sources */,
 				A80A95F92893D4D500F044D9 /* NoteNetwork+Rx.swift in Sources */,
+				A8A370B62897C055004E94F0 /* InsertNote.swift in Sources */,
 				A80A95EE2893D4CB00F044D9 /* KeyboardManagerment.swift in Sources */,
 				A80A95F22893D4CB00F044D9 /* Font+Constraint.swift in Sources */,
 				A80A95EF2893D4CB00F044D9 /* MoveXError.swift in Sources */,
