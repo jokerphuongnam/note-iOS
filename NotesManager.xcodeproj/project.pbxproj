@@ -47,6 +47,9 @@
 		A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
 		A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
 		A8A370B62897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
+		A8A370B82897CC79004E94F0 /* UpdateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B72897CC79004E94F0 /* UpdateNote.swift */; };
+		A8A370B92897CC79004E94F0 /* UpdateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B72897CC79004E94F0 /* UpdateNote.swift */; };
+		A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B72897CC79004E94F0 /* UpdateNote.swift */; };
 		A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
 		A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
 		A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */; };
@@ -154,6 +157,7 @@
 		A80A960828941A1400F044D9 /* FetchAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccessToken.swift; sourceTree = "<group>"; };
 		A84F1B942897849A005683EB /* FetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotes.swift; sourceTree = "<group>"; };
 		A8A370B32897C055004E94F0 /* InsertNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNote.swift; sourceTree = "<group>"; };
+		A8A370B72897CC79004E94F0 /* UpdateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNote.swift; sourceTree = "<group>"; };
 		A8A539C628965A4900FE0FB5 /* UpdateProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateProfile.swift; sourceTree = "<group>"; };
 		A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		A8A539D0289670A400FE0FB5 /* NoteNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNetworkTests.swift; sourceTree = "<group>"; };
@@ -276,6 +280,7 @@
 			children = (
 				A84F1B942897849A005683EB /* FetchNotes.swift */,
 				A8A370B32897C055004E94F0 /* InsertNote.swift */,
+				A8A370B72897CC79004E94F0 /* UpdateNote.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -906,6 +911,7 @@
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
 				A8B2083528925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */,
+				A8A370B82897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A8B2084D28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A8B2082D28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
 				A8B2089428926C5E00DC7FA6 /* User.swift in Sources */,
@@ -943,6 +949,7 @@
 				A8B2083628925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
+				A8A370B92897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A80A95E42893D45900F044D9 /* UserNetwork.swift in Sources */,
 				A8B2082E28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
 				A8B2089528926C5E00DC7FA6 /* User.swift in Sources */,
@@ -967,6 +974,7 @@
 				A80A95EA2893D4B900F044D9 /* User.swift in Sources */,
 				A80A95FF2893D4DC00F044D9 /* UserNetworkRequest.swift in Sources */,
 				A80A96072893EC8200F044D9 /* Register.swift in Sources */,
+				A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A80A95F02893D4CB00F044D9 /* String+.swift in Sources */,
 				A8A539D1289670A400FE0FB5 /* NoteNetworkTests.swift in Sources */,
 				A80A95F62893D4CF00F044D9 /* ApiError.swift in Sources */,
