@@ -608,6 +608,88 @@ final class AFNoteNetworkTests: XCTestCase {
         XCTAssertEqual(title, mockSession.parameters?["title"] as? String)
         XCTAssertEqual(description, mockSession.parameters?["description"] as? String)
     }
+    
+    //MARK: - delete note
+    
+    /// Given
+    /// - title, description are provided
+    /// - mock success reponse for API calling
+    /// When: call delete note
+    /// Then:
+    /// - Call API with correct parameters
+    func test_deleteNote() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "notes/delete-note"
+        let id = "testid"
+        let statusCode = 200
+        let deleteNoteResponse = InsertNoteResponse(id: id, title: "test title", description: "test description", color: "test color", createAt: 123, updateAt: 123)
+        let apiDeleteNoteResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: deleteNoteResponse)
+        let dataResult = try JSONEncoder().encode(apiDeleteNoteResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)/\(id)")!, dataType: .json, statusCode: statusCode, data: [.delete: dataResult])
+        mock.register()
+        
+        /// When
+        let deleteNote = sut.deleteNote(id: id).asObservable()
+        _ = try deleteNote.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)/\(id)", mockSession.endPoint)
+    }
+    
+    /// Given
+    /// - title, description are provided
+    /// - mock success reponse for API calling
+    /// When: call delete note
+    /// Then:
+    /// - Call API with correct parameters
+    func test_deleteNote_deleteNoteSuccess() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "notes/delete-note"
+        let id = "testid"
+        let statusCode = 200
+        let deleteNoteResponse = InsertNoteResponse(id: id, title: "test title", description: "test description", color: "test color", createAt: 123, updateAt: 123)
+        let apiDeleteNoteResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: deleteNoteResponse)
+        let dataResult = try JSONEncoder().encode(apiDeleteNoteResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)/\(id)")!, dataType: .json, statusCode: statusCode, data: [.delete: dataResult])
+        mock.register()
+        
+        /// When
+        let deleteNote = sut.deleteNote(id: id).asObservable()
+        let response = try? deleteNote.toBlocking().first()
+        
+        /// Then
+        XCTAssertEqual("/\(endPoint)/\(id)", mockSession.endPoint)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(deleteNoteResponse, response!)
+    }
+    
+    /// Given
+    /// - title, description are provided
+    /// - mock success reponse for API calling
+    /// When: call delete note
+    /// Then:
+    /// - Call API with delete note error
+    func test_deleteNote_deleteNoteError() throws {
+        /// Given
+        let baseUrl = String.baseUrl
+        let endPoint = "notes/delete-note"
+        let id = "testid"
+        let statusCode = 404
+        let apiDeleteNoteResponse = ApiResponse<DeleteNoteResponse>(statusCode: statusCode, status: false, message: "", data: nil)
+        let dataResult = try JSONEncoder().encode(apiDeleteNoteResponse)
+        let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)/\(id)")!, dataType: .json, statusCode: statusCode, data: [.delete: dataResult])
+        mock.register()
+        
+        /// When
+        let insertNote = sut.deleteNote(id: id).asObservable()
+        let responseBlocking = insertNote.toBlocking()
+        
+        /// Then
+        XCTAssertThrowsError(try responseBlocking.first())
+        XCTAssertEqual("/\(endPoint)/\(id)", mockSession.endPoint)
+    }
 }
 
 extension FetchNotesResponse: Equatable {
