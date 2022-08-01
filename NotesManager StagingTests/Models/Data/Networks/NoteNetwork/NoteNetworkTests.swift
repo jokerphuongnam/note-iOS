@@ -529,7 +529,7 @@ final class AFNoteNetworkTests: XCTestCase {
         let baseUrl = String.baseUrl
         let endPoint = "notes/update-note"
         let id = "test id"
-        let title = "test title", description = "test title"
+        let title = "test title", description = "test description"
         let statusCode = 200
         let updateNoteResponse = InsertNoteResponse(id: id, title: title, description: description, color: "test color", createAt: 123, updateAt: 123)
         let apiUpdateNoteResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: updateNoteResponse)
@@ -560,24 +560,26 @@ final class AFNoteNetworkTests: XCTestCase {
         let baseUrl = String.baseUrl
         let endPoint = "notes/update-note"
         let id = "test id"
-        let title = "test title", description = "test title"
+        let title = "test title", description = "test description"
         let statusCode = 200
-        let apiInsertNoteResponse = ApiResponse<InsertNoteResponse>(statusCode: statusCode, status: false, message: "", data: nil)
-        let dataResult = try JSONEncoder().encode(apiInsertNoteResponse)
+        let updateNoteResponse = InsertNoteResponse(id: id, title: title, description: description, color: "test color", createAt: 123, updateAt: 123)
+        let apiUpdateNoteResponse = ApiResponse(statusCode: statusCode, status: true, message: "", data: updateNoteResponse)
+        let dataResult = try JSONEncoder().encode(apiUpdateNoteResponse)
         let mock = Mock(url: URL(string: "\(baseUrl)\(endPoint)")!, dataType: .json, statusCode: statusCode, data: [.patch: dataResult])
         mock.register()
         
         /// When
         let updateNote = sut.updateNote(id: id, title: title, description: description).asObservable()
-        let responseBlocking = updateNote.toBlocking()
+        let response = try? updateNote.toBlocking().first()
         
         /// Then
-        XCTAssertThrowsError(try responseBlocking.first())
         XCTAssertEqual("/\(endPoint)", mockSession.endPoint)
         XCTAssertEqual(3, mockSession.parameters?.count)
         XCTAssertEqual(id, mockSession.parameters?["id"] as? String)
         XCTAssertEqual(title, mockSession.parameters?["title"] as? String)
         XCTAssertEqual(description, mockSession.parameters?["description"] as? String)
+        XCTAssertNotNil(response)
+        XCTAssertEqual(updateNoteResponse, response!)
     }
     
     /// Given
@@ -590,7 +592,7 @@ final class AFNoteNetworkTests: XCTestCase {
         /// Given
         let baseUrl = String.baseUrl
         let endPoint = "notes/insert-note"
-        let title = "test title", description = "test title"
+        let title = "test title", description = "test description"
         let statusCode = 404
         let apiInsertNoteResponse = ApiResponse<InsertNoteResponse>(statusCode: statusCode, status: false, message: "", data: nil)
         let dataResult = try JSONEncoder().encode(apiInsertNoteResponse)
