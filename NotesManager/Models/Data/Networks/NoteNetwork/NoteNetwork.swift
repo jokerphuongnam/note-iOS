@@ -14,6 +14,8 @@ protocol NoteNetwork {
     func fetchNotes(page: Int?, limit: Int?, searchWords: String?) -> Single<FetchNotesRequest.Response>
     // MARK: - insert note
     func inserNote(title: String?, description: String?) -> Single<InsertNoteRequest.Response>
+    // MARK: - update note
+    func updateNote(id: String, title: String?, description: String?) -> Single<UpdateNoteRequest.Response>
 }
 
 // MARK: - AFNoteNetwork
@@ -33,5 +35,10 @@ final class AFNoteNetwork: NoteNetwork, BaseAFNetwork {
     // MARK: - insert note
     func inserNote(title: String?, description: String?) -> Single<InsertNoteRequest.Response> {
         rx.send(request: InsertNoteRequest(title: title, description: description))
+    }
+    
+    // MARK: - update note
+    func updateNote(id: String, title: String?, description: String?) -> Single<UpdateNoteRequest.Response> {
+        rx.send(request: UpdateNoteRequest(id: id, title: title, description: description))
     }
 }
