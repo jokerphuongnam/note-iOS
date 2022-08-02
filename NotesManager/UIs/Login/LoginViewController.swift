@@ -17,6 +17,11 @@ class LoginViewController: UIViewController {
         setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        resumeNavigationBar()
+    }
+    
     private func setupView() {
         
     }
