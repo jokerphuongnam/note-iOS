@@ -116,6 +116,9 @@
 		A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
 		A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
 		A8B208C22892BC4A00DC7FA6 /* UserNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B208C12892BC4A00DC7FA6 /* UserNetworkTests.swift */; };
+		A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
+		A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
+		A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
 		B734C077EC7426D133002905 /* Pods_NotesManager_NotesManager_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9722BD69E25D43A6FA4D206E /* Pods_NotesManager_NotesManager_Staging.framework */; };
 		DFD91BB4571CB9E85923B2FF /* Pods_NotesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B13E15988130F218AD1A7 /* Pods_NotesManager.framework */; };
 /* End PBXBuildFile section */
@@ -200,6 +203,7 @@
 		A8B2089828926D9F00DC7FA6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A8B208B22892AE0700DC7FA6 /* NotesManager StagingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NotesManager StagingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B208C12892BC4A00DC7FA6 /* UserNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkTests.swift; sourceTree = "<group>"; };
+		A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Localization.swift"; sourceTree = "<group>"; };
 		AA129073F338D0ED4A26E571 /* Pods-NotesManager.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugprod.xcconfig"; sourceTree = "<group>"; };
 		AE1C38614CF7E8C93AB5537A /* Pods-NotesManager.debugstaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugstaging.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugstaging.xcconfig"; sourceTree = "<group>"; };
 		B2FFD19359E4078179C76A07 /* Pods-NotesManager-NotesManager Staging.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager-NotesManager Staging/Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 				A8B2082728925B0E00DC7FA6 /* String+.swift */,
 				A8B2082A28925B0F00DC7FA6 /* View+.swift */,
 				A8B2082428925B0E00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift */,
+				A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -911,6 +916,7 @@
 				A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8A370C02897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
+				A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8B2084528925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8A7709F288E5A6000F03C5C /* strings.swift in Sources */,
@@ -950,6 +956,7 @@
 				A8B208632892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8A370C12897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
+				A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A770A0288E5A6000F03C5C /* strings.swift in Sources */,
 				A8A539CC289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
@@ -974,6 +981,7 @@
 				A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */,
 				A80A95F12893D4CB00F044D9 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
 				A80A95E22893CCAC00F044D9 /* MockSession.swift in Sources */,
+				A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A80A96012893D52500F044D9 /* ApiResponse.swift in Sources */,
 				A80A95F32893D4CB00F044D9 /* NavigationBar+.swift in Sources */,
 				A80A95EC2893D4CB00F044D9 /* View+.swift in Sources */,
