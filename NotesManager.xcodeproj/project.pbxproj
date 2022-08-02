@@ -11,8 +11,6 @@
 		582D7B6633D8FA261EDC9B0E /* Pods_NotesManager_StagingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABEB919295578665B481999 /* Pods_NotesManager_StagingTests.framework */; };
 		A80A95E22893CCAC00F044D9 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A95E12893CCAC00F044D9 /* MockSession.swift */; };
 		A80A95E42893D45900F044D9 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B20873289267C900DC7FA6 /* UserNetwork.swift */; };
-		A80A95E62893D4A000F044D9 /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A77099288E5A6000F03C5C /* assets.swift */; };
-		A80A95E72893D4A200F044D9 /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7709A288E5A6000F03C5C /* strings.swift */; };
 		A80A95E82893D4A600F044D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB9CC9288E547A00939E9D /* AppDelegate.swift */; };
 		A80A95E92893D4A800F044D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB9CCB288E547A00939E9D /* SceneDelegate.swift */; };
 		A80A95EA2893D4B900F044D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089328926C5E00DC7FA6 /* User.swift */; };
@@ -62,10 +60,6 @@
 		A8A539D1289670A400FE0FB5 /* NoteNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A539D0289670A400FE0FB5 /* NoteNetworkTests.swift */; };
 		A8A77095288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
 		A8A77096288E59E800F03C5C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8A77098288E59E800F03C5C /* Localizable.strings */; };
-		A8A7709B288E5A6000F03C5C /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A77099288E5A6000F03C5C /* assets.swift */; };
-		A8A7709C288E5A6000F03C5C /* assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A77099288E5A6000F03C5C /* assets.swift */; };
-		A8A7709F288E5A6000F03C5C /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7709A288E5A6000F03C5C /* strings.swift */; };
-		A8A770A0288E5A6000F03C5C /* strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A7709A288E5A6000F03C5C /* strings.swift */; };
 		A8AB9CCA288E547A00939E9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB9CC9288E547A00939E9D /* AppDelegate.swift */; };
 		A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB9CCB288E547A00939E9D /* SceneDelegate.swift */; };
 		A8AB9CD3288E547B00939E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8AB9CD2288E547B00939E9D /* Assets.xcassets */; };
@@ -131,6 +125,30 @@
 		A8F25FF22898C87000FEAF22 /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FF12898C87000FEAF22 /* BaseNavigationBar.swift */; };
 		A8F25FF32898C87000FEAF22 /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FF12898C87000FEAF22 /* BaseNavigationBar.swift */; };
 		A8F25FF42898C87000FEAF22 /* BaseNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FF12898C87000FEAF22 /* BaseNavigationBar.swift */; };
+		A8F25FFA2898DC1100FEAF22 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FF82898DC1100FEAF22 /* RegisterViewController.swift */; };
+		A8F25FFB2898DC1100FEAF22 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FF82898DC1100FEAF22 /* RegisterViewController.swift */; };
+		A8F25FFC2898DC1100FEAF22 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FF82898DC1100FEAF22 /* RegisterViewController.swift */; };
+		A8F25FFD2898DC1100FEAF22 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8F25FF92898DC1100FEAF22 /* RegisterViewController.xib */; };
+		A8F25FFE2898DC1100FEAF22 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8F25FF92898DC1100FEAF22 /* RegisterViewController.xib */; };
+		A8F25FFF2898DC1100FEAF22 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8F25FF92898DC1100FEAF22 /* RegisterViewController.xib */; };
+		A8F260012898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260002898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift */; };
+		A8F260022898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260002898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift */; };
+		A8F260032898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260002898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift */; };
+		A8F260052898F70F00FEAF22 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F260042898F70F00FEAF22 /* Colors.xcassets */; };
+		A8F260062898F70F00FEAF22 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F260042898F70F00FEAF22 /* Colors.xcassets */; };
+		A8F260072898F70F00FEAF22 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8F260042898F70F00FEAF22 /* Colors.xcassets */; };
+		A8F2600C2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260082898FA2C00FEAF22 /* IB-Segues+Generated.swift */; };
+		A8F2600D2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260082898FA2C00FEAF22 /* IB-Segues+Generated.swift */; };
+		A8F2600E2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260082898FA2C00FEAF22 /* IB-Segues+Generated.swift */; };
+		A8F2600F2898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260092898FA2C00FEAF22 /* XCAssets+Generated.swift */; };
+		A8F260102898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260092898FA2C00FEAF22 /* XCAssets+Generated.swift */; };
+		A8F260112898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F260092898FA2C00FEAF22 /* XCAssets+Generated.swift */; };
+		A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600A2898FA2C00FEAF22 /* IB-Scenes+Generated.swift */; };
+		A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600A2898FA2C00FEAF22 /* IB-Scenes+Generated.swift */; };
+		A8F260142898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600A2898FA2C00FEAF22 /* IB-Scenes+Generated.swift */; };
+		A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
+		A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
+		A8F260172898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
 		B734C077EC7426D133002905 /* Pods_NotesManager_NotesManager_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9722BD69E25D43A6FA4D206E /* Pods_NotesManager_NotesManager_Staging.framework */; };
 		DFD91BB4571CB9E85923B2FF /* Pods_NotesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B13E15988130F218AD1A7 /* Pods_NotesManager.framework */; };
 /* End PBXBuildFile section */
@@ -181,8 +199,6 @@
 		A8A539CA289668DC00FE0FB5 /* ChangePassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassword.swift; sourceTree = "<group>"; };
 		A8A539D0289670A400FE0FB5 /* NoteNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteNetworkTests.swift; sourceTree = "<group>"; };
 		A8A77097288E59E800F03C5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A8A77099288E5A6000F03C5C /* assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assets.swift; sourceTree = "<group>"; };
-		A8A7709A288E5A6000F03C5C /* strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = strings.swift; sourceTree = "<group>"; };
 		A8AB9CC6288E547A00939E9D /* NotesManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotesManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8AB9CC9288E547A00939E9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8AB9CCB288E547A00939E9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -220,6 +236,14 @@
 		A8F25FE52898C80000FEAF22 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		A8F25FED2898C85800FEAF22 /* LoginViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		A8F25FF12898C87000FEAF22 /* BaseNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BaseNavigationBar.swift; path = NotesManager/UIs/Base/BaseNavigationBar.swift; sourceTree = SOURCE_ROOT; };
+		A8F25FF82898DC1100FEAF22 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		A8F25FF92898DC1100FEAF22 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		A8F260002898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		A8F260042898F70F00FEAF22 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A8F260082898FA2C00FEAF22 /* IB-Segues+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Segues+Generated.swift"; sourceTree = "<group>"; };
+		A8F260092898FA2C00FEAF22 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
+		A8F2600A2898FA2C00FEAF22 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
+		A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
 		AA129073F338D0ED4A26E571 /* Pods-NotesManager.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugprod.xcconfig"; sourceTree = "<group>"; };
 		AE1C38614CF7E8C93AB5537A /* Pods-NotesManager.debugstaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugstaging.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugstaging.xcconfig"; sourceTree = "<group>"; };
 		B2FFD19359E4078179C76A07 /* Pods-NotesManager-NotesManager Staging.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager-NotesManager Staging/Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -379,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				A8AB9CD2288E547B00939E9D /* Assets.xcassets */,
+				A8F260042898F70F00FEAF22 /* Colors.xcassets */,
 				A8A77098288E59E800F03C5C /* Localizable.strings */,
 			);
 			path = Resources;
@@ -405,6 +430,7 @@
 				A8F25FF52898C87B00FEAF22 /* Base */,
 				A8AB9D02288E555E00939E9D /* Lauch */,
 				A8F25FEC2898C80600FEAF22 /* Login */,
+				A8F25FF72898DBD900FEAF22 /* Register */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
@@ -436,8 +462,10 @@
 		A8AB9D24288E58AE00939E9D /* SwiftGen */ = {
 			isa = PBXGroup;
 			children = (
-				A8A77099288E5A6000F03C5C /* assets.swift */,
-				A8A7709A288E5A6000F03C5C /* strings.swift */,
+				A8F2600A2898FA2C00FEAF22 /* IB-Scenes+Generated.swift */,
+				A8F260082898FA2C00FEAF22 /* IB-Segues+Generated.swift */,
+				A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */,
+				A8F260092898FA2C00FEAF22 /* XCAssets+Generated.swift */,
 			);
 			path = SwiftGen;
 			sourceTree = "<group>";
@@ -589,6 +617,16 @@
 			path = Controls;
 			sourceTree = "<group>";
 		};
+		A8F25FF72898DBD900FEAF22 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				A8F25FF82898DC1100FEAF22 /* RegisterViewController.swift */,
+				A8F25FF92898DC1100FEAF22 /* RegisterViewController.xib */,
+				A8F260002898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -703,6 +741,8 @@
 				A8B208522892631400DC7FA6 /* Prod.xcconfig in Resources */,
 				A8A77095288E59E800F03C5C /* Localizable.strings in Resources */,
 				A8AB9CD3288E547B00939E9D /* Assets.xcassets in Resources */,
+				A8F25FFD2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
+				A8F260052898F70F00FEAF22 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,6 +755,8 @@
 				A8AB9D0B288E561300939E9D /* LaunchScreen.storyboard in Resources */,
 				A8A77096288E59E800F03C5C /* Localizable.strings in Resources */,
 				A8AB9D0C288E561300939E9D /* Assets.xcassets in Resources */,
+				A8F25FFE2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
+				A8F260062898F70F00FEAF22 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,7 +764,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8F260072898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8F25FEB2898C80000FEAF22 /* LoginViewController.xib in Resources */,
+				A8F25FFF2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -862,7 +906,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Pods/SwiftGen/bin/swiftgen\n";
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
 		};
 		A8AB9D25288E58D200939E9D /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -880,7 +924,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "Pods/SwiftGen/bin/swiftgen\n";
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
 		};
 		A8B208202892543000DC7FA6 /* XCConfig Create */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -926,7 +970,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B2088D2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */,
-				A8A7709B288E5A6000F03C5C /* assets.swift in Sources */,
 				A8B208672892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
 				A8B20879289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
 				A80A96052893EC8200F044D9 /* Register.swift in Sources */,
@@ -937,10 +980,12 @@
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A8F25FF22898C87000FEAF22 /* BaseNavigationBar.swift in Sources */,
 				A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */,
+				A8F2600F2898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A8B208882892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2083128925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8B2086C2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
+				A8F25FFA2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2083928925B0F00DC7FA6 /* String+.swift in Sources */,
 				A8B2084928925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8B2087E2892681600DC7FA6 /* UserNetwork+Rx.swift in Sources */,
@@ -949,14 +994,17 @@
 				A8A370C02897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8F25FEE2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
+				A8F260012898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
 				A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8B2084528925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
-				A8A7709F288E5A6000F03C5C /* strings.swift in Sources */,
+				A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
+				A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
 				A8B2083528925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8A370B82897CC79004E94F0 /* UpdateNote.swift in Sources */,
+				A8F2600C2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */,
 				A8F25FE62898C80000FEAF22 /* LoginViewController.swift in Sources */,
 				A8B2084D28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A8B2082D28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
@@ -969,7 +1017,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B2088E2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */,
-				A8A7709C288E5A6000F03C5C /* assets.swift in Sources */,
 				A8B208682892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
 				A8B2087A289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
 				A80A96062893EC8200F044D9 /* Register.swift in Sources */,
@@ -980,10 +1027,12 @@
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8F25FF32898C87000FEAF22 /* BaseNavigationBar.swift in Sources */,
 				A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */,
+				A8F260102898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A8B2083228925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2086D2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
 				A8B2083A28925B0F00DC7FA6 /* String+.swift in Sources */,
+				A8F25FFB2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8B2087F2892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8AB9D06288E561300939E9D /* AppDelegate.swift in Sources */,
@@ -992,14 +1041,17 @@
 				A8A370C12897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8F25FEF2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
+				A8F260022898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
 				A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */,
-				A8A770A0288E5A6000F03C5C /* strings.swift in Sources */,
 				A8A539CC289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
+				A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
+				A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
 				A8B2083628925B0F00DC7FA6 /* MoveXError.swift in Sources */,
 				A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8A370B92897CC79004E94F0 /* UpdateNote.swift in Sources */,
+				A8F2600D2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */,
 				A8F25FE72898C80000FEAF22 /* LoginViewController.swift in Sources */,
 				A80A95E42893D45900F044D9 /* UserNetwork.swift in Sources */,
 				A8B2082E28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
@@ -1013,17 +1065,18 @@
 			files = (
 				A8F25FF02898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A80A95E82893D4A600F044D9 /* AppDelegate.swift in Sources */,
-				A80A95E62893D4A000F044D9 /* assets.swift in Sources */,
 				A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A80A95E92893D4A800F044D9 /* SceneDelegate.swift in Sources */,
 				A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */,
 				A80A95F12893D4CB00F044D9 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
+				A8F260112898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A80A95E22893CCAC00F044D9 /* MockSession.swift in Sources */,
 				A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A80A96012893D52500F044D9 /* ApiResponse.swift in Sources */,
 				A80A95F32893D4CB00F044D9 /* NavigationBar+.swift in Sources */,
+				A8F2600E2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */,
+				A8F25FFC2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A80A95EC2893D4CB00F044D9 /* View+.swift in Sources */,
-				A80A95E72893D4A200F044D9 /* strings.swift in Sources */,
 				A80A95EA2893D4B900F044D9 /* User.swift in Sources */,
 				A80A95FF2893D4DC00F044D9 /* UserNetworkRequest.swift in Sources */,
 				A80A96072893EC8200F044D9 /* Register.swift in Sources */,
@@ -1049,7 +1102,10 @@
 				A80A95EB2893D4BF00F044D9 /* Login.swift in Sources */,
 				A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A84F1B972897849A005683EB /* FetchNotes.swift in Sources */,
+				A8F260032898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
 				A8B208C22892BC4A00DC7FA6 /* UserNetworkTests.swift in Sources */,
+				A8F260172898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
+				A8F260142898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,8 +20,12 @@ class LoginViewController: UIViewController {
     private func setupView() {
         
     }
+    
     @IBAction func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
+        let registerViewController = RegisterViewController()
+        navigationController?.pushViewController(registerViewController, animated: true)
     }
+    
     @IBAction func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
     }
 }
