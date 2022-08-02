@@ -5,3 +5,9 @@
   Created by pnam on 25/07/2022.
   
 */
+
+"login" = "Login";
+"email" = "Email";
+"password" = "Password";
+"register" = "Register";
+"login" = "Login";
