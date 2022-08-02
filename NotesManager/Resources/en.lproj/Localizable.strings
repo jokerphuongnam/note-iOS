@@ -11,4 +11,4 @@
 "password" = "Password";
 "register" = "Register";
 "login" = "Login";
-"register" = "Register";
+"repeat_password" = "Repeat password";

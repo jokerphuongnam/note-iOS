@@ -9,10 +9,16 @@
 
 extension LoginViewController: BaseNavigationBar {
     func setupNavigationBar() {
-        setupTitle()
+        
     }
     
-    private func setupTitle() {
+    func resumeNavigationBar() {
+        setupNavigationBar()
+    }
+    
+    private func setupSimpleNavigationBar() {
         title = Strings.login
+        navigationController?.navigationBar.update(backroundColor: Asset.Colors.main.color)
+        navigationController?.navigationBar.removeBottomShadow()
     }
 }

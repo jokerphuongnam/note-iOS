@@ -9,4 +9,5 @@
 
 protocol BaseNavigationBar {
     func setupNavigationBar()
+    func resumeNavigationBar()
 }

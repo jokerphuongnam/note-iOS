@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		34AA50D684E21FA8F249F6D6 /* Pods_NotesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B13E15988130F218AD1A7 /* Pods_NotesManager.framework */; };
 		582D7B6633D8FA261EDC9B0E /* Pods_NotesManager_StagingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ABEB919295578665B481999 /* Pods_NotesManager_StagingTests.framework */; };
 		A80A95E22893CCAC00F044D9 /* MockSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A95E12893CCAC00F044D9 /* MockSession.swift */; };
 		A80A95E42893D45900F044D9 /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B20873289267C900DC7FA6 /* UserNetwork.swift */; };
@@ -68,7 +67,6 @@
 		A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AB9CCB288E547A00939E9D /* SceneDelegate.swift */; };
 		A8AB9D0B288E561300939E9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AB9CD4288E547B00939E9D /* LaunchScreen.storyboard */; };
 		A8AB9D0C288E561300939E9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8AB9CD2288E547B00939E9D /* Assets.xcassets */; };
-		A8B2081F2892534F00DC7FA6 /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A8B2081E2892534F00DC7FA6 /* Staging.xcconfig */; };
 		A8B2082D28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082428925B0E00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift */; };
 		A8B2082E28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082428925B0E00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift */; };
 		A8B2083128925B0F00DC7FA6 /* NavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082528925B0E00DC7FA6 /* NavigationBar+.swift */; };
@@ -85,7 +83,6 @@
 		A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082B28925B0F00DC7FA6 /* KeyboardManagerment.swift */; };
 		A8B2084D28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082C28925B0F00DC7FA6 /* Font+Constraint.swift */; };
 		A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082C28925B0F00DC7FA6 /* Font+Constraint.swift */; };
-		A8B208522892631400DC7FA6 /* Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A8B208512892631400DC7FA6 /* Prod.xcconfig */; };
 		A8B2085D2892675500DC7FA6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2085C2892675500DC7FA6 /* Request.swift */; };
 		A8B2085E2892675500DC7FA6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2085C2892675500DC7FA6 /* Request.swift */; };
 		A8B208622892676000DC7FA6 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B208612892676000DC7FA6 /* ApiError.swift */; };
@@ -257,7 +254,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFD91BB4571CB9E85923B2FF /* Pods_NotesManager.framework in Frameworks */,
-				34AA50D684E21FA8F249F6D6 /* Pods_NotesManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,7 +734,6 @@
 			files = (
 				A8F25FE92898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9CD6288E547B00939E9D /* LaunchScreen.storyboard in Resources */,
-				A8B208522892631400DC7FA6 /* Prod.xcconfig in Resources */,
 				A8A77095288E59E800F03C5C /* Localizable.strings in Resources */,
 				A8AB9CD3288E547B00939E9D /* Assets.xcassets in Resources */,
 				A8F25FFD2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
@@ -751,7 +746,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F25FEA2898C80000FEAF22 /* LoginViewController.xib in Resources */,
-				A8B2081F2892534F00DC7FA6 /* Staging.xcconfig in Resources */,
 				A8AB9D0B288E561300939E9D /* LaunchScreen.storyboard in Resources */,
 				A8A77096288E59E800F03C5C /* Localizable.strings in Resources */,
 				A8AB9D0C288E561300939E9D /* Assets.xcassets in Resources */,

@@ -9,10 +9,16 @@
 
 extension RegisterViewController: BaseNavigationBar {
     func setupNavigationBar() {
-        setupTitle()
+        
     }
     
-    func setupTitle() {
-        title = Strings.register
+    func resumeNavigationBar() {
+        setupNavigationBar()
+    }
+    
+    private func setupSimpleNavigationBar() {
+        title = Strings.login
+        navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color)
+        navigationController?.navigationBar.removeBottomShadow()
     }
 }
