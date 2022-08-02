@@ -5,7 +5,7 @@
 //  Created by pnam on 25/07/2022.
 //
 
-import UIKit
+@_implementationOnly import UIKit
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
