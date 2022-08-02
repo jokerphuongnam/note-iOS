@@ -13,7 +13,7 @@ extension UILabel {
             text = NSLocalizedString(value, comment: "")
         }
         get {
-            return ""
+            text ?? ""
         }
     }
 }
@@ -24,7 +24,7 @@ extension UIButton {
             setTitle(NSLocalizedString(value, comment: ""), for: .normal)
         }
         get {
-            return ""
+            titleLabel?.text ?? ""
         }
     }
 }
@@ -35,17 +35,16 @@ extension UITextField {
             placeholder = NSLocalizedString(value, comment: "")
         }
         get {
-            return ""
+            placeholder ?? ""
         }
     }
     
     @IBInspectable var localizeText: String {
         set(value) {
             text = NSLocalizedString(value, comment: "")
-            L10n
         }
         get {
-            return ""
+            text ?? ""
         }
     }
 }
