@@ -14,6 +14,8 @@ def notesManager
   pod 'SwinjectAutoregistration', '~> 2.7.0'
   # Alamofire
   pod 'Alamofire', '~> 5.5.0'
+  # Hero
+  pod 'Hero'
 end
 
 target 'NotesManager' do
