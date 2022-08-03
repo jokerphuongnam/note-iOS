@@ -1,36 +1,34 @@
 //
 //  MoveTextField.swift
-//  MoveX
+//  NotesManager
 //
-//  Created by pnam on 17/07/2022.
+//  Created by pnam on 02/08/2022.
 //
 
 @_implementationOnly import UIKit
 
-#if targetEnvironment(simulator)
-#else
 final class KeyboardManagerment {
     private typealias TextFields = [UITextField]
     private var textFields: TextFields
     private weak var scrollView: UIScrollView!
     private weak var viewController: UIViewController!
     
-    init(viewController: UIViewController ,scrollView: UIScrollView, textField: UITextField...) {
+    init(viewController: UIViewController, scrollView: UIScrollView, textField: UITextField...) {
         self.scrollView = scrollView
         self.textFields = textField
         self.viewController = viewController
         
         if !textField.isEmpty {
-            NotificationCenter.default.addObserver(viewController, selector: #selector(onKeyboardAppear(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
-            NotificationCenter.default.addObserver(viewController, selector: #selector(onKeyboardDisappear(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardAppear(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+            NotificationCenter.default.addObserver(self, selector: #selector(onKeyboardDisappear(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
         }
     }
     
     
     deinit {
         if !textFields.isEmpty {
-            NotificationCenter.default.removeObserver(viewController ?? self, name: UIResponder.keyboardDidShowNotification, object: nil)
-            NotificationCenter.default.removeObserver(viewController ?? self, name: UIResponder.keyboardDidHideNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
             textFields.removeAll()
         }
         scrollView = nil
@@ -65,4 +63,3 @@ final class KeyboardManagerment {
         scrollView.scrollIndicatorInsets = UIEdgeInsets.zero
     }
 }
-#endif

@@ -1,8 +1,8 @@
 //
 //  ViewController+HideKeyboardWhenTapView.swift
-//  MoveX
+//  NotesManager
 //
-//  Created by pnam on 17/07/2022.
+//  Created by pnam on 02/08/2022.
 //
 
 @_implementationOnly import UIKit

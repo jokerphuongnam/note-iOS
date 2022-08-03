@@ -20,8 +20,8 @@ extension UILabel {
 
 extension UIButton {
     @IBInspectable var localizeTitle: String {
-        set(value) {
-            setTitle(NSLocalizedString(value, comment: ""), for: .normal)
+        set {
+            setTitle(NSLocalizedString(newValue, comment: ""), for: .normal)
         }
         get {
             titleLabel?.text ?? ""
@@ -31,8 +31,8 @@ extension UIButton {
 
 extension UITextField {
     @IBInspectable var localizePlaceholder: String {
-        set(value) {
-            placeholder = NSLocalizedString(value, comment: "")
+        set {
+            placeholder = NSLocalizedString(newValue, comment: "")
         }
         get {
             placeholder ?? ""
@@ -40,8 +40,8 @@ extension UITextField {
     }
     
     @IBInspectable var localizeText: String {
-        set(value) {
-            text = NSLocalizedString(value, comment: "")
+        set {
+            text = NSLocalizedString(newValue, comment: "")
         }
         get {
             text ?? ""

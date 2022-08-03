@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="NotesManager" customModuleProvider="target">
             <connections>
+                <outlet property="emailTextField" destination="CMc-zn-7f3" id="AYp-4F-kls"/>
+                <outlet property="passwordTextField" destination="Q4k-dE-hfJ" id="eLQ-B6-DB6"/>
+                <outlet property="registerButton" destination="W7b-wc-KGT" id="dc2-d4-9BN"/>
+                <outlet property="repeatPasswordTextField" destination="Qli-3N-RYB" id="wKD-oE-9WY"/>
+                <outlet property="scrollView" destination="nCs-J5-O2V" id="Bkf-TX-3ER"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -131,6 +136,9 @@
                                             <real key="value" value="1"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="registerAction:forEvent:" destination="-1" eventType="touchUpInside" id="Pdh-4t-ySl"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

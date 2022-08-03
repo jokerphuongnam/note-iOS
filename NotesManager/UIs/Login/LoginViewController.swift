@@ -8,8 +8,12 @@
 @_implementationOnly import UIKit
 
 class LoginViewController: UIViewController {
+    private var keyboardManager: KeyboardManagerment!
+    @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +24,18 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         resumeNavigationBar()
+        keyboardManager = .init(viewController: self, scrollView: scrollView, textField: emailTextField, passwordTextField)
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        keyboardManager = nil
     }
     
     private func setupView() {
-        
+        emailTextField.becomeFirstResponder()
     }
     
     @IBAction func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
@@ -32,5 +44,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
+        
     }
 }

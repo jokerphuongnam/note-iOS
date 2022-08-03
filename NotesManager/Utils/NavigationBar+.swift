@@ -1,8 +1,8 @@
 //
 //  NavigationBar+.swift
-//  MoveX
+//  NotesManager
 //
-//  Created by pnam on 11/07/2022.
+//  Created by pnam on 02/08/2022.
 //
 
 @_implementationOnly import UIKit
@@ -28,10 +28,5 @@ extension UINavigationBar {
                 titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
             }
         }
-    }
-    
-    func removeBottomShadow() {
-        setBackgroundImage(UIImage(), for: .default)
-        shadowImage = UIImage()
     }
 }
