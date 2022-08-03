@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "post-it-3.svg",
+      "filename" : "eye-1x.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "post-it-1.svg",
+      "filename" : "eye-2x.svg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "post-it-2.svg",
+      "filename" : "eye-3x.svg",
       "idiom" : "universal",
       "scale" : "3x"
     }

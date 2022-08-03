@@ -327,6 +327,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A816B137289A2942003793FB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		A84F1B932897848C005683EB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -435,6 +442,7 @@
 				A8AB9D02288E555E00939E9D /* Lauch */,
 				A8F25FEC2898C80600FEAF22 /* Login */,
 				A8F25FF72898DBD900FEAF22 /* Register */,
+				A816B137289A2942003793FB /* Main */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
