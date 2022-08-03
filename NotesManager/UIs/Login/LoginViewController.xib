@@ -11,7 +11,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="NotesManager" customModuleProvider="target">
             <connections>
                 <outlet property="emailTextField" destination="Gld-MX-1nx" id="NKe-fj-Zfp"/>
+                <outlet property="loginButton" destination="aE1-6b-aVm" id="L4x-GM-pcd"/>
                 <outlet property="passwordTextField" destination="kmM-Lg-q08" id="pK8-eQ-fPw"/>
+                <outlet property="registerButton" destination="yFC-Lc-Apb" id="pbf-r9-hWn"/>
+                <outlet property="scrollView" destination="PNv-YH-R3z" id="eoY-JD-8B5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -49,7 +52,7 @@
                                             <color key="tintColor" name="Main"/>
                                             <color key="textColor" name="Text"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="email"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPoints">
                                                     <real key="value" value="16"/>
@@ -82,7 +85,7 @@
                                             <color key="tintColor" name="Main"/>
                                             <color key="textColor" name="Text"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES" textContentType="password"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPoints">
                                                     <real key="value" value="16"/>
@@ -121,7 +124,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
-                                                <action selector="registerAction:forEvent:" destination="-1" eventType="touchUpInside" id="NCy-rn-Zt1"/>
+                                                <action selector="registerAction:forEvent:" destination="-1" eventType="touchUpInside" id="Q5m-xx-QGx"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-6b-aVm" userLabel="Login">

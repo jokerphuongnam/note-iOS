@@ -13,12 +13,15 @@ extension LoginViewController: BaseNavigationBar {
     }
     
     func resumeNavigationBar() {
-        setupNavigationBar()
+        setupSimpleNavigationBar()
     }
     
     private func setupSimpleNavigationBar() {
         title = Strings.login
         navigationController?.navigationBar.update(backroundColor: Asset.Colors.main.color)
-        navigationController?.navigationBar.removeBottomShadow()
+        navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
+        if let font: UIFont = .helveticalNeueBoldItalic(size: 17) {
+            navigationController?.navigationBar.titleTextAttributes = [.font: font]
+        }
     }
 }

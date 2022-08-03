@@ -1,8 +1,8 @@
 //
 //  String+.swift
-//  MoveX
+//  NotesManager
 //
-//  Created by pnam on 11/07/2022.
+//  Created by pnam on 02/08/2022.
 //
 
 import Foundation

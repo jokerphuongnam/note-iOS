@@ -1,8 +1,8 @@
 //
-//  File.swift
-//  MoveX
+//  Font+Constant.swift
+//  NotesManager
 //
-//  Created by pnam on 16/07/2022.
+//  Created by pnam on 02/08/2022.
 //
 
 @_implementationOnly import UIKit

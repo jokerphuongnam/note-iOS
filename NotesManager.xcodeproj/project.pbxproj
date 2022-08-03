@@ -17,10 +17,9 @@
 		A80A95EC2893D4CB00F044D9 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082A28925B0F00DC7FA6 /* View+.swift */; };
 		A80A95ED2893D4CB00F044D9 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082928925B0F00DC7FA6 /* Color+.swift */; };
 		A80A95EE2893D4CB00F044D9 /* KeyboardManagerment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082B28925B0F00DC7FA6 /* KeyboardManagerment.swift */; };
-		A80A95EF2893D4CB00F044D9 /* MoveXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082628925B0E00DC7FA6 /* MoveXError.swift */; };
+		A80A95EF2893D4CB00F044D9 /* NoteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082628925B0E00DC7FA6 /* NoteError.swift */; };
 		A80A95F02893D4CB00F044D9 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082728925B0E00DC7FA6 /* String+.swift */; };
 		A80A95F12893D4CB00F044D9 /* ViewController+HideKeyboardWhenTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082428925B0E00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift */; };
-		A80A95F22893D4CB00F044D9 /* Font+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082C28925B0F00DC7FA6 /* Font+Constraint.swift */; };
 		A80A95F32893D4CB00F044D9 /* NavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082528925B0E00DC7FA6 /* NavigationBar+.swift */; };
 		A80A95F62893D4CF00F044D9 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B208612892676000DC7FA6 /* ApiError.swift */; };
 		A80A95F72893D4CF00F044D9 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2085C2892675500DC7FA6 /* Request.swift */; };
@@ -71,8 +70,8 @@
 		A8B2082E28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082428925B0E00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift */; };
 		A8B2083128925B0F00DC7FA6 /* NavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082528925B0E00DC7FA6 /* NavigationBar+.swift */; };
 		A8B2083228925B0F00DC7FA6 /* NavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082528925B0E00DC7FA6 /* NavigationBar+.swift */; };
-		A8B2083528925B0F00DC7FA6 /* MoveXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082628925B0E00DC7FA6 /* MoveXError.swift */; };
-		A8B2083628925B0F00DC7FA6 /* MoveXError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082628925B0E00DC7FA6 /* MoveXError.swift */; };
+		A8B2083528925B0F00DC7FA6 /* NoteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082628925B0E00DC7FA6 /* NoteError.swift */; };
+		A8B2083628925B0F00DC7FA6 /* NoteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082628925B0E00DC7FA6 /* NoteError.swift */; };
 		A8B2083928925B0F00DC7FA6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082728925B0E00DC7FA6 /* String+.swift */; };
 		A8B2083A28925B0F00DC7FA6 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082728925B0E00DC7FA6 /* String+.swift */; };
 		A8B2084128925B0F00DC7FA6 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082928925B0F00DC7FA6 /* Color+.swift */; };
@@ -81,8 +80,6 @@
 		A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082A28925B0F00DC7FA6 /* View+.swift */; };
 		A8B2084928925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082B28925B0F00DC7FA6 /* KeyboardManagerment.swift */; };
 		A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082B28925B0F00DC7FA6 /* KeyboardManagerment.swift */; };
-		A8B2084D28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082C28925B0F00DC7FA6 /* Font+Constraint.swift */; };
-		A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2082C28925B0F00DC7FA6 /* Font+Constraint.swift */; };
 		A8B2085D2892675500DC7FA6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2085C2892675500DC7FA6 /* Request.swift */; };
 		A8B2085E2892675500DC7FA6 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2085C2892675500DC7FA6 /* Request.swift */; };
 		A8B208622892676000DC7FA6 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B208612892676000DC7FA6 /* ApiError.swift */; };
@@ -107,6 +104,15 @@
 		A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
 		A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B2089828926D9F00DC7FA6 /* Login.swift */; };
 		A8B208C22892BC4A00DC7FA6 /* UserNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B208C12892BC4A00DC7FA6 /* UserNetworkTests.swift */; };
+		A8C7876828991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */; };
+		A8C7876928991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */; };
+		A8C7876A28991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */; };
+		A8C7876C2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */; };
+		A8C7876D2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */; };
+		A8C7876E2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */; };
+		A8C78770289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
+		A8C78771289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
+		A8C78772289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
 		A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
 		A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
 		A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
@@ -207,12 +213,11 @@
 		A8B2081E2892534F00DC7FA6 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
 		A8B2082428925B0E00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+HideKeyboardWhenTapView.swift"; sourceTree = "<group>"; };
 		A8B2082528925B0E00DC7FA6 /* NavigationBar+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NavigationBar+.swift"; sourceTree = "<group>"; };
-		A8B2082628925B0E00DC7FA6 /* MoveXError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveXError.swift; sourceTree = "<group>"; };
+		A8B2082628925B0E00DC7FA6 /* NoteError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteError.swift; sourceTree = "<group>"; };
 		A8B2082728925B0E00DC7FA6 /* String+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		A8B2082928925B0F00DC7FA6 /* Color+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		A8B2082A28925B0F00DC7FA6 /* View+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		A8B2082B28925B0F00DC7FA6 /* KeyboardManagerment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardManagerment.swift; sourceTree = "<group>"; };
-		A8B2082C28925B0F00DC7FA6 /* Font+Constraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Font+Constraint.swift"; sourceTree = "<group>"; };
 		A8B208512892631400DC7FA6 /* Prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Prod.xcconfig; sourceTree = "<group>"; };
 		A8B2085C2892675500DC7FA6 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		A8B208612892676000DC7FA6 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -228,6 +233,9 @@
 		A8B2089828926D9F00DC7FA6 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		A8B208B22892AE0700DC7FA6 /* NotesManager StagingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NotesManager StagingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8B208C12892BC4A00DC7FA6 /* UserNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetworkTests.swift; sourceTree = "<group>"; };
+		A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
+		A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+VIewDelegate.swift"; sourceTree = "<group>"; };
+		A8C7876F289922B90080D31E /* Font+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Constant.swift"; sourceTree = "<group>"; };
 		A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Localization.swift"; sourceTree = "<group>"; };
 		A8F25FE42898C80000FEAF22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8F25FE52898C80000FEAF22 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -435,14 +443,14 @@
 			isa = PBXGroup;
 			children = (
 				A8B2082928925B0F00DC7FA6 /* Color+.swift */,
-				A8B2082C28925B0F00DC7FA6 /* Font+Constraint.swift */,
 				A8B2082B28925B0F00DC7FA6 /* KeyboardManagerment.swift */,
-				A8B2082628925B0E00DC7FA6 /* MoveXError.swift */,
+				A8B2082628925B0E00DC7FA6 /* NoteError.swift */,
 				A8B2082528925B0E00DC7FA6 /* NavigationBar+.swift */,
 				A8B2082728925B0E00DC7FA6 /* String+.swift */,
 				A8B2082A28925B0F00DC7FA6 /* View+.swift */,
 				A8B2082428925B0E00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift */,
 				A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */,
+				A8C7876F289922B90080D31E /* Font+Constant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -594,6 +602,7 @@
 				A8F25FE42898C80000FEAF22 /* LoginViewController.swift */,
 				A8F25FE52898C80000FEAF22 /* LoginViewController.xib */,
 				A8F25FED2898C85800FEAF22 /* LoginViewController+NavigationBar.swift */,
+				A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -619,6 +628,7 @@
 				A8F25FF82898DC1100FEAF22 /* RegisterViewController.swift */,
 				A8F25FF92898DC1100FEAF22 /* RegisterViewController.xib */,
 				A8F260002898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift */,
+				A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -982,8 +992,10 @@
 				A8F25FFA2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2083928925B0F00DC7FA6 /* String+.swift in Sources */,
 				A8B2084928925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
+				A8C7876828991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
 				A8B2087E2892681600DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8AB9CCA288E547A00939E9D /* AppDelegate.swift in Sources */,
+				A8C7876C2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8A370C02897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8F25FEE2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
@@ -995,12 +1007,12 @@
 				A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
-				A8B2083528925B0F00DC7FA6 /* MoveXError.swift in Sources */,
+				A8B2083528925B0F00DC7FA6 /* NoteError.swift in Sources */,
 				A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */,
+				A8C78770289922B90080D31E /* Font+Constant.swift in Sources */,
 				A8A370B82897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A8F2600C2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */,
 				A8F25FE62898C80000FEAF22 /* LoginViewController.swift in Sources */,
-				A8B2084D28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
 				A8B2082D28925B0F00DC7FA6 /* ViewController+HideKeyboardWhenTapView.swift in Sources */,
 				A8B2089428926C5E00DC7FA6 /* User.swift in Sources */,
 			);
@@ -1029,8 +1041,10 @@
 				A8F25FFB2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8B2087F2892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
+				A8C7876928991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
 				A8AB9D06288E561300939E9D /* AppDelegate.swift in Sources */,
 				A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */,
+				A8C7876D2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8B208632892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8A370C12897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8F25FEF2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
@@ -1041,10 +1055,10 @@
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
-				A8B2083628925B0F00DC7FA6 /* MoveXError.swift in Sources */,
-				A8B2084E28925B0F00DC7FA6 /* Font+Constraint.swift in Sources */,
+				A8B2083628925B0F00DC7FA6 /* NoteError.swift in Sources */,
 				A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8A370B92897CC79004E94F0 /* UpdateNote.swift in Sources */,
+				A8C78771289922B90080D31E /* Font+Constant.swift in Sources */,
 				A8F2600D2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */,
 				A8F25FE72898C80000FEAF22 /* LoginViewController.swift in Sources */,
 				A80A95E42893D45900F044D9 /* UserNetwork.swift in Sources */,
@@ -1083,17 +1097,19 @@
 				A80A95F92893D4D500F044D9 /* NoteNetwork+Rx.swift in Sources */,
 				A8A370B62897C055004E94F0 /* InsertNote.swift in Sources */,
 				A80A95EE2893D4CB00F044D9 /* KeyboardManagerment.swift in Sources */,
-				A80A95F22893D4CB00F044D9 /* Font+Constraint.swift in Sources */,
 				A8F25FE82898C80000FEAF22 /* LoginViewController.swift in Sources */,
-				A80A95EF2893D4CB00F044D9 /* MoveXError.swift in Sources */,
+				A80A95EF2893D4CB00F044D9 /* NoteError.swift in Sources */,
 				A80A95ED2893D4CB00F044D9 /* Color+.swift in Sources */,
 				A8A539CD289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
+				A8C78772289922B90080D31E /* Font+Constant.swift in Sources */,
 				A80A95FA2893D4D500F044D9 /* NoteNetworkRequest.swift in Sources */,
 				A80A95FB2893D4D500F044D9 /* NoteNetwork.swift in Sources */,
 				A80A95F72893D4CF00F044D9 /* Request.swift in Sources */,
+				A8C7876E2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8A370C22897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A80A95FE2893D4DC00F044D9 /* UserNetwork.swift in Sources */,
 				A80A95EB2893D4BF00F044D9 /* Login.swift in Sources */,
+				A8C7876A28991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
 				A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A84F1B972897849A005683EB /* FetchNotes.swift in Sources */,
 				A8F260032898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
@@ -1258,6 +1274,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1269,7 +1286,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG PROD";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1286,6 +1303,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1297,7 +1315,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = PROD;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1314,6 +1332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1325,7 +1344,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1341,6 +1360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1352,7 +1372,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1429,6 +1449,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1440,7 +1461,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG STAGING";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1457,6 +1478,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1468,7 +1490,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1540,6 +1562,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1551,7 +1574,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.prod;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = STAGING;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1568,6 +1591,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YZK42MUV9Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NotesManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1579,7 +1603,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.moveX.NotesManager.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pnam.NotesManager.staging;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1648,7 +1672,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.moveX.NotesManager-StagingTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.NotesManager-StagingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1721,7 +1745,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.moveX.NotesManager-StagingTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.NotesManager-StagingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1787,7 +1811,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.moveX.NotesManager-StagingTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.NotesManager-StagingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1854,7 +1878,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.moveX.NotesManager-StagingTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pnam.NotesManager-StagingTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
