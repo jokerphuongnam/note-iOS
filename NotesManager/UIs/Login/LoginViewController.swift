@@ -14,6 +14,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    private lazy var showHideButton: UIButton = { [weak self] in
+        let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let image = (!passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
+        showHideButton.setImage(image, for: .normal)
+        showHideButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
+        showHideButton.contentEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 16)
+        showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return showHideButton
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +45,16 @@ class LoginViewController: UIViewController {
     
     private func setupView() {
         emailTextField.becomeFirstResponder()
+        passwordTextField.rightView = showHideButton
+    }
+}
+
+//MARK: - Action
+extension LoginViewController {
+    @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
+        let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
+        sender.setImage(image, for: .normal)
+        passwordTextField.isSecureTextEntry.toggle()
     }
     
     @IBAction func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
