@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.5.0)
+  - Hero (1.6.1)
   - Kingfisher (7.3.0)
   - Mocker (2.5.5)
   - RxBlocking (6.0.0):
@@ -19,6 +20,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 5.5.0)
+  - Hero
   - Kingfisher (~> 7.0)
   - Mocker (~> 2.5.4)
   - RxBlocking (= 6.0.0)
@@ -32,6 +34,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Hero
     - Kingfisher
     - Mocker
     - RxBlocking
@@ -45,6 +48,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
   Kingfisher: cdb1189a9223b1bc028816bd47c8b8101a58831c
   Mocker: 8c731a8104962f246cadf2b02556218e9edc1390
   RxBlocking: c025b8c6fe08c5b18c039b5b11d41ec413f8a59e
@@ -56,6 +60,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: 80e996264ed47ed33e2e6384db25858068f934b0
+PODFILE CHECKSUM: dc6b3fd012a5b78e8ba1cc17032d6fe500586e45
 
 COCOAPODS: 1.11.2
