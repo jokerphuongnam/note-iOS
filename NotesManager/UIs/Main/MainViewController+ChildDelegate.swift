@@ -10,7 +10,7 @@
 //MARK: - DashboardViewControllerDelegate
 extension MainViewController: DashboardViewControllerDelegate {
     func dashboard(_ viewController: DashboardViewController, viewDidAppear animated: Bool) {
-        navigationItem.rightBarButtonItems = [addButton]
+        
     }
 }
 

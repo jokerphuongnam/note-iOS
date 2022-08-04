@@ -12,10 +12,11 @@ class MainViewController: UIPageViewController {
     fileprivate lazy var _viewControllers: [UIViewController] = [
         { [weak self] in
             let viewController: DashboardViewController
+            let viewModel: DashboardViewModel = DashboardViewModelImpl()
             if let self = self {
-                viewController = DashboardViewController(delegate: self)
+                viewController = DashboardViewController(delegate: self, viewModel: viewModel)
             } else {
-                viewController = DashboardViewController()
+                viewController = DashboardViewController(viewModel: viewModel)
             }
             let navigationController = UINavigationController(rootViewController: viewController)
             return navigationController
@@ -35,12 +36,6 @@ class MainViewController: UIPageViewController {
     override var viewControllers: [UIViewController]? {
         _viewControllers
     }
-    
-    lazy var addButton: UIBarButtonItem = { [weak self] in
-        guard let self = self else { return UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: nil, action: #selector(addAction)) }
-        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addAction))
-        return addButton
-    }()
     
     init() {
         super.init(transitionStyle: .scroll, navigationOrientation: .horizontal, options: [:])
@@ -76,9 +71,7 @@ class MainViewController: UIPageViewController {
 
 // MARK: Action
 extension MainViewController {
-    @objc private func addAction(_ sender: UIBarButtonItem) {
-        
-    }
+    
 }
 
 // MARK: UIPageViewControllerDataSource

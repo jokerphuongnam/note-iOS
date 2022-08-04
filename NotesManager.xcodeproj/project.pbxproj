@@ -43,6 +43,30 @@
 		A8880CDC289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDB289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift */; };
 		A8880CDD289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDB289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift */; };
 		A8880CDE289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDB289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift */; };
+		A8880CE0289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
+		A8880CE1289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
+		A8880CE2289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
+		A8880CE4289BC27600FCDCF0 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CE3289BC27600FCDCF0 /* Note.swift */; };
+		A8880CE5289BC27600FCDCF0 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CE3289BC27600FCDCF0 /* Note.swift */; };
+		A8880CE6289BC27600FCDCF0 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CE3289BC27600FCDCF0 /* Note.swift */; };
+		A8880CE8289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */; };
+		A8880CE9289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */; };
+		A8880CEA289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */; };
+		A8880CEC289BC48300FCDCF0 /* PagingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CEB289BC48300FCDCF0 /* PagingArray.swift */; };
+		A8880CED289BC48300FCDCF0 /* PagingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CEB289BC48300FCDCF0 /* PagingArray.swift */; };
+		A8880CEE289BC48300FCDCF0 /* PagingArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CEB289BC48300FCDCF0 /* PagingArray.swift */; };
+		A8880CF0289BC75800FCDCF0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CEF289BC75800FCDCF0 /* Resource.swift */; };
+		A8880CF1289BC75800FCDCF0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CEF289BC75800FCDCF0 /* Resource.swift */; };
+		A8880CF2289BC75800FCDCF0 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CEF289BC75800FCDCF0 /* Resource.swift */; };
+		A8880CF4289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CF3289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift */; };
+		A8880CF5289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CF3289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift */; };
+		A8880CF6289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CF3289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift */; };
+		A8880CFA289BC8AD00FCDCF0 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CF8289BC8AD00FCDCF0 /* NoteCell.swift */; };
+		A8880CFB289BC8AD00FCDCF0 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CF8289BC8AD00FCDCF0 /* NoteCell.swift */; };
+		A8880CFC289BC8AD00FCDCF0 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CF8289BC8AD00FCDCF0 /* NoteCell.swift */; };
+		A8880CFD289BC8AD00FCDCF0 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8880CF9289BC8AD00FCDCF0 /* NoteCell.xib */; };
+		A8880CFE289BC8AD00FCDCF0 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8880CF9289BC8AD00FCDCF0 /* NoteCell.xib */; };
+		A8880CFF289BC8AD00FCDCF0 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8880CF9289BC8AD00FCDCF0 /* NoteCell.xib */; };
 		A88F2A02289A6F02002DE601 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F2A00289A6F02002DE601 /* MainViewController.swift */; };
 		A88F2A03289A6F02002DE601 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F2A00289A6F02002DE601 /* MainViewController.swift */; };
 		A88F2A04289A6F02002DE601 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F2A00289A6F02002DE601 /* MainViewController.swift */; };
@@ -217,6 +241,14 @@
 		A80A960828941A1400F044D9 /* FetchAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccessToken.swift; sourceTree = "<group>"; };
 		A84F1B942897849A005683EB /* FetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotes.swift; sourceTree = "<group>"; };
 		A8880CDB289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+ChildDelegate.swift"; sourceTree = "<group>"; };
+		A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		A8880CE3289BC27600FCDCF0 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		A8880CEB289BC48300FCDCF0 /* PagingArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingArray.swift; sourceTree = "<group>"; };
+		A8880CEF289BC75800FCDCF0 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		A8880CF3289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		A8880CF8289BC8AD00FCDCF0 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		A8880CF9289BC8AD00FCDCF0 /* NoteCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
 		A88F2A00289A6F02002DE601 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A88F2A01289A6F02002DE601 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A88F2A08289A7958002DE601 /* Window+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Window+.swift"; sourceTree = "<group>"; };
@@ -379,6 +411,15 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		A8880CF7289BC88C00FCDCF0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A8880CF8289BC8AD00FCDCF0 /* NoteCell.swift */,
+				A8880CF9289BC8AD00FCDCF0 /* NoteCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A8A539CF2896706100FE0FB5 /* NoteNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +562,9 @@
 			isa = PBXGroup;
 			children = (
 				A8B2089328926C5E00DC7FA6 /* User.swift */,
+				A8880CE3289BC27600FCDCF0 /* Note.swift */,
+				A8880CEB289BC48300FCDCF0 /* PagingArray.swift */,
+				A8880CEF289BC75800FCDCF0 /* Resource.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -642,7 +686,11 @@
 		A8B4B169289B494500F2E8E1 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				A8880CF7289BC88C00FCDCF0 /* Cells */,
 				A8B4B17F289B4CE400F2E8E1 /* DashboardViewController.swift */,
+				A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */,
+				A8880CF3289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift */,
+				A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -804,6 +852,7 @@
 				A8F25FE92898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9CD6288E547B00939E9D /* LaunchScreen.storyboard in Resources */,
 				A8A77095288E59E800F03C5C /* Localizable.strings in Resources */,
+				A8880CFD289BC8AD00FCDCF0 /* NoteCell.xib in Resources */,
 				A8AB9CD3288E547B00939E9D /* Assets.xcassets in Resources */,
 				A8F25FFD2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
 				A88F2A05289A6F02002DE601 /* MainViewController.xib in Resources */,
@@ -818,6 +867,7 @@
 				A8F25FEA2898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9D0B288E561300939E9D /* LaunchScreen.storyboard in Resources */,
 				A8A77096288E59E800F03C5C /* Localizable.strings in Resources */,
+				A8880CFE289BC8AD00FCDCF0 /* NoteCell.xib in Resources */,
 				A8AB9D0C288E561300939E9D /* Assets.xcassets in Resources */,
 				A8F25FFE2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
 				A88F2A06289A6F02002DE601 /* MainViewController.xib in Resources */,
@@ -829,6 +879,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8880CFF289BC8AD00FCDCF0 /* NoteCell.xib in Resources */,
 				A8F260072898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8F25FEB2898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8F25FFF2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
@@ -1037,9 +1088,11 @@
 			files = (
 				A8B2088D2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */,
 				A8B208672892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
+				A8880CFA289BC8AD00FCDCF0 /* NoteCell.swift in Sources */,
 				A8B20879289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
 				A80A96052893EC8200F044D9 /* Register.swift in Sources */,
 				A8B4B180289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
+				A8880CEC289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085D2892675500DC7FA6 /* Request.swift in Sources */,
 				A8B2084128925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A84F1B952897849A005683EB /* FetchNotes.swift in Sources */,
@@ -1056,6 +1109,7 @@
 				A8B2086C2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
 				A8F25FFA2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2083928925B0F00DC7FA6 /* String+.swift in Sources */,
+				A8880CE0289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
 				A8B4B184289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B2084928925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8C7876828991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
@@ -1063,18 +1117,22 @@
 				A8AB9CCA288E547A00939E9D /* AppDelegate.swift in Sources */,
 				A8C7876C2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */,
+				A8880CF0289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A8A370C02897DF46004E94F0 /* DeleteNote.swift in Sources */,
+				A8880CF4289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,
 				A8F25FEE2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B4B17C289B4AAD00F2E8E1 /* MainViewController+NavigationBar.swift in Sources */,
 				A8880CDC289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8F260012898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A8880CE4289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8B2084528925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
+				A8880CE8289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A8B2083528925B0F00DC7FA6 /* NoteError.swift in Sources */,
 				A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8C78770289922B90080D31E /* Font+Constant.swift in Sources */,
@@ -1092,9 +1150,11 @@
 			files = (
 				A8B2088E2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */,
 				A8B208682892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
+				A8880CFB289BC8AD00FCDCF0 /* NoteCell.swift in Sources */,
 				A8B2087A289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
 				A80A96062893EC8200F044D9 /* Register.swift in Sources */,
 				A8B4B181289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
+				A8880CED289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085E2892675500DC7FA6 /* Request.swift in Sources */,
 				A8B2084228925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A84F1B962897849A005683EB /* FetchNotes.swift in Sources */,
@@ -1111,6 +1171,7 @@
 				A8B2083A28925B0F00DC7FA6 /* String+.swift in Sources */,
 				A8F25FFB2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
+				A8880CE1289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
 				A8B4B185289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B2087F2892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8C7876928991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
@@ -1118,18 +1179,22 @@
 				A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8C7876D2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8B208632892676000DC7FA6 /* ApiError.swift in Sources */,
+				A8880CF1289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A8A370C12897DF46004E94F0 /* DeleteNote.swift in Sources */,
+				A8880CF5289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,
 				A8F25FEF2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B4B17D289B4AAD00F2E8E1 /* MainViewController+NavigationBar.swift in Sources */,
 				A8880CDD289BAD1D00FCDCF0 /* MainViewController+ChildDelegate.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8F260022898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A8880CE5289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A539CC289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
 				A8B2083628925B0F00DC7FA6 /* NoteError.swift in Sources */,
+				A8880CE9289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8A370B92897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A8C78771289922B90080D31E /* Font+Constant.swift in Sources */,
@@ -1148,12 +1213,16 @@
 				A8F25FF02898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A88F2A04289A6F02002DE601 /* MainViewController.swift in Sources */,
 				A80A95E82893D4A600F044D9 /* AppDelegate.swift in Sources */,
+				A8880CFC289BC8AD00FCDCF0 /* NoteCell.swift in Sources */,
+				A8880CEA289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A80A95E92893D4A800F044D9 /* SceneDelegate.swift in Sources */,
 				A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */,
 				A80A95F12893D4CB00F044D9 /* ViewController+.swift in Sources */,
 				A8F260112898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
+				A8880CEE289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A80A95E22893CCAC00F044D9 /* MockSession.swift in Sources */,
+				A8880CE6289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A80A96012893D52500F044D9 /* ApiResponse.swift in Sources */,
 				A80A95F32893D4CB00F044D9 /* NavigationBar+.swift in Sources */,
@@ -1182,6 +1251,9 @@
 				A80A95FA2893D4D500F044D9 /* NoteNetworkRequest.swift in Sources */,
 				A8B4B186289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A80A95FB2893D4D500F044D9 /* NoteNetwork.swift in Sources */,
+				A8880CE2289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
+				A8880CF6289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,
+				A8880CF2289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A80A95F72893D4CF00F044D9 /* Request.swift in Sources */,
 				A8C7876E2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8A370C22897DF46004E94F0 /* DeleteNote.swift in Sources */,
