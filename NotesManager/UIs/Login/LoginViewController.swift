@@ -24,6 +24,12 @@ class LoginViewController: UIViewController {
         return showHideButton
     }()
     
+    #if DEBUG
+    deinit {
+        print("Deinit: \(String(describing: Self.self))")
+    }
+    #endif
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -34,8 +40,6 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         resumeNavigationBar()
         keyboardManager = .init(viewController: self, scrollView: scrollView, textField: emailTextField, passwordTextField)
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -46,6 +50,8 @@ class LoginViewController: UIViewController {
     private func setupView() {
         emailTextField.becomeFirstResponder()
         passwordTextField.rightView = showHideButton
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
 }
 
@@ -63,6 +69,13 @@ extension LoginViewController {
     }
     
     @IBAction func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
+        let mainViewController = MainViewController()
+        mainViewController.modalPresentationStyle = .fullScreen
         
+        navigationController?.present(mainViewController, animated: true) { [weak self] in
+            guard self != nil, let window = UIWindow.key else { return }
+            let mainViewController = MainViewController()
+            window.rootViewController = mainViewController
+        }
     }
 }
