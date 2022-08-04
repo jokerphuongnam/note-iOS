@@ -21,10 +21,33 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-        let loginViewController = LoginViewController()
-        let loginNavigation = UINavigationController(rootViewController: loginViewController)
+//        let loginViewController = LoginViewController()
+//        let loginNavigation = UINavigationController(rootViewController: loginViewController)
+//
+//        window.rootViewController = loginNavigation
         
-        window.rootViewController = loginNavigation
+        let mainViewController = MainViewController()
+        let mainNavigation = UINavigationController(rootViewController: mainViewController)
+        
+        window.rootViewController = mainNavigation
+    }
+    
+    func changeRootViewController(rootViewController: UIViewController) {
+        guard let window = window else {
+            return
+        }
+        let snapShot = window.snapshotView(afterScreenUpdates: true)
+        if let snapShot = snapShot {
+            rootViewController.view.addSubview(snapShot)
+        }
+        window.rootViewController = rootViewController
+
+        UIView.animate(withDuration: 0.3, animations: {
+            snapShot?.layer.opacity = 0
+            snapShot?.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }) { finished in
+            snapShot?.removeFromSuperview()
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

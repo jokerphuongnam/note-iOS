@@ -33,6 +33,12 @@ class RegisterViewController: UIViewController {
         return showHideButton
     }()
     
+#if DEBUG
+    deinit {
+        print("Deinit: \(String(describing: Self.self))")
+    }
+#endif
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -43,9 +49,6 @@ class RegisterViewController: UIViewController {
         super.viewWillAppear(animated)
         resumeNavigationBar()
         keyboardManager = .init(viewController: self, scrollView: scrollView, textField: emailTextField, passwordTextField, repeatPasswordTextField)
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        repeatPasswordTextField.delegate = self
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -57,6 +60,9 @@ class RegisterViewController: UIViewController {
         emailTextField.becomeFirstResponder()
         passwordTextField.rightView = showHidePasswordButton
         repeatPasswordTextField.rightView = showHideRepeatPasswordButton
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        repeatPasswordTextField.delegate = self
     }
 }
 
