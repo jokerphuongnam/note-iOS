@@ -13,3 +13,5 @@ struct User {
     let v: Int
     let token: String
 }
+
+typealias Users = [User]
