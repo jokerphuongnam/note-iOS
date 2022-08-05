@@ -7,7 +7,6 @@
 
 @_implementationOnly import UIKit
 
-protocol BaseNavigationBar {
+@objc protocol BaseNavigationBar {
     func setupNavigationBar()
-    func resumeNavigationBar()
 }

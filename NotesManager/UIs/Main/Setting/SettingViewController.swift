@@ -9,14 +9,9 @@
 
 private let reuseIdentifier = "Cell"
 
-protocol SettingViewControllerDelegate: AnyObject {
-    func setting(_ viewController: SettingViewController, viewDidAppear animated: Bool)
-}
-
 class SettingViewController: UICollectionViewController {
-    private weak var delegate: SettingViewControllerDelegate!
     
-    init(delegate: SettingViewControllerDelegate? = nil) {
+    init() {
         super.init(
             collectionViewLayout: UICollectionViewCompositionalLayout { (numberOfSection ,env) in
                 let item = NSCollectionLayoutItem(
@@ -38,7 +33,6 @@ class SettingViewController: UICollectionViewController {
                 return section
             }
         )
-        self.delegate = delegate
     }
     
     required init?(coder: NSCoder) {
@@ -53,17 +47,12 @@ class SettingViewController: UICollectionViewController {
         super.viewDidLoad()
         collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Setting"
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setNavigationBarTitle(largeTitle: "Large Setting", collapsedTitle: "Collapsed Setting")
         navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color, titleColor: Asset.Colors.text.color)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        delegate?.setting(self, viewDidAppear: animated)
     }
 }
 
@@ -119,7 +108,4 @@ extension SettingViewController {
      
      }
      */
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        setNavigationBarTitle(largeTitle: "Large Setting", collapsedTitle: "Collapsed Setting")
-    }
 }
