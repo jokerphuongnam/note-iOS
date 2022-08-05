@@ -14,12 +14,32 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    
+    private lazy var emailButton: UIButton = { [weak self] in
+        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let image = Asset.Assets.email.image
+        emailImage.setImage(image, for: .normal)
+        emailImage.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
+        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return emailImage
+    }()
+    
+    private lazy var passwordButton: UIButton = { [weak self] in
+        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let image = Asset.Assets.password.image
+        emailImage.setImage(image, for: .normal)
+        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return emailImage
+    }()
+    
     private lazy var showHideButton: UIButton = { [weak self] in
         let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = (!passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         showHideButton.setImage(image, for: .normal)
         showHideButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
-        showHideButton.contentEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 16)
+        showHideButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
         showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
         return showHideButton
     }()
@@ -48,9 +68,14 @@ class LoginViewController: UIViewController {
     
     private func setupView() {
         emailTextField.becomeFirstResponder()
-        passwordTextField.rightView = showHideButton
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        emailTextField.leftView = emailButton
+        emailTextField.leftViewMode = .always
+        passwordTextField.leftView = passwordButton
+        passwordTextField.leftViewMode = .always
+        passwordTextField.rightView = showHideButton
+        passwordTextField.rightViewMode = .always
     }
 }
 

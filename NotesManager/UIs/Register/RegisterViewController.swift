@@ -14,6 +14,26 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repeatPasswordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
+    
+    private lazy var emailButton: UIButton = { [weak self] in
+        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let image = Asset.Assets.email.image
+        emailImage.setImage(image, for: .normal)
+        emailImage.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
+        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return emailImage
+    }()
+    
+    private lazy var passwordButton: UIButton = { [weak self] in
+        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let image = Asset.Assets.password.image
+        emailImage.setImage(image, for: .normal)
+        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return emailImage
+    }()
+    
     private lazy var showHidePasswordButton: UIButton = { [weak self] in
         let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = (!passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
@@ -23,6 +43,16 @@ class RegisterViewController: UIViewController {
         showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
         return showHideButton
     }()
+    
+    private lazy var repeatPasswordButton: UIButton = { [weak self] in
+        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let image = Asset.Assets.password.image
+        emailImage.setImage(image, for: .normal)
+        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return emailImage
+    }()
+    
     private lazy var showHideRepeatPasswordButton: UIButton = { [weak self] in
         let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = (!passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
@@ -57,11 +87,19 @@ class RegisterViewController: UIViewController {
     
     private func setupView() {
         emailTextField.becomeFirstResponder()
-        passwordTextField.rightView = showHidePasswordButton
-        repeatPasswordTextField.rightView = showHideRepeatPasswordButton
         emailTextField.delegate = self
         passwordTextField.delegate = self
         repeatPasswordTextField.delegate = self
+        emailTextField.leftView = emailButton
+        emailTextField.leftViewMode = .always
+        passwordTextField.leftView = passwordButton
+        passwordTextField.leftViewMode = .always
+        passwordTextField.rightView = showHidePasswordButton
+        passwordTextField.rightViewMode = .always
+        repeatPasswordTextField.leftView = repeatPasswordButton
+        repeatPasswordTextField.leftViewMode = .always
+        repeatPasswordTextField.rightView = showHideRepeatPasswordButton
+        repeatPasswordTextField.rightViewMode = .always
     }
 }
 
