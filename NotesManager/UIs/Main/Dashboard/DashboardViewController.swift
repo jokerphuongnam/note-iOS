@@ -70,6 +70,8 @@ class DashboardViewController: UICollectionViewController {
             UINib(nibName: Self.noteGridCellName, bundle: nibBundle),
             forCellWithReuseIdentifier: Self.noteGridCellName
         )
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .clear
         view.backgroundColor = Asset.Colors.background.color
     }

@@ -38,7 +38,6 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        resumeNavigationBar()
         keyboardManager = .init(viewController: self, scrollView: scrollView, textField: emailTextField, passwordTextField)
     }
     
