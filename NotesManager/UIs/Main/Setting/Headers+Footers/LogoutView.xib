@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LogoutView" customModule="NotesManager" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="U6b-Vx-4bR" customClass="LogoutView" customModule="NotesManager" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awL-js-KYE" userLabel="Logout Button">
+                    <rect key="frame" x="118.5" y="16" width="83" height="36"/>
+                    <color key="backgroundColor" name="Main"/>
+                    <color key="tintColor" name="Background"/>
+                    <inset key="contentEdgeInsets" minX="40" minY="16" maxX="40" maxY="16"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button" buttonSize="large"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizeTitle" value="logout"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="logoutAction:forEvent:" destination="-1" eventType="touchUpInside" id="5wp-4D-Xqo"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="awL-js-KYE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="16" id="Els-yb-LsW"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="awL-js-KYE" secondAttribute="trailing" constant="16" id="G22-Ss-Sik"/>
+                <constraint firstAttribute="bottom" secondItem="awL-js-KYE" secondAttribute="bottom" constant="16" id="IXh-yJ-4Jy"/>
+                <constraint firstItem="awL-js-KYE" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="16" id="M8H-TS-k9J"/>
+                <constraint firstItem="awL-js-KYE" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="hkX-Bx-5J8"/>
+                <constraint firstItem="awL-js-KYE" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="yh4-z8-q7i"/>
+            </constraints>
+            <connections>
+                <outlet property="logoutButton" destination="awL-js-KYE" id="LMt-cB-7Ud"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="59.598214285714285"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <namedColor name="Background">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main">
+            <color red="1" green="0.76099997758865356" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

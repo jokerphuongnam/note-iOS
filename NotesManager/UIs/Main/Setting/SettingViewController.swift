@@ -7,32 +7,14 @@
 
 @_implementationOnly import UIKit
 
-private let reuseIdentifier = "Cell"
-
 class SettingViewController: UICollectionViewController {
+    static let settingCellName = String(describing: SettingCell.self)
+    static let logoutViewName = String(describing: LogoutView.self)
+    
+    var options = Option.allCases
     
     init() {
-        super.init(
-            collectionViewLayout: UICollectionViewCompositionalLayout { (numberOfSection ,env) in
-                let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
-                    )
-                )
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(50)
-                    ),
-                    subitems: [item]
-                )
-                let section = NSCollectionLayoutSection(group: group)
-                section.interGroupSpacing = 16
-                section.contentInsets.bottom = 16
-                return section
-            }
-        )
+        super.init(collectionViewLayout: .init())
     }
     
     required init?(coder: NSCoder) {
@@ -45,67 +27,24 @@ class SettingViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-        navigationController?.navigationBar.prefersLargeTitles = true
-        title = "Setting"
+        setupView()
+        setupNavigationBar()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color, titleColor: Asset.Colors.text.color)
+    private func setupView() {
+        collectionView.collectionViewLayout = layout
+        collectionView.register(
+            UINib(nibName: Self.settingCellName, bundle: Bundle.main),
+            forCellWithReuseIdentifier: Self.settingCellName
+        )
+        collectionView.register(
+            UINib(nibName: Self.logoutViewName, bundle: Bundle.main),
+            forSupplementaryViewOfKind: Self.logoutViewName,
+            withReuseIdentifier: Self.logoutViewName
+        )
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
+        view.backgroundColor = Asset.Colors.background.color
     }
-}
-
-// MARK: UICollectionViewDataSource
-extension SettingViewController {
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        1
-    }
-    
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        100
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-        
-        // Configure the cell
-        cell.backgroundColor = indexPath.item % 2 == 0 ? .gray : .black
-        return cell
-    }
-}
-
-// MARK: UICollectionViewDelegate
-extension SettingViewController {
-    /*
-     // Uncomment this method to specify if the specified item should be highlighted during tracking
-     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment this method to specify if the specified item should be selected
-     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-     return true
-     }
-     */
-    
-    /*
-     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-     return false
-     }
-     
-     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-     
-     }
-     */
 }
