@@ -12,8 +12,9 @@
 class DashboardViewController: UICollectionViewController {
     static let noteVerticalCellName = String(describing: NoteVerticalCell.self)
     static let noteGridCellName = String(describing: NoteGridCell.self)
-    var viewModel: DashboardViewModel!
+    
     private let disposeBag = DisposeBag()
+    var viewModel: DashboardViewModel!
     var layoutType: DashboardLayout = .vertical
     
     lazy var settingButton: UIBarButtonItem = { [weak self] in

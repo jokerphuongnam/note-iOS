@@ -70,14 +70,13 @@ extension LoginViewController {
     @IBAction func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
         let viewModel: DashboardViewModel = DashboardViewModelImpl()
         let viewController = DashboardViewController(viewModel: viewModel)
-        viewController.modalPresentationStyle = .fullScreen
         let navigation = UINavigationController(rootViewController: viewController)
+        navigation.modalPresentationStyle = .fullScreen
         
         navigationController?.present(navigation, animated: true) { [weak self] in
             guard self != nil, let window = UIWindow.key else { return }
             let viewModel: DashboardViewModel = DashboardViewModelImpl()
             let viewController = DashboardViewController(viewModel: viewModel)
-            viewController.modalPresentationStyle = .fullScreen
             let navigation = UINavigationController(rootViewController: viewController)
             window.rootViewController = navigation
         }

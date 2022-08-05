@@ -64,7 +64,7 @@ extension DashboardViewController {
     }
 }
 
-// MARK: UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension DashboardViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         1
@@ -95,7 +95,7 @@ extension DashboardViewController {
     }
 }
 
-// MARK: UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 extension DashboardViewController {
     
 }
