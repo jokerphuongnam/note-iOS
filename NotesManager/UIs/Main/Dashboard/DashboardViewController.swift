@@ -7,51 +7,45 @@
 
 @_implementationOnly import UIKit
 @_implementationOnly import RxSwift
-
-private let reuseIdentifier = "Cell"
-
-protocol DashboardViewControllerDelegate: AnyObject {
-    func dashboard(_ viewController: DashboardViewController, viewDidAppear animated: Bool)
-}
+@_implementationOnly import Hero
 
 class DashboardViewController: UICollectionViewController {
-    static let noteCellName = String(describing: NoteCell.self)
-    private weak var delegate: DashboardViewControllerDelegate!
+    static let noteVerticalCellName = String(describing: NoteVerticalCell.self)
+    static let noteGridCellName = String(describing: NoteGridCell.self)
     var viewModel: DashboardViewModel!
     private let disposeBag = DisposeBag()
+    var layoutType: DashboardLayout = .vertical
     
-    lazy var addButton: UIBarButtonItem = { [weak self] in
-        guard let self = self else { return UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: nil, action: #selector(addAction)) }
-        let addButton = UIBarButtonItem(image: UIImage(systemName: "plus"), style: .plain, target: self, action: #selector(addAction))
-        return addButton
+    lazy var settingButton: UIBarButtonItem = { [weak self] in
+        guard let self = self else {
+            return UIBarButtonItem(image: Asset.Assets.humburger.image, style: .plain, target: nil, action: #selector(settingAction))
+        }
+        let settingButton = UIBarButtonItem(image: Asset.Assets.humburger.image, style: .plain, target: self, action: #selector(settingAction))
+        return settingButton
     }()
     
-    init(
-        delegate: DashboardViewControllerDelegate? = nil,
-        viewModel: DashboardViewModel
-    ) {
-        super.init(
-            collectionViewLayout: UICollectionViewCompositionalLayout { (numberOfSection ,env) in
-                let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
-                    )
-                )
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(50)
-                    ),
-                    subitems: [item]
-                )
-                let section = NSCollectionLayoutSection(group: group)
-                section.interGroupSpacing = 16
-                section.contentInsets.bottom = 16
-                return section
-            }
-        )
-        self.delegate = delegate
+    lazy var layoutChangeButton: UIBarButtonItem = { [weak self] in
+        guard let self = self else {
+            return UIBarButtonItem(image: Asset.Assets.list.image, style: .plain, target: nil, action: #selector(addAction))
+        }
+        return UIBarButtonItem(image: self.layoutType == .grid ? Asset.Assets.list.image : Asset.Assets.grid.image, style: .plain, target: self, action: #selector(layoutChangeAction))
+    }()
+    
+    lazy var addButton: UIBarButtonItem = { [weak self] in
+        let imageView = UIImageView(image: UIImage(systemName: "plus"))
+        imageView.hero.isEnabled = true
+        imageView.hero.id = ""
+        let tapGesture: UITapGestureRecognizer
+        if let self = self {
+            tapGesture = UITapGestureRecognizer(target: self, action: #selector(addAction))
+        } else {
+            tapGesture = UITapGestureRecognizer(target: nil, action: #selector(addAction))
+        }
+        return UIBarButtonItem(customView: imageView)
+    }()
+    
+    init(viewModel: DashboardViewModel) {
+        super.init(collectionViewLayout: .init())
         self.viewModel = viewModel
     }
     
@@ -66,21 +60,18 @@ class DashboardViewController: UICollectionViewController {
         setupNavigationBar()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        resumeNavigationBar()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        delegate?.dashboard(self, viewDidAppear: animated)
-    }
-    
     private func setupView() {
+        collectionView.collectionViewLayout = layout
         collectionView.register(
-            UINib(nibName: Self.noteCellName, bundle: nibBundle),
-            forCellWithReuseIdentifier: Self.noteCellName
+            UINib(nibName: Self.noteVerticalCellName, bundle: nibBundle),
+            forCellWithReuseIdentifier: Self.noteVerticalCellName
         )
+        collectionView.register(
+            UINib(nibName: Self.noteGridCellName, bundle: nibBundle),
+            forCellWithReuseIdentifier: Self.noteGridCellName
+        )
+        collectionView.backgroundColor = .clear
+        view.backgroundColor = Asset.Colors.background.color
     }
     
     private func setupLiveData() {
@@ -107,8 +98,19 @@ class DashboardViewController: UICollectionViewController {
     }
 }
 
-// MARK: Action
+// MARK: - Action
 private extension DashboardViewController {
+    @objc func settingAction(_ sender: UIBarButtonItem) {
+        let viewController = SettingViewController()
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    @objc func layoutChangeAction(_ sender: UIBarButtonItem) {
+        layoutType = layoutType == .vertical ? .grid : .vertical
+        collectionView.reloadData()
+        sender.image = layoutType == .grid ? Asset.Assets.list.image : Asset.Assets.grid.image
+    }
+    
     @objc func addAction(_ sender: UIBarButtonItem) {
         
     }

@@ -20,13 +20,8 @@ extension UIViewController {
     
     func setNavigationBarTitle(largeTitle: String, collapsedTitle: String) {
         let heightForCollapsedNav = UINavigationController().navigationBar.frame.size.height
-        let navHeight = navigationController!.navigationBar.frame.size.height
+        guard let navHeight = navigationController?.navigationBar.frame.size.height else { return }
+        
         navigationController?.navigationBar.topItem?.title = navHeight <= heightForCollapsedNav ? collapsedTitle : largeTitle
-    }
-    
-    func setNavigationBarTitleView(largeTitle: UIView, collapsedTitle: UIView) {
-        let heightForCollapsedNav = UINavigationController().navigationBar.frame.size.height
-        let navHeight = navigationController!.navigationBar.frame.size.height
-        navigationController?.navigationBar.topItem?.titleView = navHeight <= heightForCollapsedNav  ? collapsedTitle : largeTitle
     }
 }

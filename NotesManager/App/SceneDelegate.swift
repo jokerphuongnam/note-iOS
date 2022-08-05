@@ -26,10 +26,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //
 //        window.rootViewController = loginNavigation
         
-        let mainViewController = MainViewController()
-        let mainNavigation = UINavigationController(rootViewController: mainViewController)
+        let viewModel: DashboardViewModel = DashboardViewModelImpl()
+        let viewController = DashboardViewController(viewModel: viewModel)
+        let navigation = UINavigationController(rootViewController: viewController)
         
-        window.rootViewController = mainNavigation
+        window.rootViewController = navigation
     }
     
     func changeRootViewController(rootViewController: UIViewController) {

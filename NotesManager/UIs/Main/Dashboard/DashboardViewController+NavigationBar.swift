@@ -5,17 +5,22 @@
 //  Created by pnam on 04/08/2022.
 //
 
-import Foundation
+@_implementationOnly import UIKit
 
 extension DashboardViewController: BaseNavigationBar {
     func setupNavigationBar() {
-        
-    }
-    
-    func resumeNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
-        setNavigationBarTitle(largeTitle: "Large Dashboard", collapsedTitle: "Collapsed Dashboard")
         navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color, titleColor: Asset.Colors.text.color)
-        navigationItem.rightBarButtonItems = [addButton]
+        navigationItem.leftBarButtonItems = [settingButton]
+        navigationItem.rightBarButtonItems = [addButton, layoutChangeButton]
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.delegate = self
+        navigationItem.searchController = search
+        title = Strings.dashboard
+        navigationController?.navigationBar.update(
+            backroundColor: Asset.Colors.background.color,
+            titleColor: Asset.Colors.text.color
+        )
     }
 }

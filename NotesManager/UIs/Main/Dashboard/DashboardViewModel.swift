@@ -50,7 +50,7 @@ final class DashboardViewModelImpl: DashboardViewModel {
                         .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
                         .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
                         .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
+                        .init(id: "1", title: "test", description: "test", color: "#ffff23", createAt: 12, updateAt: 12),
                         .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
                         .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
                         .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
