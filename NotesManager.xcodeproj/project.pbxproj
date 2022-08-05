@@ -439,6 +439,7 @@
 				0D222746F8177B3A5534A11A /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		A8AB9CC7288E547A00939E9D /* Products */ = {
 			isa = PBXGroup;
@@ -748,7 +749,7 @@
 			buildConfigurationList = A8AB9CF0288E547C00939E9D /* Build configuration list for PBXNativeTarget "NotesManager" */;
 			buildPhases = (
 				1ED16A999C06E43EE4F933B2 /* [CP] Check Pods Manifest.lock */,
-				A8B208202892543000DC7FA6 /* XCConfig Create */,
+				A8A3F329289CC33B00DEBCD5 /* Generate SwiftGen */,
 				A8AB9D1E288E584500939E9D /* SwiftGen */,
 				A8AB9CC2288E547A00939E9D /* Sources */,
 				A8AB9CC3288E547A00939E9D /* Frameworks */,
@@ -769,7 +770,7 @@
 			buildConfigurationList = A8AB9D0E288E561300939E9D /* Build configuration list for PBXNativeTarget "NotesManager Staging" */;
 			buildPhases = (
 				A2B47D2B37C9FCACE62EDC12 /* [CP] Check Pods Manifest.lock */,
-				A8B208212892547100DC7FA6 /* XCConfig Create */,
+				A8A3F32A289CC35E00DEBCD5 /* Generate SwiftGen */,
 				A8AB9D25288E58D200939E9D /* SwiftGen */,
 				A8AB9D05288E561300939E9D /* Sources */,
 				A8AB9D08288E561300939E9D /* Frameworks */,
@@ -1007,6 +1008,42 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A8A3F329289CC33B00DEBCD5 /* Generate SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ ! -f \"${PROJECT_DIR}/NotesManager/SwiftGen\" ]]; then\n    mkdir \"${PROJECT_DIR}/NotesManager/SwiftGen\"\nfi\nexit 0\n";
+		};
+		A8A3F32A289CC35E00DEBCD5 /* Generate SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Generate SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ ! -f \"${PROJECT_DIR}/NotesManager/SwiftGen\" ]]; then\n    mkdir \"${PROJECT_DIR}/NotesManager/SwiftGen\"\nfi\nexit 0\n";
+		};
 		A8AB9D1E288E584500939E9D /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1023,7 +1060,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
+			shellScript = "Pods/SwiftGen/bin/swiftgen\n";
 		};
 		A8AB9D25288E58D200939E9D /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1041,43 +1078,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n";
-		};
-		A8B208202892543000DC7FA6 /* XCConfig Create */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "XCConfig Create";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FILE=\"${PROJECT_DIR}/NotesManager/XCConfig/Prod.xcconfig\"\nif [ ! -f $FILE ]; then\n    touch \"${PROJECT_DIR}/NotesManager/XCConfig/Prod.xcconfig\"\nfi\nexit 0\n";
-		};
-		A8B208212892547100DC7FA6 /* XCConfig Create */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "XCConfig Create";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "FILE=\"${PROJECT_DIR}/NotesManager/XCConfig/Prod.xcconfig\"\nif [ ! -f $FILE ]; then\n    touch \"${PROJECT_DIR}/NotesManager/XCConfig/Prod.xcconfig\"\nfi\nexit 0\n";
+			shellScript = "Pods/SwiftGen/bin/swiftgen\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
