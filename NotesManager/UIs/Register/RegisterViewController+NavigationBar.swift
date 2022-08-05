@@ -7,16 +7,8 @@
 
 @_implementationOnly import UIKit
 
-extension RegisterViewController: BaseNavigationBar {
+extension RegisterViewController {
     func setupNavigationBar() {
-        
-    }
-    
-    func resumeNavigationBar() {
-        setupSimpleNavigationBar()
-    }
-    
-    private func setupSimpleNavigationBar() {
         title = Strings.login
         navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color)
         navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear

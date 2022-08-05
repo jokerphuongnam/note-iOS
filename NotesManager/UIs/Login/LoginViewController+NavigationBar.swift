@@ -7,16 +7,8 @@
 
 @_implementationOnly import UIKit
 
-extension LoginViewController: BaseNavigationBar {
+extension LoginViewController {
     func setupNavigationBar() {
-        
-    }
-    
-    func resumeNavigationBar() {
-        setupSimpleNavigationBar()
-    }
-    
-    private func setupSimpleNavigationBar() {
         title = Strings.login
         navigationController?.navigationBar.update(backroundColor: Asset.Colors.main.color)
         navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear

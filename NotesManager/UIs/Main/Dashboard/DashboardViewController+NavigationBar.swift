@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-extension DashboardViewController: BaseNavigationBar {
+extension DashboardViewController {
     func setupNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color, titleColor: Asset.Colors.text.color)
