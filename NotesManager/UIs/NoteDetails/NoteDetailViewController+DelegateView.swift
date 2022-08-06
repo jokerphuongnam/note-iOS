@@ -10,6 +10,6 @@
 //MARK: - UIScrollViewDelegate
 extension NoteDetailViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        setNavigationBarTitle(largeTitle: viewModel.note.title ?? "", collapsedTitle: "Note")
+        setNavigationBarTitle(largeTitle: viewModel.note.title ?? "", collapsedTitle: Strings.noteDetail)
     }
 }
