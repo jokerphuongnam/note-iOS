@@ -9,7 +9,13 @@ import Foundation
 
 extension NoteDetailViewController {
     func setupNavigationBar() {
-        title = viewModel.note.title
+        if let noteTitle = viewModel.note.title {
+            setNavigationBarTitle(largeTitle: noteTitle, collapsedTitle: Strings.noteDetail)
+            navigationController?.navigationBar.prefersLargeTitles = true
+        } else {
+            setNavigationBarTitle(largeTitle: "", collapsedTitle: Strings.noteDetail)
+            navigationController?.navigationBar.prefersLargeTitles = false
+        }
         navigationController?.navigationBar.update(
             backroundColor: Asset.Colors.background.color,
             titleColor: Asset.Colors.text.color

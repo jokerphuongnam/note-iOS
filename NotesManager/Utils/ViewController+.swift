@@ -22,6 +22,6 @@ extension UIViewController {
         let heightForCollapsedNav = UINavigationController().navigationBar.frame.size.height
         guard let navHeight = navigationController?.navigationBar.frame.size.height else { return }
         
-        navigationController?.navigationBar.topItem?.title = navHeight <= heightForCollapsedNav ? collapsedTitle : largeTitle
+        title = navHeight <= heightForCollapsedNav ? collapsedTitle : largeTitle
     }
 }
