@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
     private var keyboardManager: KeyboardManagerment!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -80,8 +80,8 @@ class LoginViewController: UIViewController {
 }
 
 //MARK: - Action
-extension LoginViewController {
-    @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
+private extension LoginViewController {
+    @objc func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         sender.setImage(image, for: .normal)
         passwordTextField.isSecureTextEntry.toggle()
@@ -98,8 +98,9 @@ extension LoginViewController {
         let navigation = UINavigationController(rootViewController: viewController)
         navigation.modalPresentationStyle = .fullScreen
         
-        navigationController?.present(navigation, animated: true) { [weak self] in
-            guard self != nil, let window = UIWindow.key else { return }
+        present(navigation, animated: true) { [weak self] in
+            guard let self = self, let window = UIWindow.key else { return }
+            self.navigationController?.popToRootViewController(animated: false)
             let viewModel: DashboardViewModel = DashboardViewModelImpl()
             let viewController = DashboardViewController(viewModel: viewModel)
             let navigation = UINavigationController(rootViewController: viewController)

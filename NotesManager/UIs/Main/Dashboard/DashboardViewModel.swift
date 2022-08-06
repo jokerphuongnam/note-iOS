@@ -33,41 +33,30 @@ final class DashboardViewModelImpl: DashboardViewModel {
         notesObserver.accept(
             .success(
                 data: (
-                    data: [
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffff23", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12),
-                        .init(id: "1", title: "test", description: "test", color: "#ffffff", createAt: 12, updateAt: 12)
-                    ],
+                    data: {
+                        var data: Notes = []
+                        let date = Date()
+                        
+                        let timeMilliseconds = date.millisecondsSince1970
+                        for i in 0...40 {
+                            data.append(
+                                .init(
+                                    id: "\(i)",
+                                    title: "title \(i)",
+                                    description: "description \(i)",
+                                    color:  UIColor(
+                                        red:  CGFloat(255 - (i * 2)) / 255.0,
+                                        green:  1,
+                                        blue:  CGFloat(255 - (i * 3)) / 255.0,
+                                        alpha: 1
+                                    ),
+                                    createAt: timeMilliseconds,
+                                    updateAt: timeMilliseconds
+                                )
+                            )
+                        }
+                        return data
+                    }(),
                     hasNext: false,
                     hasPrev: false
                 )

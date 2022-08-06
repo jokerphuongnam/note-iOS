@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-class SettingCell: UICollectionViewCell {
+final class SettingCell: UICollectionViewCell {
     var option: SettingOption! {
         willSet {
             guard let newValue = newValue else {

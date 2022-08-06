@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-class RegisterViewController: UIViewController {
+final class RegisterViewController: UIViewController {
     private var keyboardManager: KeyboardManagerment!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!

@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-class NoteGridCell: UICollectionViewCell {
+final class NoteGridCell: UICollectionViewCell {
     var note: Note! {
         willSet {
             guard let newValue = newValue else {
@@ -15,7 +15,7 @@ class NoteGridCell: UICollectionViewCell {
             }
             titleLabel.text = newValue.title
             descriptionLabel.text = newValue.description
-            backgroundColor = .init(hex: newValue.color)
+            backgroundColor = newValue.color
         }
     }
     @IBOutlet private weak var titleLabel: UILabel!
@@ -23,7 +23,9 @@ class NoteGridCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        heroModifiers = [.cascade]
+        titleLabel.heroModifiers = [.cascade]
+        descriptionLabel.heroModifiers = [.cascade]
     }
 
 }
