@@ -6,12 +6,13 @@
 //
 
 import Foundation
+@_implementationOnly import UIKit
 
 struct Note {
     let id: String
     let title: String?
     let description: String?
-    let color: String
+    let color: UIColor
     let createAt, updateAt: Int64
 }
 

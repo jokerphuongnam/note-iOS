@@ -83,7 +83,8 @@ extension SettingViewController: LogoutViewDelegate {
         navigation.modalPresentationStyle = .fullScreen
         
         navigationController?.present(navigation, animated: true) { [weak self] in
-            guard self != nil, let window = UIWindow.key else { return }
+            guard let self = self, let window = UIWindow.key else { return }
+            self.navigationController?.popToRootViewController(animated: false)
             let viewController = LoginViewController()
             let navigation = UINavigationController(rootViewController: viewController)
             window.rootViewController = navigation

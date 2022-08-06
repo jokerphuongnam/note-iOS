@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoteDetailViewController" customModule="NotesManager" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="descriptionLabel" destination="cBo-bs-UP5" id="Zx8-A9-jDF"/>
+                <outlet property="timeLabel" destination="hJF-a0-mY3" id="bND-D2-teC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="liA-MY-QeZ">
+                    <rect key="frame" x="0.0" y="384" width="414" height="128"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9up-Fo-x3j" userLabel="Content">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBo-bs-UP5" userLabel="Description">
+                                    <rect key="frame" x="16" y="16" width="382" height="23"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                    <color key="textColor" name="Text"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="description"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJF-a0-mY3" userLabel="Time">
+                                    <rect key="frame" x="191.5" y="787.5" width="31" height="14.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" name="Text"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="cBo-bs-UP5" secondAttribute="trailing" constant="16" id="4AF-IP-sCP"/>
+                                <constraint firstItem="cBo-bs-UP5" firstAttribute="top" secondItem="9up-Fo-x3j" secondAttribute="top" constant="16" id="6PJ-lM-E6Q"/>
+                                <constraint firstItem="hJF-a0-mY3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9up-Fo-x3j" secondAttribute="leading" constant="16" id="DLE-Sj-31O"/>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hJF-a0-mY3" secondAttribute="trailing" constant="16" id="Eqd-RS-HcK"/>
+                                <constraint firstItem="hJF-a0-mY3" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cBo-bs-UP5" secondAttribute="bottom" constant="16" id="bEX-uO-id8"/>
+                                <constraint firstItem="cBo-bs-UP5" firstAttribute="leading" secondItem="9up-Fo-x3j" secondAttribute="leading" constant="16" id="xXq-mW-tpW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="9up-Fo-x3j" secondAttribute="bottom" id="LJd-e0-onI"/>
+                        <constraint firstAttribute="trailing" secondItem="9up-Fo-x3j" secondAttribute="trailing" id="Ubp-fq-xxz"/>
+                        <constraint firstItem="9up-Fo-x3j" firstAttribute="width" secondItem="liA-MY-QeZ" secondAttribute="width" id="bl1-Bg-7bQ"/>
+                        <constraint firstItem="9up-Fo-x3j" firstAttribute="top" secondItem="liA-MY-QeZ" secondAttribute="top" id="kU8-7h-Foa"/>
+                        <constraint firstItem="9up-Fo-x3j" firstAttribute="leading" secondItem="liA-MY-QeZ" secondAttribute="leading" id="kdm-9m-19X"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="0hZ-nq-fuB"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="63j-IY-UlP"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="boN-oe-0PV"/>
+                    </connections>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="liA-MY-QeZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Vm-La-2Kx"/>
+                <constraint firstItem="liA-MY-QeZ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="JVc-LP-k0p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hJF-a0-mY3" secondAttribute="bottom" constant="16" id="Kkw-mA-50G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="liA-MY-QeZ" secondAttribute="trailing" id="Oa3-t7-dv1"/>
+                <constraint firstItem="liA-MY-QeZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="QGV-Ij-j41"/>
+                <constraint firstItem="hJF-a0-mY3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="mZr-ed-OAU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="liA-MY-QeZ" secondAttribute="bottom" id="moy-7i-bQ1"/>
+            </constraints>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="note"/>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="heroModifierString" value="cascade"/>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="132" y="54"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Text">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

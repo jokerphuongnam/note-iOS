@@ -9,7 +9,7 @@
 @_implementationOnly import RxSwift
 @_implementationOnly import Hero
 
-class DashboardViewController: UICollectionViewController {
+final class DashboardViewController: UICollectionViewController {
     static let noteVerticalCellName = String(describing: NoteVerticalCell.self)
     static let noteGridCellName = String(describing: NoteGridCell.self)
     
@@ -21,8 +21,7 @@ class DashboardViewController: UICollectionViewController {
         guard let self = self else {
             return UIBarButtonItem(image: Asset.Assets.humburger.image, style: .plain, target: nil, action: #selector(settingAction))
         }
-        let settingButton = UIBarButtonItem(image: Asset.Assets.humburger.image, style: .plain, target: self, action: #selector(settingAction))
-        return settingButton
+        return UIBarButtonItem(image: Asset.Assets.humburger.image, style: .plain, target: self, action: #selector(settingAction))
     }()
     
     lazy var layoutChangeButton: UIBarButtonItem = { [weak self] in
@@ -54,6 +53,10 @@ class DashboardViewController: UICollectionViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        viewModel = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -75,6 +78,7 @@ class DashboardViewController: UICollectionViewController {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.backgroundColor = .clear
         view.backgroundColor = Asset.Colors.background.color
+        hero.isEnabled = true
     }
     
     private func setupLiveData() {

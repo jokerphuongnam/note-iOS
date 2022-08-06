@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-class SettingViewController: UICollectionViewController {
+final class SettingViewController: UICollectionViewController {
     static let settingCellName = String(describing: SettingCell.self)
     static let logoutViewName = String(describing: LogoutView.self)
     
@@ -22,7 +22,7 @@ class SettingViewController: UICollectionViewController {
     }
     
     deinit {
-        print(String(describing: Self.self))
+        
     }
     
     override func viewDidLoad() {

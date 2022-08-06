@@ -11,7 +11,7 @@
     @objc optional func logoutView(_ logoutView: LogoutView, logout sender: UIButton, forEvent event: UIEvent)
 }
 
-class LogoutView: UICollectionReusableView {
+final class LogoutView: UICollectionReusableView {
     @IBOutlet weak var logoutButton: UIButton!
     weak var delegate: LogoutViewDelegate!
     

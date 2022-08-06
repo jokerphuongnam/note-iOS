@@ -97,5 +97,14 @@ extension DashboardViewController {
 
 // MARK: - UICollectionViewDelegate
 extension DashboardViewController {
-    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let note = viewModel.notes?.data[indexPath.item] else { return }
+        let viewModel: NoteDetailViewModel = NoteDetailViewModelImpl(note: note)
+        let viewController = NoteDetailViewController(viewModel: viewModel)
+        viewController.modalPresentationStyle = .fullScreen
+//        present(viewController, animated: true) { [weak self] in
+//
+//        }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
 }

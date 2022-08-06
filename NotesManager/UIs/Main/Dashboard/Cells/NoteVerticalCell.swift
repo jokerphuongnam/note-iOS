@@ -7,19 +7,21 @@
 
 @_implementationOnly import UIKit
 
-class NoteVerticalCell: UICollectionViewCell {
+final class NoteVerticalCell: UICollectionViewCell {
     var note: Note! {
         willSet {
             guard let newValue = newValue else {
                 return
             }
             titleLabel.text = newValue.title
-            backgroundColor = .init(hex: newValue.color)
+            backgroundColor = newValue.color
         }
     }
     @IBOutlet private weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        heroModifiers = [.cascade]
+        titleLabel.heroModifiers = [.cascade]
     }
 }
