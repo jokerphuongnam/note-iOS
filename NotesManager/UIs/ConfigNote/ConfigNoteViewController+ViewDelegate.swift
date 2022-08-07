@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-//MARK: - UIColorPickerViewControllerDelegate
+// MARK: - UIColorPickerViewControllerDelegate
 extension ConfigNoteViewController: UIColorPickerViewControllerDelegate {
     func colorPickerViewController(_ viewController: UIColorPickerViewController, didSelect color: UIColor, continuously: Bool) {
         selectedPaletteColor = color

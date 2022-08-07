@@ -67,6 +67,15 @@
 		A88F2A09289A7958002DE601 /* Window+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F2A08289A7958002DE601 /* Window+.swift */; };
 		A88F2A0A289A7958002DE601 /* Window+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F2A08289A7958002DE601 /* Window+.swift */; };
 		A88F2A0B289A7958002DE601 /* Window+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88F2A08289A7958002DE601 /* Window+.swift */; };
+		A89492AC289F768B00F860DC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89492AA289F768B00F860DC /* EditProfileViewController.swift */; };
+		A89492AD289F768B00F860DC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89492AA289F768B00F860DC /* EditProfileViewController.swift */; };
+		A89492AE289F768B00F860DC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89492AA289F768B00F860DC /* EditProfileViewController.swift */; };
+		A89492AF289F768B00F860DC /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89492AB289F768B00F860DC /* EditProfileViewController.xib */; };
+		A89492B0289F768B00F860DC /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89492AB289F768B00F860DC /* EditProfileViewController.xib */; };
+		A89492B1289F768B00F860DC /* EditProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89492AB289F768B00F860DC /* EditProfileViewController.xib */; };
+		A89492B7289F77EC00F860DC /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89492B6289F77EC00F860DC /* EditProfileViewModel.swift */; };
+		A89492B8289F77EC00F860DC /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89492B6289F77EC00F860DC /* EditProfileViewModel.swift */; };
+		A89492B9289F77EC00F860DC /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89492B6289F77EC00F860DC /* EditProfileViewModel.swift */; };
 		A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
 		A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
 		A8A370B62897C055004E94F0 /* InsertNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A370B32897C055004E94F0 /* InsertNote.swift */; };
@@ -269,6 +278,18 @@
 		A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
 		A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
 		A8F260172898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
+		A8FA63D5289F9AC000BC3490 /* Button+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* Button+.swift */; };
+		A8FA63D6289F9AC000BC3490 /* Button+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* Button+.swift */; };
+		A8FA63D7289F9AC000BC3490 /* Button+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* Button+.swift */; };
+		A8FA63D9289F9CA000BC3490 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */; };
+		A8FA63DA289F9CA000BC3490 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */; };
+		A8FA63DB289F9CA000BC3490 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */; };
+		A8FA63DD289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63DC289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift */; };
+		A8FA63DE289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63DC289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift */; };
+		A8FA63DF289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63DC289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift */; };
+		A8FA63E1289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */; };
+		A8FA63E2289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */; };
+		A8FA63E3289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */; };
 		B734C077EC7426D133002905 /* Pods_NotesManager_NotesManager_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9722BD69E25D43A6FA4D206E /* Pods_NotesManager_NotesManager_Staging.framework */; };
 		DFD91BB4571CB9E85923B2FF /* Pods_NotesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B13E15988130F218AD1A7 /* Pods_NotesManager.framework */; };
 /* End PBXBuildFile section */
@@ -321,6 +342,9 @@
 		A8880CEF289BC75800FCDCF0 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		A8880CF3289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		A88F2A08289A7958002DE601 /* Window+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Window+.swift"; sourceTree = "<group>"; };
+		A89492AA289F768B00F860DC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		A89492AB289F768B00F860DC /* EditProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditProfileViewController.xib; sourceTree = "<group>"; };
+		A89492B6289F77EC00F860DC /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		A8A370B32897C055004E94F0 /* InsertNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertNote.swift; sourceTree = "<group>"; };
 		A8A370B72897CC79004E94F0 /* UpdateNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNote.swift; sourceTree = "<group>"; };
 		A8A370BF2897DF46004E94F0 /* DeleteNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteNote.swift; sourceTree = "<group>"; };
@@ -405,6 +429,10 @@
 		A8F260092898FA2C00FEAF22 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		A8F2600A2898FA2C00FEAF22 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
 		A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
+		A8FA63D4289F9AC000BC3490 /* Button+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+.swift"; sourceTree = "<group>"; };
+		A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		A8FA63DC289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
+		A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		AA129073F338D0ED4A26E571 /* Pods-NotesManager.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugprod.xcconfig"; sourceTree = "<group>"; };
 		AE1C38614CF7E8C93AB5537A /* Pods-NotesManager.debugstaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugstaging.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugstaging.xcconfig"; sourceTree = "<group>"; };
 		B2FFD19359E4078179C76A07 /* Pods-NotesManager-NotesManager Staging.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager-NotesManager Staging/Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -512,6 +540,18 @@
 				A8A3F341289CFCC900DEBCD5 /* NoteGridCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A89492A9289F766C00F860DC /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A89492AA289F768B00F860DC /* EditProfileViewController.swift */,
+				A89492AB289F768B00F860DC /* EditProfileViewController.xib */,
+				A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */,
+				A8FA63DC289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift */,
+				A89492B6289F77EC00F860DC /* EditProfileViewModel.swift */,
+			);
+			path = EditProfile;
 			sourceTree = "<group>";
 		};
 		A8A3F358289D203700DEBCD5 /* Cells */ = {
@@ -626,12 +666,13 @@
 		A8AB9CFE288E551400939E9D /* UIs */ = {
 			isa = PBXGroup;
 			children = (
+				A8B5913B289E27F400CF50E3 /* NoteDetails */,
 				A8AB9D02288E555E00939E9D /* Lauch */,
 				A8F25FEC2898C80600FEAF22 /* Login */,
 				A8F25FF72898DBD900FEAF22 /* Register */,
 				A816B137289A2942003793FB /* Main */,
-				A8B5913B289E27F400CF50E3 /* NoteDetails */,
 				A8B59158289E52B200CF50E3 /* ConfigNote */,
+				A89492A9289F766C00F860DC /* EditProfile */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
@@ -650,6 +691,7 @@
 				A8C7876F289922B90080D31E /* Font+Constant.swift */,
 				A88F2A08289A7958002DE601 /* Window+.swift */,
 				A8B59150289E36FD00CF50E3 /* Date+.swift */,
+				A8FA63D4289F9AC000BC3490 /* Button+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -820,6 +862,7 @@
 				A8A3F34C289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift */,
 				A8A3F350289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift */,
 				A8A3F354289D1EA700DEBCD5 /* SettingViewController+Options.swift */,
+				A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1021,6 +1064,7 @@
 				A8A3F367289D27C800DEBCD5 /* LogoutView.xib in Resources */,
 				A8A3F35E289D204F00DEBCD5 /* SettingCell.xib in Resources */,
 				A8F25FFD2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
+				A89492AF289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 				A8A3F345289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
 				A821BD36289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
 				A8F260052898F70F00FEAF22 /* Colors.xcassets in Resources */,
@@ -1043,6 +1087,7 @@
 				A8A3F368289D27C800DEBCD5 /* LogoutView.xib in Resources */,
 				A8A3F35F289D204F00DEBCD5 /* SettingCell.xib in Resources */,
 				A8F25FFE2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
+				A89492B0289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 				A8A3F346289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
 				A821BD37289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
 				A8F260062898F70F00FEAF22 /* Colors.xcassets in Resources */,
@@ -1066,6 +1111,7 @@
 				A8B59143289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
 				A8A3F360289D204F00DEBCD5 /* SettingCell.xib in Resources */,
 				A8F25FFF2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
+				A89492B1289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1276,16 +1322,19 @@
 				A8B4B180289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
 				A8880CEC289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085D2892675500DC7FA6 /* Request.swift in Sources */,
+				A8FA63D9289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
 				A8A3F351289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
 				A8B59180289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
 				A8B2084128925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A8B59149289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift in Sources */,
 				A84F1B952897849A005683EB /* FetchNotes.swift in Sources */,
+				A8FA63E1289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A88F2A09289A7958002DE601 /* Window+.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */,
 				A8A3F342289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
+				A89492AC289F768B00F860DC /* EditProfileViewController.swift in Sources */,
 				A8F2600F2898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A8B208882892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8B59145289E2A2400CF50E3 /* NoteDetailViewModel.swift in Sources */,
@@ -1302,6 +1351,7 @@
 				A8B59151289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8B59184289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
 				A8B2084928925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
+				A8FA63D5289F9AC000BC3490 /* Button+.swift in Sources */,
 				A8C7876828991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
 				A821BD33289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8B2087E2892681600DC7FA6 /* UserNetwork+Rx.swift in Sources */,
@@ -1317,6 +1367,7 @@
 				A8F25FEE2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8F260012898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A8FA63DD289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8880CE4289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A3F33A289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
@@ -1324,6 +1375,7 @@
 				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
+				A89492B7289F77EC00F860DC /* EditProfileViewModel.swift in Sources */,
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
 				A8880CE8289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A8A3F35B289D204F00DEBCD5 /* SettingCell.swift in Sources */,
@@ -1355,16 +1407,19 @@
 				A8B4B181289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
 				A8880CED289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085E2892675500DC7FA6 /* Request.swift in Sources */,
+				A8FA63DA289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
 				A8A3F352289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
 				A8B59181289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
 				A8B2084228925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A8B5914A289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift in Sources */,
 				A84F1B962897849A005683EB /* FetchNotes.swift in Sources */,
+				A8FA63E2289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A88F2A0A289A7958002DE601 /* Window+.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */,
 				A8A3F343289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
+				A89492AD289F768B00F860DC /* EditProfileViewController.swift in Sources */,
 				A8F260102898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A8B2083228925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8B59146289E2A2400CF50E3 /* NoteDetailViewModel.swift in Sources */,
@@ -1381,6 +1436,7 @@
 				A8B59152289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8B59185289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
 				A8B2087F2892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
+				A8FA63D6289F9AC000BC3490 /* Button+.swift in Sources */,
 				A8C7876928991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
 				A821BD34289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8AB9D06288E561300939E9D /* AppDelegate.swift in Sources */,
@@ -1396,6 +1452,7 @@
 				A8F25FEF2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8F260022898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A8FA63DE289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8880CE5289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A3F33B289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
@@ -1403,6 +1460,7 @@
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
+				A89492B8289F77EC00F860DC /* EditProfileViewModel.swift in Sources */,
 				A8B2083628925B0F00DC7FA6 /* NoteError.swift in Sources */,
 				A8880CE9289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A8A3F35C289D204F00DEBCD5 /* SettingCell.swift in Sources */,
@@ -1427,6 +1485,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F25FF02898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
+				A8FA63D7289F9AC000BC3490 /* Button+.swift in Sources */,
 				A8B59160289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A8B59186289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
 				A8B59164289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
@@ -1439,6 +1498,7 @@
 				A8F260112898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A8A3F357289D1EA700DEBCD5 /* SettingViewController+Options.swift in Sources */,
 				A8880CEE289BC48300FCDCF0 /* PagingArray.swift in Sources */,
+				A8FA63E3289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A8A3F344289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
 				A821BD35289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8B59153289E36FD00CF50E3 /* Date+.swift in Sources */,
@@ -1449,11 +1509,13 @@
 				A80A95F32893D4CB00F044D9 /* NavigationBar+.swift in Sources */,
 				A8F2600E2898FA2C00FEAF22 /* IB-Segues+Generated.swift in Sources */,
 				A8F25FFC2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
+				A89492AE289F768B00F860DC /* EditProfileViewController.swift in Sources */,
 				A80A95EC2893D4CB00F044D9 /* View+.swift in Sources */,
 				A8B5917B289E62AB00CF50E3 /* TextCell.swift in Sources */,
 				A80A95EA2893D4B900F044D9 /* User.swift in Sources */,
 				A80A95FF2893D4DC00F044D9 /* UserNetworkRequest.swift in Sources */,
 				A8B59140289E282500CF50E3 /* NoteDetailViewController.swift in Sources */,
+				A8FA63DF289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8B4B182289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
 				A80A96072893EC8200F044D9 /* Register.swift in Sources */,
 				A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */,
@@ -1490,6 +1552,7 @@
 				A80A95F72893D4CF00F044D9 /* Request.swift in Sources */,
 				A8C7876E2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8A370C22897DF46004E94F0 /* DeleteNote.swift in Sources */,
+				A89492B9289F77EC00F860DC /* EditProfileViewModel.swift in Sources */,
 				A88F2A0B289A7958002DE601 /* Window+.swift in Sources */,
 				A80A95FE2893D4DC00F044D9 /* UserNetwork.swift in Sources */,
 				A80A95EB2893D4BF00F044D9 /* Login.swift in Sources */,
@@ -1497,6 +1560,7 @@
 				A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A84F1B972897849A005683EB /* FetchNotes.swift in Sources */,
 				A8F260032898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A8FA63DB289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
 				A8B208C22892BC4A00DC7FA6 /* UserNetworkTests.swift in Sources */,
 				A8F260172898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
 				A8F260142898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,

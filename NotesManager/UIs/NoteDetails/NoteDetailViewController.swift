@@ -65,7 +65,7 @@ final class NoteDetailViewController: UIViewController {
     }
 }
 
-//MARK: - Action
+// MARK: - Action
 private extension NoteDetailViewController {
     @objc func editNoteAction(_ sender: UIBarButtonItem) {
         let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl(note: viewModel.note)

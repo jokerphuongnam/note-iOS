@@ -103,7 +103,7 @@ final class RegisterViewController: UIViewController {
     }
 }
 
-//MARK: - Action
+// MARK: - Action
 extension RegisterViewController {
     @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let passwordTextField: UITextField = sender == showHidePasswordButton ? passwordTextField : repeatPasswordTextField

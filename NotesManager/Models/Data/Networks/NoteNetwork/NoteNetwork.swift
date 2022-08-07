@@ -10,7 +10,7 @@
 
 // MARK: - NoteNetwork
 protocol NoteNetwork {
-    //MARK: - fetch notes
+    // MARK: - fetch notes
     func fetchNotes(page: Int?, limit: Int?, searchWords: String?) -> Single<FetchNotesRequest.Response>
     // MARK: - insert note
     func inserNote(title: String?, description: String?) -> Single<InsertNoteRequest.Response>
@@ -29,7 +29,7 @@ final class AFNoteNetwork: NoteNetwork, BaseAFNetwork {
         self.session = session
     }
     
-    //MARK: - fetch notes
+    // MARK: - fetch notes
     func fetchNotes(page: Int?, limit: Int?, searchWords: String?) -> Single<FetchNotesRequest.Response> {
         rx.send(request: FetchNotesRequest(page: page, limit: limit, searchWords: searchWords))
     }
