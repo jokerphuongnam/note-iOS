@@ -16,28 +16,31 @@ final class RegisterViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     
     private lazy var emailButton: UIButton = { [weak self] in
-        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let emailButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = Asset.Assets.email.image
-        emailImage.setImage(image, for: .normal)
-        emailImage.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
-        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
-        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
-        return emailImage
+        emailButton.setImage(image, for: .normal)
+        emailButton.imageTint = Asset.Colors.text.color
+        emailButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
+        emailButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        emailButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return emailButton
     }()
     
     private lazy var passwordButton: UIButton = { [weak self] in
-        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let passwordButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = Asset.Assets.password.image
-        emailImage.setImage(image, for: .normal)
-        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
-        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
-        return emailImage
+        passwordButton.setImage(image, for: .normal)
+        passwordButton.imageTint = Asset.Colors.text.color
+        passwordButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        passwordButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return passwordButton
     }()
     
     private lazy var showHidePasswordButton: UIButton = { [weak self] in
         let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = (!passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         showHideButton.setImage(image, for: .normal)
+        showHideButton.imageTint = Asset.Colors.text.color
         showHideButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
         showHideButton.contentEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 16)
         showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
@@ -45,18 +48,20 @@ final class RegisterViewController: UIViewController {
     }()
     
     private lazy var repeatPasswordButton: UIButton = { [weak self] in
-        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = Asset.Assets.password.image
-        emailImage.setImage(image, for: .normal)
-        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
-        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
-        return emailImage
+        showHideButton.setImage(image, for: .normal)
+        showHideButton.imageTint = Asset.Colors.text.color
+        showHideButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return         showHideButton
     }()
     
     private lazy var showHideRepeatPasswordButton: UIButton = { [weak self] in
         let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = (!passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         showHideButton.setImage(image, for: .normal)
+        showHideButton.imageTint = Asset.Colors.text.color
         showHideButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
         showHideButton.contentEdgeInsets = .init(top: 0, left: 0, bottom: 0, right: 16)
         showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
@@ -78,6 +83,7 @@ final class RegisterViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         keyboardManager = .init(viewController: self, scrollView: scrollView, textField: emailTextField, passwordTextField, repeatPasswordTextField)
+        navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color)
     }
     
     override func viewWillDisappear(_ animated: Bool) {

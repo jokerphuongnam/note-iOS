@@ -88,6 +88,12 @@ extension SettingViewController {
                 
             }
         case .changePassword:
+            let viewModel: ChangePasswordViewModel = ChangePasswordViewModelImpl(user: viewModel.user)
+            let viewController = ChangePasswordViewController(viewModel: viewModel)
+            let navigation = UINavigationController(rootViewController: viewController)
+            present(navigation, animated: true) { [weak self] in
+                
+            }
             break
         }
     }

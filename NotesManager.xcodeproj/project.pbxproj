@@ -278,9 +278,9 @@
 		A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
 		A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
 		A8F260172898FA2C00FEAF22 /* Strings+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */; };
-		A8FA63D5289F9AC000BC3490 /* Button+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* Button+.swift */; };
-		A8FA63D6289F9AC000BC3490 /* Button+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* Button+.swift */; };
-		A8FA63D7289F9AC000BC3490 /* Button+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* Button+.swift */; };
+		A8FA63D5289F9AC000BC3490 /* ImageTintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* ImageTintColor.swift */; };
+		A8FA63D6289F9AC000BC3490 /* ImageTintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* ImageTintColor.swift */; };
+		A8FA63D7289F9AC000BC3490 /* ImageTintColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D4289F9AC000BC3490 /* ImageTintColor.swift */; };
 		A8FA63D9289F9CA000BC3490 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */; };
 		A8FA63DA289F9CA000BC3490 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */; };
 		A8FA63DB289F9CA000BC3490 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */; };
@@ -290,6 +290,18 @@
 		A8FA63E1289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */; };
 		A8FA63E2289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */; };
 		A8FA63E3289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */; };
+		A8FA63E7289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E5289FB46B00BC3490 /* ChangePasswordViewController.swift */; };
+		A8FA63E8289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E5289FB46B00BC3490 /* ChangePasswordViewController.swift */; };
+		A8FA63E9289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63E5289FB46B00BC3490 /* ChangePasswordViewController.swift */; };
+		A8FA63EA289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FA63E6289FB46B00BC3490 /* ChangePasswordViewController.xib */; };
+		A8FA63EB289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FA63E6289FB46B00BC3490 /* ChangePasswordViewController.xib */; };
+		A8FA63EC289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8FA63E6289FB46B00BC3490 /* ChangePasswordViewController.xib */; };
+		A8FA63EE289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63ED289FB4B800BC3490 /* ChangePasswordViewModel.swift */; };
+		A8FA63EF289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63ED289FB4B800BC3490 /* ChangePasswordViewModel.swift */; };
+		A8FA63F0289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63ED289FB4B800BC3490 /* ChangePasswordViewModel.swift */; };
+		A8FA63F2289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63F1289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift */; };
+		A8FA63F3289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63F1289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift */; };
+		A8FA63F4289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FA63F1289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift */; };
 		B734C077EC7426D133002905 /* Pods_NotesManager_NotesManager_Staging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9722BD69E25D43A6FA4D206E /* Pods_NotesManager_NotesManager_Staging.framework */; };
 		DFD91BB4571CB9E85923B2FF /* Pods_NotesManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 526B13E15988130F218AD1A7 /* Pods_NotesManager.framework */; };
 /* End PBXBuildFile section */
@@ -429,10 +441,14 @@
 		A8F260092898FA2C00FEAF22 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		A8F2600A2898FA2C00FEAF22 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
 		A8F2600B2898FA2C00FEAF22 /* Strings+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Strings+Generated.swift"; sourceTree = "<group>"; };
-		A8FA63D4289F9AC000BC3490 /* Button+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+.swift"; sourceTree = "<group>"; };
+		A8FA63D4289F9AC000BC3490 /* ImageTintColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTintColor.swift; sourceTree = "<group>"; };
 		A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		A8FA63DC289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
 		A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditProfileViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		A8FA63E5289FB46B00BC3490 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		A8FA63E6289FB46B00BC3490 /* ChangePasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangePasswordViewController.xib; sourceTree = "<group>"; };
+		A8FA63ED289FB4B800BC3490 /* ChangePasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewModel.swift; sourceTree = "<group>"; };
+		A8FA63F1289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChangePasswordViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		AA129073F338D0ED4A26E571 /* Pods-NotesManager.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugprod.xcconfig"; sourceTree = "<group>"; };
 		AE1C38614CF7E8C93AB5537A /* Pods-NotesManager.debugstaging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager.debugstaging.xcconfig"; path = "Target Support Files/Pods-NotesManager/Pods-NotesManager.debugstaging.xcconfig"; sourceTree = "<group>"; };
 		B2FFD19359E4078179C76A07 /* Pods-NotesManager-NotesManager Staging.debugprod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; path = "Target Support Files/Pods-NotesManager-NotesManager Staging/Pods-NotesManager-NotesManager Staging.debugprod.xcconfig"; sourceTree = "<group>"; };
@@ -666,13 +682,14 @@
 		A8AB9CFE288E551400939E9D /* UIs */ = {
 			isa = PBXGroup;
 			children = (
-				A8B5913B289E27F400CF50E3 /* NoteDetails */,
 				A8AB9D02288E555E00939E9D /* Lauch */,
 				A8F25FEC2898C80600FEAF22 /* Login */,
 				A8F25FF72898DBD900FEAF22 /* Register */,
 				A816B137289A2942003793FB /* Main */,
+				A8B5913B289E27F400CF50E3 /* NoteDetails */,
 				A8B59158289E52B200CF50E3 /* ConfigNote */,
 				A89492A9289F766C00F860DC /* EditProfile */,
+				A8FA63E4289FB45600BC3490 /* ChangePassword */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
@@ -691,7 +708,7 @@
 				A8C7876F289922B90080D31E /* Font+Constant.swift */,
 				A88F2A08289A7958002DE601 /* Window+.swift */,
 				A8B59150289E36FD00CF50E3 /* Date+.swift */,
-				A8FA63D4289F9AC000BC3490 /* Button+.swift */,
+				A8FA63D4289F9AC000BC3490 /* ImageTintColor.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -944,6 +961,17 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		A8FA63E4289FB45600BC3490 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				A8FA63E5289FB46B00BC3490 /* ChangePasswordViewController.swift */,
+				A8FA63E6289FB46B00BC3490 /* ChangePasswordViewController.xib */,
+				A8FA63F1289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift */,
+				A8FA63ED289FB4B800BC3490 /* ChangePasswordViewModel.swift */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1054,6 +1082,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B59141289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
+				A8FA63EA289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
 				A8B59174289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8F25FE92898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9CD6288E547B00939E9D /* LaunchScreen.storyboard in Resources */,
@@ -1077,6 +1106,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8B59142289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
+				A8FA63EB289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
 				A8B59175289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8F25FEA2898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9D0B288E561300939E9D /* LaunchScreen.storyboard in Resources */,
@@ -1099,6 +1129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8FA63EC289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
 				A8F260072898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8B59176289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8A3F33F289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
@@ -1324,6 +1355,7 @@
 				A8B2085D2892675500DC7FA6 /* Request.swift in Sources */,
 				A8FA63D9289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
 				A8A3F351289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
+				A8FA63E7289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */,
 				A8B59180289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
 				A8B2084128925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A8B59149289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift in Sources */,
@@ -1345,19 +1377,21 @@
 				A8F25FFA2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2083928925B0F00DC7FA6 /* String+.swift in Sources */,
 				A8880CE0289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
+				A8FA63F2289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B184289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B59162289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A8A3F34D289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
 				A8B59151289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8B59184289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
 				A8B2084928925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
-				A8FA63D5289F9AC000BC3490 /* Button+.swift in Sources */,
+				A8FA63D5289F9AC000BC3490 /* ImageTintColor.swift in Sources */,
 				A8C7876828991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
 				A821BD33289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8B2087E2892681600DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8AB9CCA288E547A00939E9D /* AppDelegate.swift in Sources */,
 				A8C7876C2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8B2089928926D9F00DC7FA6 /* Login.swift in Sources */,
+				A8FA63EE289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
 				A8880CF0289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A8A370C02897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8B5915A289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */,
@@ -1409,6 +1443,7 @@
 				A8B2085E2892675500DC7FA6 /* Request.swift in Sources */,
 				A8FA63DA289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
 				A8A3F352289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
+				A8FA63E8289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */,
 				A8B59181289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
 				A8B2084228925B0F00DC7FA6 /* Color+.swift in Sources */,
 				A8B5914A289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift in Sources */,
@@ -1430,19 +1465,21 @@
 				A8F25FFB2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8880CE1289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
+				A8FA63F3289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B185289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B59163289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A8A3F34E289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
 				A8B59152289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8B59185289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
 				A8B2087F2892681700DC7FA6 /* UserNetwork+Rx.swift in Sources */,
-				A8FA63D6289F9AC000BC3490 /* Button+.swift in Sources */,
+				A8FA63D6289F9AC000BC3490 /* ImageTintColor.swift in Sources */,
 				A8C7876928991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
 				A821BD34289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8AB9D06288E561300939E9D /* AppDelegate.swift in Sources */,
 				A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8C7876D2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
 				A8B208632892676000DC7FA6 /* ApiError.swift in Sources */,
+				A8FA63EF289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
 				A8880CF1289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A8A370C12897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A8B5915B289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */,
@@ -1485,9 +1522,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8F25FF02898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
-				A8FA63D7289F9AC000BC3490 /* Button+.swift in Sources */,
+				A8FA63D7289F9AC000BC3490 /* ImageTintColor.swift in Sources */,
 				A8B59160289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A8B59186289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
+				A8FA63F0289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
 				A8B59164289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A80A95E82893D4A600F044D9 /* AppDelegate.swift in Sources */,
 				A8880CEA289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
@@ -1518,6 +1556,7 @@
 				A8FA63DF289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8B4B182289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
 				A80A96072893EC8200F044D9 /* Register.swift in Sources */,
+				A8FA63F4289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A8A3F366289D27C800DEBCD5 /* LogoutView.swift in Sources */,
 				A8B59182289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
@@ -1551,6 +1590,7 @@
 				A8880CF2289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A80A95F72893D4CF00F044D9 /* Request.swift in Sources */,
 				A8C7876E2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
+				A8FA63E9289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */,
 				A8A370C22897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A89492B9289F77EC00F860DC /* EditProfileViewModel.swift in Sources */,
 				A88F2A0B289A7958002DE601 /* Window+.swift in Sources */,

@@ -10,7 +10,11 @@
 extension SettingViewController {
     func setupNavigationBar() {
         configTitle()
-        navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color, titleColor: Asset.Colors.text.color)
+        navigationController?.navigationBar.update(
+            backroundColor: Asset.Colors.background.color,
+            titleColor: Asset.Colors.text.color
+        )
+        navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.tintColor = Asset.Colors.main.color
     }

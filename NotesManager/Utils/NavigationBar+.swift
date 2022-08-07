@@ -17,6 +17,7 @@ extension UINavigationBar {
             }
             if let titleColor = titleColor {
                 appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+                appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
             }
             standardAppearance = appearance
             scrollEdgeAppearance = appearance
@@ -26,6 +27,7 @@ extension UINavigationBar {
             }
             if let titleColor = titleColor {
                 titleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
+                largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: titleColor]
             }
         }
     }

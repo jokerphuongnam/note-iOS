@@ -74,5 +74,6 @@ final class ConfigNoteViewController: UICollectionViewController {
         isShowTitle = viewModel.note.title != nil
         isShowDescription = viewModel.note.description != nil
         title = viewModel.title
+        view.backgroundColor = Asset.Colors.background.color
     }
 }

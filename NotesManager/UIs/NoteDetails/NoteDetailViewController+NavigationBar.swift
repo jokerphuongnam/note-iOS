@@ -16,10 +16,7 @@ extension NoteDetailViewController {
             setNavigationBarTitle(largeTitle: "", collapsedTitle: Strings.noteDetail)
             navigationController?.navigationBar.prefersLargeTitles = false
         }
-        navigationController?.navigationBar.update(
-            backroundColor: Asset.Colors.background.color,
-            titleColor: Asset.Colors.text.color
-        )
+        navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
         navigationItem.rightBarButtonItems = [deleteNoteButton, editNoteButton]
     }
 }

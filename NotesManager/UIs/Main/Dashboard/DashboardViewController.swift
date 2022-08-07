@@ -64,6 +64,14 @@ final class DashboardViewController: UICollectionViewController {
         setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.update(
+            backroundColor: Asset.Colors.background.color,
+            titleColor: Asset.Colors.text.color
+        )
+    }
+    
     private func setupView() {
         collectionView.collectionViewLayout = layout
         collectionView.register(

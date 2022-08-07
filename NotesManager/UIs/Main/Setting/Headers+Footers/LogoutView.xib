@@ -14,12 +14,12 @@
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awL-js-KYE" userLabel="Logout Button">
-                    <rect key="frame" x="118.5" y="16" width="83" height="36"/>
+                    <rect key="frame" x="117.5" y="16" width="85.5" height="36"/>
                     <color key="backgroundColor" name="Main"/>
-                    <color key="tintColor" name="Background"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <inset key="contentEdgeInsets" minX="40" minY="16" maxX="40" maxY="16"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button" buttonSize="large"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Logout" buttonSize="large"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="16"/>
@@ -46,9 +46,6 @@
         </collectionReusableView>
     </objects>
     <resources>
-        <namedColor name="Background">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Main">
             <color red="1" green="0.76099997758865356" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
