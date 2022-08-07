@@ -5,7 +5,6 @@
 //  Created by pnam on 05/08/2022.
 //
 
-import Foundation
 @_implementationOnly import UIKit
 
 extension SettingViewController {

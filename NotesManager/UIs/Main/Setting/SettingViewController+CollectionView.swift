@@ -62,9 +62,9 @@ extension SettingViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        if let logoutView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Self.logoutViewName, for: indexPath) as? LogoutView {
-            logoutView.delegate = self
-            return logoutView
+        if let v = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Self.logoutViewName, for: indexPath) as? LogoutView {
+            v.delegate = self
+            return v
         }
         fatalError()
     }
