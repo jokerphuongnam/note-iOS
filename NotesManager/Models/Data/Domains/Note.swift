@@ -10,9 +10,9 @@ import Foundation
 
 struct Note {
     let id: String
-    let title: String?
-    let description: String?
-    let color: UIColor
+    var title: String?
+    var description: String?
+    var color: UIColor
     let createAt, updateAt: Int64
 }
 

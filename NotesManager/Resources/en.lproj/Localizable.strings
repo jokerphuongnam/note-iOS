@@ -20,3 +20,8 @@
 "change_password" = "Change Password";
 "logout" = "Logout";
 "note_detail" = "Note Detail";
+"add_note" = "Add Note";
+"edit_note" = "Edit Note";
+"title" = "Title";
+"description" = "Description";
+"color" = "Color";

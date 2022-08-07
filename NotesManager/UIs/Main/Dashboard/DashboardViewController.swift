@@ -32,16 +32,16 @@ final class DashboardViewController: UICollectionViewController {
     }()
     
     lazy var addButton: UIBarButtonItem = { [weak self] in
-        let imageView = UIImageView(image: UIImage(systemName: "plus"))
-        imageView.hero.isEnabled = true
-        imageView.hero.id = ""
-        let tapGesture: UITapGestureRecognizer
+        let buttonView = UIButton()
+        buttonView.hero.isEnabled = true
+        buttonView.heroID = "note"
+        buttonView.setImage(UIImage(systemName: "plus"), for: .normal)
         if let self = self {
-            tapGesture = UITapGestureRecognizer(target: self, action: #selector(addAction))
+            buttonView.addTarget(self, action: #selector(addAction), for: .touchUpInside)
         } else {
-            tapGesture = UITapGestureRecognizer(target: nil, action: #selector(addAction))
+            buttonView.addTarget(nil, action: #selector(addAction), for: .touchUpInside)
         }
-        return UIBarButtonItem(customView: imageView)
+        return UIBarButtonItem(customView: buttonView)
     }()
     
     init(viewModel: DashboardViewModel) {
@@ -118,7 +118,12 @@ private extension DashboardViewController {
         sender.image = layoutType == .grid ? Asset.Assets.list.image : Asset.Assets.grid.image
     }
     
-    @objc func addAction(_ sender: UIBarButtonItem) {
-        
+    @objc func addAction(_ sender: UIButton, forEvent event: UIEvent) {
+        let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl()
+        let viewController = ConfigNoteViewController(viewModel: viewModel)
+        let navigation = UINavigationController(rootViewController: viewController)
+        present(navigation, animated: true) { [weak self] in
+            
+        }
     }
 }

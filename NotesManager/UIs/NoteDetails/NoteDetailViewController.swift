@@ -13,17 +13,29 @@ final class NoteDetailViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     lazy var editNoteButton: UIBarButtonItem = { [weak self] in
-        guard let self = self else {
-            return UIBarButtonItem(image: UIImage(systemName: "pencil"), style: .plain, target: nil, action: #selector(editNoteAction))
-        }
-        return UIBarButtonItem(image: UIImage(systemName: "pencil"), style: .plain, target: self, action: #selector(editNoteAction))
+            let buttonView = UIButton()
+            buttonView.hero.isEnabled = true
+            buttonView.heroID = "note"
+            buttonView.setImage(UIImage(systemName: "pencil"), for: .normal)
+            if let self = self {
+                buttonView.addTarget(self, action: #selector(editNoteAction), for: .touchUpInside)
+            } else {
+                buttonView.addTarget(nil, action: #selector(editNoteAction), for: .touchUpInside)
+            }
+            return UIBarButtonItem(customView: buttonView)
     }()
     
     lazy var deleteNoteButton: UIBarButtonItem = { [weak self] in
-        guard let self = self else {
-            return UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: nil, action: #selector(deleteNoteAction))
+        let buttonView = UIButton()
+        buttonView.hero.isEnabled = true
+        buttonView.heroID = "note"
+        buttonView.setImage(UIImage(systemName: "trash"), for: .normal)
+        if let self = self {
+            buttonView.addTarget(self, action: #selector(deleteNoteAction), for: .touchUpInside)
+        } else {
+            buttonView.addTarget(nil, action: #selector(deleteNoteAction), for: .touchUpInside)
         }
-        return UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(deleteNoteAction))
+        return UIBarButtonItem(customView: buttonView)
     }()
     
     init(viewModel: NoteDetailViewModel) {
@@ -56,7 +68,12 @@ final class NoteDetailViewController: UIViewController {
 //MARK: - Action
 private extension NoteDetailViewController {
     @objc func editNoteAction(_ sender: UIBarButtonItem) {
-        
+        let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl(note: viewModel.note)
+        let viewController = ConfigNoteViewController(viewModel: viewModel)
+        let navigation = UINavigationController(rootViewController: viewController)
+        present(navigation, animated: true) { [weak self] in
+            
+        }
     }
     
     @objc func deleteNoteAction(_ sender: UIBarButtonItem) {
