@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-//MARK: - property IBInspectable
+// MARK: - property IBInspectable
 extension UIView {
     @IBInspectable var isCircle: Bool {
         get {

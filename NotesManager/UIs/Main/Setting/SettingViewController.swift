@@ -11,10 +11,12 @@ final class SettingViewController: UICollectionViewController {
     static let settingCellName = String(describing: SettingCell.self)
     static let logoutViewName = String(describing: LogoutView.self)
     
+    var viewModel: SettingViewModel!
     var options = Option.allCases
     
-    init() {
+    init(viewModel: SettingViewModel) {
         super.init(collectionViewLayout: .init())
+        self.viewModel = viewModel
     }
     
     required init?(coder: NSCoder) {
@@ -22,13 +24,23 @@ final class SettingViewController: UICollectionViewController {
     }
     
     deinit {
-        
+        viewModel = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
         setupNavigationBar()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configTitle()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        title = Strings.setting
     }
     
     private func setupView() {

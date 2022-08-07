@@ -25,3 +25,12 @@
 "title" = "Title";
 "description" = "Description";
 "color" = "Color";
+"name" = "Name";
+"gender" = "Gender";
+"male" = "Male";
+"female" = "Female";
+"secret" = "Secret";
+"other" = "Other";
+"example_name" = "Exmaple Name etc...";
+"example_email" = "abc@gmail.com";
+"confirm" = "Confirm";

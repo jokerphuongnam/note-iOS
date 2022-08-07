@@ -35,7 +35,7 @@ final class AFNoteNetworkTests: XCTestCase {
         try super.tearDownWithError()
     }
     
-    //MARK: - fetch notes
+    // MARK: - fetch notes
     
     /// Given
     /// - page are provided
@@ -309,7 +309,7 @@ final class AFNoteNetworkTests: XCTestCase {
         XCTAssertEqual(searchWords, mockSession.parameters?["search_words"] as? String)
     }
     
-    //MARK: - insert note
+    // MARK: - insert note
     
     /// Given
     /// - title are provided
@@ -456,7 +456,7 @@ final class AFNoteNetworkTests: XCTestCase {
         XCTAssertEqual(description, mockSession.parameters?["description"] as? String)
     }
     
-    //MARK: - update note
+    // MARK: - update note
     
     /// Given
     /// - title are provided
@@ -611,7 +611,7 @@ final class AFNoteNetworkTests: XCTestCase {
         XCTAssertEqual(description, mockSession.parameters?["description"] as? String)
     }
     
-    //MARK: - delete note
+    // MARK: - delete note
     
     /// Given
     /// - title, description are provided

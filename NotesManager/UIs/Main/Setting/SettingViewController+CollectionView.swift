@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-//MARK: - layout
+// MARK: - layout
 extension SettingViewController {
     var layout: UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] (numberOfSection ,env) in
@@ -72,7 +72,25 @@ extension SettingViewController {
 
 // MARK: - UICollectionViewDelegate
 extension SettingViewController {
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        configTitle()
+    }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch options[indexPath.item] {
+        case .language(value: let value):
+            break
+        case .editProfile:
+            let viewModel: EditProfileViewModel = EditProfileViewModelImpl(user: viewModel.user)
+            let viewController = EditProfileViewController(viewModel: viewModel)
+            let navigation = UINavigationController(rootViewController: viewController)
+            present(navigation, animated: true) { [weak self] in
+                
+            }
+        case .changePassword:
+            break
+        }
+    }
 }
 
 // MARK: - LogoutViewDelegate

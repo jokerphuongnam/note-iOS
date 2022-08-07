@@ -7,7 +7,7 @@
 
 @_implementationOnly import UIKit
 
-//MARK: - layout
+// MARK: - layout
 extension DashboardViewController {
     var layout: UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] (numberOfSection, env) in

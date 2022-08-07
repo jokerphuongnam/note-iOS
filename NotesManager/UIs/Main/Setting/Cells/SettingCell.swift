@@ -28,5 +28,4 @@ final class SettingCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
 }

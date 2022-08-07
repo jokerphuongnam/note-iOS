@@ -7,14 +7,14 @@
 
 @_implementationOnly import UIKit
 
-//MARK: - UISearchResultsUpdating
+// MARK: - UISearchResultsUpdating
 extension DashboardViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchWords = searchController.searchBar.text else { return }
     }
 }
 
-//MARK: - UISearchControllerDelegate
+// MARK: - UISearchControllerDelegate
 extension DashboardViewController: UISearchControllerDelegate {
     
 }

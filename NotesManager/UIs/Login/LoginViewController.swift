@@ -79,7 +79,7 @@ final class LoginViewController: UIViewController {
     }
 }
 
-//MARK: - Action
+// MARK: - Action
 private extension LoginViewController {
     @objc func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
