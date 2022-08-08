@@ -36,3 +36,10 @@
 "old_password" = "이전 암호";
 "new_password" = "새 암호";
 "system_language" = "시스템 언어";
+"appearance" = "모양";
+"light" = "빛";
+"dark" = "어두운";
+"system_appearance" = "시스템 모양";
+"custom" = "커스텀";
+"start_time" = "시작 시간";
+"end_time" = "종료 시간";

@@ -36,3 +36,10 @@
 "old_password" = "舊密碼";
 "new_password" = "新密碼";
 "system_language" = "系統語言";
+"appearance" = "外觀";
+"light" = "光";
+"dark" = "黑暗";
+"system_appearance" = "系統外觀";
+"custom" = "風俗";
+"start_time" = "開始時間";
+"end_time" = "結束時間";

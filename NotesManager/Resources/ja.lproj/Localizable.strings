@@ -36,3 +36,10 @@
 "old_password" = "古いパスワード";
 "new_password" = "新しいパスワード";
 "system_language" = "システム言語";
+"appearance" = "外観";
+"light" = "ライト";
+"dark" = "暗い";
+"system_appearance" = "システムの外観";
+"custom" = "習慣";
+"start_time"="開始時間";
+"end_time"="終了時間";

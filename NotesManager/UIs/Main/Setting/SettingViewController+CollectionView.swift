@@ -82,21 +82,18 @@ extension SettingViewController {
             let viewModel: LanguagesViewModel = LanguagesViewModelImpl(language: language)
             let viewController = LanguagesViewController(viewModel: viewModel)
             navigationController?.pushViewController(viewController, animated: true)
+        case .appearance(currentAppearance: let appearance):
+            let viewModel: AppearancesViewModel = AppearancesViewModelImpl(appearance: appearance)
+            let viewController = AppearancesViewController(viewModel: viewModel)
+            navigationController?.pushViewController(viewController, animated: true)
         case .editProfile:
             let viewModel: EditProfileViewModel = EditProfileViewModelImpl(user: viewModel.user)
             let viewController = EditProfileViewController(viewModel: viewModel)
-            let navigation = UINavigationController(rootViewController: viewController)
-            present(navigation, animated: true) { [weak self] in
-                
-            }
+            navigationController?.pushViewController(viewController, animated: true)
         case .changePassword:
             let viewModel: ChangePasswordViewModel = ChangePasswordViewModelImpl(user: viewModel.user)
             let viewController = ChangePasswordViewController(viewModel: viewModel)
-            let navigation = UINavigationController(rootViewController: viewController)
-            present(navigation, animated: true) { [weak self] in
-                
-            }
-            break
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }

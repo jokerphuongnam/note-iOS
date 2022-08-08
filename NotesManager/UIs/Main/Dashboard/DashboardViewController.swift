@@ -118,7 +118,11 @@ private extension DashboardViewController {
     @objc func settingAction(_ sender: UIBarButtonItem) {
         let viewModel: SettingViewModel = SettingViewModelImpl()
         let viewController = SettingViewController(viewModel: viewModel)
-        navigationController?.pushViewController(viewController, animated: true)
+        let navigation = UINavigationController(rootViewController: viewController)
+//        navigationController?.pushViewController(viewController, animated: true)
+        present(navigation, animated: true) { [weak self] in
+            
+        }
     }
     
     @objc func layoutChangeAction(_ sender: UIBarButtonItem) {

@@ -36,19 +36,19 @@ extension LanguagesViewController {
 // MARK: - UICollectionViewDataSource
 extension LanguagesViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        1
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return languages.count
+        languages.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.languageCellName, for: indexPath) as? LanguageCell {
             let language = languages[indexPath.item]
             cell.titleLabel.text = language.name
-            cell.checkImage.isHidden = viewModel.language != language
+            cell.checkImageView.isHidden = viewModel.language != language
             return cell
         }
         fatalError()

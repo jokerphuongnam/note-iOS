@@ -38,8 +38,8 @@ final class SettingViewController: UICollectionViewController {
         configTitle()
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         title = Strings.setting
     }
     

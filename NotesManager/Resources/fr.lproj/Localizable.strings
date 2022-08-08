@@ -36,3 +36,10 @@
 "old_password" = "Ancien mot de passe";
 "new_password" = "Nouveau mot de passe";
 "system_language" = "Langue du système";
+"appearance" = "Apparence";
+"light" = "Lumière";
+"dark" = "Sombre";
+"system_appearance" = "Apparence du système";
+"custom" = "Douane";
+"start_time" = "Heure de début";
+"end_time" = "Heure de fin";

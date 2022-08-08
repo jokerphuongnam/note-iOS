@@ -36,3 +36,10 @@
 "old_password" = "Mật Khẩu Cũ";
 "new_password" = "Mật Khẩu Mới";
 "system_language" = "Ngôn Ngữ Hệ Thống";
+"appearance" = "Giao diện";
+"light" = "Sáng";
+"dark" = "Tối";
+"system_appearance" = "Giao Diện Hệ Thống";
+"custom" = "Tùy Chỉnh";
+"start_time" = "Thời Gian Bắt Đầu";
+"end_time" = "Thời Gian Kết Thúc";

@@ -36,3 +36,10 @@
 "old_password" = "Old Password";
 "new_password" = "New Password";
 "system_language" = "System Language";
+"appearance" = "Appearance";
+"light" = "Light";
+"dark" = "Dark";
+"system_appearance" = "System Appearance";
+"custom" = "Custom";
+"start_time" = "Start Time";
+"end_time" = "End Time";
