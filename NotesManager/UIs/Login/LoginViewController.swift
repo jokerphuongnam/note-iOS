@@ -19,6 +19,7 @@ final class LoginViewController: UIViewController {
         let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = Asset.Assets.email.image
         emailImage.setImage(image, for: .normal)
+        emailImage.imageTint = Asset.Colors.text.color
         emailImage.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
         emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
         emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
@@ -29,6 +30,7 @@ final class LoginViewController: UIViewController {
         let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = Asset.Assets.password.image
         emailImage.setImage(image, for: .normal)
+        emailImage.imageTint = Asset.Colors.text.color
         emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
         emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
         return emailImage
@@ -38,6 +40,7 @@ final class LoginViewController: UIViewController {
         let showHideButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = (!passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         showHideButton.setImage(image, for: .normal)
+        showHideButton.imageTint = Asset.Colors.text.color
         showHideButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
         showHideButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
         showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
@@ -59,6 +62,7 @@ final class LoginViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         keyboardManager = .init(viewController: self, scrollView: scrollView, textField: emailTextField, passwordTextField)
+        navigationController?.navigationBar.update(backroundColor: Asset.Colors.main.color)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -81,18 +85,18 @@ final class LoginViewController: UIViewController {
 
 // MARK: - Action
 private extension LoginViewController {
-    @objc func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         sender.setImage(image, for: .normal)
         passwordTextField.isSecureTextEntry.toggle()
     }
     
-    @IBAction func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
         let registerViewController = RegisterViewController()
         navigationController?.pushViewController(registerViewController, animated: true)
     }
     
-    @IBAction func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
         let viewModel: DashboardViewModel = DashboardViewModelImpl()
         let viewController = DashboardViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)

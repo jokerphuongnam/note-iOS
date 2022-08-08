@@ -1,17 +1,17 @@
 //
-//  EditProfileViewController+NavigationBar.swift
+//  ChangePasswordViewController+NavigationBar.swift
 //  NotesManager
 //
 //  Created by pnam on 07/08/2022.
 //
 
-@_implementationOnly import UIKit
+import Foundation
 
-extension EditProfileViewController {
+extension ChangePasswordViewController {
     func setupNavigationBar() {
-        title = Strings.editProfile
+        title = Strings.changePassword
         navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
+        navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.tintColor = Asset.Colors.main.color
-        
     }
 }

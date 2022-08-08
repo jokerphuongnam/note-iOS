@@ -1,5 +1,5 @@
 //
-//  Button+.swift
+//  ImageTintColor.swift
 //  NotesManager
 //
 //  Created by pnam on 07/08/2022.
@@ -15,6 +15,19 @@ extension UIButton {
         set {
             let tintedImage = imageView?.image?.withRenderingMode(.alwaysTemplate)
             setImage(tintedImage, for: .normal)
+            tintColor = newValue
+        }
+    }
+}
+
+extension UIImageView {
+    @IBInspectable var imageTint: UIColor! {
+        get {
+            tintColor
+        }
+        set {
+            let tintedImage = image?.withRenderingMode(.alwaysTemplate)
+            image = tintedImage
             tintColor = newValue
         }
     }

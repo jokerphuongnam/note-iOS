@@ -28,7 +28,7 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Jo-bL-s8Q" userLabel="Content View">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="308.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="324.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPh-tt-jNd" userLabel="Name Label">
                                     <rect key="frame" x="16" y="16" width="382" height="24"/>
@@ -64,7 +64,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6k9-l8-iKq" userLabel="Gender Label">
-                                    <rect key="frame" x="16" y="106" width="382" height="24"/>
+                                    <rect key="frame" x="16" y="122" width="382" height="24"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N52-HR-v9J" userLabel="Gender View">
-                                    <rect key="frame" x="16" y="146" width="382" height="83.5"/>
+                                    <rect key="frame" x="16" y="162" width="382" height="83.5"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFj-cX-e4y" userLabel="Male Button">
                                             <rect key="frame" x="0.0" y="0.0" width="83.5" height="83.5"/>
@@ -89,10 +89,10 @@
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="imageTint">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -113,10 +113,10 @@
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="imageTint">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -137,10 +137,10 @@
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="imageTint">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -161,10 +161,10 @@
                                                     <real key="value" value="1"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="imageTint">
-                                                    <color key="value" systemColor="opaqueSeparatorColor"/>
+                                                    <color key="value" name="Gray"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
@@ -190,7 +190,7 @@
                                     </constraints>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CG5-Iy-CaW" userLabel="Confirm Button">
-                                    <rect key="frame" x="32" y="261.5" width="350" height="31"/>
+                                    <rect key="frame" x="32" y="277.5" width="350" height="31"/>
                                     <color key="backgroundColor" name="Main"/>
                                     <color key="tintColor" name="Text"/>
                                     <inset key="contentEdgeInsets" minX="32" minY="16" maxX="32" maxY="16"/>
@@ -220,7 +220,7 @@
                                 <constraint firstItem="N52-HR-v9J" firstAttribute="top" secondItem="6k9-l8-iKq" secondAttribute="bottom" constant="16" id="DFS-iD-ZDb"/>
                                 <constraint firstItem="CG5-Iy-CaW" firstAttribute="top" secondItem="N52-HR-v9J" secondAttribute="bottom" constant="32" id="EAx-1S-o3w"/>
                                 <constraint firstItem="6k9-l8-iKq" firstAttribute="leading" secondItem="LHe-jb-FQt" secondAttribute="leading" id="He0-eG-y8y"/>
-                                <constraint firstItem="6k9-l8-iKq" firstAttribute="top" secondItem="LHe-jb-FQt" secondAttribute="bottom" constant="16" id="J4m-lD-uw0"/>
+                                <constraint firstItem="6k9-l8-iKq" firstAttribute="top" secondItem="LHe-jb-FQt" secondAttribute="bottom" constant="32" id="J4m-lD-uw0"/>
                                 <constraint firstItem="N52-HR-v9J" firstAttribute="trailing" secondItem="6k9-l8-iKq" secondAttribute="trailing" id="MOg-fo-Eoj"/>
                                 <constraint firstItem="LHe-jb-FQt" firstAttribute="top" secondItem="rPh-tt-jNd" secondAttribute="bottom" constant="16" id="MUf-lu-Gqa"/>
                                 <constraint firstItem="rPh-tt-jNd" firstAttribute="top" secondItem="3Jo-bL-s8Q" secondAttribute="top" constant="16" id="MWb-SY-SLb"/>
@@ -265,14 +265,14 @@
         <namedColor name="Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Gray">
+            <color red="0.86274509803921573" green="0.86274509803921573" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Main">
             <color red="1" green="0.76099997758865356" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Text">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

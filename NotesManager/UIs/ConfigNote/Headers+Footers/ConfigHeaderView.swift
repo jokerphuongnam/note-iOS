@@ -28,7 +28,7 @@ final class ConfigHeaderView: UICollectionReusableView {
         super.awakeFromNib()
     }
     
-    @IBAction func addAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func addAction(_ sender: UIButton, forEvent event: UIEvent) {
         if section != 2 {
             flag.toggle()
             delegate?.configHeader?(self, addAction: flag, at: section, sender, forEvent: event)

@@ -8,6 +8,7 @@
 @_implementationOnly import UIKit
 
 final class EditProfileViewController: UIViewController {
+    private var keyboardManager: KeyboardManagerment!
     var viewModel: EditProfileViewModel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -32,6 +33,20 @@ final class EditProfileViewController: UIViewController {
         setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        keyboardManager = .init(viewController: self, scrollView: scrollView, textField: nameTextField)
+        navigationController?.navigationBar.update(
+            backroundColor: Asset.Colors.background.color,
+            titleColor: Asset.Colors.text.color
+        )
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        keyboardManager = nil
+    }
+    
     private func setupView() {
         nameTextField.delegate = self
         scrollView.delegate = self
@@ -53,8 +68,8 @@ final class EditProfileViewController: UIViewController {
             default: break
             }
         } else {
-            sender.borderColor = .opaqueSeparator
-            sender.imageTint = .opaqueSeparator
+            sender.borderColor = Asset.Colors.gray.color
+            sender.imageTint = Asset.Colors.gray.color
             sender.backgroundColor = .clear
             sender.borderWidth = 1
         }
@@ -68,8 +83,8 @@ final class EditProfileViewController: UIViewController {
 }
 
 // MARK: - Action
-extension EditProfileViewController {
-    @IBAction func gendersAction(_ sender: UIButton, forEvent event: UIEvent) {
+private extension EditProfileViewController {
+    @IBAction private func gendersAction(_ sender: UIButton, forEvent event: UIEvent) {
         if let index = genderButtons.firstIndex(of: sender) {
             viewModel.user.gender = .init(of: index)
         }
@@ -78,7 +93,7 @@ extension EditProfileViewController {
         }
     }
     
-    @IBAction func confirmAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func confirmAction(_ sender: UIButton, forEvent event: UIEvent) {
     }
 }
 

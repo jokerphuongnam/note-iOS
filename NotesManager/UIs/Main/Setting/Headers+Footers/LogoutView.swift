@@ -19,7 +19,7 @@ final class LogoutView: UICollectionReusableView {
         super.awakeFromNib()
     }
     
-    @IBAction func logoutAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func logoutAction(_ sender: UIButton, forEvent event: UIEvent) {
         delegate?.logoutView?(self, logout: sender, forEvent: event)
     }
 }

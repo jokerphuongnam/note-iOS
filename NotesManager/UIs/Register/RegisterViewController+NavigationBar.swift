@@ -10,8 +10,8 @@
 extension RegisterViewController {
     func setupNavigationBar() {
         title = Strings.login
-        navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color)
         navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
+        navigationController?.navigationBar.tintColor = Asset.Colors.main.color
         if let font: UIFont = .helveticalNeueBoldItalic(size: 17) {
             navigationController?.navigationBar.titleTextAttributes = [.font: font]
         }

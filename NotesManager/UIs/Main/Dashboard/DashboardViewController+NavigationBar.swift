@@ -11,7 +11,6 @@ extension DashboardViewController {
     func setupNavigationBar() {
         title = Strings.dashboard
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.update(backroundColor: Asset.Colors.background.color, titleColor: Asset.Colors.text.color)
         
         navigationItem.leftBarButtonItems = [settingButton]
         navigationItem.rightBarButtonItems = [addButton, layoutChangeButton]
@@ -20,11 +19,7 @@ extension DashboardViewController {
         search.searchResultsUpdater = self
         search.delegate = self
         navigationItem.searchController = search
-        navigationController?.navigationBar.update(
-            backroundColor: Asset.Colors.background.color,
-            titleColor: Asset.Colors.text.color
-        )
-        
+        navigationController?.navigationBar.scrollEdgeAppearance?.shadowColor = .clear
         navigationController?.navigationBar.tintColor = Asset.Colors.main.color
     }
 }

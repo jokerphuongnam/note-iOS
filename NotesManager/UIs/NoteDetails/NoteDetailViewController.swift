@@ -53,6 +53,14 @@ final class NoteDetailViewController: UIViewController {
         setupNavigationBar()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.update(
+            backroundColor: viewModel.note.color,
+            titleColor: .black
+        )
+    }
+    
     private func setupView() {
         hero.modalAnimationType = .zoom
         descriptionLabel.text = viewModel.note.description
