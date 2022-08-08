@@ -46,6 +46,27 @@
 		A84F1B952897849A005683EB /* FetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84F1B942897849A005683EB /* FetchNotes.swift */; };
 		A84F1B962897849A005683EB /* FetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84F1B942897849A005683EB /* FetchNotes.swift */; };
 		A84F1B972897849A005683EB /* FetchNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84F1B942897849A005683EB /* FetchNotes.swift */; };
+		A85E226628A0F28F00FB00EB /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E226428A0F28F00FB00EB /* LanguageCell.swift */; };
+		A85E226728A0F28F00FB00EB /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E226428A0F28F00FB00EB /* LanguageCell.swift */; };
+		A85E226828A0F28F00FB00EB /* LanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E226428A0F28F00FB00EB /* LanguageCell.swift */; };
+		A85E226928A0F28F00FB00EB /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85E226528A0F28F00FB00EB /* LanguageCell.xib */; };
+		A85E226A28A0F28F00FB00EB /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85E226528A0F28F00FB00EB /* LanguageCell.xib */; };
+		A85E226B28A0F28F00FB00EB /* LanguageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A85E226528A0F28F00FB00EB /* LanguageCell.xib */; };
+		A85E226D28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E226C28A0F2F400FB00EB /* LanguagesViewController.swift */; };
+		A85E226E28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E226C28A0F2F400FB00EB /* LanguagesViewController.swift */; };
+		A85E226F28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E226C28A0F2F400FB00EB /* LanguagesViewController.swift */; };
+		A85E227128A0F30000FB00EB /* LanguagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227028A0F30000FB00EB /* LanguagesViewModel.swift */; };
+		A85E227228A0F30000FB00EB /* LanguagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227028A0F30000FB00EB /* LanguagesViewModel.swift */; };
+		A85E227328A0F30000FB00EB /* LanguagesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227028A0F30000FB00EB /* LanguagesViewModel.swift */; };
+		A85E227528A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227428A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift */; };
+		A85E227628A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227428A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift */; };
+		A85E227728A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227428A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift */; };
+		A85E227928A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227828A0F34000FB00EB /* LanguagesViewController+CollectionView.swift */; };
+		A85E227A28A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227828A0F34000FB00EB /* LanguagesViewController+CollectionView.swift */; };
+		A85E227B28A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227828A0F34000FB00EB /* LanguagesViewController+CollectionView.swift */; };
+		A85E227D28A0F39C00FB00EB /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227C28A0F39C00FB00EB /* Language.swift */; };
+		A85E227E28A0F39C00FB00EB /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227C28A0F39C00FB00EB /* Language.swift */; };
+		A85E227F28A0F39C00FB00EB /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E227C28A0F39C00FB00EB /* Language.swift */; };
 		A8880CE0289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
 		A8880CE1289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
 		A8880CE2289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
@@ -347,6 +368,25 @@
 		A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderView.swift; sourceTree = "<group>"; };
 		A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorHeaderView.xib; sourceTree = "<group>"; };
 		A84F1B942897849A005683EB /* FetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotes.swift; sourceTree = "<group>"; };
+		A85E225628A0F00400FB00EB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A85E225728A0F00400FB00EB /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A85E225828A0F03A00FB00EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A85E225928A0F03A00FB00EB /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A85E225A28A0F05900FB00EB /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A85E225B28A0F05A00FB00EB /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A85E225C28A0F07400FB00EB /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		A85E225D28A0F07400FB00EB /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A85E225E28A0F09E00FB00EB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A85E225F28A0F09F00FB00EB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A85E226028A0F0CB00FB00EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		A85E226128A0F0CB00FB00EB /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		A85E226428A0F28F00FB00EB /* LanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCell.swift; sourceTree = "<group>"; };
+		A85E226528A0F28F00FB00EB /* LanguageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LanguageCell.xib; sourceTree = "<group>"; };
+		A85E226C28A0F2F400FB00EB /* LanguagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewController.swift; sourceTree = "<group>"; };
+		A85E227028A0F30000FB00EB /* LanguagesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesViewModel.swift; sourceTree = "<group>"; };
+		A85E227428A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController+NavigationBar.swift"; sourceTree = "<group>"; };
+		A85E227828A0F34000FB00EB /* LanguagesViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LanguagesViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		A85E227C28A0F39C00FB00EB /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		A8880CE3289BC27600FCDCF0 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -547,6 +587,27 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		A85E226228A0F23D00FB00EB /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				A85E226328A0F24800FB00EB /* Cells */,
+				A85E226C28A0F2F400FB00EB /* LanguagesViewController.swift */,
+				A85E227428A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift */,
+				A85E227828A0F34000FB00EB /* LanguagesViewController+CollectionView.swift */,
+				A85E227028A0F30000FB00EB /* LanguagesViewModel.swift */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
+		A85E226328A0F24800FB00EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A85E226428A0F28F00FB00EB /* LanguageCell.swift */,
+				A85E226528A0F28F00FB00EB /* LanguageCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A8880CF7289BC88C00FCDCF0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,6 +751,7 @@
 				A8B59158289E52B200CF50E3 /* ConfigNote */,
 				A89492A9289F766C00F860DC /* EditProfile */,
 				A8FA63E4289FB45600BC3490 /* ChangePassword */,
+				A85E226228A0F23D00FB00EB /* Languages */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
@@ -739,6 +801,7 @@
 				A8880CE3289BC27600FCDCF0 /* Note.swift */,
 				A8880CEB289BC48300FCDCF0 /* PagingArray.swift */,
 				A8880CEF289BC75800FCDCF0 /* Resource.swift */,
+				A85E227C28A0F39C00FB00EB /* Language.swift */,
 			);
 			path = Domains;
 			sourceTree = "<group>";
@@ -1061,8 +1124,15 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
+                en,
+                Base,
+                vi,
+                fr,
+                "zh-Hans",
+                "zh-Hant",
+                ja,
+                ko,
+
 			);
 			mainGroup = A8AB9CBD288E547A00939E9D;
 			productRefGroup = A8AB9CC7288E547A00939E9D /* Products */;
@@ -1096,6 +1166,7 @@
 				A89492AF289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 				A8A3F345289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
 				A821BD36289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
+				A85E226928A0F28F00FB00EB /* LanguageCell.xib in Resources */,
 				A8F260052898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8A3F33D289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
 			);
@@ -1120,6 +1191,7 @@
 				A89492B0289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 				A8A3F346289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
 				A821BD37289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
+				A85E226A28A0F28F00FB00EB /* LanguageCell.xib in Resources */,
 				A8F260062898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8A3F33E289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
 			);
@@ -1129,6 +1201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A85E226B28A0F28F00FB00EB /* LanguageCell.xib in Resources */,
 				A8FA63EC289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
 				A8F260072898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8B59176289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
@@ -1348,8 +1421,10 @@
 				A8B2088D2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */,
 				A8B208672892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
 				A8B20879289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
+				A85E227D28A0F39C00FB00EB /* Language.swift in Sources */,
 				A80A96052893EC8200F044D9 /* Register.swift in Sources */,
 				A8B59179289E62AB00CF50E3 /* TextCell.swift in Sources */,
+				A85E226D28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */,
 				A8B4B180289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
 				A8880CEC289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085D2892675500DC7FA6 /* Request.swift in Sources */,
@@ -1377,9 +1452,11 @@
 				A8F25FFA2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2083928925B0F00DC7FA6 /* String+.swift in Sources */,
 				A8880CE0289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
+				A85E227528A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */,
 				A8FA63F2289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B184289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B59162289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
+				A85E226628A0F28F00FB00EB /* LanguageCell.swift in Sources */,
 				A8A3F34D289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
 				A8B59151289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8B59184289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
@@ -1401,11 +1478,13 @@
 				A8F25FEE2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8F260012898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A85E227128A0F30000FB00EB /* LanguagesViewModel.swift in Sources */,
 				A8FA63DD289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8880CE4289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A3F33A289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
 				A8B2084528925B0F00DC7FA6 /* View+.swift in Sources */,
+				A85E227928A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */,
 				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
@@ -1436,8 +1515,10 @@
 				A8B2088E2892683800DC7FA6 /* NoteNetworkRequest.swift in Sources */,
 				A8B208682892676F00DC7FA6 /* BaseAFNetwork.swift in Sources */,
 				A8B2087A289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
+				A85E227E28A0F39C00FB00EB /* Language.swift in Sources */,
 				A80A96062893EC8200F044D9 /* Register.swift in Sources */,
 				A8B5917A289E62AB00CF50E3 /* TextCell.swift in Sources */,
+				A85E226E28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */,
 				A8B4B181289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
 				A8880CED289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085E2892675500DC7FA6 /* Request.swift in Sources */,
@@ -1465,9 +1546,11 @@
 				A8F25FFB2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A8B2084A28925B0F00DC7FA6 /* KeyboardManagerment.swift in Sources */,
 				A8880CE1289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
+				A85E227628A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */,
 				A8FA63F3289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B185289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B59163289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
+				A85E226728A0F28F00FB00EB /* LanguageCell.swift in Sources */,
 				A8A3F34E289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
 				A8B59152289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8B59185289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
@@ -1489,11 +1572,13 @@
 				A8F25FEF2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8F260022898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A85E227228A0F30000FB00EB /* LanguagesViewModel.swift in Sources */,
 				A8FA63DE289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8880CE5289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A3F33B289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
 				A8A539CC289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
+				A85E227A28A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */,
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
@@ -1534,6 +1619,7 @@
 				A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */,
 				A80A95F12893D4CB00F044D9 /* ViewController+.swift in Sources */,
 				A8F260112898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
+				A85E227328A0F30000FB00EB /* LanguagesViewModel.swift in Sources */,
 				A8A3F357289D1EA700DEBCD5 /* SettingViewController+Options.swift in Sources */,
 				A8880CEE289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8FA63E3289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
@@ -1541,6 +1627,7 @@
 				A821BD35289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8B59153289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A80A95E22893CCAC00F044D9 /* MockSession.swift in Sources */,
+				A85E227F28A0F39C00FB00EB /* Language.swift in Sources */,
 				A8880CE6289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A80A96012893D52500F044D9 /* ApiResponse.swift in Sources */,
@@ -1560,6 +1647,7 @@
 				A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A8A3F366289D27C800DEBCD5 /* LogoutView.swift in Sources */,
 				A8B59182289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
+				A85E227728A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */,
 				A80A95F02893D4CB00F044D9 /* String+.swift in Sources */,
 				A8A539D1289670A400FE0FB5 /* NoteNetworkTests.swift in Sources */,
 				A80A95F62893D4CF00F044D9 /* ApiError.swift in Sources */,
@@ -1572,8 +1660,10 @@
 				A8A3F33C289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
 				A80A95EE2893D4CB00F044D9 /* KeyboardManagerment.swift in Sources */,
 				A8B5915C289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */,
+				A85E227B28A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */,
 				A8A3F34F289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
 				A8F25FE82898C80000FEAF22 /* LoginViewController.swift in Sources */,
+				A85E226828A0F28F00FB00EB /* LanguageCell.swift in Sources */,
 				A80A95EF2893D4CB00F044D9 /* NoteError.swift in Sources */,
 				A80A95ED2893D4CB00F044D9 /* Color+.swift in Sources */,
 				A8B59157289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */,
@@ -1600,6 +1690,7 @@
 				A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A84F1B972897849A005683EB /* FetchNotes.swift in Sources */,
 				A8F260032898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
+				A85E226F28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */,
 				A8FA63DB289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
 				A8B208C22892BC4A00DC7FA6 /* UserNetworkTests.swift in Sources */,
 				A8F260172898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
@@ -1623,6 +1714,12 @@
 			isa = PBXVariantGroup;
 			children = (
 				A8A77097288E59E800F03C5C /* en */,
+				A85E225728A0F00400FB00EB /* fr */,
+				A85E225928A0F03A00FB00EB /* ja */,
+				A85E225B28A0F05A00FB00EB /* ko */,
+				A85E225D28A0F07400FB00EB /* vi */,
+				A85E225F28A0F09F00FB00EB /* zh-Hans */,
+				A85E226128A0F0CB00FB00EB /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1631,6 +1728,12 @@
 			isa = PBXVariantGroup;
 			children = (
 				A8AB9CD5288E547B00939E9D /* Base */,
+				A85E225628A0F00400FB00EB /* fr */,
+				A85E225828A0F03A00FB00EB /* ja */,
+				A85E225A28A0F05900FB00EB /* ko */,
+				A85E225C28A0F07400FB00EB /* vi */,
+				A85E225E28A0F09E00FB00EB /* zh-Hans */,
+				A85E226028A0F0CB00FB00EB /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1643,6 +1746,7 @@
 			baseConfigurationReference = A8B208512892631400DC7FA6 /* Prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1704,6 +1808,7 @@
 			baseConfigurationReference = A8B208512892631400DC7FA6 /* Prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1874,6 +1979,7 @@
 			baseConfigurationReference = A8B2081E2892534F00DC7FA6 /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -1992,6 +2098,7 @@
 			baseConfigurationReference = A8B2081E2892534F00DC7FA6 /* Staging.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";

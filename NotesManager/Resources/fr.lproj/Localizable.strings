@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  NotesManager
+
+  Created by pnam on 25/07/2022.
+  
+*/
+
+"loading" = "Chargement";
+"login" = "Connexion";
+"email" = "Email";
+"password" = "Mot de passe";
+"register" = "Enregistrer";
+"repeat_password" = "Répéter le mot de passe";
+"dashboard" = "Tableau de bord";
+"setting" = "Paramètre";
+"language" = "Langue";
+"edit_profile" = "Modifier le profil";
+"change_password" = "Modifier le mot de passe";
+"logout" = "Déconnexion";
+"note_detail" = "Détail de la note";
+"add_note" = "Ajouter une note";
+"edit_note" = "Modifier la note";
+"title" = "Titre";
+"description" = "Description";
+"color" = "Couleur";
+"name" = "Nom";
+"gender" = "Sexe";
+"male" = "Homme";
+"female" = "Femme";
+"other" = "Autre";
+"secret" = "Secret";
+"example_name" = "Nom de l'exemple etc...";
+"example_email" = "abc@gmail.com";
+"confirmer" = "Confirmer";
+"old_password" = "Ancien mot de passe";
+"new_password" = "Nouveau mot de passe";
+"system_language" = "Langue du système";

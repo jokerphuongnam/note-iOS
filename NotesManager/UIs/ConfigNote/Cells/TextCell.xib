@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="338" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnR-n0-hd3">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Aa" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WnR-n0-hd3">
                         <rect key="frame" x="0.0" y="0.0" width="338" height="50"/>
                         <color key="tintColor" name="Main"/>
                         <color key="textColor" name="Text"/>

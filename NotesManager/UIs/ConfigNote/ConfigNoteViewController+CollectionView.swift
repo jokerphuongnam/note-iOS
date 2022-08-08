@@ -133,7 +133,6 @@ extension ConfigNoteViewController {
         case 0:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.textCellName, for: indexPath) as? TextCell {
                 if cell.item == -1 {
-                    cell.contentTextField.placeholder = Strings.title
                     cell.contentTextField.text = viewModel.note.title
                     cell.item = indexPath.item
                     cell.delegate = self
@@ -143,7 +142,6 @@ extension ConfigNoteViewController {
         case 1:
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Self.textCellName, for: indexPath) as? TextCell {
                 if cell.item == -1 {
-                    cell.contentTextField.placeholder = Strings.description
                     cell.contentTextField.text = viewModel.note.description
                     cell.item = indexPath.item
                     cell.delegate = self

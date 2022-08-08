@@ -9,12 +9,12 @@
 
 extension SettingViewController {
     enum Option: CaseIterable {
-        case language(value: String)
+        case language(currentLanguage: Language)
         case editProfile
         case changePassword
         
         static var allCases: [SettingViewController.Option] = [
-            .language(value: ""),
+            .language(currentLanguage: .en),
             .editProfile,
             .changePassword
         ]
@@ -39,10 +39,10 @@ extension SettingViewController {
             }
         }
         
-        var settingValue: String? {
+        var settingValue: Language? {
             switch self {
-            case .language(let value):
-                return value
+            case .language(let currentLanguage):
+                return currentLanguage
             case .editProfile, .changePassword:
                 return nil
             }

@@ -16,7 +16,7 @@ final class SettingCell: UICollectionViewCell {
             iconImage.image = newValue.settingIcon
             titleLabel.text = newValue.title
             valueLabel.isHidden = newValue.isHiddenValueLabel
-            valueLabel.text = newValue.settingValue
+            valueLabel.text = newValue.settingValue?.name
         }
     }
     

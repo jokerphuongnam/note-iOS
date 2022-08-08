@@ -78,8 +78,10 @@ extension SettingViewController {
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch options[indexPath.item] {
-        case .language(value: let value):
-            break
+        case .language(currentLanguage: let language):
+            let viewModel: LanguagesViewModel = LanguagesViewModelImpl(language: language)
+            let viewController = LanguagesViewController(viewModel: viewModel)
+            navigationController?.pushViewController(viewController, animated: true)
         case .editProfile:
             let viewModel: EditProfileViewModel = EditProfileViewModelImpl(user: viewModel.user)
             let viewController = EditProfileViewController(viewModel: viewModel)
