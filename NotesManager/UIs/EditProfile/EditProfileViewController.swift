@@ -83,8 +83,8 @@ final class EditProfileViewController: UIViewController {
 }
 
 // MARK: - Action
-extension EditProfileViewController {
-    @IBAction func gendersAction(_ sender: UIButton, forEvent event: UIEvent) {
+private extension EditProfileViewController {
+    @IBAction private func gendersAction(_ sender: UIButton, forEvent event: UIEvent) {
         if let index = genderButtons.firstIndex(of: sender) {
             viewModel.user.gender = .init(of: index)
         }
@@ -93,7 +93,7 @@ extension EditProfileViewController {
         }
     }
     
-    @IBAction func confirmAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func confirmAction(_ sender: UIButton, forEvent event: UIEvent) {
     }
 }
 

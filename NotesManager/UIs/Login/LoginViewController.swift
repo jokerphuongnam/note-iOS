@@ -85,18 +85,18 @@ final class LoginViewController: UIViewController {
 
 // MARK: - Action
 private extension LoginViewController {
-    @objc func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         sender.setImage(image, for: .normal)
         passwordTextField.isSecureTextEntry.toggle()
     }
     
-    @IBAction func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
         let registerViewController = RegisterViewController()
         navigationController?.pushViewController(registerViewController, animated: true)
     }
     
-    @IBAction func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
         let viewModel: DashboardViewModel = DashboardViewModelImpl()
         let viewController = DashboardViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)

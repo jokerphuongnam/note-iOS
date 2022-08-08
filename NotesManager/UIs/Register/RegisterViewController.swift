@@ -110,7 +110,7 @@ final class RegisterViewController: UIViewController {
 }
 
 // MARK: - Action
-extension RegisterViewController {
+private extension RegisterViewController {
     @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let passwordTextField: UITextField = sender == showHidePasswordButton ? passwordTextField : repeatPasswordTextField
         let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
@@ -118,7 +118,7 @@ extension RegisterViewController {
         passwordTextField.isSecureTextEntry.toggle()
     }
     
-    @IBAction func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
+    @IBAction private func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
         
     }
 }

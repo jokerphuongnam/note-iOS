@@ -34,3 +34,5 @@
 "example_name" = "Exmaple Name etc...";
 "example_email" = "abc@gmail.com";
 "confirm" = "Confirm";
+"old_password" = "Old Password";
+"new_password" = "New Password";
