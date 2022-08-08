@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  NotesManager
+
+  Created by pnam on 25/07/2022.
+  
+*/
+
+"loading" = "Đang Tải";
+"login" = "Đăng nhập";
+"email" = "Email";
+"password" = "Mật Khẩu";
+"register" = "Đăng ký";
+"repeat_password" = "Lặp Lại";
+"dashboard" = "Ghi nhớ";
+"setting" = "Cài đặt";
+"language" = "Ngôn ngữ";
+"edit_profile" = "Chỉnh sửa thông tin";
+"change_password" = "Thay đổi mật khẩu";
+"logout" = "Đăng xuất";
+"note_detail" = "Chi tiết ghi chú";
+"add_note" = "Thêm ghi chú";
+"edit_note" = "Sửa ghi chú";
+"title" = "Tiêu đề";
+"description" = "Mô tả";
+"color" = "Màu";
+"name" = "Tên";
+"gender" = "Giới tính";
+"male" = "Nam";
+"female" = "Nữ";
+"other" = "Khác";
+"secret" = "Bí Mật";
+"example_name" = "Nguyễn Văn A,...";
+"example_email" = "abc@gmail.com";
+"confirm" = "Xác nhận";
+"old_password" = "Mật Khẩu Cũ";
+"new_password" = "Mật Khẩu Mới";
+"system_language" = "Ngôn Ngữ Hệ Thống";

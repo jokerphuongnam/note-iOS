@@ -1,0 +1,38 @@
+/* 
+  Localizable.strings
+  NotesManager
+
+  Created by pnam on 25/07/2022.
+  
+*/
+
+"loading" = "正在加載";
+"login" = "登錄";
+"email" = "電子郵件";
+"password" = "密碼";
+"register" = "註冊";
+"repeat_password" = "重複密碼";
+"dashboard" = "儀表板";
+"setting" = "設置";
+"language" = "語言";
+"edit_profile" = "編輯個人資料";
+"change_password" = "更改密碼";
+"logout" = "註銷";
+"note_detail" = "註釋詳細信息";
+"add_note" = "添加註釋";
+"edit_note" = "編輯註釋";
+"title" = "標題";
+"description" = "描述";
+"color" = "顏色";
+"name" = "名稱";
+"gender" = "性別";
+"male" = "男";
+"female" = "女";
+"other" = "其他";
+"secret" = "秘密";
+"example_name" = "示例名稱等...";
+"example_email" = "abc@gmail.com";
+"confirm" = "確認";
+"old_password" = "舊密碼";
+"new_password" = "新密碼";
+"system_language" = "系統語言";
