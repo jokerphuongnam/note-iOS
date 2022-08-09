@@ -65,10 +65,11 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizeText" value="start_time"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o46-m6-2wq" userLabel="Time Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00" placeholder="00:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o46-m6-2wq" userLabel="Time Text Field">
                                         <rect key="frame" x="111" y="16" width="214" height="43"/>
+                                        <color key="tintColor" name="Main"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPoints">
                                                 <real key="value" value="8"/>
@@ -87,7 +88,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="editingFinished:forEvent:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="gWz-V6-yzr"/>
+                                            <action selector="textFieldDidChanged:forEvent:" destination="gTV-IL-0wX" eventType="editingChanged" id="2cY-FV-ndJ"/>
+                                            <action selector="textFieldDidEnd:forEvent:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="cz9-DB-TlT"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSE-5N-U1d" userLabel="Clock Button">
@@ -135,10 +137,11 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizeText" value="end_time"/>
                                         </userDefinedRuntimeAttributes>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghS-Am-Ntd" userLabel="Time Text Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00:00" placeholder="00:00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ghS-Am-Ntd" userLabel="Time Text Field">
                                         <rect key="frame" x="111" y="16" width="214" height="43"/>
+                                        <color key="tintColor" name="Main"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="leftPaddingPoints">
                                                 <real key="value" value="8"/>
@@ -157,7 +160,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="editingFinished:forEvent:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="ZUX-F7-WMv"/>
+                                            <action selector="textFieldDidChanged:forEvent:" destination="gTV-IL-0wX" eventType="editingChanged" id="EKg-eh-D1S"/>
+                                            <action selector="textFieldDidEnd:forEvent:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="lER-EF-sDd"/>
                                         </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQ3-f4-WWU" userLabel="Clock Button">
