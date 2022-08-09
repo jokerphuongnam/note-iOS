@@ -36,3 +36,10 @@
 "old_password" = "旧密码";
 "new_password" = "新密码";
 "system_language" = "系统语言";
+"appearance" = "外观";
+"light" = "光";
+"dark" = "黑暗";
+"system_appearance" = "系统外观";
+"custom" = "风俗";
+"start_time" = "开始时间";
+"end_time" = "结束时间";
