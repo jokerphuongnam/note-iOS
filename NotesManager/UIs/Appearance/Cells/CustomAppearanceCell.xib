@@ -92,7 +92,7 @@
                                             <action selector="textFieldDidEnd:forEvent:" destination="gTV-IL-0wX" eventType="editingDidEnd" id="cz9-DB-TlT"/>
                                         </connections>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSE-5N-U1d" userLabel="Clock Button">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSE-5N-U1d" userLabel="Clock Button">
                                         <rect key="frame" x="341" y="16" width="43" height="43"/>
                                         <color key="backgroundColor" name="Main"/>
                                         <constraints>

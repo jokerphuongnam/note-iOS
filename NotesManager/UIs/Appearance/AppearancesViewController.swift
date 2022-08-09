@@ -12,7 +12,9 @@ final class AppearancesViewController: UICollectionViewController {
     static let customAppearanceCellName = String(describing: CustomAppearanceCell.self)
     
     var viewModel: AppearancesViewModel!
-    var appearances = Appearance.allCases
+    lazy var appearances: [Appearance] = {
+        Appearance.allCases
+    }()
     
     init(viewModel: AppearancesViewModel) {
         super.init(collectionViewLayout: .init())
@@ -24,9 +26,14 @@ final class AppearancesViewController: UICollectionViewController {
     }
     
     deinit {
+        if let cell = collectionView.cellForItem(at: .init(item: 3, section: 0)) as? CustomAppearanceCell, viewModel.appearance.equatable(compareAppearance: .custom(startDarkMode: 0, endDarkMode: 0)) {
+            cell.updateTime { [self] startTime, endTime in
+                viewModel.appearance = .custom(startDarkMode: startTime,endDarkMode: endTime)
+            }
+        }
         viewModel = nil
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()

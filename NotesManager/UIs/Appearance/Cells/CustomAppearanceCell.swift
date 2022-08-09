@@ -7,7 +7,13 @@
 
 @_implementationOnly import UIKit
 
+@objc protocol CustomAppearanceCellDelegate {
+    @objc optional func customAppearance(_ customAppearanceCell: CustomAppearanceCell, didTapClockAction textField: UITextField, sender: UIButton, forEvent event: UIEvent)
+    @objc optional func customAppearance(_ customAppearanceCell: CustomAppearanceCell, startTime: Int64, endTime: Int64)
+}
+
 class CustomAppearanceCell: UICollectionViewCell {
+    weak var delegate: CustomAppearanceCellDelegate!
     private static let dateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm"
@@ -19,23 +25,46 @@ class CustomAppearanceCell: UICollectionViewCell {
     @IBOutlet weak var startTimeTextField: UITextField!
     @IBOutlet weak var endTimeTextField: UITextField!
     
+    fileprivate var datePicker:UIDatePicker = UIDatePicker()
+    fileprivate let toolBar = UIToolbar()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         startTimeTextField.delegate = self
         endTimeTextField.delegate = self
     }
     
-    func setSelected(startTime: Int, endTime: Int) {
+    func setSelected(startTime: Int64, endTime: Int64) {
         checkImageView.isHidden = false
         timeView.isHidden = false
-        startTimeTextField.text = Self.dateFormatter.string(from: .init(milliseconds: Int64(startTime)))
-        endTimeTextField.text = Self.dateFormatter.string(from: .init(milliseconds: Int64(endTime)))
+        startTimeTextField.text = Self.dateFormatter.string(from: .init(milliseconds: startTime))
+        endTimeTextField.text = Self.dateFormatter.string(from: .init(milliseconds: endTime))
     }
     
     func unSelected() {
         checkImageView.isHidden = true
         timeView.isHidden = true
     }
+    
+    func updateTime(handler: ((_ startTime: Int64, _ endTime: Int64) -> ())? = nil) {
+        guard let startTime = startTimeTextField.text, let endTime = endTimeTextField.text else { return }
+        guard let startTime = Self.dateFormatter.date(from: startTime), let endTime = Self.dateFormatter.date(from: endTime) else { return }
+        textFieldDidEnd(startTimeTextField)
+        textFieldDidEnd(endTimeTextField)
+        if let handler = handler {
+            handler(
+                startTime.millisecondsSince1970,
+                endTime.millisecondsSince1970
+            )
+        } else {
+            delegate?.customAppearance?(
+                self,
+                startTime: startTime.millisecondsSince1970,
+                endTime: endTime.millisecondsSince1970
+            )
+        }
+    }
+    
     
     // MARK: - validate minutes
     fileprivate func validate(_ sender: UITextField, minutes string: String) {
@@ -56,26 +85,11 @@ class CustomAppearanceCell: UICollectionViewCell {
             if h.count == 1 {
                 h.insert("0", at: h.startIndex)
             }
-            
             sender.text = sender.text?.replacingOccurrences(of: string, with: h)
         }
     }
-}
-
-// MARK: - Action
-private extension CustomAppearanceCell {
-    @IBAction private func textFieldDidChanged(_ sender: UITextField, forEvent event: UIEvent) {
-        guard let text = sender.text else { return }
-        let split = text.split(separator: ":")
-        if split.count > 1, let minutes = split.last {
-            validate(sender, minutes: String(minutes))
-        }
-        if let hours = split.first {
-            validate(sender, hours: String(hours))
-        }
-    }
     
-    @IBAction func textFieldDidEnd(_ sender: UITextField, forEvent event: UIEvent) {
+    func textFieldDidEnd(_ sender: UITextField) {
         guard let text = sender.text else { return }
         let split = text.split(separator: ":")
         if split.count > 1 {
@@ -97,10 +111,28 @@ private extension CustomAppearanceCell {
             sender.text?.insert("0", at: text.startIndex)
         }
     }
+}
+
+// MARK: - Action
+private extension CustomAppearanceCell {
+    @IBAction private func textFieldDidChanged(_ sender: UITextField, forEvent event: UIEvent) {
+        guard let text = sender.text else { return }
+        let split = text.split(separator: ":")
+        if split.count > 1, let minutes = split.last {
+            validate(sender, minutes: String(minutes))
+        }
+        if let hours = split.first {
+            validate(sender, hours: String(hours))
+        }
+    }
     
+    @IBAction func textFieldDidEnd(_ sender: UITextField, forEvent event: UIEvent) {
+        textFieldDidEnd(sender)
+        updateTime()
+    }
     
     @IBAction private func clockAction(_ sender: UIButton, forEvent event: UIEvent) {
-        
+        delegate?.customAppearance?(self, didTapClockAction: sender.tag == 1 ? startTimeTextField : endTimeTextField, sender: sender, forEvent: event)
     }
 }
 
