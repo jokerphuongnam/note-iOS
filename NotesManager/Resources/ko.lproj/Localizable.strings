@@ -46,3 +46,5 @@
 "pick_time" = "시간 선택";
 "ok" = "확인";
 "cancel" = "취소";
+"pull_to_reload" = "당겨서 다시 로드";
+"pull_to_load_more" = "더 로드하려면 당겨";

@@ -46,3 +46,5 @@
 "pick_time" = "Chọn Giờ";
 "ok" = "Ok";
 "cancel" = "Hủy Bỏ";
+"pull_to_reload" = "Kéo Để Tải Lại";
+"pull_to_load_more" = "Kéo Để Tải Thêm";

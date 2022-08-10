@@ -46,3 +46,5 @@
 "pick_time" = "选择时间";
 "ok" = "好的";
 "cancel" = "取消";
+"pull_to_reload" = "拉动重新加载";
+"pull_to_load_more" = "拉加载更多";
