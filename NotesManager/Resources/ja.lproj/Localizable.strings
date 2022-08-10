@@ -43,3 +43,6 @@
 "custom" = "習慣";
 "start_time"="開始時間";
 "end_time"="終了時間";
+"pick_time" = "ピックタイム";
+"ok" = "Ok";
+"cancel" = "キャンセル";

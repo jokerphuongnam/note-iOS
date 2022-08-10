@@ -111,7 +111,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gSE-5N-U1d" secondAttribute="trailing" constant="16" id="ALS-N7-yUH"/>
                                     <constraint firstAttribute="bottom" secondItem="o46-m6-2wq" secondAttribute="bottom" constant="16" id="B4A-qb-1kL"/>
@@ -183,7 +183,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ghS-Am-Ntd" firstAttribute="leading" secondItem="iTg-t3-pff" secondAttribute="trailing" constant="16" id="96Y-fl-5i5"/>
                                     <constraint firstItem="ghS-Am-Ntd" firstAttribute="top" secondItem="giH-J9-cYn" secondAttribute="top" constant="16" id="Btp-IS-zy8"/>
@@ -258,9 +258,6 @@
         <namedColor name="Text">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

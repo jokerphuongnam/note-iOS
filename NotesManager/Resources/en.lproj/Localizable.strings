@@ -43,3 +43,6 @@
 "custom" = "Custom";
 "start_time" = "Start Time";
 "end_time" = "End Time";
+"pick_time" = "Pick Time";
+"ok" = "Ok";
+"cancel" = "Cancel";

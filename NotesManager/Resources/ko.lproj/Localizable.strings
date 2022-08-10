@@ -43,3 +43,6 @@
 "custom" = "커스텀";
 "start_time" = "시작 시간";
 "end_time" = "종료 시간";
+"pick_time" = "시간 선택";
+"ok" = "확인";
+"cancel" = "취소";

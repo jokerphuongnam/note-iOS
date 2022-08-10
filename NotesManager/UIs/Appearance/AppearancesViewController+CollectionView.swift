@@ -97,19 +97,22 @@ extension AppearancesViewController: CustomAppearanceCellDelegate {
         datePicker.preferredDatePickerStyle = .wheels
         datePicker.frame = CGRect(x: 0, y: 40, width: 270, height: 160)
         
-        let alertController = UIAlertController(title: "Pick Time", message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
+        let alertController = UIAlertController(title: Strings.pickTime, message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
         alertController.view.addSubview(datePicker)
         NSLayoutConstraint.activate([
             datePicker.leadingAnchor.constraint(equalTo: alertController.view.leadingAnchor),
             datePicker.trailingAnchor.constraint(equalTo: alertController.view.trailingAnchor),
         ])
         
-        let selectAction = UIAlertAction(title: "OK", style: .default) { [weak self] alertAction in
+        let selectAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] alertAction in
             guard let self = self else { return }
             textField.text = dateFormatter.string(from: datePicker.date)
             customAppearanceCell.updateTime()
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        selectAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+        
+        let cancelAction = UIAlertAction(title: Strings.cancel, style: .cancel, handler: nil)
+        cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
         
         alertController.addAction(selectAction)
         alertController.addAction(cancelAction)
