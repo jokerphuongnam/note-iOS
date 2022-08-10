@@ -43,3 +43,6 @@
 "custom" = "風俗";
 "start_time" = "開始時間";
 "end_time" = "結束時間";
+"pick_time" = "選擇時間";
+"ok" = "好的";
+"cancel" = "取消";

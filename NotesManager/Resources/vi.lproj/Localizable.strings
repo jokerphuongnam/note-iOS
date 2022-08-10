@@ -43,3 +43,6 @@
 "custom" = "Tùy Chỉnh";
 "start_time" = "Thời Gian Bắt Đầu";
 "end_time" = "Thời Gian Kết Thúc";
+"pick_time" = "Chọn Giờ";
+"ok" = "Ok";
+"cancel" = "Hủy Bỏ";
