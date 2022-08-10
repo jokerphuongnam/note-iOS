@@ -16,6 +16,7 @@ final class DashboardViewController: UICollectionViewController {
     private let disposeBag = DisposeBag()
     var viewModel: DashboardViewModel!
     var layoutType: DashboardLayout = .vertical
+    var loadingType: UIScrollView.ScrollLoadingType!
     
     lazy var settingButton: UIBarButtonItem = { [weak self] in
         guard let self = self else {
@@ -91,19 +92,22 @@ final class DashboardViewController: UICollectionViewController {
     
     private func setupLiveData() {
         viewModel.notesObserver
-            .subscribe { resource in
+            .subscribe(on: SerialDispatchQueueScheduler.init(qos: .utility))
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] resource in
+                guard let self = self else { return }
                 switch resource {
                 case .next(let data):
                     switch data {
-                    case .`init`:
-                        print("init")
-                    case .loading:
-                        print("loading")
-                    case .success(data: let data):
-                        print(data)
+                    case .`init`: break
+                    case .loading: break
+                    case .success(data: _):
+                        self.collectionView.removeLoadingView()
+                        self.collectionView.reloadData()
                     }
-                case .error(let error):
-                    print(error)
+                case .error(_):
+                    self.collectionView.removeLoadingView()
+                    self.collectionView.reloadData()
                 case .completed:
                     print("completed")
                 }
@@ -119,10 +123,7 @@ private extension DashboardViewController {
         let viewModel: SettingViewModel = SettingViewModelImpl()
         let viewController = SettingViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
-//        navigationController?.pushViewController(viewController, animated: true)
-        present(navigation, animated: true) { [weak self] in
-            
-        }
+        present(navigation, animated: true)
     }
     
     @objc func layoutChangeAction(_ sender: UIBarButtonItem) {
@@ -135,8 +136,6 @@ private extension DashboardViewController {
         let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl()
         let viewController = ConfigNoteViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
-        present(navigation, animated: true) { [weak self] in
-            
-        }
+        present(navigation, animated: true)
     }
 }

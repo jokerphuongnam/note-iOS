@@ -46,3 +46,5 @@
 "pick_time" = "Choisissez l'heure";
 "ok" = "D'accord";
 "cancel" = "Annuler";
+"pull_to_reload" = "Tirez pour recharger";
+"pull_to_load_more" = "Tirez pour charger plus";

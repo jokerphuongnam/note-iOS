@@ -46,3 +46,5 @@
 "pick_time" = "ピックタイム";
 "ok" = "Ok";
 "cancel" = "キャンセル";
+"pull_to_reload" = "引っ張ってリロード";
+"pull_to_load_more" = "引っ張ってもっと読み込む";

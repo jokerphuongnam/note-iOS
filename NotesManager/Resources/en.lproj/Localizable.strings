@@ -46,3 +46,5 @@
 "pick_time" = "Pick Time";
 "ok" = "Ok";
 "cancel" = "Cancel";
+"pull_to_reload" = "Pull To Reload";
+"pull_to_load_more" = "Pull To Load More";

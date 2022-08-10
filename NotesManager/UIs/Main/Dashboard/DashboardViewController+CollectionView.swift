@@ -102,9 +102,34 @@ extension DashboardViewController {
         let viewModel: NoteDetailViewModel = NoteDetailViewModelImpl(note: note)
         let viewController = NoteDetailViewController(viewModel: viewModel)
         viewController.modalPresentationStyle = .fullScreen
-//        present(viewController, animated: true) { [weak self] in
-//
-//        }
         navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        switch loadingType {
+        case .reload:
+            self.viewModel.reloadNotes()
+        case .loadMore:
+            self.viewModel.loadMoreNotes()
+        default: break
+        }
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if let notes = viewModel.notes, notes.hasNext {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                scrollView.defaultLoadingView(isLoading: &self.viewModel.isLoading, reloadTitle: Strings.pullToReload, loadMoreTitle: Strings.pullToLoadMore) { [weak self] type in
+                    guard let self = self else { return }
+                    self.loadingType = type
+                    switch type {
+                    case .reload:
+                        break
+                    case .loadMore:
+                        break
+                    }
+                }
+            }
+        }
     }
 }
