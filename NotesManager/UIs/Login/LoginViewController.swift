@@ -128,6 +128,7 @@ private extension LoginViewController {
                 } onDisposed: {
                     
                 }
+                .disposed(by: disposeBag)
         }
     }
     

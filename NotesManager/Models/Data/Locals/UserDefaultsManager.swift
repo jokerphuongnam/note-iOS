@@ -50,17 +50,13 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
         .create { [weak self] observer in
             guard let self = self else {
                 observer(.error(NError.ownerNil))
-                return Disposables.create {
-                    
-                }
+                return Disposables.create()
             }
             let accounts = self.userDefaults.stringArray(forKey: .userDefaultAccount)
             if var accounts = accounts, !accounts.contains(email) {
                 accounts.append(email)
                 self.userDefaults.set(accounts, forKey: .userDefaultAccount)
                 self.userDefaults.synchronize()
-            } else {
-                observer(.error(UserDefaultsError.duplicate))
             }
             observer(.completed)
             return Disposables.create()
@@ -74,6 +70,7 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
                 return Disposables.create ()
             }
             self.user = user
+            observer(.completed)
             return Disposables.create()
         }
     }
@@ -96,7 +93,6 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
 
 extension UserDefaultsManagerImpl {
     enum UserDefaultsError: Error {
-        case duplicate
         case notFound
     }
 }

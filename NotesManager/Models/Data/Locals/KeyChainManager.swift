@@ -10,158 +10,129 @@
 import Security
 
 protocol KeyChainManager {
-    @discardableResult
-    func saveToken(token: String) -> Completable
-    @discardableResult
-    func getToken() -> Single<String>
-    @discardableResult
-    func updateToken(token: String) -> Completable
+    func saveToken(token: String) throws
+    func getToken() throws -> String
+    func updateToken(token: String) throws
     
-    @discardableResult
-    func saveAccount(email: String, password: String) -> Completable
-    @discardableResult
-    func getAccount(email: String) -> Single<String>
-    @discardableResult
-    func updateAccount(email: String, password: String) -> Completable
-    @discardableResult
-    func deleteAccount(email: String) -> Completable
+    func saveAccount(email: String, password: String) throws
+    func getAccount(email: String) throws -> String
+    func updateAccount(email: String, password: String) throws
+    func deleteAccount(email: String) throws
 }
 
 final class KeyChainManagerImpl: KeyChainManager {
-    @discardableResult
-    func saveToken(token: String) -> Completable {
-        save(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+    func saveToken(token: String) throws {
+        try save(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+    }
+    
+    func getToken() throws -> String {
+        try get(type: .token, account: KeyChainServiceType.token.rawValue)
+    }
+    
+    func updateToken(token: String) throws {
+        try update(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+    }
+    
+    func saveAccount(email: String, password: String) throws {
+        try save(type: .login, account: email, value: password)
     }
     
     @discardableResult
-    func getToken() -> Single<String> {
-        get(type: .token, account: KeyChainServiceType.token.rawValue)
+    func getAccount(email: String) throws -> String {
+        try get(type: .login, account: email)
     }
     
-    @discardableResult
-    func updateToken(token: String) -> Completable {
-        update(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+    func updateAccount(email: String, password: String) throws {
+        try update(type: .login, account: email, value: password)
     }
     
-    @discardableResult
-    func saveAccount(email: String, password: String) -> Completable {
-        save(type: .login, account: email, value: password)
-    }
-    
-    @discardableResult
-    func getAccount(email: String) -> Single<String> {
-        get(type: .login, account: email)
-    }
-    
-    @discardableResult
-    func updateAccount(email: String, password: String) -> Completable {
-        update(type: .login, account: email, value: password)
-    }
-    
-    @discardableResult
-    func deleteAccount(email: String) -> Completable {
-        delete(type: .login, account: email)
+    func deleteAccount(email: String) throws {
+        try delete(type: .login, account: email)
     }
 }
 
 private extension KeyChainManagerImpl {
-    @discardableResult
-    private func save(type: KeyChainServiceType, account: String, value: String) -> Completable {
-        .create { observer in
-            let query: [String: AnyObject] = [
-                kSecClass as String: kSecClassGenericPassword,
-                kSecAttrService as String: type as AnyObject,
-                kSecAttrAccount as String: account as AnyObject,
-                kSecValueData as String: value.data(using: .utf8) as AnyObject
-            ]
-            let status = SecItemAdd(query as CFDictionary, nil)
-            
-            if status == errSecDuplicateItem {
-                observer(.error(KeyChainError.duplicateEntry))
-                return Disposables.create()
+    private func save(type: KeyChainServiceType, account: String, value: String) throws {
+        let query: [String: AnyObject] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: type.rawValue as AnyObject,
+            kSecAttrAccount as String: account as AnyObject,
+            kSecValueData as String: value.data(using: .utf8) as AnyObject
+        ]
+        
+        let status = SecItemAdd(query as CFDictionary, nil)
+        
+        if status == errSecDuplicateItem {
+            throw KeyChainError.duplicateEntry
+        }
+        guard status == errSecSuccess else {
+            if let error: String = SecCopyErrorMessageString(status, nil) as String? {
+                throw KeyChainError.message(error)
             }
-            guard status == errSecSuccess else {
-                observer(.error(KeyChainError.unknown(status)))
-                return Disposables.create()
-            }
-            observer(.completed)
-            return Disposables.create()
+            throw KeyChainError.unknown(status)
         }
     }
     
     @discardableResult
-    func get(type: KeyChainServiceType, account: String) -> Single<String> {
-        .create { observer in
-            let query: [String: AnyObject] = [
-                kSecClass as String: kSecClassGenericPassword,
-                kSecAttrService as String: type as AnyObject,
-                kSecAttrAccount as String: account as AnyObject,
-                kSecReturnData as String: kCFBooleanTrue,
-                kSecMatchLimit as String: kSecMatchLimitOne
-            ]
-            
-            var result: AnyObject? = nil
-            SecItemCopyMatching(query as CFDictionary, &result)
-            guard let data: Data = result as? Data else {
-                observer(.failure(NError.canNotConvertObject))
-                return Disposables.create()
+    func get(type: KeyChainServiceType, account: String) throws -> String {
+        let query: [String: AnyObject] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: type.rawValue as AnyObject,
+            kSecAttrAccount as String: account as AnyObject,
+            kSecReturnData as String: kCFBooleanTrue,
+            kSecMatchLimit as String: kSecMatchLimitOne
+        ]
+        
+        var result: AnyObject? = nil
+        SecItemCopyMatching(query as CFDictionary, &result)
+        guard let data: Data = result as? Data else {
+            throw NError.canNotConvertObject
+        }
+        return String(decoding: data, as: UTF8.self)
+    }
+    
+    func delete(type: KeyChainServiceType, account: String) throws {
+        let query: [String: AnyObject] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: type.rawValue as AnyObject,
+            kSecAttrAccount as String: account as AnyObject
+        ]
+        
+        let status = SecItemDelete(query as CFDictionary)
+        
+        if status == errSecDuplicateItem {
+            throw KeyChainError.duplicateEntry
+        }
+        guard status == errSecSuccess else {
+            if let error: String = SecCopyErrorMessageString(status, nil) as String? {
+                throw KeyChainError.message(error)
             }
-            
-            observer(.success(String(decoding: data, as: UTF8.self)))
-            return Disposables.create()
+            throw KeyChainError.unknown(status)
         }
     }
     
-    @discardableResult
-    func delete(type: KeyChainServiceType, account: String) -> Completable {
-        .create { observer in
-            let query: [String: AnyObject] = [
-                kSecClass as String: kSecClassGenericPassword,
-                kSecAttrService as String: type as AnyObject,
-                kSecAttrAccount as String: account as AnyObject
-            ]
-            
-            let status = SecItemDelete(query as CFDictionary)
-            
-            if status == errSecDuplicateItem {
-                observer(.error(KeyChainError.duplicateEntry))
-                return Disposables.create()
-            }
-            guard status == errSecSuccess else {
-                observer(.error(KeyChainError.unknown(status)))
-                return Disposables.create()
-            }
-            observer(.completed)
-            return Disposables.create()
+    private func update(type: KeyChainServiceType, account: String, value: String) throws {
+        let query: [String: AnyObject] = [
+            kSecClass as String: kSecClassGenericPassword,
+            kSecAttrService as String: type.rawValue as AnyObject,
+            kSecAttrAccount as String: account as AnyObject
+        ]
+        
+        let attributes: [String: Any] = [
+            kSecAttrAccount as String: account,
+            kSecValueData as String: value
+        ]
+        
+        let status = SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
+        
+        if status == errSecDuplicateItem {
+            throw KeyChainError.duplicateEntry
         }
-    }
-    
-    @discardableResult
-    private func update(type: KeyChainServiceType, account: String, value: String) -> Completable {
-        .create { observer in
-            let query: [String: AnyObject] = [
-                kSecClass as String: kSecClassGenericPassword,
-                kSecAttrService as String: type as AnyObject,
-                kSecAttrAccount as String: account as AnyObject
-            ]
-            
-            let attributes: [String: Any] = [
-                kSecAttrAccount as String: account,
-                kSecValueData as String: value
-            ]
-            
-            let status = SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
-            
-            if status == errSecDuplicateItem {
-                observer(.error(KeyChainError.duplicateEntry))
-                return Disposables.create()
+        guard status == errSecSuccess else {
+            if let error: String = SecCopyErrorMessageString(status, nil) as String? {
+                throw KeyChainError.message(error)
             }
-            guard status == errSecSuccess else {
-                observer(.error(KeyChainError.unknown(status)))
-                return Disposables.create()
-            }
-            observer(.completed)
-            return Disposables.create()
+            throw KeyChainError.unknown(status)
         }
     }
 }
@@ -176,6 +147,7 @@ private extension KeyChainManagerImpl {
 extension KeyChainManagerImpl {
     enum KeyChainError: Error {
         case duplicateEntry
+        case message(String)
         case unknown(OSStatus)
     }
 }
