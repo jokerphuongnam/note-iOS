@@ -3,6 +3,15 @@ PODS:
   - Hero (1.6.1)
   - Kingfisher (7.3.0)
   - Mocker (2.5.5)
+  - ObjectMapper (3.5.3)
+  - Realm (3.21.0):
+    - Realm/Headers (= 3.21.0)
+  - Realm/Headers (3.21.0)
+  - RealmS (4.0.1):
+    - ObjectMapper (~> 3.0)
+    - RealmSwift (~> 3.0)
+  - RealmSwift (3.21.0):
+    - Realm (= 3.21.0)
   - RxBlocking (6.0.0):
     - RxSwift (= 6.0.0)
   - RxCocoa (6.0.0):
@@ -23,6 +32,7 @@ DEPENDENCIES:
   - Hero
   - Kingfisher (~> 7.0)
   - Mocker (~> 2.5.4)
+  - RealmS (~> 4.0.0)
   - RxBlocking (= 6.0.0)
   - RxCocoa (= 6.0.0)
   - RxSwift (= 6.0.0)
@@ -37,6 +47,10 @@ SPEC REPOS:
     - Hero
     - Kingfisher
     - Mocker
+    - ObjectMapper
+    - Realm
+    - RealmS
+    - RealmSwift
     - RxBlocking
     - RxCocoa
     - RxRelay
@@ -51,6 +65,10 @@ SPEC CHECKSUMS:
   Hero: 215865ba3ae41dd9bb08cd6c60a645529c6fc94b
   Kingfisher: cdb1189a9223b1bc028816bd47c8b8101a58831c
   Mocker: 8c731a8104962f246cadf2b02556218e9edc1390
+  ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  Realm: 38e9dcb19104b58407167d99f70d4995f7c16023
+  RealmS: a5ce0e34359676b6d52778dab92c4e36b779bbd9
+  RealmSwift: 3183cc1ad48378fbcd634311b22c0e6c44021152
   RxBlocking: c025b8c6fe08c5b18c039b5b11d41ec413f8a59e
   RxCocoa: 3f79328fafa3645b34600f37c31e64c73ae3a80e
   RxRelay: 8d593be109c06ea850df027351beba614b012ffb
@@ -60,6 +78,6 @@ SPEC CHECKSUMS:
   Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
   SwinjectAutoregistration: 330f5012642a8b5c89a8a4adb0c5e52df07382c0
 
-PODFILE CHECKSUM: dc6b3fd012a5b78e8ba1cc17032d6fe500586e45
+PODFILE CHECKSUM: 6d681174c639097bb7d203b0a1629dd6d28f425f
 
 COCOAPODS: 1.11.2

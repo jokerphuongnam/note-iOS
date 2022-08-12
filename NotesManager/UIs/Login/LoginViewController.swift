@@ -6,8 +6,12 @@
 //
 
 @_implementationOnly import UIKit
+@_implementationOnly import RxSwift
 
 final class LoginViewController: UIViewController {
+    var viewModel: LoginViewModel!
+    private let disposeBag = DisposeBag()
+    
     private var keyboardManager: KeyboardManagerment!
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -47,11 +51,21 @@ final class LoginViewController: UIViewController {
         return showHideButton
     }()
     
-    #if DEBUG
-    deinit {
-        print("Deinit: \(String(describing: Self.self))")
+    init(viewModel: LoginViewModel) {
+        super.init(nibName: String(describing: Self.self), bundle: Bundle.main)
+        self.viewModel = viewModel
     }
-    #endif
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+#if DEBUG
+        print("Deinit: \(String(describing: Self.self))")
+#endif
+        viewModel = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,6 +95,10 @@ final class LoginViewController: UIViewController {
         passwordTextField.rightView = showHideButton
         passwordTextField.rightViewMode = .always
     }
+    
+    private func setupLiveData() {
+        
+    }
 }
 
 // MARK: - Action
@@ -97,18 +115,28 @@ private extension LoginViewController {
     }
     
     @IBAction private func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            viewModel.login(email: email, password: password)
+                .subscribe { [weak self] in
+                    guard let self = self else { return }
+                    self.presentDashboard()
+                } onError: { [weak self] error in
+                    guard let self = self else { return }
+                    if let error = error as? UserLocalImpl.UserLocalError, error == UserLocalError.duplicate {
+                        self.presentDashboard()
+                    }
+                } onDisposed: {
+                    
+                }
+        }
+    }
+    
+    private func presentDashboard() {
+        self.navigationController?.navigationBar.layer.removeAllAnimations()
+        self.navigationController?.popToRootViewController(animated: false)
         let viewModel: DashboardViewModel = DashboardViewModelImpl()
         let viewController = DashboardViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
-        navigation.modalPresentationStyle = .fullScreen
-        
-        present(navigation, animated: true) { [weak self] in
-            guard let self = self, let window = UIWindow.key else { return }
-            self.navigationController?.popToRootViewController(animated: false)
-            let viewModel: DashboardViewModel = DashboardViewModelImpl()
-            let viewController = DashboardViewController(viewModel: viewModel)
-            let navigation = UINavigationController(rootViewController: viewController)
-            window.rootViewController = navigation
-        }
+        UIWindow.key?.changeRootViewControllerPresent(rootViewController: navigation)
     }
 }

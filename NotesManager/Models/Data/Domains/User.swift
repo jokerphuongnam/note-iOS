@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     let id: String
     var email: String
     var name: String, gender: Gender
 }
 
 extension User {
-    enum Gender {
+    enum Gender: Codable {
         case male
         case female
         case other
@@ -37,6 +37,34 @@ extension User.Gender {
             return Strings.other
         case .secret:
             return Strings.secret
+        }
+    }
+    
+    var constant: String {
+        switch self {
+        case .male:
+            return "male"
+        case .female:
+            return "female"
+        case .other:
+            return "other"
+        case .secret:
+            return "secret"
+        }
+    }
+    
+    init(gender text: String) {
+        switch text.lowercased() {
+        case "male":
+            self = .male
+        case "female":
+            self = .female
+        case "other":
+            self = .other
+        case "secret":
+            self = .secret
+        default:
+            self = .secret
         }
     }
 }

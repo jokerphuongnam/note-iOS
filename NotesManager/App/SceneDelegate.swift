@@ -10,6 +10,7 @@
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    private var userLocal: UserLocal!
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -21,13 +22,16 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.makeKeyAndVisible()
         
-//        let loginViewController = LoginViewController()
-//        let loginNavigation = UINavigationController(rootViewController: loginViewController)
-//
-//        window.rootViewController = loginNavigation
+        let viewController: UIViewController
+        userLocal = NoteManagerAssembler.inject()
+        if userLocal.user != nil {
+            let viewModel: DashboardViewModel = DashboardViewModelImpl()
+            viewController = DashboardViewController(viewModel: viewModel)
+        } else {
+            let viewModel: LoginViewModel = LoginViewModelImpl(useCase: NoteManagerAssembler.inject())
+            viewController = LoginViewController(viewModel: viewModel)
+        }
         
-        let viewModel: DashboardViewModel = DashboardViewModelImpl()
-        let viewController = DashboardViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
         
         window.rootViewController = navigation
