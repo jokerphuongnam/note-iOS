@@ -8,6 +8,8 @@
 import Foundation
 
 extension String {
+    // MARK: -
+    static let contentAlertViewControllerKey: Self = "contentViewController"
     // MARK: - XCConfig
     static func infoKey(_ key: String) -> String {
         ((Bundle.main.infoDictionary?[key] as? String)?.replacingOccurrences(of: "\\", with: ""))!

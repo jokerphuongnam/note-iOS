@@ -115,26 +115,48 @@ private extension LoginViewController {
     }
     
     @IBAction private func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            viewModel.login(email: email, password: password)
-                .subscribe { [weak self] in
-                    guard let self = self else { return }
-                    self.presentDashboard()
-                } onError: { [weak self] error in
-                    guard let self = self else { return }
-                    if let error = error as? UserLocalImpl.UserLocalError, error == UserLocalError.duplicate {
-                        self.presentDashboard()
-                    }
-                } onDisposed: {
-                    
-                }
-                .disposed(by: disposeBag)
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+           return
         }
+        let loadingContentViewController = LoadingAlertController()
+        let loadingAlertController = loadingContentViewController.alertController
+        loadingContentViewController.messageLabel.text = Strings.loading
+        present(loadingAlertController, animated: true)
+        viewModel.login(email: email, password: password)
+            .subscribe { [weak self] in
+                guard let self = self else { return }
+                loadingAlertController.dismiss(animated: true)
+                self.presentDashboard()
+            } onError: { [weak self] error in
+                guard let self = self else { return }
+                loadingAlertController.dismiss(animated: true)
+                if let error = error as? UserLocalImpl.UserLocalError, error == UserLocalError.duplicate {
+                    self.presentDashboard()
+                    return
+                }
+                let message: String
+                switch error {
+                case ApiError.unknownError(let responseError):
+                    message = responseError.message ?? ""
+                case ApiError.otherError(let responseError):
+                    message = "\(Strings.unknownError): \(responseError.statusCode ?? 0)"
+                default:
+                    message = Strings.unknownError
+                }
+                let messageAlertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: Strings.ok, style: .cancel, handler: nil)
+                alertAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+                messageAlertController.addAction(alertAction)
+                self.present(messageAlertController, animated: true)
+            } onDisposed: {
+                
+            }
+            .disposed(by: disposeBag)
     }
     
     private func presentDashboard() {
-        self.navigationController?.navigationBar.layer.removeAllAnimations()
-        self.navigationController?.popToRootViewController(animated: false)
+        navigationController?.navigationBar.layer.removeAllAnimations()
+        navigationController?.popToRootViewController(animated: false)
         let viewModel: DashboardViewModel = DashboardViewModelImpl()
         let viewController = DashboardViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)

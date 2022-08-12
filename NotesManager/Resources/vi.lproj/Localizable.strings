@@ -48,3 +48,5 @@
 "cancel" = "Hủy Bỏ";
 "pull_to_reload" = "Kéo Để Tải Lại";
 "pull_to_load_more" = "Kéo Để Tải Thêm";
+"error" = "Lỗi";
+"unknown_error" = "Lỗi Không Rõ";

@@ -338,6 +338,15 @@
 		A8C78770289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
 		A8C78771289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
 		A8C78772289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
+		A8CB3CFF28A69908008EDDFE /* BaseContentAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */; };
+		A8CB3D0028A69908008EDDFE /* BaseContentAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */; };
+		A8CB3D0128A69908008EDDFE /* BaseContentAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */; };
+		A8CB3D0428A69C03008EDDFE /* LoadingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */; };
+		A8CB3D0528A69C03008EDDFE /* LoadingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */; };
+		A8CB3D0628A69C03008EDDFE /* LoadingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */; };
+		A8CB3D0728A69C03008EDDFE /* LoadingAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */; };
+		A8CB3D0828A69C03008EDDFE /* LoadingAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */; };
+		A8CB3D0928A69C03008EDDFE /* LoadingAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */; };
 		A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
 		A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
 		A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
@@ -569,6 +578,9 @@
 		A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
 		A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+VIewDelegate.swift"; sourceTree = "<group>"; };
 		A8C7876F289922B90080D31E /* Font+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Constant.swift"; sourceTree = "<group>"; };
+		A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContentAlertController.swift; sourceTree = "<group>"; };
+		A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertController.swift; sourceTree = "<group>"; };
+		A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingAlertController.xib; sourceTree = "<group>"; };
 		A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Localization.swift"; sourceTree = "<group>"; };
 		A8F25FE42898C80000FEAF22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8F25FE52898C80000FEAF22 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -665,6 +677,15 @@
 				5918775F2251A0CFDF49F777 /* Pods-NotesManager StagingTests.releasestaging.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A814475128A65AA9006628ED /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */,
+				A8CB3CED28A692FE008EDDFE /* LoadingDialog */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 		A816B137289A2942003793FB /* Main */ = {
@@ -889,6 +910,7 @@
 		A8AB9CFE288E551400939E9D /* UIs */ = {
 			isa = PBXGroup;
 			children = (
+				A814475128A65AA9006628ED /* Dialog */,
 				A8AB9D02288E555E00939E9D /* Lauch */,
 				A8F25FEC2898C80600FEAF22 /* Login */,
 				A8F25FF72898DBD900FEAF22 /* Register */,
@@ -1165,6 +1187,15 @@
 			path = ScrollLoading;
 			sourceTree = "<group>";
 		};
+		A8CB3CED28A692FE008EDDFE /* LoadingDialog */ = {
+			isa = PBXGroup;
+			children = (
+				A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */,
+				A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */,
+			);
+			path = LoadingDialog;
+			sourceTree = "<group>";
+		};
 		A8F25FEC2898C80600FEAF22 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -1324,6 +1355,7 @@
 				A8B5917C289E62AB00CF50E3 /* TextCell.xib in Resources */,
 				A8B5916B289E604D00CF50E3 /* PaletteColorCell.xib in Resources */,
 				A8A77095288E59E800F03C5C /* Localizable.strings in Resources */,
+				A8CB3D0728A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
 				A8AB9CD3288E547B00939E9D /* Assets.xcassets in Resources */,
 				A8A3F367289D27C800DEBCD5 /* LogoutView.xib in Resources */,
 				A8A3F35E289D204F00DEBCD5 /* SettingCell.xib in Resources */,
@@ -1352,6 +1384,7 @@
 				A8B5917D289E62AB00CF50E3 /* TextCell.xib in Resources */,
 				A8B5916C289E604D00CF50E3 /* PaletteColorCell.xib in Resources */,
 				A8A77096288E59E800F03C5C /* Localizable.strings in Resources */,
+				A8CB3D0828A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
 				A8AB9D0C288E561300939E9D /* Assets.xcassets in Resources */,
 				A8A3F368289D27C800DEBCD5 /* LogoutView.xib in Resources */,
 				A8A3F35F289D204F00DEBCD5 /* SettingCell.xib in Resources */,
@@ -1377,6 +1410,7 @@
 				A85E229928A1052B00FB00EB /* SimpleAppearanceCell.xib in Resources */,
 				A8B59176289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8A3F33F289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
+				A8CB3D0928A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
 				A8BAB4B028A3AE4900D0397B /* ScrollLoadingView.xib in Resources */,
 				A821BD38289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
 				A8A3F347289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
@@ -1613,11 +1647,13 @@
 				A84F1B952897849A005683EB /* FetchNotes.swift in Sources */,
 				A8FA63E1289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A88F2A09289A7958002DE601 /* Window+.swift in Sources */,
+				A8CB3CFF28A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5228A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A8649D3328A4D46300DE3312 /* LoginViewModel.swift in Sources */,
 				A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */,
+				A8CB3D0428A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
 				A8BAB4A028A3ADA100D0397B /* ScrollView+Loading.swift in Sources */,
 				A8A3F342289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
 				A89492AC289F768B00F860DC /* EditProfileViewController.swift in Sources */,
@@ -1729,11 +1765,13 @@
 				A84F1B962897849A005683EB /* FetchNotes.swift in Sources */,
 				A8FA63E2289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A88F2A0A289A7958002DE601 /* Window+.swift in Sources */,
+				A8CB3D0028A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5328A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8649D3428A4D46300DE3312 /* LoginViewModel.swift in Sources */,
 				A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */,
+				A8CB3D0528A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
 				A8BAB4A128A3ADA100D0397B /* ScrollView+Loading.swift in Sources */,
 				A8A3F343289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
 				A89492AD289F768B00F860DC /* EditProfileViewController.swift in Sources */,
@@ -1827,6 +1865,7 @@
 				A8FA63D7289F9AC000BC3490 /* ImageTintColor.swift in Sources */,
 				A8B59160289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A8B59186289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
+				A8CB3D0128A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8FA63F0289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
 				A8BAB4AC28A3AE3800D0397B /* ScrollLoadingView.swift in Sources */,
 				A85E22A128A1069400FB00EB /* AppearancesViewController+NavigationBar.swift in Sources */,
@@ -1907,6 +1946,7 @@
 				A8B4B186289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A80A95FB2893D4D500F044D9 /* NoteNetwork.swift in Sources */,
 				A8880CE2289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
+				A8CB3D0628A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
 				A8A3F353289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
 				A8B59173289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */,
 				A8880CF6289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,
