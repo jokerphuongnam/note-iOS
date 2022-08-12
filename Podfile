@@ -16,6 +16,8 @@ def notesManager
   pod 'Alamofire', '~> 5.5.0'
   # Hero
   pod 'Hero'
+  # Realm
+  pod 'RealmS', '~> 4.0.0'
 end
 
 target 'NotesManager' do

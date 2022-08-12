@@ -8,9 +8,14 @@
 import Foundation
 
 extension String {
+    // MARK: - XCConfig
     static func infoKey(_ key: String) -> String {
         ((Bundle.main.infoDictionary?[key] as? String)?.replacingOccurrences(of: "\\", with: ""))!
     }
     
     static let baseUrl: Self = .infoKey("Base Url")
+    
+    // MARK: - UserDefaults
+    static let userDefaultAccount: Self = "account"
+    static let userDefaultUser: Self = "user"
 }

@@ -36,3 +36,9 @@ extension LoginResponse: Codable {
         case token
     }
 }
+
+extension LoginResponse {
+    var user: User {
+        .init(id: id, email: email, name: name, gender: .init(gender: gender))
+    }
+}

@@ -22,11 +22,18 @@ protocol NoteNetwork {
 
 // MARK: - AFNoteNetwork
 final class AFNoteNetwork: NoteNetwork, BaseAFNetwork {
-    var session: Session
+    var session: Session!
+    var decoder: JSONDecoder!
     
     // MARK: - Init
-    init(session: Session) {
+    init(session: Session, decoder: JSONDecoder) {
         self.session = session
+        self.decoder = decoder
+    }
+    
+    deinit {
+        session = nil
+        decoder = nil
     }
     
     // MARK: - fetch notes
