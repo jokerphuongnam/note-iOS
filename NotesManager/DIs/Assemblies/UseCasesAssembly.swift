@@ -12,5 +12,8 @@ struct UseCasesAssembly: Assembly {
     func assemble(container: Container) {
         container.autoregister(LoginUseCase.self, initializer: LoginUseCaseImpl.init)
             .inObjectScope(.container)
+        
+        container.autoregister(DashboardUseCase.self, initializer: DashboardUseCaseImpl.init)
+            .inObjectScope(.container)
     }
 }

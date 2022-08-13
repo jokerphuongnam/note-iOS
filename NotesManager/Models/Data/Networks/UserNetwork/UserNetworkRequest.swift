@@ -29,7 +29,7 @@ extension UserNetworkRequest {
     }
     
     var interceptor: RequestInterceptor? {
-        NoteManagerAssembler.inject(name: .tokenInterceptor)
+        nil
     }
     
     var url: URL {

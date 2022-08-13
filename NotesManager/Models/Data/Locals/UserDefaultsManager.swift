@@ -39,7 +39,7 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
     
     var accessToken: String? {
         get {
-            userDefaults.string(forKey: .userDefaultAccessToken) ?? ""
+            userDefaults.string(forKey: .userDefaultAccessToken)
         }
         set {
             userDefaults.set(newValue, forKey: .userDefaultAccessToken)

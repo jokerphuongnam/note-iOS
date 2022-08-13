@@ -208,7 +208,7 @@ private extension LoginViewController {
     private func presentDashboard() {
         navigationController?.navigationBar.layer.removeAllAnimations()
         navigationController?.popToRootViewController(animated: false)
-        let viewModel: DashboardViewModel = DashboardViewModelImpl()
+        let viewModel: DashboardViewModel = DashboardViewModelImpl(useCase: NoteManagerAssembler.inject())
         let viewController = DashboardViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
         UIWindow.key?.changeRootViewControllerPresent(rootViewController: navigation)

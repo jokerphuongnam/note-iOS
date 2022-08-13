@@ -58,6 +58,12 @@
 		A81E698A28A7B9690068431A /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698928A7B9680068431A /* Number+.swift */; };
 		A81E698B28A7B9690068431A /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698928A7B9680068431A /* Number+.swift */; };
 		A81E698C28A7B9690068431A /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698928A7B9680068431A /* Number+.swift */; };
+		A81E698E28A7BE630068431A /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698D28A7BE630068431A /* NoteRepository.swift */; };
+		A81E698F28A7BE630068431A /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698D28A7BE630068431A /* NoteRepository.swift */; };
+		A81E699028A7BE630068431A /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698D28A7BE630068431A /* NoteRepository.swift */; };
+		A81E699228A7C1770068431A /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E699128A7C1770068431A /* DashboardUseCase.swift */; };
+		A81E699328A7C1770068431A /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E699128A7C1770068431A /* DashboardUseCase.swift */; };
+		A81E699428A7C1770068431A /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E699128A7C1770068431A /* DashboardUseCase.swift */; };
 		A821BD33289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
 		A821BD34289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
 		A821BD35289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
@@ -471,6 +477,8 @@
 		A814474D28A64418006628ED /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		A81E698528A7A9F90068431A /* TokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInterceptor.swift; sourceTree = "<group>"; };
 		A81E698928A7B9680068431A /* Number+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+.swift"; sourceTree = "<group>"; };
+		A81E698D28A7BE630068431A /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
+		A81E699128A7C1770068431A /* DashboardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardUseCase.swift; sourceTree = "<group>"; };
 		A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderView.swift; sourceTree = "<group>"; };
 		A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorHeaderView.xib; sourceTree = "<group>"; };
 		A823A38728A130920069BB8F /* CustomAppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAppearanceCell.swift; sourceTree = "<group>"; };
@@ -802,6 +810,7 @@
 			isa = PBXGroup;
 			children = (
 				A8649D3C28A4DD6D00DE3312 /* UserRepository.swift */,
+				A81E698D28A7BE630068431A /* NoteRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -1143,6 +1152,7 @@
 				A8880CF3289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift */,
 				A8A3F348289D145700DEBCD5 /* DashboardViewController+ViewDelegate.swift */,
 				A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */,
+				A81E699128A7C1770068431A /* DashboardUseCase.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -1718,8 +1728,10 @@
 				A8649D3728A4D6CC00DE3312 /* LoginUseCase.swift in Sources */,
 				A8FA63F2289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B184289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
+				A81E698E28A7BE630068431A /* NoteRepository.swift in Sources */,
 				A8B59162289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A85E226628A0F28F00FB00EB /* LanguageCell.swift in Sources */,
+				A81E699228A7C1770068431A /* DashboardUseCase.swift in Sources */,
 				A8A3F34D289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
 				A8B59151289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8649D4C28A4DE1D00DE3312 /* UseCasesAssembly.swift in Sources */,
@@ -1840,8 +1852,10 @@
 				A8649D3828A4D6CC00DE3312 /* LoginUseCase.swift in Sources */,
 				A8FA63F3289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B185289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
+				A81E698F28A7BE630068431A /* NoteRepository.swift in Sources */,
 				A8B59163289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A85E226728A0F28F00FB00EB /* LanguageCell.swift in Sources */,
+				A81E699328A7C1770068431A /* DashboardUseCase.swift in Sources */,
 				A8A3F34E289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
 				A8B59152289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A8649D4D28A4DE1D00DE3312 /* UseCasesAssembly.swift in Sources */,
@@ -1995,6 +2009,7 @@
 				A80A95EF2893D4CB00F044D9 /* NoteError.swift in Sources */,
 				A80A95ED2893D4CB00F044D9 /* Color+.swift in Sources */,
 				A8B59157289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */,
+				A81E699428A7C1770068431A /* DashboardUseCase.swift in Sources */,
 				A8A539CD289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8A3F35D289D204F00DEBCD5 /* SettingCell.swift in Sources */,
 				A8C78772289922B90080D31E /* Font+Constant.swift in Sources */,
@@ -2028,6 +2043,7 @@
 				A8FA63DB289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
 				A8B208C22892BC4A00DC7FA6 /* UserNetworkTests.swift in Sources */,
 				A8F260172898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
+				A81E699028A7BE630068431A /* NoteRepository.swift in Sources */,
 				A85E22A528A1069D00FB00EB /* AppearancesViewController+CollectionView.swift in Sources */,
 				A8F260142898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8B5914B289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift in Sources */,

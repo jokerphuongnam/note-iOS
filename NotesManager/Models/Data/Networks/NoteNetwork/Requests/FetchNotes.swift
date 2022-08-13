@@ -30,8 +30,20 @@ struct FetchNotesRequest: NoteNetworkRequest {
 }
 
 struct FetchNotesResponse {
-    let notes: [NotesResponse]
+    let notes: NotesResponse
     let hasPrePage, hasNextPage: Bool
+}
+
+extension FetchNotesResponse {
+    var paingNotes: PagingArray<Note> {
+        (
+            data: notes.map { noteResponse in
+                noteResponse.note
+            },
+            hasNext: hasNextPage,
+            hasPrev: hasPrePage
+        )
+    }
 }
 
 extension FetchNotesResponse: Codable {
@@ -49,7 +61,7 @@ struct NoteResponse {
     let createAt, updateAt: Int64
 }
 
-typealias NotesResponse = NoteResponse
+typealias NotesResponse = [NoteResponse]
 
 extension NoteResponse: Codable {
     enum CodingKeys: String, CodingKey {
@@ -59,5 +71,11 @@ extension NoteResponse: Codable {
         case color
         case createAt = "create_at"
         case updateAt = "update_at"
+    }
+}
+
+extension NoteResponse {
+    var note: Note {
+        .init(id: id, title: title, description: description, color: .init(hex: color), createAt: createAt, updateAt: updateAt)
     }
 }

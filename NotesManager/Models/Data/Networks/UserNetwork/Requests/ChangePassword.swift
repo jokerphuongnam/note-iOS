@@ -15,6 +15,10 @@ struct ChangePasswordRequest: UserNetworkRequest {
     var encoding: URLEncoding = .httpBody
     var parameters: Parameters
     
+    var interceptor: RequestInterceptor? {
+        NoteManagerAssembler.inject(name: .tokenInterceptor)
+    }
+    
     init(oldPassword: String, newPassword: String) {
         parameters = [
             "old_password":oldPassword,
