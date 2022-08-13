@@ -104,6 +104,6 @@ extension SettingViewController: LogoutViewDelegate {
         let viewModel: LoginViewModel = LoginViewModelImpl(useCase: NoteManagerAssembler.inject())
         let viewController = LoginViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
-        present(navigation, animated: true)
+        UIWindow.key?.changeRootViewControllerPresent(rootViewController: navigation)
     }
 }

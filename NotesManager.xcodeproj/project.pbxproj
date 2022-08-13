@@ -37,6 +37,15 @@
 		A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
 		A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
 		A80A960B28941A1400F044D9 /* FetchAccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A960828941A1400F044D9 /* FetchAccessToken.swift */; };
+		A80EF5FD28A7807800A9DA0D /* LoginViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80EF5FC28A7807800A9DA0D /* LoginViewController+CollectionView.swift */; };
+		A80EF5FE28A7807800A9DA0D /* LoginViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80EF5FC28A7807800A9DA0D /* LoginViewController+CollectionView.swift */; };
+		A80EF5FF28A7807800A9DA0D /* LoginViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80EF5FC28A7807800A9DA0D /* LoginViewController+CollectionView.swift */; };
+		A80EF60328A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80EF60128A7837A00A9DA0D /* RecommendEmailCell.swift */; };
+		A80EF60428A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80EF60128A7837A00A9DA0D /* RecommendEmailCell.swift */; };
+		A80EF60528A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80EF60128A7837A00A9DA0D /* RecommendEmailCell.swift */; };
+		A80EF60628A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80EF60228A7837A00A9DA0D /* RecommendEmailCell.xib */; };
+		A80EF60728A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80EF60228A7837A00A9DA0D /* RecommendEmailCell.xib */; };
+		A80EF60828A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A80EF60228A7837A00A9DA0D /* RecommendEmailCell.xib */; };
 		A814474A28A5FDC1006628ED /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474928A5FDC1006628ED /* UserDefaultsManager.swift */; };
 		A814474B28A5FDC1006628ED /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474928A5FDC1006628ED /* UserDefaultsManager.swift */; };
 		A814474C28A5FDC1006628ED /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474928A5FDC1006628ED /* UserDefaultsManager.swift */; };
@@ -338,6 +347,15 @@
 		A8C78770289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
 		A8C78771289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
 		A8C78772289922B90080D31E /* Font+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7876F289922B90080D31E /* Font+Constant.swift */; };
+		A8CB3CFF28A69908008EDDFE /* BaseContentAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */; };
+		A8CB3D0028A69908008EDDFE /* BaseContentAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */; };
+		A8CB3D0128A69908008EDDFE /* BaseContentAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */; };
+		A8CB3D0428A69C03008EDDFE /* LoadingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */; };
+		A8CB3D0528A69C03008EDDFE /* LoadingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */; };
+		A8CB3D0628A69C03008EDDFE /* LoadingAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */; };
+		A8CB3D0728A69C03008EDDFE /* LoadingAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */; };
+		A8CB3D0828A69C03008EDDFE /* LoadingAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */; };
+		A8CB3D0928A69C03008EDDFE /* LoadingAlertController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */; };
 		A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
 		A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
 		A8F25FE22898C57600FEAF22 /* Text+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */; };
@@ -440,6 +458,9 @@
 		A80A95E12893CCAC00F044D9 /* MockSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSession.swift; sourceTree = "<group>"; };
 		A80A96042893EC8200F044D9 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		A80A960828941A1400F044D9 /* FetchAccessToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchAccessToken.swift; sourceTree = "<group>"; };
+		A80EF5FC28A7807800A9DA0D /* LoginViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		A80EF60128A7837A00A9DA0D /* RecommendEmailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendEmailCell.swift; sourceTree = "<group>"; };
+		A80EF60228A7837A00A9DA0D /* RecommendEmailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendEmailCell.xib; sourceTree = "<group>"; };
 		A814474928A5FDC1006628ED /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A814474D28A64418006628ED /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderView.swift; sourceTree = "<group>"; };
@@ -569,6 +590,9 @@
 		A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegisterViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
 		A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+VIewDelegate.swift"; sourceTree = "<group>"; };
 		A8C7876F289922B90080D31E /* Font+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Constant.swift"; sourceTree = "<group>"; };
+		A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseContentAlertController.swift; sourceTree = "<group>"; };
+		A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAlertController.swift; sourceTree = "<group>"; };
+		A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingAlertController.xib; sourceTree = "<group>"; };
 		A8F25FDF2898C57600FEAF22 /* Text+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Localization.swift"; sourceTree = "<group>"; };
 		A8F25FE42898C80000FEAF22 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A8F25FE52898C80000FEAF22 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -665,6 +689,24 @@
 				5918775F2251A0CFDF49F777 /* Pods-NotesManager StagingTests.releasestaging.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A80EF60028A7827F00A9DA0D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A80EF60128A7837A00A9DA0D /* RecommendEmailCell.swift */,
+				A80EF60228A7837A00A9DA0D /* RecommendEmailCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A814475128A65AA9006628ED /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				A8CB3CFE28A69908008EDDFE /* BaseContentAlertController.swift */,
+				A8CB3CED28A692FE008EDDFE /* LoadingDialog */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 		A816B137289A2942003793FB /* Main */ = {
@@ -889,6 +931,7 @@
 		A8AB9CFE288E551400939E9D /* UIs */ = {
 			isa = PBXGroup;
 			children = (
+				A814475128A65AA9006628ED /* Dialog */,
 				A8AB9D02288E555E00939E9D /* Lauch */,
 				A8F25FEC2898C80600FEAF22 /* Login */,
 				A8F25FF72898DBD900FEAF22 /* Register */,
@@ -1165,12 +1208,23 @@
 			path = ScrollLoading;
 			sourceTree = "<group>";
 		};
+		A8CB3CED28A692FE008EDDFE /* LoadingDialog */ = {
+			isa = PBXGroup;
+			children = (
+				A8CB3D0228A69C03008EDDFE /* LoadingAlertController.swift */,
+				A8CB3D0328A69C03008EDDFE /* LoadingAlertController.xib */,
+			);
+			path = LoadingDialog;
+			sourceTree = "<group>";
+		};
 		A8F25FEC2898C80600FEAF22 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A80EF60028A7827F00A9DA0D /* Cells */,
 				A8F25FE42898C80000FEAF22 /* LoginViewController.swift */,
 				A8F25FE52898C80000FEAF22 /* LoginViewController.xib */,
 				A8F25FED2898C85800FEAF22 /* LoginViewController+NavigationBar.swift */,
+				A80EF5FC28A7807800A9DA0D /* LoginViewController+CollectionView.swift */,
 				A8C7876B2899206A0080D31E /* LoginViewController+VIewDelegate.swift */,
 				A8649D3228A4D46300DE3312 /* LoginViewModel.swift */,
 				A8649D3628A4D6CC00DE3312 /* LoginUseCase.swift */,
@@ -1318,12 +1372,14 @@
 				A8BAB4AE28A3AE4900D0397B /* ScrollLoadingView.xib in Resources */,
 				A8B59141289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
 				A8FA63EA289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
+				A80EF60628A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */,
 				A8B59174289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8F25FE92898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9CD6288E547B00939E9D /* LaunchScreen.storyboard in Resources */,
 				A8B5917C289E62AB00CF50E3 /* TextCell.xib in Resources */,
 				A8B5916B289E604D00CF50E3 /* PaletteColorCell.xib in Resources */,
 				A8A77095288E59E800F03C5C /* Localizable.strings in Resources */,
+				A8CB3D0728A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
 				A8AB9CD3288E547B00939E9D /* Assets.xcassets in Resources */,
 				A8A3F367289D27C800DEBCD5 /* LogoutView.xib in Resources */,
 				A8A3F35E289D204F00DEBCD5 /* SettingCell.xib in Resources */,
@@ -1346,12 +1402,14 @@
 				A8BAB4AF28A3AE4900D0397B /* ScrollLoadingView.xib in Resources */,
 				A8B59142289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
 				A8FA63EB289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
+				A80EF60728A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */,
 				A8B59175289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8F25FEA2898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9D0B288E561300939E9D /* LaunchScreen.storyboard in Resources */,
 				A8B5917D289E62AB00CF50E3 /* TextCell.xib in Resources */,
 				A8B5916C289E604D00CF50E3 /* PaletteColorCell.xib in Resources */,
 				A8A77096288E59E800F03C5C /* Localizable.strings in Resources */,
+				A8CB3D0828A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
 				A8AB9D0C288E561300939E9D /* Assets.xcassets in Resources */,
 				A8A3F368289D27C800DEBCD5 /* LogoutView.xib in Resources */,
 				A8A3F35F289D204F00DEBCD5 /* SettingCell.xib in Resources */,
@@ -1377,6 +1435,7 @@
 				A85E229928A1052B00FB00EB /* SimpleAppearanceCell.xib in Resources */,
 				A8B59176289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8A3F33F289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
+				A8CB3D0928A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
 				A8BAB4B028A3AE4900D0397B /* ScrollLoadingView.xib in Resources */,
 				A821BD38289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
 				A8A3F347289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
@@ -1387,6 +1446,7 @@
 				A823A38E28A130920069BB8F /* CustomAppearanceCell.xib in Resources */,
 				A8B59143289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
 				A8A3F360289D204F00DEBCD5 /* SettingCell.xib in Resources */,
+				A80EF60828A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */,
 				A8F25FFF2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
 				A89492B1289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 			);
@@ -1604,6 +1664,7 @@
 				A8880CEC289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085D2892675500DC7FA6 /* Request.swift in Sources */,
 				A8FA63D9289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
+				A80EF5FD28A7807800A9DA0D /* LoginViewController+CollectionView.swift in Sources */,
 				A8A3F351289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
 				A8FA63E7289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */,
 				A8B59180289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
@@ -1613,11 +1674,13 @@
 				A84F1B952897849A005683EB /* FetchNotes.swift in Sources */,
 				A8FA63E1289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A88F2A09289A7958002DE601 /* Window+.swift in Sources */,
+				A8CB3CFF28A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5228A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A8649D3328A4D46300DE3312 /* LoginViewModel.swift in Sources */,
 				A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */,
+				A8CB3D0428A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
 				A8BAB4A028A3ADA100D0397B /* ScrollView+Loading.swift in Sources */,
 				A8A3F342289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
 				A89492AC289F768B00F860DC /* EditProfileViewController.swift in Sources */,
@@ -1686,6 +1749,7 @@
 				A8880CE8289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A8A3F35B289D204F00DEBCD5 /* SettingCell.swift in Sources */,
 				A8A3F364289D27C800DEBCD5 /* LogoutView.swift in Sources */,
+				A80EF60328A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */,
 				A8A3F349289D145700DEBCD5 /* DashboardViewController+ViewDelegate.swift in Sources */,
 				A8B2083528925B0F00DC7FA6 /* NoteError.swift in Sources */,
 				A80A960928941A1400F044D9 /* FetchAccessToken.swift in Sources */,
@@ -1720,6 +1784,7 @@
 				A8880CED289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8B2085E2892675500DC7FA6 /* Request.swift in Sources */,
 				A8FA63DA289F9CA000BC3490 /* SettingViewModel.swift in Sources */,
+				A80EF5FE28A7807800A9DA0D /* LoginViewController+CollectionView.swift in Sources */,
 				A8A3F352289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
 				A8FA63E8289FB46B00BC3490 /* ChangePasswordViewController.swift in Sources */,
 				A8B59181289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
@@ -1729,11 +1794,13 @@
 				A84F1B962897849A005683EB /* FetchNotes.swift in Sources */,
 				A8FA63E2289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A88F2A0A289A7958002DE601 /* Window+.swift in Sources */,
+				A8CB3D0028A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5328A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8649D3428A4D46300DE3312 /* LoginViewModel.swift in Sources */,
 				A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */,
+				A8CB3D0528A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
 				A8BAB4A128A3ADA100D0397B /* ScrollView+Loading.swift in Sources */,
 				A8A3F343289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
 				A89492AD289F768B00F860DC /* EditProfileViewController.swift in Sources */,
@@ -1802,6 +1869,7 @@
 				A8880CE9289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A8A3F35C289D204F00DEBCD5 /* SettingCell.swift in Sources */,
 				A8A3F365289D27C800DEBCD5 /* LogoutView.swift in Sources */,
+				A80EF60428A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */,
 				A8A3F34A289D145700DEBCD5 /* DashboardViewController+ViewDelegate.swift in Sources */,
 				A80A960A28941A1400F044D9 /* FetchAccessToken.swift in Sources */,
 				A8A370B92897CC79004E94F0 /* UpdateNote.swift in Sources */,
@@ -1827,6 +1895,7 @@
 				A8FA63D7289F9AC000BC3490 /* ImageTintColor.swift in Sources */,
 				A8B59160289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A8B59186289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */,
+				A8CB3D0128A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8FA63F0289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
 				A8BAB4AC28A3AE3800D0397B /* ScrollLoadingView.swift in Sources */,
 				A85E22A128A1069400FB00EB /* AppearancesViewController+NavigationBar.swift in Sources */,
@@ -1835,6 +1904,7 @@
 				A8880CEA289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
 				A8A539C928965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A80A95E92893D4A800F044D9 /* SceneDelegate.swift in Sources */,
+				A80EF5FF28A7807800A9DA0D /* LoginViewController+CollectionView.swift in Sources */,
 				A8649D6028A4E07900DE3312 /* UserLocal.swift in Sources */,
 				A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */,
 				A80A95F12893D4CB00F044D9 /* ViewController+.swift in Sources */,
@@ -1870,6 +1940,7 @@
 				A8649D3F28A4DD6D00DE3312 /* UserRepository.swift in Sources */,
 				A8A3F366289D27C800DEBCD5 /* LogoutView.swift in Sources */,
 				A85E229628A1052B00FB00EB /* SimpleAppearanceCell.swift in Sources */,
+				A80EF60528A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */,
 				A8B59182289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
 				A85E227728A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */,
 				A80A95F02893D4CB00F044D9 /* String+.swift in Sources */,
@@ -1907,6 +1978,7 @@
 				A8B4B186289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A80A95FB2893D4D500F044D9 /* NoteNetwork.swift in Sources */,
 				A8880CE2289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
+				A8CB3D0628A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
 				A8A3F353289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
 				A8B59173289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */,
 				A8880CF6289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,

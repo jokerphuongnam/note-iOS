@@ -8,9 +8,15 @@
 @_implementationOnly import RealmSwift
 @_implementationOnly import RxSwift
 
+typealias Login = (email: String, password: String)
+
 protocol UserLocal {
     var user: User? { get set }
+    var emails: [String] { get }
     func login(email: String, password: String, user: User, token: String) -> Completable
+    func deleteEmail(email: String)
+    func updatePasswordInLocal(email: String, password: String) -> Completable
+    func getLogin(email: String) throws -> Login
 }
 
 final class UserLocalImpl: UserLocal {
@@ -28,6 +34,10 @@ final class UserLocalImpl: UserLocal {
         }
     }
     
+    var emails: [String] {
+        userDefaultsManager.emails
+    }
+    
     init(keyChainManager: KeyChainManager, userDefaultsManager: UserDefaultsManager) {
         self.keyChainManager = keyChainManager
         self.userDefaultsManager = userDefaultsManager
@@ -42,17 +52,72 @@ final class UserLocalImpl: UserLocal {
         let lowercasedEmail = email.lowercased()
         return userDefaultsManager.saveUser(user: user)
             .andThen(userDefaultsManager.login(email: email, password: password))
-            .andThen(keyChainManager.saveAccount(email: lowercasedEmail, password: password))
-            .andThen(keyChainManager.saveToken(token: token))
-            .catch { error in
-                if case KeyChainError.duplicateEntry = error {
-                    throw UserLocalError.duplicate
+            .andThen(.create { [weak self] observer in
+                guard let self = self else {
+                    observer(.error(NError.ownerNil))
+                    return Disposables.create()
                 }
-                if case UserDefaultsError.duplicate = error {
-                    throw UserLocalError.duplicate
+                do {
+                    try self.keyChainManager.saveAccount(email: lowercasedEmail, password: password)
+                    observer(.completed)
+                } catch {
+                    observer(.error(error))
+                }
+                return Disposables.create()
+            })
+            .andThen(.create { [weak self] observer in
+                guard let self = self else {
+                    observer(.error(NError.ownerNil))
+                    return Disposables.create()
+                }
+                do {
+                    try self.keyChainManager.saveToken(token: token)
+                    observer(.completed)
+                } catch {
+                    observer(.error(error))
+                }
+                return Disposables.create()
+            })
+            .catch { [weak self] error in
+                guard let self = self else { throw NError.ownerNil }
+                if case KeyChainError.duplicateEntry = error {
+                    if let keyChainPassword = try? self.keyChainManager.getAccount(email: email), keyChainPassword != password {
+                        throw UserLocalError.duplicate
+                    } else {
+                        return Completable.empty()
+                    }
                 }
                 throw error
             }
+    }
+    
+    func deleteEmail(email: String) {
+        userDefaultsManager.deleteEmail(email: email)
+        try? keyChainManager.deleteAccount(email: email)
+    }
+    
+    func updatePasswordInLocal(email: String, password: String) -> Completable {
+        .create { [weak self] observer in
+            guard let self = self else {
+                observer(.error(NError.ownerNil))
+                return Disposables.create()
+            }
+            do {
+                try self.keyChainManager.updateAccount(email: email, password: password)
+                observer(.completed)
+            } catch {
+                observer(.error(error))
+            }
+            return Disposables.create()
+        }
+    }
+    
+    func getLogin(email: String) throws -> Login {
+        do {
+            return (email: email, password: try keyChainManager.getAccount(email: email))
+        } catch {
+            throw error
+        }
     }
 }
 

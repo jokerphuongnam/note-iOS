@@ -9,7 +9,9 @@
 
 protocol UserDefaultsManager {
     var user: User? { get set }
+    var emails: [String] { get }
     func login(email: String, password: String) -> Completable
+    func deleteEmail(email: String)
     func saveUser(user: User) -> Completable
     func getUser() -> Single<User>
 }
@@ -34,6 +36,10 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
         }
     }
     
+    var emails: [String] {
+        userDefaults.stringArray(forKey: .userDefaultAccount) ?? []
+    }
+    
     init(userDefaults: UserDefaults, decoder: JSONDecoder, encoder: JSONEncoder) {
         self.userDefaults = userDefaults
         self.decoder = decoder
@@ -50,21 +56,24 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
         .create { [weak self] observer in
             guard let self = self else {
                 observer(.error(NError.ownerNil))
-                return Disposables.create {
-                    
-                }
+                return Disposables.create()
             }
-            let accounts = self.userDefaults.stringArray(forKey: .userDefaultAccount)
-            if var accounts = accounts, !accounts.contains(email) {
+            
+            var accounts = self.userDefaults.stringArray(forKey: .userDefaultAccount) ?? []
+            if !accounts.contains(email) {
                 accounts.append(email)
                 self.userDefaults.set(accounts, forKey: .userDefaultAccount)
                 self.userDefaults.synchronize()
-            } else {
-                observer(.error(UserDefaultsError.duplicate))
             }
             observer(.completed)
             return Disposables.create()
         }
+    }
+    
+    func deleteEmail(email: String) {
+        let accounts = userDefaults.stringArray(forKey: .userDefaultAccount) ?? []
+        userDefaults.set(accounts.filter { $0 != email }, forKey: .userDefaultAccount)
+        userDefaults.synchronize()
     }
     
     func saveUser(user: User) -> Completable {
@@ -74,6 +83,7 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
                 return Disposables.create ()
             }
             self.user = user
+            observer(.completed)
             return Disposables.create()
         }
     }
@@ -96,7 +106,6 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
 
 extension UserDefaultsManagerImpl {
     enum UserDefaultsError: Error {
-        case duplicate
         case notFound
     }
 }

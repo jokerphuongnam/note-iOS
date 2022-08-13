@@ -48,3 +48,5 @@
 "cancel" = "취소";
 "pull_to_reload" = "당겨서 다시 로드";
 "pull_to_load_more" = "더 로드하려면 당겨";
+"error" = "오류";
+"unknown_error" = "알수없는 오류";

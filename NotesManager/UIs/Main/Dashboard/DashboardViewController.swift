@@ -128,7 +128,7 @@ private extension DashboardViewController {
     
     @objc func layoutChangeAction(_ sender: UIBarButtonItem) {
         layoutType = layoutType == .vertical ? .grid : .vertical
-        collectionView.reloadData()
+        collectionView.setCollectionViewLayout(layout, animated: true)
         sender.image = layoutType == .grid ? Asset.Assets.list.image : Asset.Assets.grid.image
     }
     

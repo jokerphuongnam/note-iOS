@@ -9,8 +9,11 @@
 @_implementationOnly import RxSwift
 
 final class LoginViewController: UIViewController {
+    static let recommendEmailCellName = String(describing: RecommendEmailCell.self)
+    
     var viewModel: LoginViewModel!
     private let disposeBag = DisposeBag()
+    @IBOutlet weak var recommendCollectionViewHeightConstraint: NSLayoutConstraint!
     
     private var keyboardManager: KeyboardManagerment!
     @IBOutlet private weak var scrollView: UIScrollView!
@@ -18,6 +21,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var recommendCollectionView: UICollectionView!
     
     private lazy var emailButton: UIButton = { [weak self] in
         let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
@@ -94,15 +98,40 @@ final class LoginViewController: UIViewController {
         passwordTextField.leftViewMode = .always
         passwordTextField.rightView = showHideButton
         passwordTextField.rightViewMode = .always
+        recommendCollectionView.roundCorners(16, corners: [.layerMaxXMaxYCorner, .layerMinXMaxYCorner])
+        recommendCollectionView.collectionViewLayout = layout
+        recommendCollectionView.dataSource = self
+        recommendCollectionView.delegate = self
+        recommendCollectionView.register(
+            UINib(nibName: Self.recommendEmailCellName, bundle: Bundle.main),
+            forCellWithReuseIdentifier: Self.recommendEmailCellName
+        )
     }
     
     private func setupLiveData() {
-        
+        viewModel.emailsRecommendsObserver
+            .subscribe(on: MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] event in
+                guard let self = self else { return }
+                switch event {
+                case .next(let emails):
+                    self.recommendCollectionView.isHidden = emails.count == 0
+                    self.recommendCollectionViewHeightConstraint.isActive = emails.count < 3
+                    self.recommendCollectionView.reloadData()
+                default: break
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Action
 private extension LoginViewController {
+    @IBAction private func emailEditingChanged(_ sender: UITextField, forEvent event: UIEvent) {
+        viewModel.getEmailsRecommend(searchWords: sender.text ?? "")
+    }
+    
     @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         sender.setImage(image, for: .normal)
@@ -115,25 +144,70 @@ private extension LoginViewController {
     }
     
     @IBAction private func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            viewModel.login(email: email, password: password)
-                .subscribe { [weak self] in
-                    guard let self = self else { return }
-                    self.presentDashboard()
-                } onError: { [weak self] error in
-                    guard let self = self else { return }
-                    if let error = error as? UserLocalImpl.UserLocalError, error == UserLocalError.duplicate {
+        guard let email = emailTextField.text, let password = passwordTextField.text else {
+            return
+        }
+        let loadingContentViewController = LoadingAlertController()
+        let loadingAlertController = loadingContentViewController.alertController
+        loadingContentViewController.messageLabel.text = Strings.loading
+        present(loadingAlertController, animated: true)
+        viewModel.login(email: email, password: password)
+            .subscribe { [weak self] in
+                guard let self = self else { return }
+                loadingAlertController.dismiss(animated: true)
+                self.presentDashboard()
+            } onError: { [weak self] error in
+                guard let self = self else { return }
+                loadingAlertController.dismiss(animated: true)
+                if let error = error as? UserLocalImpl.UserLocalError, error == UserLocalError.duplicate {
+                    let messageAlertController = UIAlertController(title: nil, message: Strings.resavePassword(email), preferredStyle: .alert)
+                    let okAlertAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+                        guard let self = self else { return }
+                        self.viewModel.updatePasswordInLocal(email: email, password: password)
+                            .subscribe {
+                                
+                            } onError: { e in
+                                
+                            } onDisposed: { [weak self] in
+                                guard let self = self else { return }
+                                self.presentDashboard()
+                            }
+                            .disposed(by: self.disposeBag)
+                    }
+                    okAlertAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+                    let cancelAlertAction = UIAlertAction(title: Strings.cancel, style: .cancel) { [weak self] action in
+                        guard let self = self else { return }
                         self.presentDashboard()
                     }
-                } onDisposed: {
-                    
+                    cancelAlertAction.setValue(Asset.Colors.red.color, forKey: "titleTextColor")
+                    messageAlertController.addAction(okAlertAction)
+                    messageAlertController.addAction(cancelAlertAction)
+                    self.present(messageAlertController, animated: true)
+                    return
                 }
-        }
+                let message: String
+                switch error {
+                case ApiError.unknownError(let responseError):
+                    message = responseError.message ?? ""
+                case ApiError.otherError(let responseError):
+                    message = "\(Strings.unknownError): \(responseError.statusCode ?? 0)"
+                default:
+                    message = Strings.unknownError
+                }
+                let messageAlertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
+                let alertAction = UIAlertAction(title: Strings.ok, style: .cancel, handler: nil)
+                alertAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+                messageAlertController.addAction(alertAction)
+                self.present(messageAlertController, animated: true)
+            } onDisposed: {
+                
+            }
+            .disposed(by: disposeBag)
     }
     
     private func presentDashboard() {
-        self.navigationController?.navigationBar.layer.removeAllAnimations()
-        self.navigationController?.popToRootViewController(animated: false)
+        navigationController?.navigationBar.layer.removeAllAnimations()
+        navigationController?.popToRootViewController(animated: false)
         let viewModel: DashboardViewModel = DashboardViewModelImpl()
         let viewController = DashboardViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
