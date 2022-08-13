@@ -131,7 +131,29 @@ private extension LoginViewController {
                 guard let self = self else { return }
                 loadingAlertController.dismiss(animated: true)
                 if let error = error as? UserLocalImpl.UserLocalError, error == UserLocalError.duplicate {
-                    self.presentDashboard()
+                    let messageAlertController = UIAlertController(title: nil, message: Strings.resavePassword(email), preferredStyle: .alert)
+                    let okAlertAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+                        guard let self = self else { return }
+                        self.viewModel.updatePasswordInLocal(email: email, password: password)
+                            .subscribe {
+                                
+                            } onError: { e in
+                                
+                            } onDisposed: { [weak self] in
+                                guard let self = self else { return }
+                                self.presentDashboard()
+                            }
+                            .disposed(by: self.disposeBag)
+                    }
+                    okAlertAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+                    let cancelAlertAction = UIAlertAction(title: Strings.cancel, style: .cancel) { [weak self] action in
+                        guard let self = self else { return }
+                        self.presentDashboard()
+                    }
+                    cancelAlertAction.setValue(Asset.Colors.red.color, forKey: "titleTextColor")
+                    messageAlertController.addAction(okAlertAction)
+                    messageAlertController.addAction(cancelAlertAction)
+                    self.present(messageAlertController, animated: true)
                     return
                 }
                 let message: String

@@ -125,9 +125,6 @@ private extension KeyChainManagerImpl {
         
         let status = SecItemUpdate(query as CFDictionary, attributes as CFDictionary)
         
-        if status == errSecDuplicateItem {
-            throw KeyChainError.duplicateEntry
-        }
         guard status == errSecSuccess else {
             if let error: String = SecCopyErrorMessageString(status, nil) as String? {
                 throw KeyChainError.message(error)

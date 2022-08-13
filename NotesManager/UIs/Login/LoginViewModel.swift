@@ -9,6 +9,7 @@
 
 protocol LoginViewModel {
     func login(email: String, password: String) -> Completable
+    func updatePasswordInLocal(email: String, password: String) -> Completable
 }
 
 final class LoginViewModelImpl: LoginViewModel {
@@ -24,5 +25,9 @@ final class LoginViewModelImpl: LoginViewModel {
     
     func login(email: String, password: String) -> Completable {
         useCase.login(email: email, password: password)
+    }
+    
+    func updatePasswordInLocal(email: String, password: String) -> Completable {
+        useCase.updatePasswordInLocal(email: email, password: password)
     }
 }

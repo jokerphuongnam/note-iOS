@@ -9,6 +9,7 @@
 
 protocol UserRepository {
     func login(email: String, password: String) -> Completable
+    func updatePasswordInLocal(email: String, password: String) -> Completable
 }
 
 final class UserRepositoryImpl: UserRepository {
@@ -33,5 +34,9 @@ final class UserRepositoryImpl: UserRepository {
                 }
                 return self.local.login(email: email, password: password, user: loginResponse.user, token: loginResponse.token)
             }
+    }
+    
+    func updatePasswordInLocal(email: String, password: String) -> Completable {
+        local.updatePasswordInLocal(email: email, password: password)
     }
 }

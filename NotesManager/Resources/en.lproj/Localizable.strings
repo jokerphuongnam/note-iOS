@@ -50,3 +50,4 @@
 "pull_to_load_more" = "Pull To Load More";
 "error" = "Error";
 "unknown_error" = "Unknown Error";
+"resave_password" = "Do You Want To Change The Saved Password For %s?";

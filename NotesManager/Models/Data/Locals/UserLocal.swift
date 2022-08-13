@@ -11,6 +11,7 @@
 protocol UserLocal {
     var user: User? { get set }
     func login(email: String, password: String, user: User, token: String) -> Completable
+    func updatePasswordInLocal(email: String, password: String) -> Completable
 }
 
 final class UserLocalImpl: UserLocal {
@@ -79,6 +80,22 @@ final class UserLocalImpl: UserLocal {
                 }
                 throw error
             }
+    }
+    
+    func updatePasswordInLocal(email: String, password: String) -> Completable {
+        .create { [weak self] observer in
+            guard let self = self else {
+                observer(.error(NError.ownerNil))
+                return Disposables.create()
+            }
+            do {
+                try self.keyChainManager.updateAccount(email: email, password: password)
+                observer(.completed)
+            } catch {
+                observer(.error(error))
+            }
+            return Disposables.create()
+        }
     }
 }
 

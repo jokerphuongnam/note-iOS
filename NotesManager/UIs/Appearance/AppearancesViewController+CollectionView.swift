@@ -99,6 +99,7 @@ extension AppearancesViewController: CustomAppearanceCellDelegate {
         
         let alertController = UIAlertController(title: Strings.pickTime, message: "\n\n\n\n\n\n\n\n\n", preferredStyle: .alert)
         alertController.view.addSubview(datePicker)
+        
         NSLayoutConstraint.activate([
             datePicker.leadingAnchor.constraint(equalTo: alertController.view.leadingAnchor),
             datePicker.trailingAnchor.constraint(equalTo: alertController.view.trailingAnchor),
@@ -112,15 +113,12 @@ extension AppearancesViewController: CustomAppearanceCellDelegate {
         selectAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
         
         let cancelAction = UIAlertAction(title: Strings.cancel, style: .cancel, handler: nil)
-        cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
+        cancelAction.setValue(Asset.Colors.red.color, forKey: "titleTextColor")
         
         alertController.addAction(selectAction)
         alertController.addAction(cancelAction)
         
-        present(alertController, animated: true) { [weak self] in
-            guard let self = self else { return }
-            
-        }
+        present(alertController, animated: true)
     }
     
     func customAppearance(_ customAppearanceCell: CustomAppearanceCell, startTime: Int64, endTime: Int64) {

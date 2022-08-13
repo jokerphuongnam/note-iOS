@@ -9,6 +9,7 @@
 
 protocol LoginUseCase {
     func login(email: String, password: String) -> Completable
+    func updatePasswordInLocal(email: String, password: String) -> Completable
 }
 
 final class LoginUseCaseImpl: LoginUseCase {
@@ -24,6 +25,12 @@ final class LoginUseCaseImpl: LoginUseCase {
     
     func login(email: String, password: String) -> Completable {
         userRepository.login(email: email, password: password)
+            .subscribe(on: SerialDispatchQueueScheduler.init(qos: .utility))
+            .observe(on: MainScheduler.instance)
+    }
+    
+    func updatePasswordInLocal(email: String, password: String) -> Completable {
+        userRepository.updatePasswordInLocal(email: email, password: password)
             .subscribe(on: SerialDispatchQueueScheduler.init(qos: .utility))
             .observe(on: MainScheduler.instance)
     }
