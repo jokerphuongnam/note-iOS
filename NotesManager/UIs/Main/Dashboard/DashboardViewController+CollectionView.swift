@@ -16,22 +16,16 @@ extension DashboardViewController {
             }
             switch self.layoutType {
             case .vertical:
-                let item = NSCollectionLayoutItem(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .fractionalHeight(1)
-                    )
-                )
-                item.contentInsets.leading = 8
-                item.contentInsets.trailing = 8
-                let group = NSCollectionLayoutGroup.vertical(
-                    layoutSize: .init(
-                        widthDimension: .fractionalWidth(1),
-                        heightDimension: .absolute(50)
-                    ),
-                    subitems: [item]
-                )
-                let section = NSCollectionLayoutSection(group: group)
+                var config = UICollectionLayoutListConfiguration(appearance: .plain)
+                
+                if #available(iOS 15.0, *) {
+                    config.headerTopPadding = 16
+                } else {
+                    
+                }
+                let section = NSCollectionLayoutSection.list(using: config, layoutEnvironment: env)
+                section.contentInsets.leading = 8
+                section.contentInsets.trailing = 8
                 section.interGroupSpacing = 16
                 return section
             case .grid:

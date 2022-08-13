@@ -14,6 +14,7 @@ struct RegisterRequest: UserNetworkRequest {
     var path: String = "register"
     var encoding: URLEncoding = .httpBody
     var parameters: Parameters
+    var interceptor: RequestInterceptor? { nil }
     
     init(email: String, password: String) {
         parameters = [

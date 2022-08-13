@@ -9,6 +9,7 @@
 
 protocol UserDefaultsManager {
     var user: User? { get set }
+    var accessToken: String? { get set }
     var emails: [String] { get }
     func login(email: String, password: String) -> Completable
     func deleteEmail(email: String)
@@ -32,6 +33,16 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
             if let value = newValue, let data = try? encoder.encode(value) {
                 userDefaults.set(data, forKey: .userDefaultUser)
             }
+            userDefaults.synchronize()
+        }
+    }
+    
+    var accessToken: String? {
+        get {
+            userDefaults.string(forKey: .userDefaultAccessToken) ?? ""
+        }
+        set {
+            userDefaults.set(newValue, forKey: .userDefaultAccessToken)
             userDefaults.synchronize()
         }
     }

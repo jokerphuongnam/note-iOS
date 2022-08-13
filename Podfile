@@ -18,6 +18,8 @@ def notesManager
   pod 'Hero'
   # Realm
   pod 'RealmS', '~> 4.0.0'
+  # JWTDecode
+  pod 'JWTDecode', '~> 3.0'
 end
 
 target 'NotesManager' do

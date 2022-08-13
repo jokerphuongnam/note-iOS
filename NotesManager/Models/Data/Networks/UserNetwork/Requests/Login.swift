@@ -14,6 +14,7 @@ struct LoginRequest: UserNetworkRequest {
     var path: String = "login"
     var encoding: URLEncoding = .httpBody
     var parameters: Parameters
+    var interceptor: RequestInterceptor? { nil }
     
     init(email: String, password: String) {
         parameters = [

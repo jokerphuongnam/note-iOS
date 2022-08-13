@@ -8,8 +8,9 @@
 import Foundation
 
 extension String {
-    // MARK: -
+    // MARK: - UIKit Key
     static let contentAlertViewControllerKey: Self = "contentViewController"
+    
     // MARK: - XCConfig
     static func infoKey(_ key: String) -> String {
         ((Bundle.main.infoDictionary?[key] as? String)?.replacingOccurrences(of: "\\", with: ""))!
@@ -20,4 +21,8 @@ extension String {
     // MARK: - UserDefaults
     static let userDefaultAccount: Self = "account"
     static let userDefaultUser: Self = "user"
+    static let userDefaultAccessToken: Self = "accessToken"
+    
+    // MARK: - Dependency Injection
+    static let tokenInterceptor: Self = "tokenInterceptor"
 }
