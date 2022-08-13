@@ -12,5 +12,8 @@ struct RepositoriesAssembly: Assembly {
     func assemble(container: Container) {
         container.autoregister(UserRepository.self, initializer: UserRepositoryImpl.init)
             .inObjectScope(.container)
+        
+        container.autoregister(NoteRepository.self, initializer: NoteRepositoryImpl.init)
+            .inObjectScope(.container)
     }
 }

@@ -19,24 +19,14 @@ extension UIScrollView {
     
     typealias LoadingConfig<T: UIView> = (_ scrollViewLoading: T) -> ()
     
-    func addLoadingView<T>(isLoading: inout Bool, reloadConfig reload: LoadingConfig<T>?, loadMoreConfig loadMore: LoadingConfig<T>?) where T: UIView {
+    func addReloadView<T>(isLoading: inout Bool, reloadConfig reload: LoadingConfig<T>?) where T: UIView {
         let position = contentOffset.y
         guard !isLoading, scrollLoadingView == nil, contentSize.height != 0 else {
             return
         }
-        let scrollViewHeight = frame.height
         let v: T
-        if position > contentSize.height - 100 - scrollViewHeight {
-            v = .init(frame: .init(x: 0, y: contentSize.height + scrollViewHeight - scrollViewHeight + 20, width: frame.size.width, height: 80))
-            contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
-            DispatchQueue.main.async { [weak self] in
-                guard let self = self else { return }
-                loadMore?(v)
-                self.addSubview(v)
-            }
-            isLoading.toggle()
-        } else if position < -adjustedContentInset.top {
-            v = .init(frame: .init(x: 0, y: -100, width: frame.size.width, height: 80))
+        if position < -adjustedContentInset.top {
+            let v: T = .init(frame: .init(x: 0, y: -100, width: frame.size.width, height: 80))
             contentInset = .init(top: 100, left: 0, bottom: 0, right: 0)
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
@@ -47,16 +37,36 @@ extension UIScrollView {
         }
     }
     
-    typealias LoadingHandle = (_ type: ScrollLoadingType) -> ()
-    func defaultLoadingView(isLoading: inout Bool, reloadTitle reload: String? = nil, loadMoreTitle loadMore: String? = nil, LoadingHandle handle: LoadingHandle? = nil) {
-        addLoadingView(isLoading: &isLoading) { [weak self] (scrollViewLoading: ScrollLoadingView) in
-            guard let self = self else { return }
+    func addLoadMoreView<T>(isLoading: inout Bool, loadMoreConfig loadMore: LoadingConfig<T>?) where T: UIView {
+        let position = contentOffset.y
+        guard !isLoading, scrollLoadingView == nil, contentSize.height != 0 else {
+            return
+        }
+        let scrollViewHeight = frame.height
+        if position > contentSize.height - 100 - scrollViewHeight {
+            let v: T = .init(frame: .init(x: 0, y: contentSize.height + scrollViewHeight - scrollViewHeight + 20, width: frame.size.width, height: 80))
+            contentInset = .init(top: 0, left: 0, bottom: 100, right: 0)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
+                loadMore?(v)
+                self.addSubview(v)
+            }
+            isLoading.toggle()
+        }
+    }
+    
+    typealias Completion = () -> ()
+    func defaultReloadView(isLoading: inout Bool, reloadTitle reload: String? = nil, completion handle: Completion? = nil) {
+        addReloadView(isLoading: &isLoading) { (scrollViewLoading: ScrollLoadingView) in
             scrollViewLoading.titleLabel.text = reload ?? "Pull To Reload"
-            handle?(.reload)
-        } loadMoreConfig: { [weak self] (scrollViewLoading: ScrollLoadingView) in
-            guard let self = self else { return }
+            handle?()
+        }
+    }
+    
+    func defaultLoadMoreView(isLoading: inout Bool, loadMoreTitle loadMore: String? = nil, completion handle: Completion? = nil) {
+        addReloadView(isLoading: &isLoading) { (scrollViewLoading: ScrollLoadingView) in
             scrollViewLoading.titleLabel.text = loadMore ?? "Pull To LoadMore"
-            handle?(.loadMore)
+            handle?()
         }
     }
     

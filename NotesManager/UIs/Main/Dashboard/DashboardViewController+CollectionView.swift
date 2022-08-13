@@ -102,26 +102,25 @@ extension DashboardViewController {
     override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         switch loadingType {
         case .reload:
-            self.viewModel.reloadNotes()
+            viewModel.reloadNotes(searchWords: nil)
         case .loadMore:
-            self.viewModel.loadMoreNotes()
+            viewModel.loadMoreNotes()
         default: break
         }
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         DispatchQueue.main.async { [weak self] in
-            guard let self = self else { return }
-            if let notes = self.viewModel.notes, notes.hasNext {
-                scrollView.defaultLoadingView(isLoading: &self.viewModel.isLoading, reloadTitle: Strings.pullToReload, loadMoreTitle: Strings.pullToLoadMore) { [weak self] type in
+            guard let self = self, let notes = self.viewModel.notes else { return }
+            if notes.hasNext {
+                scrollView.defaultLoadMoreView(isLoading: &self.viewModel.isLoading, loadMoreTitle: Strings.pullToReload) { [weak self] in
                     guard let self = self else { return }
-                    self.loadingType = type
-                    switch type {
-                    case .reload:
-                        break
-                    case .loadMore:
-                        break
-                    }
+                    self.loadingType = .loadMore
+                }
+            } else if notes.hasPrev {
+                scrollView.defaultReloadView(isLoading: &self.viewModel.isLoading, reloadTitle: Strings.pullToReload) { [weak self] in
+                    guard let self = self else { return }
+                    self.loadingType = .reload
                 }
             }
         }

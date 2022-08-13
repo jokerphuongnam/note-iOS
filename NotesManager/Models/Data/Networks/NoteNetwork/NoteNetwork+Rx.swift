@@ -10,7 +10,7 @@
 
 // MARK: - ReactiveCompatible
 extension AFNoteNetwork: ReactiveCompatible {
-
+    
 }
 
 // MARK: - AFUserNetwork
@@ -18,6 +18,9 @@ extension Reactive where Base: AFNoteNetwork {
     func send<T: Request>(request: T) -> Single<T.Response> {
         Single.create { observer in
             let request = base.send(request: request) { result in
+#if DEBUG
+                print(result)
+#endif
                 switch result {
                 case .success(let res):
                     observer(.success(res))

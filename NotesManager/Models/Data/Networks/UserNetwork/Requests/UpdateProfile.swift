@@ -15,6 +15,10 @@ struct UpdateProfileRequest: UserNetworkRequest {
     var encoding: URLEncoding = .httpBody
     var parameters: Parameters
     
+    var interceptor: RequestInterceptor? {
+        NoteManagerAssembler.inject(name: .tokenInterceptor)
+    }
+    
     init(name: String? = nil, gender: String? = nil) {
         parameters = [:]
         if let name = name {

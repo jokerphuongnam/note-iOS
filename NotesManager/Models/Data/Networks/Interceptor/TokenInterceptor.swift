@@ -27,8 +27,10 @@ final class TokenInterceptor: RequestInterceptor {
     
     func adapt(_ urlRequest: URLRequest, using state: RequestAdapterState, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var urlRequest = urlRequest
-        if let accessToken = local.accessToken {
-            urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        let date = Date()
+        let currentDate = date.millisecondsSince1970
+        if let token = local.accessToken, let jwt = try? decode(jwt: token), let expiresAt = jwt.expiresAt?.millisecondsSince1970, currentDate + Int64(Int.networkTimeOut * 1000) < expiresAt {
+            urlRequest.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
             completion(.success(urlRequest))
         } else {
             fetchAccessToken { [weak self] result in

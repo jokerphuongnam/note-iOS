@@ -25,7 +25,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController: UIViewController
         userLocal = NoteManagerAssembler.inject()
         if userLocal.user != nil {
-            let viewModel: DashboardViewModel = DashboardViewModelImpl()
+            let viewModel: DashboardViewModel = DashboardViewModelImpl(useCase: NoteManagerAssembler.inject())
             viewController = DashboardViewController(viewModel: viewModel)
         } else {
             let viewModel: LoginViewModel = LoginViewModelImpl(useCase: NoteManagerAssembler.inject())

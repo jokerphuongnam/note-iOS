@@ -102,10 +102,12 @@ final class DashboardViewController: UICollectionViewController {
                     case .`init`: break
                     case .loading: break
                     case .success(data: _):
+                        self.viewModel.isLoading = false
                         self.collectionView.removeLoadingView()
                         self.collectionView.reloadData()
                     }
                 case .error(_):
+                    self.viewModel.isLoading = false
                     self.collectionView.removeLoadingView()
                     self.collectionView.reloadData()
                 case .completed:
@@ -113,7 +115,7 @@ final class DashboardViewController: UICollectionViewController {
                 }
             }
             .disposed(by: disposeBag)
-        viewModel.reloadNotes()
+        viewModel.reloadNotes(searchWords: nil)
     }
 }
 

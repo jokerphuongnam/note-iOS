@@ -11,6 +11,7 @@
 extension DashboardViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchWords = searchController.searchBar.text else { return }
+        viewModel.reloadNotes(searchWords: searchWords)
     }
 }
 
