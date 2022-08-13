@@ -20,4 +20,17 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            recommendCollectionView.isHidden = false
+            viewModel.getEmailsRecommend(searchWords: textField.text ?? "")
+        }
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            recommendCollectionView.isHidden = true
+        }
+    }
 }

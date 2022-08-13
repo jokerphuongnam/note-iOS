@@ -8,13 +8,20 @@
 @_implementationOnly import RxSwift
 
 protocol UserRepository {
+    var emails: [String] { get }
     func login(email: String, password: String) -> Completable
+    func deleteEmail(email: String)
     func updatePasswordInLocal(email: String, password: String) -> Completable
+    func getLogin(email: String) throws -> Login
 }
 
 final class UserRepositoryImpl: UserRepository {
     var network: UserNetwork!
     var local: UserLocal!
+    
+    var emails: [String] {
+        local.emails
+    }
     
     init(network: UserNetwork, local: UserLocal) {
         self.network = network
@@ -36,7 +43,15 @@ final class UserRepositoryImpl: UserRepository {
             }
     }
     
+    func deleteEmail(email: String) {
+        local.deleteEmail(email: email)
+    }
+    
     func updatePasswordInLocal(email: String, password: String) -> Completable {
         local.updatePasswordInLocal(email: email, password: password)
+    }
+    
+    func getLogin(email: String) throws -> Login {
+        try local.getLogin(email: email)
     }
 }

@@ -22,7 +22,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIq-6p-7xg" userLabel="ContentView">
                     <rect key="frame" x="16" y="82" width="318" height="36"/>
                     <subviews>
-                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lOi-12-dWn">
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="lOi-12-dWn">
                             <rect key="frame" x="149" y="0.0" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="lOi-12-dWn" secondAttribute="height" multiplier="1:1" id="6S7-KN-6C6"/>

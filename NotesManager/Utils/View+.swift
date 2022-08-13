@@ -57,6 +57,12 @@ extension UIView {
             layer.borderColor = newValue?.cgColor
         }
     }
+    
+    func roundCorners(_ radius: CGFloat, corners: CACornerMask) {
+        layer.maskedCorners = corners
+        layer.cornerRadius = 10
+        clipsToBounds = true
+    }
 }
 
 extension UIImage {

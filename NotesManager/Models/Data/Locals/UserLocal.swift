@@ -8,10 +8,15 @@
 @_implementationOnly import RealmSwift
 @_implementationOnly import RxSwift
 
+typealias Login = (email: String, password: String)
+
 protocol UserLocal {
     var user: User? { get set }
+    var emails: [String] { get }
     func login(email: String, password: String, user: User, token: String) -> Completable
+    func deleteEmail(email: String)
     func updatePasswordInLocal(email: String, password: String) -> Completable
+    func getLogin(email: String) throws -> Login
 }
 
 final class UserLocalImpl: UserLocal {
@@ -27,6 +32,10 @@ final class UserLocalImpl: UserLocal {
         set {
             userDefaultsManager.user = newValue
         }
+    }
+    
+    var emails: [String] {
+        userDefaultsManager.emails
     }
     
     init(keyChainManager: KeyChainManager, userDefaultsManager: UserDefaultsManager) {
@@ -82,6 +91,11 @@ final class UserLocalImpl: UserLocal {
             }
     }
     
+    func deleteEmail(email: String) {
+        userDefaultsManager.deleteEmail(email: email)
+        try? keyChainManager.deleteAccount(email: email)
+    }
+    
     func updatePasswordInLocal(email: String, password: String) -> Completable {
         .create { [weak self] observer in
             guard let self = self else {
@@ -95,6 +109,14 @@ final class UserLocalImpl: UserLocal {
                 observer(.error(error))
             }
             return Disposables.create()
+        }
+    }
+    
+    func getLogin(email: String) throws -> Login {
+        do {
+            return (email: email, password: try keyChainManager.getAccount(email: email))
+        } catch {
+            throw error
         }
     }
 }

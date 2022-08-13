@@ -9,8 +9,11 @@
 @_implementationOnly import RxSwift
 
 final class LoginViewController: UIViewController {
+    static let recommendEmailCellName = String(describing: RecommendEmailCell.self)
+    
     var viewModel: LoginViewModel!
     private let disposeBag = DisposeBag()
+    @IBOutlet weak var recommendCollectionViewHeightConstraint: NSLayoutConstraint!
     
     private var keyboardManager: KeyboardManagerment!
     @IBOutlet private weak var scrollView: UIScrollView!
@@ -18,6 +21,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var recommendCollectionView: UICollectionView!
     
     private lazy var emailButton: UIButton = { [weak self] in
         let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
@@ -94,15 +98,40 @@ final class LoginViewController: UIViewController {
         passwordTextField.leftViewMode = .always
         passwordTextField.rightView = showHideButton
         passwordTextField.rightViewMode = .always
+        recommendCollectionView.roundCorners(16, corners: [.layerMaxXMaxYCorner, .layerMinXMaxYCorner])
+        recommendCollectionView.collectionViewLayout = layout
+        recommendCollectionView.dataSource = self
+        recommendCollectionView.delegate = self
+        recommendCollectionView.register(
+            UINib(nibName: Self.recommendEmailCellName, bundle: Bundle.main),
+            forCellWithReuseIdentifier: Self.recommendEmailCellName
+        )
     }
     
     private func setupLiveData() {
-        
+        viewModel.emailsRecommendsObserver
+            .subscribe(on: MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] event in
+                guard let self = self else { return }
+                switch event {
+                case .next(let emails):
+                    self.recommendCollectionView.isHidden = emails.count == 0
+                    self.recommendCollectionViewHeightConstraint.isActive = emails.count < 3
+                    self.recommendCollectionView.reloadData()
+                default: break
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Action
 private extension LoginViewController {
+    @IBAction private func emailEditingChanged(_ sender: UITextField, forEvent event: UIEvent) {
+        viewModel.getEmailsRecommend(searchWords: sender.text ?? "")
+    }
+    
     @objc private func showHideButtonAction(_ sender: UIButton, forEvent event: UIEvent) {
         let image = (passwordTextField.isSecureTextEntry ? Asset.Assets.hideEye : Asset.Assets.eye).image
         sender.setImage(image, for: .normal)
@@ -116,7 +145,7 @@ private extension LoginViewController {
     
     @IBAction private func loginAction(_ sender: UIButton, forEvent event: UIEvent) {
         guard let email = emailTextField.text, let password = passwordTextField.text else {
-           return
+            return
         }
         let loadingContentViewController = LoadingAlertController()
         let loadingAlertController = loadingContentViewController.alertController
