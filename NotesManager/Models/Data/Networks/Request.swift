@@ -17,5 +17,5 @@ protocol Request where Self.Response: Codable {
     var parameters: Parameters { get }
     var httpHeaderFields: HTTPHeaders { get }
     var encoding: URLEncoding { get }
-    var interceptor: Interceptor? { get }
+    var interceptor: RequestInterceptor? { get }
 }

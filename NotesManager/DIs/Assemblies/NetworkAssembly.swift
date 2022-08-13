@@ -11,11 +11,12 @@
 
 struct NetworkAssembly: Assembly {
     func assemble(container: Container) {
+        container.autoregister(RequestInterceptor.self, name: .tokenInterceptor, initializer: TokenInterceptor.init)
+        
         container.register(Session.self) { resolve in
             let configuration = URLSessionConfiguration.default
-            let timeout = 60
-            configuration.timeoutIntervalForResource = TimeInterval(timeout)
-            configuration.timeoutIntervalForRequest = TimeInterval(timeout)
+            configuration.timeoutIntervalForResource = TimeInterval(.networkTimeOut)
+            configuration.timeoutIntervalForRequest = TimeInterval(.networkTimeOut)
             configuration.waitsForConnectivity = true
             configuration.allowsCellularAccess = false
             configuration.allowsConstrainedNetworkAccess = false

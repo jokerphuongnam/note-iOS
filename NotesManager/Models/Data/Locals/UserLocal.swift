@@ -12,9 +12,11 @@ typealias Login = (email: String, password: String)
 
 protocol UserLocal {
     var user: User? { get set }
+    var accessToken: String? { get set }
     var emails: [String] { get }
     func login(email: String, password: String, user: User, token: String) -> Completable
     func deleteEmail(email: String)
+    func loginToken() throws -> String
     func updatePasswordInLocal(email: String, password: String) -> Completable
     func getLogin(email: String) throws -> Login
 }
@@ -31,6 +33,15 @@ final class UserLocalImpl: UserLocal {
         }
         set {
             userDefaultsManager.user = newValue
+        }
+    }
+    
+    var accessToken: String? {
+        get {
+            userDefaultsManager.accessToken
+        }
+        set {
+            userDefaultsManager.accessToken = newValue
         }
     }
     
@@ -94,6 +105,10 @@ final class UserLocalImpl: UserLocal {
     func deleteEmail(email: String) {
         userDefaultsManager.deleteEmail(email: email)
         try? keyChainManager.deleteAccount(email: email)
+    }
+    
+    func loginToken() throws -> String {
+        try keyChainManager.getToken()
     }
     
     func updatePasswordInLocal(email: String, password: String) -> Completable {

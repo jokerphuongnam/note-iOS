@@ -52,6 +52,12 @@
 		A814474E28A64418006628ED /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474D28A64418006628ED /* AppAssembly.swift */; };
 		A814474F28A64418006628ED /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474D28A64418006628ED /* AppAssembly.swift */; };
 		A814475028A64418006628ED /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474D28A64418006628ED /* AppAssembly.swift */; };
+		A81E698628A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
+		A81E698728A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
+		A81E698828A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
+		A81E698A28A7B9690068431A /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698928A7B9680068431A /* Number+.swift */; };
+		A81E698B28A7B9690068431A /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698928A7B9680068431A /* Number+.swift */; };
+		A81E698C28A7B9690068431A /* Number+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698928A7B9680068431A /* Number+.swift */; };
 		A821BD33289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
 		A821BD34289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
 		A821BD35289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
@@ -463,6 +469,8 @@
 		A80EF60228A7837A00A9DA0D /* RecommendEmailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendEmailCell.xib; sourceTree = "<group>"; };
 		A814474928A5FDC1006628ED /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A814474D28A64418006628ED /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		A81E698528A7A9F90068431A /* TokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInterceptor.swift; sourceTree = "<group>"; };
+		A81E698928A7B9680068431A /* Number+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+.swift"; sourceTree = "<group>"; };
 		A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderView.swift; sourceTree = "<group>"; };
 		A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorHeaderView.xib; sourceTree = "<group>"; };
 		A823A38728A130920069BB8F /* CustomAppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAppearanceCell.swift; sourceTree = "<group>"; };
@@ -718,6 +726,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		A81E698428A7A9E30068431A /* Interceptor */ = {
+			isa = PBXGroup;
+			children = (
+				A81E698528A7A9F90068431A /* TokenInterceptor.swift */,
+			);
+			path = Interceptor;
+			sourceTree = "<group>";
+		};
 		A84F1B932897848C005683EB /* Requests */ = {
 			isa = PBXGroup;
 			children = (
@@ -963,6 +979,7 @@
 				A8FA63D4289F9AC000BC3490 /* ImageTintColor.swift */,
 				A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */,
 				A8649D6E28A54AAE00DE3312 /* Error+.swift */,
+				A81E698928A7B9680068431A /* Number+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1012,6 +1029,7 @@
 		A8B20859289266E500DC7FA6 /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				A81E698428A7A9E30068431A /* Interceptor */,
 				A8B208702892679300DC7FA6 /* UserNetwork */,
 				A8B2085A2892673A00DC7FA6 /* NoteNetwork */,
 				A8B2085B2892674100DC7FA6 /* Models */,
@@ -1678,6 +1696,7 @@
 				A8649D5228A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
+				A81E698A28A7B9690068431A /* Number+.swift in Sources */,
 				A8649D3328A4D46300DE3312 /* LoginViewModel.swift in Sources */,
 				A8A370B42897C055004E94F0 /* InsertNote.swift in Sources */,
 				A8CB3D0428A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
@@ -1742,6 +1761,7 @@
 				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260152898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
+				A81E698628A7A9F90068431A /* TokenInterceptor.swift in Sources */,
 				A8649D5E28A4E07900DE3312 /* UserLocal.swift in Sources */,
 				A89492B7289F77EC00F860DC /* EditProfileViewModel.swift in Sources */,
 				A85E22A328A1069D00FB00EB /* AppearancesViewController+CollectionView.swift in Sources */,
@@ -1798,6 +1818,7 @@
 				A8649D5328A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
+				A81E698B28A7B9690068431A /* Number+.swift in Sources */,
 				A8649D3428A4D46300DE3312 /* LoginViewModel.swift in Sources */,
 				A8A370B52897C055004E94F0 /* InsertNote.swift in Sources */,
 				A8CB3D0528A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
@@ -1862,6 +1883,7 @@
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
 				A8F260162898FA2C00FEAF22 /* Strings+Generated.swift in Sources */,
+				A81E698728A7A9F90068431A /* TokenInterceptor.swift in Sources */,
 				A8649D5F28A4E07900DE3312 /* UserLocal.swift in Sources */,
 				A89492B8289F77EC00F860DC /* EditProfileViewModel.swift in Sources */,
 				A85E22A428A1069D00FB00EB /* AppearancesViewController+CollectionView.swift in Sources */,
@@ -1899,6 +1921,7 @@
 				A8FA63F0289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
 				A8BAB4AC28A3AE3800D0397B /* ScrollLoadingView.swift in Sources */,
 				A85E22A128A1069400FB00EB /* AppearancesViewController+NavigationBar.swift in Sources */,
+				A81E698C28A7B9690068431A /* Number+.swift in Sources */,
 				A8B59164289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A80A95E82893D4A600F044D9 /* AppDelegate.swift in Sources */,
 				A8880CEA289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
@@ -1937,6 +1960,7 @@
 				A80A96072893EC8200F044D9 /* Register.swift in Sources */,
 				A8FA63F4289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */,
+				A81E698828A7A9F90068431A /* TokenInterceptor.swift in Sources */,
 				A8649D3F28A4DD6D00DE3312 /* UserRepository.swift in Sources */,
 				A8A3F366289D27C800DEBCD5 /* LogoutView.swift in Sources */,
 				A85E229628A1052B00FB00EB /* SimpleAppearanceCell.swift in Sources */,
