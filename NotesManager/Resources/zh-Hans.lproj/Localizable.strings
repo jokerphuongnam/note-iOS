@@ -53,3 +53,5 @@
 "title_placeholder" = "输入标题";
 "description_placeholder" = "输入说明";
 "success" = "成功";
+"delete" = "删除";
+"delete_description" = "删除这条笔记？";

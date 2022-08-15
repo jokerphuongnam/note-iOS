@@ -12,15 +12,27 @@
 protocol NoteDetailViewModel {
     var noteObserver: BehaviorRelay<Note> { get }
     var note: Note { get }
+    func deleteNote() -> Completable
 }
 
 final class NoteDetailViewModelImpl: NoteDetailViewModel {
+    var useCase: NoteDetailUseCase!
     var noteObserver: BehaviorRelay<Note>
     var note: Note {
         noteObserver.value
     }
     
-    init(note: Note) {
+    init(useCase: NoteDetailUseCase, note: Note) {
+        self.useCase = useCase
         noteObserver = BehaviorRelay(value: note)
+        
+    }
+    
+    deinit {
+        useCase = nil
+    }
+    
+    func deleteNote() -> Completable {
+        useCase.deleteNote(id: note.id)
     }
 }

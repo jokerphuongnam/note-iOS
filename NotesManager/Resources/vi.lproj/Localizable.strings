@@ -53,3 +53,5 @@
 "title_placeholder" = "Nhập Tiêu Đề";
 "description_placeholder" = "Nhập Mô Tả";
 "success" = "Thành Công";
+"delete" = "Xóa";
+"delete_description" = "Xóa Ghi Chú Này?";

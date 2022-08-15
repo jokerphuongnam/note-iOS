@@ -8,11 +8,15 @@
 @_implementationOnly import UIKit
 @_implementationOnly import RxSwift
 
+protocol NoteDetailViewControllerDelegate: AnyObject {
+    func noteDetailViewController(_ noteDetailViewController :NoteDetailViewController, updateNote note: Note)
+    func noteDetailViewController(_ noteDetailViewController :NoteDetailViewController, deleteNote id: String)
+}
+
 final class NoteDetailViewController: UIViewController {
     var viewModel: NoteDetailViewModel!
+    weak var delegate: NoteDetailViewControllerDelegate!
     let disposeBag: DisposeBag = DisposeBag()
-    typealias Completion = (_ note: Note) -> ()
-    var completion: Completion!
     
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
@@ -54,7 +58,6 @@ final class NoteDetailViewController: UIViewController {
     
     deinit {
         viewModel = nil
-        completion = nil
     }
     
     override func viewDidLoad() {
@@ -110,13 +113,63 @@ private extension NoteDetailViewController {
         viewController.completion = { [weak self] note in
             guard let self = self else { return }
             self.viewModel.noteObserver.accept(note)
-            self.completion(note)
+            self.delegate?.noteDetailViewController(self, updateNote: note)
         }
         let navigation = UINavigationController(rootViewController: viewController)
         present(navigation, animated: true)
     }
     
     @objc func deleteNoteAction(_ sender: UIBarButtonItem) {
+        let alertController = UIAlertController(title: Strings.delete, message: Strings.deleteDescription, preferredStyle: .alert)
         
+        let okAlertAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+            guard let self = self else { return }
+            let loadingContentViewController = LoadingAlertController()
+            let loadingAlertController = loadingContentViewController.alertController
+            loadingContentViewController.messageLabel.text = Strings.loading
+            self.present(loadingAlertController, animated: true)
+            self.viewModel.deleteNote()
+                .subscribe { [weak self] in
+                    loadingAlertController.dismiss(animated: true)
+                    guard let self = self else { return }
+                    self.delegate?.noteDetailViewController(self, deleteNote: self.viewModel.note.id)
+                    let alertController = UIAlertController(title: Strings.delete, message: Strings.success, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+                        guard let self = self else { return }
+                        self.navigationController?.popViewController(animated: true)
+                    }
+                    okAction.titleTextColor = Asset.Colors.main.color
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true)
+                } onError: { error in
+                    let message: String
+                    switch error {
+                    case ApiError.unknownError(let responseError):
+                        message = responseError.message ?? ""
+                    case ApiError.otherError(let responseError):
+                        message = "\(Strings.unknownError): \(responseError.statusCode ?? 0)"
+                    default:
+                        message = error.localizedDescription
+                    }
+                    let alertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+                        self?.dismiss(animated: true)
+                    }
+                    okAction.titleTextColor = Asset.Colors.red.color
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true)
+                } onDisposed: {
+                    
+                }
+                .disposed(by: self.disposeBag)
+        }
+        okAlertAction.titleTextColor = Asset.Colors.main.color
+        alertController.addAction(okAlertAction)
+        
+        let cancelAction = UIAlertAction(title: Strings.cancel, style: .cancel, handler: nil)
+        cancelAction.titleTextColor = Asset.Colors.red.color
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
     }
 }

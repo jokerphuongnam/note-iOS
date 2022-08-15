@@ -11,6 +11,7 @@ protocol NoteRepository {
     func getNotes(page: Int?, limit: Int?, searchWords: String?) -> Single<PagingArray<Note>>
     func addNote(note: Note) -> Single<Note>
     func updateNote(note: Note) -> Single<Note>
+    func deleteNote(id: String) -> Completable
 }
 
 final class NoteRepositoryImpl: NoteRepository {
@@ -43,5 +44,10 @@ final class NoteRepositoryImpl: NoteRepository {
             .map { response in
                 response.note
             }
+    }
+    
+    func deleteNote(id: String) -> Completable {
+        network.deleteNote(id: id)
+            .asCompletable()
     }
 }

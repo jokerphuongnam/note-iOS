@@ -149,8 +149,8 @@ extension ConfigNoteViewController {
             .subscribe { [weak self] note in
                 loadingAlertController.dismiss(animated: true)
                 guard let self = self else { return }
-                let alertController = UIAlertController(title: self.viewModel.action.title, message: Strings.success, preferredStyle: .alert)
                 self.completion?(note)
+                let alertController = UIAlertController(title: self.viewModel.action.title, message: Strings.success, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
                     guard let self = self else { return }
                     self.dismiss(animated: true)
@@ -170,7 +170,7 @@ extension ConfigNoteViewController {
                 default:
                     message = error.localizedDescription
                 }
-                let alertController = UIAlertController(title: self.viewModel.action.title, message: message, preferredStyle: .alert)
+                let alertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
                     self?.dismiss(animated: true)
                 }

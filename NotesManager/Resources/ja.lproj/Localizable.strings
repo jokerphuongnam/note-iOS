@@ -53,3 +53,5 @@
 "title_placeholder" = "タイトルを入力";
 "description_placeholder" = "入力の説明";
 "success" = "成功";
+"delete" = "消去";
+"delete_description" = "このメモを削除しますか？";

@@ -54,3 +54,5 @@
 "title_placeholder" = "Input title";
 "description_placeholder" = "Input Description";
 "success" = "Success";
+"delete" = "Delete";
+"delete_description" = "Delete this note?";

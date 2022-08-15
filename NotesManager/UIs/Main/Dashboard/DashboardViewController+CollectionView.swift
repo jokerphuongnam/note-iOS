@@ -96,28 +96,9 @@ extension DashboardViewController {
 extension DashboardViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let note = viewModel.notes?.data[indexPath.item] else { return }
-        let viewModel: NoteDetailViewModel = NoteDetailViewModelImpl(note: note)
+        let viewModel: NoteDetailViewModel = NoteDetailViewModelImpl(useCase: NoteManagerAssembler.inject(), note: note)
         let viewController = NoteDetailViewController(viewModel: viewModel)
-        viewController.completion = { [weak self] note in
-            guard let self = self, var notes = self.viewModel.notes else { return }
-            for index in 0..<notes.data.count {
-                if notes.data[index].id.lowercased() == note.id.lowercased() {
-                    notes.data[index] = note
-                    self.viewModel.notesObserver.accept(
-                        .success(
-                            data: (
-                                data: notes.data.sorted { lhs, rhs in
-                                    lhs.updateAt < rhs.updateAt
-                                },
-                                hasNext: notes.hasNext,
-                                hasPrev: notes.hasPrev
-                            )
-                        )
-                    )
-                    break
-                }
-            }
-        }
+        viewController.delegate = self
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
     }
