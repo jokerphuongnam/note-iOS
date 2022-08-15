@@ -50,3 +50,6 @@
 "pull_to_load_more" = "더 로드하려면 당겨";
 "error" = "오류";
 "unknown_error" = "알수없는 오류";
+"title_placeholder" = "제목 입력";
+"description_placeholder" = "입력 설명";
+"success" = "성공";

@@ -106,14 +106,14 @@ extension AppearancesViewController: CustomAppearanceCellDelegate {
         ])
         
         let selectAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] alertAction in
-            guard let self = self else { return }
+            guard self != nil else { return }
             textField.text = dateFormatter.string(from: datePicker.date)
             customAppearanceCell.updateTime()
         }
-        selectAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+        selectAction.titleTextColor = Asset.Colors.main.color
         
         let cancelAction = UIAlertAction(title: Strings.cancel, style: .cancel, handler: nil)
-        cancelAction.setValue(Asset.Colors.red.color, forKey: "titleTextColor")
+        cancelAction.titleTextColor = Asset.Colors.red.color
         
         alertController.addAction(selectAction)
         alertController.addAction(cancelAction)

@@ -15,7 +15,7 @@ struct UpdateNoteRequest: NoteNetworkRequest {
     var encoding: URLEncoding = .httpBody
     var parameters: Parameters
     
-    init(id: String, title: String?, description: String?) {
+    init(id: String, title: String?, description: String?, color: String?) {
         parameters = [
             "id": id
         ]
@@ -26,6 +26,10 @@ struct UpdateNoteRequest: NoteNetworkRequest {
         
         if let description = description {
             parameters.updateValue(description, forKey: "description")
+        }
+        
+        if let color = color {
+            parameters.updateValue(color, forKey: "color")
         }
     }
 }

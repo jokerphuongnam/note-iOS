@@ -51,3 +51,6 @@
 "error" = "Error";
 "unknown_error" = "Unknown Error";
 "resave_password" = "Do You Want To Change The Saved Password For %s?";
+"title_placeholder" = "Input title";
+"description_placeholder" = "Input Description";
+"success" = "Success";

@@ -23,6 +23,8 @@ extension Assembler {
 
 
 class NoteManagerAssembler {
+    private init() {}
+    
     static func inject<Service>() -> Service {
         Assembler.shared.resolver~>
     }

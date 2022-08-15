@@ -39,7 +39,11 @@ final class LoginViewController: UIViewController {
         let image = Asset.Assets.password.image
         emailImage.setImage(image, for: .normal)
         emailImage.imageTint = Asset.Colors.text.color
-        emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        if #available(iOS 15.0, *) {
+            showHideButton.configuration?.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
+        } else {
+            emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        }
         emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
         return emailImage
     }()
@@ -50,7 +54,11 @@ final class LoginViewController: UIViewController {
         showHideButton.setImage(image, for: .normal)
         showHideButton.imageTint = Asset.Colors.text.color
         showHideButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
-        showHideButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        if #available(iOS 15.0, *) {
+            showHideButton.configuration?.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
+        } else {
+            showHideButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        }
         showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
         return showHideButton
     }()
@@ -174,12 +182,12 @@ private extension LoginViewController {
                             }
                             .disposed(by: self.disposeBag)
                     }
-                    okAlertAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+                    okAlertAction.titleTextColor = Asset.Colors.main.color
                     let cancelAlertAction = UIAlertAction(title: Strings.cancel, style: .cancel) { [weak self] action in
                         guard let self = self else { return }
                         self.presentDashboard()
                     }
-                    cancelAlertAction.setValue(Asset.Colors.red.color, forKey: "titleTextColor")
+                    cancelAlertAction.titleTextColor = Asset.Colors.red.color
                     messageAlertController.addAction(okAlertAction)
                     messageAlertController.addAction(cancelAlertAction)
                     self.present(messageAlertController, animated: true)
@@ -196,7 +204,7 @@ private extension LoginViewController {
                 }
                 let messageAlertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
                 let alertAction = UIAlertAction(title: Strings.ok, style: .cancel, handler: nil)
-                alertAction.setValue(Asset.Colors.main.color, forKey: "titleTextColor")
+                alertAction.titleTextColor = Asset.Colors.main.color
                 messageAlertController.addAction(alertAction)
                 self.present(messageAlertController, animated: true)
             } onDisposed: {

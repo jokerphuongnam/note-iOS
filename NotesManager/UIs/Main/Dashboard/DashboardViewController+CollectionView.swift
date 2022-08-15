@@ -9,6 +9,8 @@
 
 // MARK: - layout
 extension DashboardViewController {
+    static let background = "background"
+    
     var layout: UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { [weak self] (numberOfSection, env) in
             guard let self = self else {
@@ -23,6 +25,7 @@ extension DashboardViewController {
                 } else {
                     
                 }
+                config.backgroundColor = .clear
                 let section = NSCollectionLayoutSection.list(using: config, layoutEnvironment: env)
                 section.contentInsets.leading = 8
                 section.contentInsets.trailing = 8
@@ -95,6 +98,26 @@ extension DashboardViewController {
         guard let note = viewModel.notes?.data[indexPath.item] else { return }
         let viewModel: NoteDetailViewModel = NoteDetailViewModelImpl(note: note)
         let viewController = NoteDetailViewController(viewModel: viewModel)
+        viewController.completion = { [weak self] note in
+            guard let self = self, var notes = self.viewModel.notes else { return }
+            for index in 0..<notes.data.count {
+                if notes.data[index].id.lowercased() == note.id.lowercased() {
+                    notes.data[index] = note
+                    self.viewModel.notesObserver.accept(
+                        .success(
+                            data: (
+                                data: notes.data.sorted { lhs, rhs in
+                                    lhs.updateAt < rhs.updateAt
+                                },
+                                hasNext: notes.hasNext,
+                                hasPrev: notes.hasPrev
+                            )
+                        )
+                    )
+                    break
+                }
+            }
+        }
         viewController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(viewController, animated: true)
     }
@@ -107,6 +130,7 @@ extension DashboardViewController {
             viewModel.loadMoreNotes()
         default: break
         }
+        loadingType = nil
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
@@ -117,11 +141,10 @@ extension DashboardViewController {
                     guard let self = self else { return }
                     self.loadingType = .loadMore
                 }
-            } else if notes.hasPrev {
-                scrollView.defaultReloadView(isLoading: &self.viewModel.isLoading, reloadTitle: Strings.pullToReload) { [weak self] in
-                    guard let self = self else { return }
-                    self.loadingType = .reload
-                }
+            }
+            scrollView.defaultReloadView(isLoading: &self.viewModel.isLoading, reloadTitle: Strings.pullToReload) { [weak self] in
+                guard let self = self else { return }
+                self.loadingType = .reload
             }
         }
     }

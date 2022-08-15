@@ -9,6 +9,8 @@
 
 protocol NoteRepository {
     func getNotes(page: Int?, limit: Int?, searchWords: String?) -> Single<PagingArray<Note>>
+    func addNote(note: Note) -> Single<Note>
+    func updateNote(note: Note) -> Single<Note>
 }
 
 final class NoteRepositoryImpl: NoteRepository {
@@ -26,6 +28,20 @@ final class NoteRepositoryImpl: NoteRepository {
         network.fetchNotes(page: page, limit: limit, searchWords: searchWords)
             .map { response in
                 response.paingNotes
+            }
+    }
+    
+    func addNote(note: Note) -> Single<Note> {
+        network.inserNote(title: note.title, description: note.description, color: note.color.stringHex)
+            .map { response in
+                response.note
+            }
+    }
+    
+    func updateNote(note: Note) -> Single<Note> {
+        network.updateNote(id: note.id ,title: note.title, description: note.description, color: note.color.stringHex)
+            .map { response in
+                response.note
             }
     }
 }

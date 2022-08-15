@@ -48,3 +48,23 @@ extension UITextField {
         }
     }
 }
+
+extension UITextView {
+    @IBInspectable var localizePlaceholder: String {
+        set {
+            placeholder = NSLocalizedString(newValue, comment: "")
+        }
+        get {
+            placeholder
+        }
+    }
+    
+    @IBInspectable var localizeText: String {
+        set {
+            text = NSLocalizedString(newValue, comment: "")
+        }
+        get {
+            text ?? ""
+        }
+    }
+}

@@ -50,3 +50,6 @@
 "pull_to_load_more" = "拉加载更多";
 "error" = "错误";
 "unknown_error" = "未知错误";
+"title_placeholder" = "输入标题";
+"description_placeholder" = "输入说明";
+"success" = "成功";

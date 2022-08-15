@@ -15,5 +15,8 @@ struct UseCasesAssembly: Assembly {
         
         container.autoregister(DashboardUseCase.self, initializer: DashboardUseCaseImpl.init)
             .inObjectScope(.container)
+        
+        container.autoregister(ConfigNoteUseCase.self, initializer: ConfigNoteUseCaseImpl.init)
+            .inObjectScope(.container)
     }
 }

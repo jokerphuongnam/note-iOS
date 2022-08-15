@@ -50,3 +50,6 @@
 "pull_to_load_more" = "Tirez Pour Charger Plus";
 "error" = "Erreur";
 "unknown_error" = "Erreur Inconnue";
+"title_placeholder" = "Titre d'entrée";
+"description_placeholder" = "Description de l'entrée";
+"success" = "Succès";
