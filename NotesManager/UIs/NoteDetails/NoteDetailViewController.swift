@@ -6,9 +6,14 @@
 //
 
 @_implementationOnly import UIKit
+@_implementationOnly import RxSwift
 
 final class NoteDetailViewController: UIViewController {
     var viewModel: NoteDetailViewModel!
+    let disposeBag: DisposeBag = DisposeBag()
+    typealias Completion = (_ note: Note) -> ()
+    var completion: Completion!
+    
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -47,41 +52,68 @@ final class NoteDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        viewModel = nil
+        completion = nil
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        setupLiveData()
         setupNavigationBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.update(
-            backroundColor: viewModel.note.color,
-            titleColor: .black
+            backroundColor: Asset.Colors.background.color,
+            titleColor: Asset.Colors.text.color
         )
     }
     
     private func setupView() {
         hero.modalAnimationType = .zoom
-        descriptionLabel.text = viewModel.note.description
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
-        let createAt = dateFormatter.string(from: Date(milliseconds: viewModel.note.createAt))
-        let updateAt = dateFormatter.string(from: Date(milliseconds: viewModel.note.updateAt))
-        timeLabel.text = "\(createAt) - \(updateAt)"
         view.backgroundColor = viewModel.note.color
+    }
+    
+    private func setupLiveData() {
+        viewModel.noteObserver
+            .subscribe(on: MainScheduler.instance)
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] note in
+                guard let self = self else { return }
+                let note = self.viewModel.note
+                self.title = note.title
+                self.descriptionLabel.text = note.description
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
+                let createAt = dateFormatter.string(from: Date(milliseconds: note.createAt))
+                let updateAt = dateFormatter.string(from: Date(milliseconds: note.updateAt))
+                self.timeLabel.text = "\(createAt) - \(updateAt)"
+            } onError: { e in
+                
+            } onCompleted: {
+                
+            } onDisposed: {
+                
+            }
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: - Action
 private extension NoteDetailViewController {
     @objc func editNoteAction(_ sender: UIBarButtonItem) {
-        let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl(note: viewModel.note)
+        let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl(useCase: NoteManagerAssembler.inject(), note: viewModel.note)
         let viewController = ConfigNoteViewController(viewModel: viewModel)
-        let navigation = UINavigationController(rootViewController: viewController)
-        present(navigation, animated: true) { [weak self] in
-            
+        viewController.completion = { [weak self] note in
+            guard let self = self else { return }
+            self.viewModel.noteObserver.accept(note)
+            self.completion(note)
         }
+        let navigation = UINavigationController(rootViewController: viewController)
+        present(navigation, animated: true)
     }
     
     @objc func deleteNoteAction(_ sender: UIBarButtonItem) {

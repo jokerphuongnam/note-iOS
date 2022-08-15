@@ -135,8 +135,12 @@ private extension DashboardViewController {
     }
     
     @objc func addAction(_ sender: UIButton, forEvent event: UIEvent) {
-        let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl()
+        let viewModel: ConfigNoteViewModel = ConfigNoteViewModelImpl(useCase: NoteManagerAssembler.inject())
         let viewController = ConfigNoteViewController(viewModel: viewModel)
+        viewController.completion = { [weak self] note in
+            guard let self = self else { return }
+            self.viewModel.reloadNotes(searchWords: nil)
+        }
         let navigation = UINavigationController(rootViewController: viewController)
         present(navigation, animated: true)
     }

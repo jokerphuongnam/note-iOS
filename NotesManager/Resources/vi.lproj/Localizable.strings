@@ -50,3 +50,6 @@
 "pull_to_load_more" = "Kéo Để Tải Thêm";
 "error" = "Lỗi";
 "unknown_error" = "Lỗi Không Rõ";
+"title_placeholder" = "Nhập Tiêu Đề";
+"description_placeholder" = "Nhập Mô Tả";
+"success" = "Thành Công";

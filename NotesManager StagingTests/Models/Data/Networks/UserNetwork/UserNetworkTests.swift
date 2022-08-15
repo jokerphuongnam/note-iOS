@@ -18,18 +18,20 @@ final class AFUserNetworkTests: XCTestCase {
     private var mockSession: MockSession!
     private var sut: AFUserNetwork!
     private var scheduler: TestScheduler!
+    private var jsonDecoder: JSONDecoder!
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         let configuration = URLSessionConfiguration.af.default
         configuration.protocolClasses = [MockingURLProtocol.self] + (configuration.protocolClasses ?? [])
         mockSession = .init(configuration: configuration)
-        sut = AFUserNetwork(session: mockSession)
+        sut = AFUserNetwork(session: mockSession, decoder: jsonDecoder)
         scheduler = TestScheduler(initialClock: 0)
     }
     
     override func tearDownWithError() throws {
         mockSession = nil
+        jsonDecoder = nil
         sut = nil
         scheduler = nil
         try super.tearDownWithError()

@@ -1,5 +1,5 @@
 //
-//  NoteDetailViewController+DelegateView.swift
+//  NoteDetailViewController+ViewDelegate.swift
 //  NotesManager
 //
 //  Created by pnam on 06/08/2022.

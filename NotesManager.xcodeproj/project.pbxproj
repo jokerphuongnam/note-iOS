@@ -52,6 +52,9 @@
 		A814474E28A64418006628ED /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474D28A64418006628ED /* AppAssembly.swift */; };
 		A814474F28A64418006628ED /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474D28A64418006628ED /* AppAssembly.swift */; };
 		A814475028A64418006628ED /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A814474D28A64418006628ED /* AppAssembly.swift */; };
+		A8161A0F28AA4320002FBEE9 /* AlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A0E28AA4320002FBEE9 /* AlertController+.swift */; };
+		A8161A1028AA4320002FBEE9 /* AlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A0E28AA4320002FBEE9 /* AlertController+.swift */; };
+		A8161A1128AA4320002FBEE9 /* AlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A0E28AA4320002FBEE9 /* AlertController+.swift */; };
 		A81E698628A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
 		A81E698728A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
 		A81E698828A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
@@ -64,12 +67,6 @@
 		A81E699228A7C1770068431A /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E699128A7C1770068431A /* DashboardUseCase.swift */; };
 		A81E699328A7C1770068431A /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E699128A7C1770068431A /* DashboardUseCase.swift */; };
 		A81E699428A7C1770068431A /* DashboardUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E699128A7C1770068431A /* DashboardUseCase.swift */; };
-		A821BD33289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
-		A821BD34289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
-		A821BD35289F66C3007BB0DC /* ColorHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */; };
-		A821BD36289F66C3007BB0DC /* ColorHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */; };
-		A821BD37289F66C3007BB0DC /* ColorHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */; };
-		A821BD38289F66C3007BB0DC /* ColorHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */; };
 		A823A38928A130920069BB8F /* CustomAppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823A38728A130920069BB8F /* CustomAppearanceCell.swift */; };
 		A823A38A28A130920069BB8F /* CustomAppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823A38728A130920069BB8F /* CustomAppearanceCell.swift */; };
 		A823A38B28A130920069BB8F /* CustomAppearanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A823A38728A130920069BB8F /* CustomAppearanceCell.swift */; };
@@ -154,6 +151,15 @@
 		A8649D6F28A54AAE00DE3312 /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8649D6E28A54AAE00DE3312 /* Error+.swift */; };
 		A8649D7028A54AAE00DE3312 /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8649D6E28A54AAE00DE3312 /* Error+.swift */; };
 		A8649D7128A54AAE00DE3312 /* Error+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8649D6E28A54AAE00DE3312 /* Error+.swift */; };
+		A87FCF0A28A89C1B002F35B4 /* ConfigNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FCF0928A89C1B002F35B4 /* ConfigNoteUseCase.swift */; };
+		A87FCF0B28A89C1B002F35B4 /* ConfigNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FCF0928A89C1B002F35B4 /* ConfigNoteUseCase.swift */; };
+		A87FCF0C28A89C1B002F35B4 /* ConfigNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FCF0928A89C1B002F35B4 /* ConfigNoteUseCase.swift */; };
+		A87FCF1028A8A61D002F35B4 /* ConfigNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FCF0E28A8A61D002F35B4 /* ConfigNoteViewController.swift */; };
+		A87FCF1128A8A61D002F35B4 /* ConfigNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FCF0E28A8A61D002F35B4 /* ConfigNoteViewController.swift */; };
+		A87FCF1228A8A61D002F35B4 /* ConfigNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87FCF0E28A8A61D002F35B4 /* ConfigNoteViewController.swift */; };
+		A87FCF1328A8A61D002F35B4 /* ConfigNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A87FCF0F28A8A61D002F35B4 /* ConfigNoteViewController.xib */; };
+		A87FCF1428A8A61D002F35B4 /* ConfigNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A87FCF0F28A8A61D002F35B4 /* ConfigNoteViewController.xib */; };
+		A87FCF1528A8A61D002F35B4 /* ConfigNoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A87FCF0F28A8A61D002F35B4 /* ConfigNoteViewController.xib */; };
 		A8880CE0289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
 		A8880CE1289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
 		A8880CE2289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */; };
@@ -305,12 +311,9 @@
 		A8B59151289E36FD00CF50E3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59150289E36FD00CF50E3 /* Date+.swift */; };
 		A8B59152289E36FD00CF50E3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59150289E36FD00CF50E3 /* Date+.swift */; };
 		A8B59153289E36FD00CF50E3 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59150289E36FD00CF50E3 /* Date+.swift */; };
-		A8B59155289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift */; };
-		A8B59156289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift */; };
-		A8B59157289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift */; };
-		A8B5915A289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59159289E52CF00CF50E3 /* ConfigNoteViewController.swift */; };
-		A8B5915B289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59159289E52CF00CF50E3 /* ConfigNoteViewController.swift */; };
-		A8B5915C289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59159289E52CF00CF50E3 /* ConfigNoteViewController.swift */; };
+		A8B59155289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift */; };
+		A8B59156289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift */; };
+		A8B59157289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift */; };
 		A8B5915E289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5915D289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift */; };
 		A8B5915F289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5915D289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift */; };
 		A8B59160289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5915D289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift */; };
@@ -323,18 +326,6 @@
 		A8B5916B289E604D00CF50E3 /* PaletteColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59167289E604D00CF50E3 /* PaletteColorCell.xib */; };
 		A8B5916C289E604D00CF50E3 /* PaletteColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59167289E604D00CF50E3 /* PaletteColorCell.xib */; };
 		A8B5916D289E604D00CF50E3 /* PaletteColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59167289E604D00CF50E3 /* PaletteColorCell.xib */; };
-		A8B59171289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5916F289E608F00CF50E3 /* ConfigHeaderView.swift */; };
-		A8B59172289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5916F289E608F00CF50E3 /* ConfigHeaderView.swift */; };
-		A8B59173289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5916F289E608F00CF50E3 /* ConfigHeaderView.swift */; };
-		A8B59174289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59170289E608F00CF50E3 /* ConfigHeaderView.xib */; };
-		A8B59175289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59170289E608F00CF50E3 /* ConfigHeaderView.xib */; };
-		A8B59176289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59170289E608F00CF50E3 /* ConfigHeaderView.xib */; };
-		A8B59179289E62AB00CF50E3 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59177289E62AB00CF50E3 /* TextCell.swift */; };
-		A8B5917A289E62AB00CF50E3 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59177289E62AB00CF50E3 /* TextCell.swift */; };
-		A8B5917B289E62AB00CF50E3 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59177289E62AB00CF50E3 /* TextCell.swift */; };
-		A8B5917C289E62AB00CF50E3 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59178289E62AB00CF50E3 /* TextCell.xib */; };
-		A8B5917D289E62AB00CF50E3 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59178289E62AB00CF50E3 /* TextCell.xib */; };
-		A8B5917E289E62AB00CF50E3 /* TextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8B59178289E62AB00CF50E3 /* TextCell.xib */; };
 		A8B59180289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5917F289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift */; };
 		A8B59181289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5917F289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift */; };
 		A8B59182289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B5917F289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift */; };
@@ -475,12 +466,11 @@
 		A80EF60228A7837A00A9DA0D /* RecommendEmailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendEmailCell.xib; sourceTree = "<group>"; };
 		A814474928A5FDC1006628ED /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A814474D28A64418006628ED /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		A8161A0E28AA4320002FBEE9 /* AlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+.swift"; sourceTree = "<group>"; };
 		A81E698528A7A9F90068431A /* TokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInterceptor.swift; sourceTree = "<group>"; };
 		A81E698928A7B9680068431A /* Number+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+.swift"; sourceTree = "<group>"; };
 		A81E698D28A7BE630068431A /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		A81E699128A7C1770068431A /* DashboardUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardUseCase.swift; sourceTree = "<group>"; };
-		A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHeaderView.swift; sourceTree = "<group>"; };
-		A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorHeaderView.xib; sourceTree = "<group>"; };
 		A823A38728A130920069BB8F /* CustomAppearanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAppearanceCell.swift; sourceTree = "<group>"; };
 		A823A38828A130920069BB8F /* CustomAppearanceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomAppearanceCell.xib; sourceTree = "<group>"; };
 		A84F1B942897849A005683EB /* FetchNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchNotes.swift; sourceTree = "<group>"; };
@@ -521,6 +511,9 @@
 		A8649D5D28A4E07900DE3312 /* UserLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocal.swift; sourceTree = "<group>"; };
 		A8649D6128A4E16200DE3312 /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		A8649D6E28A54AAE00DE3312 /* Error+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+.swift"; sourceTree = "<group>"; };
+		A87FCF0928A89C1B002F35B4 /* ConfigNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigNoteUseCase.swift; sourceTree = "<group>"; };
+		A87FCF0E28A8A61D002F35B4 /* ConfigNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigNoteViewController.swift; sourceTree = "<group>"; };
+		A87FCF0F28A8A61D002F35B4 /* ConfigNoteViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigNoteViewController.xib; sourceTree = "<group>"; };
 		A8880CDF289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DashboardViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		A8880CE3289BC27600FCDCF0 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		A8880CE7289BC37200FCDCF0 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
@@ -588,16 +581,11 @@
 		A8B59144289E2A2400CF50E3 /* NoteDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailViewModel.swift; sourceTree = "<group>"; };
 		A8B59148289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailViewController+NavigationBar.swift"; sourceTree = "<group>"; };
 		A8B59150289E36FD00CF50E3 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
-		A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailViewController+DelegateView.swift"; sourceTree = "<group>"; };
-		A8B59159289E52CF00CF50E3 /* ConfigNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigNoteViewController.swift; sourceTree = "<group>"; };
+		A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteDetailViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
 		A8B5915D289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+CollectionView.swift"; sourceTree = "<group>"; };
 		A8B59161289E536F00CF50E3 /* ConfigNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigNoteViewModel.swift; sourceTree = "<group>"; };
 		A8B59166289E604D00CF50E3 /* PaletteColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteColorCell.swift; sourceTree = "<group>"; };
 		A8B59167289E604D00CF50E3 /* PaletteColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaletteColorCell.xib; sourceTree = "<group>"; };
-		A8B5916F289E608F00CF50E3 /* ConfigHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigHeaderView.swift; sourceTree = "<group>"; };
-		A8B59170289E608F00CF50E3 /* ConfigHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfigHeaderView.xib; sourceTree = "<group>"; };
-		A8B59177289E62AB00CF50E3 /* TextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
-		A8B59178289E62AB00CF50E3 /* TextCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCell.xib; sourceTree = "<group>"; };
 		A8B5917F289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+OptionColors.swift"; sourceTree = "<group>"; };
 		A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
 		A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+Loading.swift"; sourceTree = "<group>"; };
@@ -989,6 +977,7 @@
 				A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */,
 				A8649D6E28A54AAE00DE3312 /* Error+.swift */,
 				A81E698928A7B9680068431A /* Number+.swift */,
+				A8161A0E28AA4320002FBEE9 /* AlertController+.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -1177,7 +1166,7 @@
 				A8B5913C289E282400CF50E3 /* NoteDetailViewController.swift */,
 				A8B5913D289E282400CF50E3 /* NoteDetailViewController.xib */,
 				A8B59148289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift */,
-				A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift */,
+				A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift */,
 				A8B59144289E2A2400CF50E3 /* NoteDetailViewModel.swift */,
 			);
 			path = NoteDetails;
@@ -1186,13 +1175,14 @@
 		A8B59158289E52B200CF50E3 /* ConfigNote */ = {
 			isa = PBXGroup;
 			children = (
-				A8B5916E289E607700CF50E3 /* Headers+Footers */,
 				A8B59165289E58A800CF50E3 /* Cells */,
-				A8B59159289E52CF00CF50E3 /* ConfigNoteViewController.swift */,
+				A87FCF0E28A8A61D002F35B4 /* ConfigNoteViewController.swift */,
+				A87FCF0F28A8A61D002F35B4 /* ConfigNoteViewController.xib */,
 				A8B5915D289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift */,
 				A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */,
 				A8B5917F289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift */,
 				A8B59161289E536F00CF50E3 /* ConfigNoteViewModel.swift */,
+				A87FCF0928A89C1B002F35B4 /* ConfigNoteUseCase.swift */,
 			);
 			path = ConfigNote;
 			sourceTree = "<group>";
@@ -1202,21 +1192,8 @@
 			children = (
 				A8B59166289E604D00CF50E3 /* PaletteColorCell.swift */,
 				A8B59167289E604D00CF50E3 /* PaletteColorCell.xib */,
-				A8B59177289E62AB00CF50E3 /* TextCell.swift */,
-				A8B59178289E62AB00CF50E3 /* TextCell.xib */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		A8B5916E289E607700CF50E3 /* Headers+Footers */ = {
-			isa = PBXGroup;
-			children = (
-				A8B5916F289E608F00CF50E3 /* ConfigHeaderView.swift */,
-				A8B59170289E608F00CF50E3 /* ConfigHeaderView.xib */,
-				A821BD31289F66C3007BB0DC /* ColorHeaderView.swift */,
-				A821BD32289F66C3007BB0DC /* ColorHeaderView.xib */,
-			);
-			path = "Headers+Footers";
 			sourceTree = "<group>";
 		};
 		A8BAB4A728A3AE0F00D0397B /* Controls */ = {
@@ -1401,10 +1378,8 @@
 				A8B59141289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
 				A8FA63EA289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
 				A80EF60628A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */,
-				A8B59174289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8F25FE92898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9CD6288E547B00939E9D /* LaunchScreen.storyboard in Resources */,
-				A8B5917C289E62AB00CF50E3 /* TextCell.xib in Resources */,
 				A8B5916B289E604D00CF50E3 /* PaletteColorCell.xib in Resources */,
 				A8A77095288E59E800F03C5C /* Localizable.strings in Resources */,
 				A8CB3D0728A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
@@ -1413,10 +1388,10 @@
 				A8A3F35E289D204F00DEBCD5 /* SettingCell.xib in Resources */,
 				A8F25FFD2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
 				A823A38C28A130920069BB8F /* CustomAppearanceCell.xib in Resources */,
+				A87FCF1328A8A61D002F35B4 /* ConfigNoteViewController.xib in Resources */,
 				A89492AF289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 				A85E229728A1052B00FB00EB /* SimpleAppearanceCell.xib in Resources */,
 				A8A3F345289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
-				A821BD36289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
 				A85E226928A0F28F00FB00EB /* LanguageCell.xib in Resources */,
 				A8F260052898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8A3F33D289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
@@ -1431,10 +1406,8 @@
 				A8B59142289E282500CF50E3 /* NoteDetailViewController.xib in Resources */,
 				A8FA63EB289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
 				A80EF60728A7837A00A9DA0D /* RecommendEmailCell.xib in Resources */,
-				A8B59175289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8F25FEA2898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A8AB9D0B288E561300939E9D /* LaunchScreen.storyboard in Resources */,
-				A8B5917D289E62AB00CF50E3 /* TextCell.xib in Resources */,
 				A8B5916C289E604D00CF50E3 /* PaletteColorCell.xib in Resources */,
 				A8A77096288E59E800F03C5C /* Localizable.strings in Resources */,
 				A8CB3D0828A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
@@ -1443,10 +1416,10 @@
 				A8A3F35F289D204F00DEBCD5 /* SettingCell.xib in Resources */,
 				A8F25FFE2898DC1100FEAF22 /* RegisterViewController.xib in Resources */,
 				A823A38D28A130920069BB8F /* CustomAppearanceCell.xib in Resources */,
+				A87FCF1428A8A61D002F35B4 /* ConfigNoteViewController.xib in Resources */,
 				A89492B0289F768B00F860DC /* EditProfileViewController.xib in Resources */,
 				A85E229828A1052B00FB00EB /* SimpleAppearanceCell.xib in Resources */,
 				A8A3F346289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
-				A821BD37289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
 				A85E226A28A0F28F00FB00EB /* LanguageCell.xib in Resources */,
 				A8F260062898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A8A3F33E289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
@@ -1461,14 +1434,12 @@
 				A8FA63EC289FB46B00BC3490 /* ChangePasswordViewController.xib in Resources */,
 				A8F260072898F70F00FEAF22 /* Colors.xcassets in Resources */,
 				A85E229928A1052B00FB00EB /* SimpleAppearanceCell.xib in Resources */,
-				A8B59176289E608F00CF50E3 /* ConfigHeaderView.xib in Resources */,
 				A8A3F33F289CFCB900DEBCD5 /* NoteVerticalCell.xib in Resources */,
 				A8CB3D0928A69C03008EDDFE /* LoadingAlertController.xib in Resources */,
+				A87FCF1528A8A61D002F35B4 /* ConfigNoteViewController.xib in Resources */,
 				A8BAB4B028A3AE4900D0397B /* ScrollLoadingView.xib in Resources */,
-				A821BD38289F66C3007BB0DC /* ColorHeaderView.xib in Resources */,
 				A8A3F347289CFCC900DEBCD5 /* NoteGridCell.xib in Resources */,
 				A8B5916D289E604D00CF50E3 /* PaletteColorCell.xib in Resources */,
-				A8B5917E289E62AB00CF50E3 /* TextCell.xib in Resources */,
 				A8A3F369289D27C800DEBCD5 /* LogoutView.xib in Resources */,
 				A8F25FEB2898C80000FEAF22 /* LoginViewController.xib in Resources */,
 				A823A38E28A130920069BB8F /* CustomAppearanceCell.xib in Resources */,
@@ -1685,7 +1656,6 @@
 				A8B20879289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
 				A85E227D28A0F39C00FB00EB /* Language.swift in Sources */,
 				A80A96052893EC8200F044D9 /* Register.swift in Sources */,
-				A8B59179289E62AB00CF50E3 /* TextCell.swift in Sources */,
 				A85E226D28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */,
 				A85E229428A1052B00FB00EB /* SimpleAppearanceCell.swift in Sources */,
 				A8B4B180289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
@@ -1717,7 +1687,6 @@
 				A8F2600F2898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A8B208882892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A8B59145289E2A2400CF50E3 /* NoteDetailViewModel.swift in Sources */,
-				A8B59171289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */,
 				A8A539C728965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2083128925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8B2086C2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
@@ -1741,8 +1710,8 @@
 				A8FA63D5289F9AC000BC3490 /* ImageTintColor.swift in Sources */,
 				A85E229B28A1053E00FB00EB /* AppearancesViewModel.swift in Sources */,
 				A8C7876828991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
+				A8161A0F28AA4320002FBEE9 /* AlertController+.swift in Sources */,
 				A8649D6228A4E16200DE3312 /* KeyChainManager.swift in Sources */,
-				A821BD33289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8B2087E2892681600DC7FA6 /* UserNetwork+Rx.swift in Sources */,
 				A8AB9CCA288E547A00939E9D /* AppDelegate.swift in Sources */,
 				A8C7876C2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
@@ -1750,13 +1719,14 @@
 				A8649D4F28A4DE1D00DE3312 /* NetworkAssembly.swift in Sources */,
 				A85E228628A0FA6500FB00EB /* Appearance.swift in Sources */,
 				A8FA63EE289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
+				A87FCF0A28A89C1B002F35B4 /* ConfigNoteUseCase.swift in Sources */,
 				A8880CF0289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A8A370C02897DF46004E94F0 /* DeleteNote.swift in Sources */,
-				A8B5915A289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */,
 				A8880CF4289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,
 				A8649D3D28A4DD6D00DE3312 /* UserRepository.swift in Sources */,
 				A8649D5A28A4DE4800DE3312 /* NoteManagerAssembler.swift in Sources */,
 				A85E229F28A1069400FB00EB /* AppearancesViewController+NavigationBar.swift in Sources */,
+				A87FCF1028A8A61D002F35B4 /* ConfigNoteViewController.swift in Sources */,
 				A8B59168289E604D00CF50E3 /* PaletteColorCell.swift in Sources */,
 				A8A3F355289D1EA700DEBCD5 /* SettingViewController+Options.swift in Sources */,
 				A8F25FEE2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
@@ -1795,7 +1765,7 @@
 				A8B2089428926C5E00DC7FA6 /* User.swift in Sources */,
 				A8B5915E289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A823A38928A130920069BB8F /* CustomAppearanceCell.swift in Sources */,
-				A8B59155289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */,
+				A8B59155289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1809,7 +1779,6 @@
 				A8B2087A289267DF00DC7FA6 /* NoteNetwork.swift in Sources */,
 				A85E227E28A0F39C00FB00EB /* Language.swift in Sources */,
 				A80A96062893EC8200F044D9 /* Register.swift in Sources */,
-				A8B5917A289E62AB00CF50E3 /* TextCell.swift in Sources */,
 				A85E226E28A0F2F400FB00EB /* LanguagesViewController.swift in Sources */,
 				A85E229528A1052B00FB00EB /* SimpleAppearanceCell.swift in Sources */,
 				A8B4B181289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
@@ -1841,7 +1810,6 @@
 				A8F260102898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A8B2083228925B0F00DC7FA6 /* NavigationBar+.swift in Sources */,
 				A8B59146289E2A2400CF50E3 /* NoteDetailViewModel.swift in Sources */,
-				A8B59172289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */,
 				A8A539C828965A4900FE0FB5 /* UpdateProfile.swift in Sources */,
 				A8B2086D2892677C00DC7FA6 /* ApiResponse.swift in Sources */,
 				A8B2083A28925B0F00DC7FA6 /* String+.swift in Sources */,
@@ -1865,8 +1833,8 @@
 				A8FA63D6289F9AC000BC3490 /* ImageTintColor.swift in Sources */,
 				A85E229C28A1053E00FB00EB /* AppearancesViewModel.swift in Sources */,
 				A8C7876928991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
+				A8161A1028AA4320002FBEE9 /* AlertController+.swift in Sources */,
 				A8649D6328A4E16200DE3312 /* KeyChainManager.swift in Sources */,
-				A821BD34289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8AB9D06288E561300939E9D /* AppDelegate.swift in Sources */,
 				A8B2089A28926D9F00DC7FA6 /* Login.swift in Sources */,
 				A8C7876D2899206A0080D31E /* LoginViewController+VIewDelegate.swift in Sources */,
@@ -1874,13 +1842,14 @@
 				A8649D5028A4DE1D00DE3312 /* NetworkAssembly.swift in Sources */,
 				A85E228728A0FA6500FB00EB /* Appearance.swift in Sources */,
 				A8FA63EF289FB4B800BC3490 /* ChangePasswordViewModel.swift in Sources */,
+				A87FCF0B28A89C1B002F35B4 /* ConfigNoteUseCase.swift in Sources */,
 				A8880CF1289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A8A370C12897DF46004E94F0 /* DeleteNote.swift in Sources */,
-				A8B5915B289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */,
 				A8880CF5289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,
 				A8649D3E28A4DD6D00DE3312 /* UserRepository.swift in Sources */,
 				A8649D5B28A4DE4800DE3312 /* NoteManagerAssembler.swift in Sources */,
 				A85E22A028A1069400FB00EB /* AppearancesViewController+NavigationBar.swift in Sources */,
+				A87FCF1128A8A61D002F35B4 /* ConfigNoteViewController.swift in Sources */,
 				A8B59169289E604D00CF50E3 /* PaletteColorCell.swift in Sources */,
 				A8A3F356289D1EA700DEBCD5 /* SettingViewController+Options.swift in Sources */,
 				A8F25FEF2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
@@ -1919,7 +1888,7 @@
 				A8B2089528926C5E00DC7FA6 /* User.swift in Sources */,
 				A8B5915F289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A823A38A28A130920069BB8F /* CustomAppearanceCell.swift in Sources */,
-				A8B59156289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */,
+				A8B59156289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1951,7 +1920,6 @@
 				A8880CEE289BC48300FCDCF0 /* PagingArray.swift in Sources */,
 				A8FA63E3289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift in Sources */,
 				A8A3F344289CFCC900DEBCD5 /* NoteGridCell.swift in Sources */,
-				A821BD35289F66C3007BB0DC /* ColorHeaderView.swift in Sources */,
 				A8B59153289E36FD00CF50E3 /* Date+.swift in Sources */,
 				A80A95E22893CCAC00F044D9 /* MockSession.swift in Sources */,
 				A85E227F28A0F39C00FB00EB /* Language.swift in Sources */,
@@ -1963,7 +1931,6 @@
 				A8F25FFC2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A89492AE289F768B00F860DC /* EditProfileViewController.swift in Sources */,
 				A80A95EC2893D4CB00F044D9 /* View+.swift in Sources */,
-				A8B5917B289E62AB00CF50E3 /* TextCell.swift in Sources */,
 				A8649D4B28A4DE1D00DE3312 /* LocalAssembly.swift in Sources */,
 				A80A95EA2893D4B900F044D9 /* User.swift in Sources */,
 				A8649D7128A54AAE00DE3312 /* Error+.swift in Sources */,
@@ -1973,10 +1940,12 @@
 				A8B4B182289B4CE400F2E8E1 /* DashboardViewController.swift in Sources */,
 				A80A96072893EC8200F044D9 /* Register.swift in Sources */,
 				A8FA63F4289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
+				A87FCF1228A8A61D002F35B4 /* ConfigNoteViewController.swift in Sources */,
 				A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A81E698828A7A9F90068431A /* TokenInterceptor.swift in Sources */,
 				A8649D3F28A4DD6D00DE3312 /* UserRepository.swift in Sources */,
 				A8A3F366289D27C800DEBCD5 /* LogoutView.swift in Sources */,
+				A87FCF0C28A89C1B002F35B4 /* ConfigNoteUseCase.swift in Sources */,
 				A85E229628A1052B00FB00EB /* SimpleAppearanceCell.swift in Sources */,
 				A80EF60528A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */,
 				A8B59182289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift in Sources */,
@@ -1999,7 +1968,6 @@
 				A8A3F33C289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
 				A80A95EE2893D4CB00F044D9 /* KeyboardManagerment.swift in Sources */,
 				A8649D5128A4DE1D00DE3312 /* NetworkAssembly.swift in Sources */,
-				A8B5915C289E52CF00CF50E3 /* ConfigNoteViewController.swift in Sources */,
 				A85E227B28A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */,
 				A814474C28A5FDC1006628ED /* UserDefaultsManager.swift in Sources */,
 				A8A3F34F289D1B0700DEBCD5 /* SettingViewController+NavigationBar.swift in Sources */,
@@ -2008,7 +1976,7 @@
 				A85E226828A0F28F00FB00EB /* LanguageCell.swift in Sources */,
 				A80A95EF2893D4CB00F044D9 /* NoteError.swift in Sources */,
 				A80A95ED2893D4CB00F044D9 /* Color+.swift in Sources */,
-				A8B59157289E3CEE00CF50E3 /* NoteDetailViewController+DelegateView.swift in Sources */,
+				A8B59157289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */,
 				A81E699428A7C1770068431A /* DashboardUseCase.swift in Sources */,
 				A8A539CD289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8A3F35D289D204F00DEBCD5 /* SettingCell.swift in Sources */,
@@ -2019,7 +1987,6 @@
 				A8880CE2289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
 				A8CB3D0628A69C03008EDDFE /* LoadingAlertController.swift in Sources */,
 				A8A3F353289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift in Sources */,
-				A8B59173289E608F00CF50E3 /* ConfigHeaderView.swift in Sources */,
 				A8880CF6289BC86300FCDCF0 /* DashboardViewController+CollectionView.swift in Sources */,
 				A8880CF2289BC75800FCDCF0 /* Resource.swift in Sources */,
 				A8BAB4A228A3ADA100D0397B /* ScrollView+Loading.swift in Sources */,
@@ -2031,6 +1998,7 @@
 				A8A370C22897DF46004E94F0 /* DeleteNote.swift in Sources */,
 				A89492B9289F77EC00F860DC /* EditProfileViewModel.swift in Sources */,
 				A88F2A0B289A7958002DE601 /* Window+.swift in Sources */,
+				A8161A1128AA4320002FBEE9 /* AlertController+.swift in Sources */,
 				A80A95FE2893D4DC00F044D9 /* UserNetwork.swift in Sources */,
 				A85E229D28A1053E00FB00EB /* AppearancesViewModel.swift in Sources */,
 				A80A95EB2893D4BF00F044D9 /* Login.swift in Sources */,

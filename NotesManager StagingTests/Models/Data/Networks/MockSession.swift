@@ -36,7 +36,7 @@ final class MockSession: Session {
             parameters: parameters,
             encoding: encoding,
             headers: headers,
-            interceptor: interceptor,
+            interceptor: nil,
             requestModifier: requestModifier
         )
     }

@@ -13,9 +13,9 @@ protocol NoteNetwork {
     // MARK: - fetch notes
     func fetchNotes(page: Int?, limit: Int?, searchWords: String?) -> Single<FetchNotesRequest.Response>
     // MARK: - insert note
-    func inserNote(title: String?, description: String?) -> Single<InsertNoteRequest.Response>
+    func inserNote(title: String?, description: String?, color: String?) -> Single<InsertNoteRequest.Response>
     // MARK: - update note
-    func updateNote(id: String, title: String?, description: String?) -> Single<UpdateNoteRequest.Response>
+    func updateNote(id: String, title: String?, description: String?, color: String?) -> Single<UpdateNoteRequest.Response>
     // MARK: - delete note
     func deleteNote(id: String) -> Single<DeleteNoteRequest.Response>
 }
@@ -42,13 +42,13 @@ final class AFNoteNetwork: NoteNetwork, BaseAFNetwork {
     }
     
     // MARK: - insert note
-    func inserNote(title: String?, description: String?) -> Single<InsertNoteRequest.Response> {
-        rx.send(request: InsertNoteRequest(title: title, description: description))
+    func inserNote(title: String?, description: String?, color: String?) -> Single<InsertNoteRequest.Response> {
+        rx.send(request: InsertNoteRequest(title: title, description: description, color: color))
     }
     
     // MARK: - update note
-    func updateNote(id: String, title: String?, description: String?) -> Single<UpdateNoteRequest.Response> {
-        rx.send(request: UpdateNoteRequest(id: id, title: title, description: description))
+    func updateNote(id: String, title: String?, description: String?, color: String?) -> Single<UpdateNoteRequest.Response> {
+        rx.send(request: UpdateNoteRequest(id: id, title: title, description: description, color: color))
     }
     
     // MARK: - delete note
