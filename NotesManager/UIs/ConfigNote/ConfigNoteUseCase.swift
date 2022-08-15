@@ -8,12 +8,23 @@
 @_implementationOnly import RxSwift
 
 protocol ConfigNoteUseCase {
+    var tempNoteWhenInsert: Note? { get set }
     func addNote(note: Note) -> Single<Note>
     func updateNote(note: Note) -> Single<Note>
+    func deleteTempNoteWhenInsert()
 }
 
 final class ConfigNoteUseCaseImpl: ConfigNoteUseCase {
     var noteRepository: NoteRepository!
+    
+    var tempNoteWhenInsert: Note? {
+        get {
+            noteRepository.tempNoteWhenInsert
+        }
+        set {
+            noteRepository.tempNoteWhenInsert = newValue
+        }
+    }
     
     init(noteRepository: NoteRepository) {
         self.noteRepository = noteRepository
@@ -33,5 +44,9 @@ final class ConfigNoteUseCaseImpl: ConfigNoteUseCase {
         noteRepository.updateNote(note: note)
             .subscribe(on: SerialDispatchQueueScheduler.init(qos: .utility))
             .observe(on: MainScheduler.instance)
+    }
+    
+    func deleteTempNoteWhenInsert() {
+        noteRepository.deleteTempNoteWhenInsert()
     }
 }

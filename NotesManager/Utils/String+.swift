@@ -19,8 +19,9 @@ extension String {
     static let baseUrl: Self = .infoKey("Base Url")
     
     // MARK: - UserDefaults
-    static let userDefaultAccount: Self = "account"
     static let userDefaultUser: Self = "user"
+    static let userDefaultTempNoteWhenInsert: Self = "tempNoteWhenInsert"
+    static let userDefaultAccount: Self = "account"
     static let userDefaultAccessToken: Self = "accessToken"
     
     // MARK: - Dependency Injection

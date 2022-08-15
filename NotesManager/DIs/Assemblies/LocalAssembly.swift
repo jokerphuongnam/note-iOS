@@ -34,5 +34,8 @@ struct LocalAssembly: Assembly {
         
         container.autoregister(UserLocal.self, initializer: UserLocalImpl.init)
             .inObjectScope(.container)
+        
+        container.autoregister(NoteLocal.self, initializer: NoteLocalImpl.init)
+            .inObjectScope(.container)
     }
 }

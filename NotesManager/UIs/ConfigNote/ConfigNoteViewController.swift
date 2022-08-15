@@ -150,6 +150,7 @@ extension ConfigNoteViewController {
                 loadingAlertController.dismiss(animated: true)
                 guard let self = self else { return }
                 self.completion?(note)
+                self.viewModel.deleteTempNoteWhenInsert()
                 let alertController = UIAlertController(title: self.viewModel.action.title, message: Strings.success, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
                     guard let self = self else { return }
