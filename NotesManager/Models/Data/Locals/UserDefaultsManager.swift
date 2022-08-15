@@ -9,12 +9,14 @@
 
 protocol UserDefaultsManager {
     var user: User? { get set }
+    var tempNoteWhenInsert: Note? { get set }
     var accessToken: String? { get set }
     var emails: [String] { get }
     func login(email: String, password: String) -> Completable
     func deleteEmail(email: String)
     func saveUser(user: User) -> Completable
     func getUser() -> Single<User>
+    func deleteTempNoteWhenInsert()
 }
 
 final class UserDefaultsManagerImpl: UserDefaultsManager {
@@ -32,6 +34,21 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
         set {
             if let value = newValue, let data = try? encoder.encode(value) {
                 userDefaults.set(data, forKey: .userDefaultUser)
+            }
+            userDefaults.synchronize()
+        }
+    }
+    
+    var tempNoteWhenInsert: Note? {
+        get {
+            guard let data = userDefaults.object(forKey: .userDefaultTempNoteWhenInsert) as? Data, let note = try? decoder.decode(CodableNote.self, from: data) else {
+                return nil
+            }
+            return note.note
+        }
+        set {
+            if let value = newValue, let data = try? encoder.encode(CodableNote(note: value)) {
+                userDefaults.set(data, forKey: .userDefaultTempNoteWhenInsert)
             }
             userDefaults.synchronize()
         }
@@ -112,6 +129,11 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
             }
             return Disposables.create()
         }
+    }
+    
+    func deleteTempNoteWhenInsert() {
+        userDefaults.removeObject(forKey: .userDefaultTempNoteWhenInsert)
+        userDefaults.synchronize()
     }
 }
 

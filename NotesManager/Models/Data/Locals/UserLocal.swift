@@ -22,8 +22,6 @@ protocol UserLocal {
 }
 
 final class UserLocalImpl: UserLocal {
-    private static let account = "account"
-    
     private var keyChainManager: KeyChainManager!
     private var userDefaultsManager: UserDefaultsManager!
     

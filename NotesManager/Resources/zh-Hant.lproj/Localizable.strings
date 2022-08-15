@@ -53,3 +53,5 @@
 "title_placeholder" = "";
 "description_placeholder" = "";
 "success" = "成功";
+"delete" = "刪除";
+"delete_description" = "刪除這條筆記？";

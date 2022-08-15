@@ -51,5 +51,7 @@
 "error" = "Erreur";
 "unknown_error" = "Erreur Inconnue";
 "title_placeholder" = "Titre d'entrée";
-"description_placeholder" = "Description de l'entrée";
+"description_placeholder" = "Description De L'entrée";
 "success" = "Succès";
+"delete" = "Effacer";
+"delete_description" = "Supprimer Cette Note ?";

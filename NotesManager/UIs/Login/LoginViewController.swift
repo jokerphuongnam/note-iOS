@@ -35,17 +35,13 @@ final class LoginViewController: UIViewController {
     }()
     
     private lazy var passwordButton: UIButton = { [weak self] in
-        let emailImage = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
+        let passwordButton = UIButton(frame: .init(x: 0, y: 0, width: passwordTextField.frame.height, height: passwordTextField.frame.height))
         let image = Asset.Assets.password.image
-        emailImage.setImage(image, for: .normal)
-        emailImage.imageTint = Asset.Colors.text.color
-        if #available(iOS 15.0, *) {
-            showHideButton.configuration?.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
-        } else {
-            emailImage.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
-        }
-        emailImage.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
-        return emailImage
+        passwordButton.setImage(image, for: .normal)
+        passwordButton.imageTint = Asset.Colors.text.color
+        passwordButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
+        passwordButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
+        return passwordButton
     }()
     
     private lazy var showHideButton: UIButton = { [weak self] in
@@ -54,11 +50,7 @@ final class LoginViewController: UIViewController {
         showHideButton.setImage(image, for: .normal)
         showHideButton.imageTint = Asset.Colors.text.color
         showHideButton.addTarget(self, action: #selector(showHideButtonAction), for: .touchUpInside)
-        if #available(iOS 15.0, *) {
-            showHideButton.configuration?.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
-        } else {
-            showHideButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
-        }
+        showHideButton.contentEdgeInsets = .init(top: 0, left: 16, bottom: 0, right: 16)
         showHideButton.imageView?.layer.magnificationFilter = CALayerContentsFilter.nearest
         return showHideButton
     }()

@@ -55,6 +55,12 @@
 		A8161A0F28AA4320002FBEE9 /* AlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A0E28AA4320002FBEE9 /* AlertController+.swift */; };
 		A8161A1028AA4320002FBEE9 /* AlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A0E28AA4320002FBEE9 /* AlertController+.swift */; };
 		A8161A1128AA4320002FBEE9 /* AlertController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A0E28AA4320002FBEE9 /* AlertController+.swift */; };
+		A8161A1328AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A1228AA5470002FBEE9 /* NoteDetailUseCase.swift */; };
+		A8161A1428AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A1228AA5470002FBEE9 /* NoteDetailUseCase.swift */; };
+		A8161A1528AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A1228AA5470002FBEE9 /* NoteDetailUseCase.swift */; };
+		A8161A1B28AA5C59002FBEE9 /* NoteLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A1A28AA5C59002FBEE9 /* NoteLocal.swift */; };
+		A8161A1C28AA5C59002FBEE9 /* NoteLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A1A28AA5C59002FBEE9 /* NoteLocal.swift */; };
+		A8161A1D28AA5C59002FBEE9 /* NoteLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8161A1A28AA5C59002FBEE9 /* NoteLocal.swift */; };
 		A81E698628A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
 		A81E698728A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
 		A81E698828A7A9F90068431A /* TokenInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81E698528A7A9F90068431A /* TokenInterceptor.swift */; };
@@ -467,6 +473,8 @@
 		A814474928A5FDC1006628ED /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A814474D28A64418006628ED /* AppAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
 		A8161A0E28AA4320002FBEE9 /* AlertController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlertController+.swift"; sourceTree = "<group>"; };
+		A8161A1228AA5470002FBEE9 /* NoteDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailUseCase.swift; sourceTree = "<group>"; };
+		A8161A1A28AA5C59002FBEE9 /* NoteLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteLocal.swift; sourceTree = "<group>"; };
 		A81E698528A7A9F90068431A /* TokenInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenInterceptor.swift; sourceTree = "<group>"; };
 		A81E698928A7B9680068431A /* Number+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+.swift"; sourceTree = "<group>"; };
 		A81E698D28A7BE630068431A /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
@@ -1020,6 +1028,7 @@
 				A8649D6128A4E16200DE3312 /* KeyChainManager.swift */,
 				A814474928A5FDC1006628ED /* UserDefaultsManager.swift */,
 				A8649D5D28A4E07900DE3312 /* UserLocal.swift */,
+				A8161A1A28AA5C59002FBEE9 /* NoteLocal.swift */,
 			);
 			path = Locals;
 			sourceTree = "<group>";
@@ -1168,6 +1177,7 @@
 				A8B59148289E311500CF50E3 /* NoteDetailViewController+NavigationBar.swift */,
 				A8B59154289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift */,
 				A8B59144289E2A2400CF50E3 /* NoteDetailViewModel.swift */,
+				A8161A1228AA5470002FBEE9 /* NoteDetailUseCase.swift */,
 			);
 			path = NoteDetails;
 			sourceTree = "<group>";
@@ -1674,6 +1684,7 @@
 				A88F2A09289A7958002DE601 /* Window+.swift in Sources */,
 				A8CB3CFF28A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5228A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
+				A8161A1328AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A81E698A28A7B9690068431A /* Number+.swift in Sources */,
@@ -1739,6 +1750,7 @@
 				A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A3F33A289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
 				A8B2084528925B0F00DC7FA6 /* View+.swift in Sources */,
+				A8161A1B28AA5C59002FBEE9 /* NoteLocal.swift in Sources */,
 				A85E227928A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */,
 				A8A539CB289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
 				A8F260122898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
@@ -1797,6 +1809,7 @@
 				A88F2A0A289A7958002DE601 /* Window+.swift in Sources */,
 				A8CB3D0028A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5328A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
+				A8161A1428AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A81E698B28A7B9690068431A /* Number+.swift in Sources */,
@@ -1862,6 +1875,7 @@
 				A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */,
 				A8A3F33B289CFCB900DEBCD5 /* NoteVerticalCell.swift in Sources */,
 				A8A539CC289668DC00FE0FB5 /* ChangePassword.swift in Sources */,
+				A8161A1C28AA5C59002FBEE9 /* NoteLocal.swift in Sources */,
 				A85E227A28A0F34000FB00EB /* LanguagesViewController+CollectionView.swift in Sources */,
 				A8AB9D07288E561300939E9D /* SceneDelegate.swift in Sources */,
 				A8F260132898FA2C00FEAF22 /* IB-Scenes+Generated.swift in Sources */,
@@ -1913,6 +1927,7 @@
 				A80EF5FF28A7807800A9DA0D /* LoginViewController+CollectionView.swift in Sources */,
 				A8649D6028A4E07900DE3312 /* UserLocal.swift in Sources */,
 				A80A96002893D4DC00F044D9 /* UserNetwork+Rx.swift in Sources */,
+				A8161A1D28AA5C59002FBEE9 /* NoteLocal.swift in Sources */,
 				A80A95F12893D4CB00F044D9 /* ViewController+.swift in Sources */,
 				A8F260112898FA2C00FEAF22 /* XCAssets+Generated.swift in Sources */,
 				A85E227328A0F30000FB00EB /* LanguagesViewModel.swift in Sources */,
@@ -1956,6 +1971,7 @@
 				A8A539D1289670A400FE0FB5 /* NoteNetworkTests.swift in Sources */,
 				A80A95F62893D4CF00F044D9 /* ApiError.swift in Sources */,
 				A80A95F82893D4CF00F044D9 /* BaseAFNetwork.swift in Sources */,
+				A8161A1528AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */,
 				A85E228428A0FA0100FB00EB /* AppearancesViewController.swift in Sources */,
 				A8649D4E28A4DE1D00DE3312 /* UseCasesAssembly.swift in Sources */,
 				A8B5916A289E604D00CF50E3 /* PaletteColorCell.swift in Sources */,

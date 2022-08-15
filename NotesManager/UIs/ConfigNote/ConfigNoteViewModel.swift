@@ -9,16 +9,44 @@
 @_implementationOnly import RxSwift
 
 protocol ConfigNoteViewModel {
-    var note: Note { get set }
     var action: NoteAction { get }
+    var note: Note { get set }
+    var tempNoteWhenInsert: Note? { get set }
     func confirmAction() -> Single<Note>
+    func deleteTempNoteWhenInsert()
 }
 
 final class ConfigNoteViewModelImpl: ConfigNoteViewModel {
     private var useCase: ConfigNoteUseCase!
     
-    var note: Note
     var action: NoteAction
+    var note: Note {
+        willSet {
+            if action == .add {
+                var note = Note(id: "", color: newValue.color, createAt: 0, updateAt: 0)
+                if let title = newValue.title, !title.isEmpty {
+                    note.title = title
+                } else {
+                    note.title = nil
+                }
+                if let description = newValue.description, !description.isEmpty {
+                    note.description = description
+                } else {
+                    note.description = nil
+                }
+                useCase.tempNoteWhenInsert = note
+            }
+        }
+    }
+    
+    var tempNoteWhenInsert: Note? {
+        get {
+            useCase.tempNoteWhenInsert
+        }
+        set {
+            useCase.tempNoteWhenInsert = newValue
+        }
+    }
     
     init(useCase: ConfigNoteUseCase, note: Note? = nil) {
         self.useCase = useCase
@@ -26,7 +54,7 @@ final class ConfigNoteViewModelImpl: ConfigNoteViewModel {
             self.note = note
             self.action = .edit
         } else {
-            self.note = .init(id: "", title: "", description: "", color: .init(hex: "#FBF048"), createAt: 0, updateAt: 0)
+            self.note = useCase.tempNoteWhenInsert ?? .init(id: "", title: "", description: "", color: .init(hex: "#FBF048"), createAt: 0, updateAt: 0)
             self.action = .add
         }
     }
@@ -42,6 +70,10 @@ final class ConfigNoteViewModelImpl: ConfigNoteViewModel {
         case .edit:
             return useCase.updateNote(note: note)
         }
+    }
+    
+    func deleteTempNoteWhenInsert() {
+        useCase.deleteTempNoteWhenInsert()
     }
 }
 

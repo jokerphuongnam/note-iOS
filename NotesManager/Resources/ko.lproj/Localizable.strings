@@ -53,3 +53,5 @@
 "title_placeholder" = "제목 입력";
 "description_placeholder" = "입력 설명";
 "success" = "성공";
+"delete" = "삭제";
+"delete_description" = "이 메모를 삭제하시겠습니까?";
