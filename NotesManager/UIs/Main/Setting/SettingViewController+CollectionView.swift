@@ -88,7 +88,7 @@ extension SettingViewController {
             let viewController = AppearancesViewController(viewModel: viewModel)
             navigationController?.pushViewController(viewController, animated: true)
         case .editProfile:
-            let viewModel: EditProfileViewModel = EditProfileViewModelImpl(user: viewModel.user)
+            let viewModel: EditProfileViewModel = EditProfileViewModelImpl(useCase: NoteManagerAssembler.inject())
             let viewController = EditProfileViewController(viewModel: viewModel)
             navigationController?.pushViewController(viewController, animated: true)
         case .changePassword:

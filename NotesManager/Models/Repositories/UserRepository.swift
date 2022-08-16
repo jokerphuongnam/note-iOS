@@ -15,6 +15,7 @@ protocol UserRepository {
     func updatePasswordInLocal(email: String, password: String) -> Completable
     func getLogin(email: String) throws -> Login
     func changePassword(oldPassword:String, newPassword: String) -> Completable
+    func editProfile(user: User!) -> Completable
     func logout()
 }
 
@@ -69,6 +70,24 @@ final class UserRepositoryImpl: UserRepository {
     
     func changePassword(oldPassword: String, newPassword: String) -> Completable {
         network.changePassword(oldPassword: oldPassword, newPassword: newPassword)
+            .asCompletable()
+    }
+    
+    func editProfile(user: User!) -> Completable {
+        let editProfileCompletable: Single<UpdateProfileRequest.Response>
+        if let user = user {
+            editProfileCompletable = network.updateProfile(name: user.name, gender: user.gender.constant)
+        } else {
+            editProfileCompletable = network.updateProfile(name: nil, gender: nil)
+        }
+        return editProfileCompletable
+            .map { [weak self] response -> Void in
+                guard let self = self else {
+                    return ()
+                }
+                self.local.user = response.user
+                return ()
+            }
             .asCompletable()
     }
     

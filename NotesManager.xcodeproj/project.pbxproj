@@ -344,6 +344,9 @@
 		A8B9BBD028AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */; };
 		A8B9BBD128AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */; };
 		A8B9BBD228AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */; };
+		A8B9BBD428AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */; };
+		A8B9BBD528AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */; };
+		A8B9BBD628AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */; };
 		A8BAB4A028A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A128A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A228A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
@@ -604,6 +607,7 @@
 		A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
 		A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUseCase.swift; sourceTree = "<group>"; };
 		A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUseCase.swift; sourceTree = "<group>"; };
+		A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUseCase.swift; sourceTree = "<group>"; };
 		A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+Loading.swift"; sourceTree = "<group>"; };
 		A8BAB4A928A3AE3800D0397B /* ScrollLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollLoadingView.swift; sourceTree = "<group>"; };
 		A8BAB4AD28A3AE4900D0397B /* ScrollLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollLoadingView.xib; sourceTree = "<group>"; };
@@ -850,6 +854,7 @@
 				A8FA63E0289FA99B00BC3490 /* EditProfileViewController+NavigationBar.swift */,
 				A8FA63DC289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift */,
 				A89492B6289F77EC00F860DC /* EditProfileViewModel.swift */,
+				A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */,
 			);
 			path = EditProfile;
 			sourceTree = "<group>";
@@ -1752,6 +1757,7 @@
 				A8B59168289E604D00CF50E3 /* PaletteColorCell.swift in Sources */,
 				A8A3F355289D1EA700DEBCD5 /* SettingViewController+Options.swift in Sources */,
 				A8F25FEE2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
+				A8B9BBD428AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */,
 				A8B208622892676000DC7FA6 /* ApiError.swift in Sources */,
 				A8649D4928A4DE1D00DE3312 /* LocalAssembly.swift in Sources */,
 				A8F260012898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
@@ -1879,6 +1885,7 @@
 				A8B59169289E604D00CF50E3 /* PaletteColorCell.swift in Sources */,
 				A8A3F356289D1EA700DEBCD5 /* SettingViewController+Options.swift in Sources */,
 				A8F25FEF2898C85800FEAF22 /* LoginViewController+NavigationBar.swift in Sources */,
+				A8B9BBD528AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */,
 				A8B2084628925B0F00DC7FA6 /* View+.swift in Sources */,
 				A8649D4A28A4DE1D00DE3312 /* LocalAssembly.swift in Sources */,
 				A8F260022898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
@@ -1963,6 +1970,7 @@
 				A8B9BBCE28AB677500937AC3 /* SettingUseCase.swift in Sources */,
 				A8649D4B28A4DE1D00DE3312 /* LocalAssembly.swift in Sources */,
 				A80A95EA2893D4B900F044D9 /* User.swift in Sources */,
+				A8B9BBD628AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */,
 				A8649D7128A54AAE00DE3312 /* Error+.swift in Sources */,
 				A80A95FF2893D4DC00F044D9 /* UserNetworkRequest.swift in Sources */,
 				A8B59140289E282500CF50E3 /* NoteDetailViewController.swift in Sources */,
