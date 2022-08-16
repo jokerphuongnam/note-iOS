@@ -35,7 +35,7 @@ struct FetchNotesResponse {
 }
 
 extension FetchNotesResponse {
-    var paingNotes: PagingArray<Note> {
+    var pagingNotes: PagingArray<Note> {
         (
             data: notes.map { noteResponse in
                 noteResponse.note

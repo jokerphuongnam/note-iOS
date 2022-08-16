@@ -41,8 +41,15 @@ final class NoteRepositoryImpl: NoteRepository {
     
     func getNotes(page: Int?, limit: Int?, searchWords: String?) -> Single<PagingArray<Note>> {
         network.fetchNotes(page: page, limit: limit, searchWords: searchWords)
-            .map { response in
-                response.paingNotes
+            .flatMap { [weak self] response in
+                let pagingNotes = response.pagingNotes
+                guard let self = self else { return Single.just(pagingNotes) }
+                return self.local.clearNote()
+                    .andThen(self.local.addNotes(notes: pagingNotes.data))
+                    .catch { e in
+                        Completable.empty()
+                    }
+                    .andThen(Single.just(pagingNotes))
             }
     }
     
@@ -55,14 +62,20 @@ final class NoteRepositoryImpl: NoteRepository {
     
     func updateNote(note: Note) -> Single<Note> {
         network.updateNote(id: note.id ,title: note.title, description: note.description, color: note.color.stringHex)
-            .map { response in
-                response.note
+            .flatMap { [weak self] response in
+                let note = response.note
+                guard let self = self else { return Single.just(note) }
+                return self.local.updateNote(note: note)
+                    .andThen(Single.just(note))
             }
     }
     
     func deleteNote(id: String) -> Completable {
         network.deleteNote(id: id)
-            .asCompletable()
+            .flatMapCompletable { [weak self] response in
+                guard let self = self else { return Completable.empty() }
+                return self.local.deleteNote(id: response.id)
+            }
     }
     
     func deleteTempNoteWhenInsert() {
