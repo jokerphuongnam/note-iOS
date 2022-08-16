@@ -28,9 +28,9 @@ extension UIWindow {
             ) {
                 let vcFrame = navView.frame
                 viewController.view.frame = .init(x: vcFrame.minX, y: 0, width: vcFrame.width, height: vcFrame.height)
-                viewController.view.removeFromSuperview()
             } completion: { [weak self] isFinished in
                 guard let self = self else { return }
+                viewController.view.removeFromSuperview()
                 self.rootViewController = viewController
             }
         }

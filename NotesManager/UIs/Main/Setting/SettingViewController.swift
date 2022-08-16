@@ -12,11 +12,24 @@ final class SettingViewController: UICollectionViewController {
     static let logoutViewName = String(describing: LogoutView.self)
     
     var viewModel: SettingViewModel!
-    var options = Option.allCases
+    var options: Options = []
     
     init(viewModel: SettingViewModel) {
         super.init(collectionViewLayout: .init())
         self.viewModel = viewModel
+        if viewModel.user == nil {
+            self.options = [
+                .language(currentLanguage: .en),
+                .appearance(currentAppearance: .systemAppearance)
+            ]
+        } else {
+            self.options = [
+                .language(currentLanguage: .en),
+                .appearance(currentAppearance: .systemAppearance),
+                .editProfile,
+                .changePassword
+            ]
+        }
     }
     
     required init?(coder: NSCoder) {

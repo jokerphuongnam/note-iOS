@@ -13,6 +13,7 @@ protocol KeyChainManager {
     func saveToken(token: String) throws
     func getToken() throws -> String
     func updateToken(token: String) throws
+    func deleteToken() throws
     
     func saveAccount(email: String, password: String) throws
     func getAccount(email: String) throws -> String
@@ -31,6 +32,10 @@ final class KeyChainManagerImpl: KeyChainManager {
     
     func updateToken(token: String) throws {
         try update(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+    }
+    
+    func deleteToken() throws {
+        try delete(type: .token, account: KeyChainServiceType.token.rawValue)
     }
     
     func saveAccount(email: String, password: String) throws {

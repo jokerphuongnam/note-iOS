@@ -101,9 +101,17 @@ extension SettingViewController {
 // MARK: - LogoutViewDelegate
 extension SettingViewController: LogoutViewDelegate {
     func logoutView(_ logoutView: LogoutView, logout sender: UIButton, forEvent event: UIEvent) {
-        let viewModel: LoginViewModel = LoginViewModelImpl(useCase: NoteManagerAssembler.inject())
-        let viewController = LoginViewController(viewModel: viewModel)
-        let navigation = UINavigationController(rootViewController: viewController)
-        UIWindow.key?.changeRootViewControllerPresent(rootViewController: navigation)
+        if viewModel.user == nil {
+            let viewModel: LoginViewModel = LoginViewModelImpl(useCase: NoteManagerAssembler.inject())
+            let viewController = LoginViewController(viewModel: viewModel)
+            let navigation = UINavigationController(rootViewController: viewController)
+            present(navigation, animated: true)
+        } else {
+            viewModel.logout()
+            let viewModel: LoginViewModel = LoginViewModelImpl(useCase: NoteManagerAssembler.inject())
+            let viewController = LoginViewController(viewModel: viewModel)
+            let navigation = UINavigationController(rootViewController: viewController)
+            UIWindow.key?.changeRootViewControllerPresent(rootViewController: navigation)
+        }
     }
 }

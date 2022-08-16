@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Language {
+enum Language: Codable {
     init?(language: String) {
         switch language {
         case Strings.systemLanguage:
@@ -66,7 +66,7 @@ enum Language {
 }
 
 extension Language {
-    enum China {
+    enum China: Codable {
         case simplified
         case tranditional
     }

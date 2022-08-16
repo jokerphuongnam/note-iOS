@@ -9,10 +9,12 @@
 
 protocol UserRepository {
     var emails: [String] { get }
+    var user: User? { get set }
     func login(email: String, password: String) -> Completable
     func deleteEmail(email: String)
     func updatePasswordInLocal(email: String, password: String) -> Completable
     func getLogin(email: String) throws -> Login
+    func logout()
 }
 
 final class UserRepositoryImpl: UserRepository {
@@ -21,6 +23,15 @@ final class UserRepositoryImpl: UserRepository {
     
     var emails: [String] {
         local.emails
+    }
+    
+    var user: User? {
+        get {
+            local.user
+        }
+        set {
+            local.user = newValue
+        }
     }
     
     init(network: UserNetwork, local: UserLocal) {
@@ -53,5 +64,9 @@ final class UserRepositoryImpl: UserRepository {
     
     func getLogin(email: String) throws -> Login {
         try local.getLogin(email: email)
+    }
+    
+    func logout() {
+        local.logout()
     }
 }

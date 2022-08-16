@@ -338,6 +338,9 @@
 		A8B59184289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */; };
 		A8B59185289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */; };
 		A8B59186289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */; };
+		A8B9BBCC28AB677500937AC3 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */; };
+		A8B9BBCD28AB677500937AC3 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */; };
+		A8B9BBCE28AB677500937AC3 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */; };
 		A8BAB4A028A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A128A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A228A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
@@ -596,6 +599,7 @@
 		A8B59167289E604D00CF50E3 /* PaletteColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaletteColorCell.xib; sourceTree = "<group>"; };
 		A8B5917F289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+OptionColors.swift"; sourceTree = "<group>"; };
 		A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
+		A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUseCase.swift; sourceTree = "<group>"; };
 		A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+Loading.swift"; sourceTree = "<group>"; };
 		A8BAB4A928A3AE3800D0397B /* ScrollLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollLoadingView.swift; sourceTree = "<group>"; };
 		A8BAB4AD28A3AE4900D0397B /* ScrollLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollLoadingView.xib; sourceTree = "<group>"; };
@@ -1165,6 +1169,7 @@
 				A8A3F350289D1B8500DEBCD5 /* SettingViewController+CollectionView.swift */,
 				A8A3F354289D1EA700DEBCD5 /* SettingViewController+Options.swift */,
 				A8FA63D8289F9CA000BC3490 /* SettingViewModel.swift */,
+				A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1777,6 +1782,7 @@
 				A8B2089428926C5E00DC7FA6 /* User.swift in Sources */,
 				A8B5915E289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A823A38928A130920069BB8F /* CustomAppearanceCell.swift in Sources */,
+				A8B9BBCC28AB677500937AC3 /* SettingUseCase.swift in Sources */,
 				A8B59155289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1902,6 +1908,7 @@
 				A8B2089528926C5E00DC7FA6 /* User.swift in Sources */,
 				A8B5915F289E52E800CF50E3 /* ConfigNoteViewController+CollectionView.swift in Sources */,
 				A823A38A28A130920069BB8F /* CustomAppearanceCell.swift in Sources */,
+				A8B9BBCD28AB677500937AC3 /* SettingUseCase.swift in Sources */,
 				A8B59156289E3CEE00CF50E3 /* NoteDetailViewController+ViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1946,6 +1953,7 @@
 				A8F25FFC2898DC1100FEAF22 /* RegisterViewController.swift in Sources */,
 				A89492AE289F768B00F860DC /* EditProfileViewController.swift in Sources */,
 				A80A95EC2893D4CB00F044D9 /* View+.swift in Sources */,
+				A8B9BBCE28AB677500937AC3 /* SettingUseCase.swift in Sources */,
 				A8649D4B28A4DE1D00DE3312 /* LocalAssembly.swift in Sources */,
 				A80A95EA2893D4B900F044D9 /* User.swift in Sources */,
 				A8649D7128A54AAE00DE3312 /* Error+.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Appearance {
+enum Appearance: Codable {
     case light
     case dark
     case systemAppearance
