@@ -15,6 +15,7 @@ protocol UserLocal {
     var accessToken: String? { get set }
     var emails: [String] { get }
     func login(email: String, password: String, user: User, token: String) -> Completable
+    func saveLoginToken(token: String) throws
     func deleteEmail(email: String)
     func loginToken() throws -> String
     func updatePasswordInLocal(email: String, password: String) -> Completable
@@ -99,6 +100,10 @@ final class UserLocalImpl: UserLocal {
                 }
                 throw error
             }
+    }
+    
+    func saveLoginToken(token: String) throws {
+        try keyChainManager.saveToken(token: token)
     }
     
     func deleteEmail(email: String) {

@@ -139,7 +139,8 @@ private extension LoginViewController {
     }
     
     @IBAction private func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
-        let registerViewController = RegisterViewController()
+        let viewModel: RegisterViewModel = RegisterViewModelImpl(useCase: NoteManagerAssembler.inject())
+        let registerViewController = RegisterViewController(viewModel: viewModel)
         navigationController?.pushViewController(registerViewController, animated: true)
     }
     

@@ -31,6 +31,6 @@ final class SettingUseCaseImpl: SettingUseCase {
     }
     
     func logout() {
-        
+        userRepository.logout()
     }
 }

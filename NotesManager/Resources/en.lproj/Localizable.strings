@@ -57,3 +57,5 @@
 "delete" = "Delete";
 "delete_description" = "Delete this note?";
 "error_password_not_same" = "Password & Repeat Password Not The Same";
+"need_great_than" = "Email Need Greater Than %d Chars";
+"email_not_valid" = "Email Not Valid";

@@ -56,3 +56,5 @@
 "delete" = "Xóa";
 "delete_description" = "Xóa Ghi Chú Này?";
 "error_password_not_same" = "Mật khẩu và nhập lại mật khẩu không giống nhau";
+"need_great_than" = "Cần Nhiều Hơn %d Ký Tự";
+"email_not_valid" = "Email Không Hợp Lệ";

@@ -6,9 +6,12 @@
 //
 
 @_implementationOnly import UIKit
+@_implementationOnly import RxSwift
 
 final class RegisterViewController: UIViewController {
+    var viewModel: RegisterViewModel!
     private var keyboardManager: KeyboardManagerment!
+    let disposeBag: DisposeBag = DisposeBag()
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -68,11 +71,21 @@ final class RegisterViewController: UIViewController {
         return showHideButton
     }()
     
-#if DEBUG
-    deinit {
-        print("Deinit: \(String(describing: Self.self))")
+    init(viewModel: RegisterViewModel) {
+        super.init(nibName: String(describing: Self.self), bundle: Bundle.main)
+        self.viewModel = viewModel
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    deinit {
+#if DEBUG
+        print("Deinit: \(String(describing: Self.self))")
 #endif
+        viewModel = nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -119,6 +132,72 @@ private extension RegisterViewController {
     }
     
     @IBAction private func registerAction(_ sender: UIButton, forEvent event: UIEvent) {
+        guard let email = emailTextField.text, let password = passwordTextField.text, let repeatPassword = repeatPasswordTextField.text else {
+            return
+        }
         
+        let message: String?
+        if email.count < 6 {
+            message = "\(Strings.email) \(Strings.needGreatThan(6))"
+        } else if !email.isValidEmail() {
+            message = Strings.emailNotValid
+        } else if password.count < 6 {
+            message = "\(Strings.password) \(Strings.needGreatThan(6))"
+        } else if password != repeatPassword {
+            message = Strings.errorPasswordNotSame
+        } else {
+            message = nil
+        }
+        
+        if let message = message {
+            let alertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
+            let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+                self?.dismiss(animated: true)
+            }
+            okAction.titleTextColor = Asset.Colors.red.color
+            alertController.addAction(okAction)
+            present(alertController, animated: true)
+            return
+        }
+        
+        let loadingContentViewController = LoadingAlertController()
+        let loadingAlertController = loadingContentViewController.alertController
+        loadingContentViewController.messageLabel.text = Strings.loading
+        present(loadingAlertController, animated: true)
+        viewModel.register(email: email, password: password)
+            .subscribe { [weak self] in
+                loadingAlertController.dismiss(animated: true)
+                guard let self = self else { return }
+                let alertController = UIAlertController(title: Strings.register, message: Strings.success, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+                    guard let self = self else { return }
+                    self.navigationController?.popViewController(animated: true)
+                }
+                okAction.titleTextColor = Asset.Colors.main.color
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true)
+            } onError: { [weak self] error in
+                loadingAlertController.dismiss(animated: true)
+                guard let self = self else { return }
+                let message: String
+                switch error {
+                case ApiError.unknownError(let responseError):
+                    message = responseError.message ?? ""
+                case ApiError.otherError(let responseError):
+                    message = "\(Strings.unknownError): \(responseError.statusCode ?? 0)"
+                default:
+                    message = error.localizedDescription
+                }
+                let alertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
+                let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
+                    self?.dismiss(animated: true)
+                }
+                okAction.titleTextColor = Asset.Colors.red.color
+                alertController.addAction(okAction)
+                self.present(alertController, animated: true)
+            } onDisposed: {
+                
+            }
+            .disposed(by: disposeBag)
     }
 }

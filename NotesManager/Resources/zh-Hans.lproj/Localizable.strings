@@ -56,3 +56,5 @@
 "delete" = "删除";
 "delete_description" = "删除这条笔记？";
 "error_password_not_same" = "密码和重复密码不相同";
+"need_great_than" = "需要大于 %d 个字符";
+"email_not_valid" = "电子邮件无效";

@@ -156,15 +156,25 @@ private extension ChangePasswordViewController {
     
     @IBAction private func confirmAction(_ sender: UIButton, forEvent event: UIEvent) {
         guard let oldPassword = oldPasswordTextField.text, let newPassword = newPasswordTextField.text, let repeatPassword = repeatPasswordTextField.text else { return }
-        guard newPassword == repeatPassword else {
-            let message: String = Strings.errorPasswordNotSame
+        
+        
+        let message: String?
+        if newPassword.count < 6 {
+            message = "\(Strings.password) \(Strings.needGreatThan(6))"
+        } else if oldPassword != repeatPassword {
+            message = Strings.errorPasswordNotSame
+        } else {
+            message = nil
+        }
+        
+        if let message = message {
             let alertController = UIAlertController(title: Strings.error, message: message, preferredStyle: .alert)
             let okAction = UIAlertAction(title: Strings.ok, style: .default) { [weak self] action in
                 self?.dismiss(animated: true)
             }
             okAction.titleTextColor = Asset.Colors.red.color
             alertController.addAction(okAction)
-            self.present(alertController, animated: true)
+            present(alertController, animated: true)
             return
         }
         let loadingContentViewController = LoadingAlertController()

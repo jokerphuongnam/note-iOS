@@ -56,3 +56,5 @@
 "delete" = "消去";
 "delete_description" = "このメモを削除しますか？";
 "error_password_not_same" = "パスワードとパスワードの繰り返しが同じではありません";
+"need_great_than" = "%d 文字以上が必要です";
+"email_not_valid" = "電子メールが無効です";

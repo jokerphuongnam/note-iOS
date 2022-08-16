@@ -347,6 +347,18 @@
 		A8B9BBD428AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */; };
 		A8B9BBD528AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */; };
 		A8B9BBD628AB7F7D00937AC3 /* EditProfileUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */; };
+		A8B9BBD828AB851D00937AC3 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD728AB851D00937AC3 /* RegisterViewModel.swift */; };
+		A8B9BBD928AB851D00937AC3 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD728AB851D00937AC3 /* RegisterViewModel.swift */; };
+		A8B9BBDA28AB851D00937AC3 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBD728AB851D00937AC3 /* RegisterViewModel.swift */; };
+		A8B9BBDC28AB852700937AC3 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBDB28AB852700937AC3 /* RegisterUseCase.swift */; };
+		A8B9BBDD28AB852700937AC3 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBDB28AB852700937AC3 /* RegisterUseCase.swift */; };
+		A8B9BBDE28AB852700937AC3 /* RegisterUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBDB28AB852700937AC3 /* RegisterUseCase.swift */; };
+		A8B9BBE028AB8D5500937AC3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBDF28AB8D5500937AC3 /* RealmManager.swift */; };
+		A8B9BBE128AB8D5500937AC3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBDF28AB8D5500937AC3 /* RealmManager.swift */; };
+		A8B9BBE228AB8D5500937AC3 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBDF28AB8D5500937AC3 /* RealmManager.swift */; };
+		A8B9BBE528AB8E7A00937AC3 /* RealmNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBE428AB8E7A00937AC3 /* RealmNote.swift */; };
+		A8B9BBE628AB8E7A00937AC3 /* RealmNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBE428AB8E7A00937AC3 /* RealmNote.swift */; };
+		A8B9BBE728AB8E7A00937AC3 /* RealmNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBE428AB8E7A00937AC3 /* RealmNote.swift */; };
 		A8BAB4A028A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A128A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A228A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
@@ -608,6 +620,10 @@
 		A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUseCase.swift; sourceTree = "<group>"; };
 		A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUseCase.swift; sourceTree = "<group>"; };
 		A8B9BBD328AB7F7D00937AC3 /* EditProfileUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileUseCase.swift; sourceTree = "<group>"; };
+		A8B9BBD728AB851D00937AC3 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		A8B9BBDB28AB852700937AC3 /* RegisterUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUseCase.swift; sourceTree = "<group>"; };
+		A8B9BBDF28AB8D5500937AC3 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		A8B9BBE428AB8E7A00937AC3 /* RealmNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmNote.swift; sourceTree = "<group>"; };
 		A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+Loading.swift"; sourceTree = "<group>"; };
 		A8BAB4A928A3AE3800D0397B /* ScrollLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollLoadingView.swift; sourceTree = "<group>"; };
 		A8BAB4AD28A3AE4900D0397B /* ScrollLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollLoadingView.xib; sourceTree = "<group>"; };
@@ -1038,10 +1054,12 @@
 		A8B20858289266E000DC7FA6 /* Locals */ = {
 			isa = PBXGroup;
 			children = (
+				A8B9BBE328AB8E6B00937AC3 /* Models */,
 				A8649D6128A4E16200DE3312 /* KeyChainManager.swift */,
 				A814474928A5FDC1006628ED /* UserDefaultsManager.swift */,
 				A8649D5D28A4E07900DE3312 /* UserLocal.swift */,
 				A8161A1A28AA5C59002FBEE9 /* NoteLocal.swift */,
+				A8B9BBDF28AB8D5500937AC3 /* RealmManager.swift */,
 			);
 			path = Locals;
 			sourceTree = "<group>";
@@ -1220,6 +1238,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A8B9BBE328AB8E6B00937AC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8B9BBE428AB8E7A00937AC3 /* RealmNote.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A8BAB4A728A3AE0F00D0397B /* Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -1268,6 +1294,8 @@
 				A8F25FF92898DC1100FEAF22 /* RegisterViewController.xib */,
 				A8F260002898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift */,
 				A8C7876728991ED70080D31E /* RegisterViewController+ViewDelegate.swift */,
+				A8B9BBD728AB851D00937AC3 /* RegisterViewModel.swift */,
+				A8B9BBDB28AB852700937AC3 /* RegisterUseCase.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -1700,6 +1728,7 @@
 				A8CB3CFF28A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5228A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8161A1328AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */,
+				A8B9BBE028AB8D5500937AC3 /* RealmManager.swift in Sources */,
 				A8B208832892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B20874289267C900DC7FA6 /* UserNetwork.swift in Sources */,
 				A81E698A28A7B9690068431A /* Number+.swift in Sources */,
@@ -1721,6 +1750,7 @@
 				A8880CE0289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
 				A85E227528A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */,
 				A8649D3728A4D6CC00DE3312 /* LoginUseCase.swift in Sources */,
+				A8B9BBE528AB8E7A00937AC3 /* RealmNote.swift in Sources */,
 				A8FA63F2289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B184289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B9BBD028AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */,
@@ -1762,6 +1792,7 @@
 				A8649D4928A4DE1D00DE3312 /* LocalAssembly.swift in Sources */,
 				A8F260012898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
 				A85E227128A0F30000FB00EB /* LanguagesViewModel.swift in Sources */,
+				A8B9BBDC28AB852700937AC3 /* RegisterUseCase.swift in Sources */,
 				A8FA63DD289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8880CE4289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE02898C57600FEAF22 /* Text+Localization.swift in Sources */,
@@ -1778,6 +1809,7 @@
 				A85E22A328A1069D00FB00EB /* AppearancesViewController+CollectionView.swift in Sources */,
 				A8AB9CCC288E547A00939E9D /* SceneDelegate.swift in Sources */,
 				A8880CE8289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
+				A8B9BBD828AB851D00937AC3 /* RegisterViewModel.swift in Sources */,
 				A8A3F35B289D204F00DEBCD5 /* SettingCell.swift in Sources */,
 				A8A3F364289D27C800DEBCD5 /* LogoutView.swift in Sources */,
 				A80EF60328A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */,
@@ -1828,6 +1860,7 @@
 				A8CB3D0028A69908008EDDFE /* BaseContentAlertController.swift in Sources */,
 				A8649D5328A4DE1D00DE3312 /* RepositoriesAssembly.swift in Sources */,
 				A8161A1428AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */,
+				A8B9BBE128AB8D5500937AC3 /* RealmManager.swift in Sources */,
 				A8B208842892682100DC7FA6 /* UserNetworkRequest.swift in Sources */,
 				A8B208892892682C00DC7FA6 /* NoteNetwork+Rx.swift in Sources */,
 				A81E698B28A7B9690068431A /* Number+.swift in Sources */,
@@ -1849,6 +1882,7 @@
 				A8880CE1289BC14100FCDCF0 /* DashboardViewController+NavigationBar.swift in Sources */,
 				A85E227628A0F31800FB00EB /* LanguagesViewController+NavigationBar.swift in Sources */,
 				A8649D3828A4D6CC00DE3312 /* LoginUseCase.swift in Sources */,
+				A8B9BBE628AB8E7A00937AC3 /* RealmNote.swift in Sources */,
 				A8FA63F3289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B185289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
 				A8B9BBD128AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */,
@@ -1890,6 +1924,7 @@
 				A8649D4A28A4DE1D00DE3312 /* LocalAssembly.swift in Sources */,
 				A8F260022898DC2200FEAF22 /* RegisterViewController+NavigationBar.swift in Sources */,
 				A85E227228A0F30000FB00EB /* LanguagesViewModel.swift in Sources */,
+				A8B9BBDD28AB852700937AC3 /* RegisterUseCase.swift in Sources */,
 				A8FA63DE289FA5C800BC3490 /* EditProfileViewController+ViewDelegate.swift in Sources */,
 				A8880CE5289BC27600FCDCF0 /* Note.swift in Sources */,
 				A8F25FE12898C57600FEAF22 /* Text+Localization.swift in Sources */,
@@ -1906,6 +1941,7 @@
 				A85E22A428A1069D00FB00EB /* AppearancesViewController+CollectionView.swift in Sources */,
 				A8B2083628925B0F00DC7FA6 /* NoteError.swift in Sources */,
 				A8880CE9289BC37200FCDCF0 /* DashboardViewModel.swift in Sources */,
+				A8B9BBD928AB851D00937AC3 /* RegisterViewModel.swift in Sources */,
 				A8A3F35C289D204F00DEBCD5 /* SettingCell.swift in Sources */,
 				A8A3F365289D27C800DEBCD5 /* LogoutView.swift in Sources */,
 				A80EF60428A7837A00A9DA0D /* RecommendEmailCell.swift in Sources */,
@@ -1982,6 +2018,7 @@
 				A8A370BA2897CC79004E94F0 /* UpdateNote.swift in Sources */,
 				A81E698828A7A9F90068431A /* TokenInterceptor.swift in Sources */,
 				A8649D3F28A4DD6D00DE3312 /* UserRepository.swift in Sources */,
+				A8B9BBDA28AB851D00937AC3 /* RegisterViewModel.swift in Sources */,
 				A8A3F366289D27C800DEBCD5 /* LogoutView.swift in Sources */,
 				A87FCF0C28A89C1B002F35B4 /* ConfigNoteUseCase.swift in Sources */,
 				A85E229628A1052B00FB00EB /* SimpleAppearanceCell.swift in Sources */,
@@ -2001,7 +2038,9 @@
 				A8B5916A289E604D00CF50E3 /* PaletteColorCell.swift in Sources */,
 				A8649D3928A4D6CC00DE3312 /* LoginUseCase.swift in Sources */,
 				A80A95F92893D4D500F044D9 /* NoteNetwork+Rx.swift in Sources */,
+				A8B9BBE228AB8D5500937AC3 /* RealmManager.swift in Sources */,
 				A8A370B62897C055004E94F0 /* InsertNote.swift in Sources */,
+				A8B9BBDE28AB852700937AC3 /* RegisterUseCase.swift in Sources */,
 				A814475028A64418006628ED /* AppAssembly.swift in Sources */,
 				A8B59147289E2A2400CF50E3 /* NoteDetailViewModel.swift in Sources */,
 				A8A3F34B289D145700DEBCD5 /* DashboardViewController+ViewDelegate.swift in Sources */,
@@ -2041,6 +2080,7 @@
 				A8161A1128AA4320002FBEE9 /* AlertController+.swift in Sources */,
 				A80A95FE2893D4DC00F044D9 /* UserNetwork.swift in Sources */,
 				A85E229D28A1053E00FB00EB /* AppearancesViewModel.swift in Sources */,
+				A8B9BBE728AB8E7A00937AC3 /* RealmNote.swift in Sources */,
 				A80A95EB2893D4BF00F044D9 /* Login.swift in Sources */,
 				A8649D3528A4D46300DE3312 /* LoginViewModel.swift in Sources */,
 				A8C7876A28991ED70080D31E /* RegisterViewController+ViewDelegate.swift in Sources */,
