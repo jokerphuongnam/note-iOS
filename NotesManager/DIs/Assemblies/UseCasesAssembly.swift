@@ -21,5 +21,8 @@ struct UseCasesAssembly: Assembly {
         
         container.autoregister(NoteDetailUseCase.self, initializer: NoteDetailUseCaseImpl.init)
             .inObjectScope(.container)
+        
+        container.autoregister(SettingUseCase.self, initializer: SettingUseCaseImpl.init)
+            .inObjectScope(.container)
     }
 }

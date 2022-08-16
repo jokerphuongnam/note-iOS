@@ -17,6 +17,8 @@ protocol UserDefaultsManager {
     func saveUser(user: User) -> Completable
     func getUser() -> Single<User>
     func deleteTempNoteWhenInsert()
+    func deleteAccessToken()
+    func deleteUser()
 }
 
 final class UserDefaultsManagerImpl: UserDefaultsManager {
@@ -133,6 +135,16 @@ final class UserDefaultsManagerImpl: UserDefaultsManager {
     
     func deleteTempNoteWhenInsert() {
         userDefaults.removeObject(forKey: .userDefaultTempNoteWhenInsert)
+        userDefaults.synchronize()
+    }
+    
+    func deleteAccessToken() {
+        userDefaults.removeObject(forKey: .userDefaultAccessToken)
+        userDefaults.synchronize()
+    }
+    
+    func deleteUser() {
+        userDefaults.removeObject(forKey: .userDefaultUser)
         userDefaults.synchronize()
     }
 }

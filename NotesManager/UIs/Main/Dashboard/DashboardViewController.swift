@@ -122,7 +122,7 @@ final class DashboardViewController: UICollectionViewController {
 // MARK: - Action
 private extension DashboardViewController {
     @objc func settingAction(_ sender: UIBarButtonItem) {
-        let viewModel: SettingViewModel = SettingViewModelImpl()
+        let viewModel: SettingViewModel = SettingViewModelImpl(useCase: NoteManagerAssembler.inject())
         let viewController = SettingViewController(viewModel: viewModel)
         let navigation = UINavigationController(rootViewController: viewController)
         present(navigation, animated: true)

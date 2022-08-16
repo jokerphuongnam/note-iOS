@@ -8,18 +8,11 @@
 @_implementationOnly import UIKit
 
 extension SettingViewController {
-    enum Option: CaseIterable {
+    enum Option: Codable {
         case language(currentLanguage: Language)
         case appearance(currentAppearance: Appearance)
         case editProfile
         case changePassword
-        
-        static var allCases: [SettingViewController.Option] = [
-            .language(currentLanguage: .en),
-            .appearance(currentAppearance: .systemAppearance),
-            .editProfile,
-            .changePassword
-        ]
         
         var title: String {
             switch self {
@@ -67,6 +60,9 @@ extension SettingViewController {
             }
         }
     }
+    
+    typealias Options = [Option]
 }
 
 typealias SettingOption = SettingViewController.Option
+typealias SettingOptions = [SettingOption]

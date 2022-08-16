@@ -19,6 +19,7 @@ protocol UserLocal {
     func loginToken() throws -> String
     func updatePasswordInLocal(email: String, password: String) -> Completable
     func getLogin(email: String) throws -> Login
+    func logout()
 }
 
 final class UserLocalImpl: UserLocal {
@@ -130,6 +131,17 @@ final class UserLocalImpl: UserLocal {
             return (email: email, password: try keyChainManager.getAccount(email: email))
         } catch {
             throw error
+        }
+    }
+    
+    func logout() {
+        do {
+            userDefaultsManager.deleteTempNoteWhenInsert()
+            userDefaultsManager.deleteAccessToken()
+            userDefaultsManager.deleteUser()
+            try keyChainManager.deleteToken()
+        } catch {
+            
         }
     }
 }
