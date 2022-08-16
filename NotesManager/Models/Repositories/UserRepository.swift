@@ -14,12 +14,13 @@ protocol UserRepository {
     func deleteEmail(email: String)
     func updatePasswordInLocal(email: String, password: String) -> Completable
     func getLogin(email: String) throws -> Login
+    func changePassword(oldPassword:String, newPassword: String) -> Completable
     func logout()
 }
 
 final class UserRepositoryImpl: UserRepository {
-    var network: UserNetwork!
-    var local: UserLocal!
+    private var network: UserNetwork!
+    private var local: UserLocal!
     
     var emails: [String] {
         local.emails
@@ -64,6 +65,11 @@ final class UserRepositoryImpl: UserRepository {
     
     func getLogin(email: String) throws -> Login {
         try local.getLogin(email: email)
+    }
+    
+    func changePassword(oldPassword: String, newPassword: String) -> Completable {
+        network.changePassword(oldPassword: oldPassword, newPassword: newPassword)
+            .asCompletable()
     }
     
     func logout() {

@@ -56,3 +56,4 @@
 "success" = "Success";
 "delete" = "Delete";
 "delete_description" = "Delete this note?";
+"error_password_not_same" = "Password & Repeat Password Not The Same";

@@ -22,9 +22,9 @@ protocol UserDefaultsManager {
 }
 
 final class UserDefaultsManagerImpl: UserDefaultsManager {
-    var userDefaults: UserDefaults!
-    var decoder: JSONDecoder!
-    var encoder: JSONEncoder!
+    private var userDefaults: UserDefaults!
+    private var decoder: JSONDecoder!
+    private var encoder: JSONEncoder!
     
     var user: User? {
         get {

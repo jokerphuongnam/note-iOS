@@ -341,6 +341,9 @@
 		A8B9BBCC28AB677500937AC3 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */; };
 		A8B9BBCD28AB677500937AC3 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */; };
 		A8B9BBCE28AB677500937AC3 /* SettingUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */; };
+		A8B9BBD028AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */; };
+		A8B9BBD128AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */; };
+		A8B9BBD228AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */; };
 		A8BAB4A028A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A128A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
 		A8BAB4A228A3ADA100D0397B /* ScrollView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */; };
@@ -600,6 +603,7 @@
 		A8B5917F289E63BA00CF50E3 /* ConfigNoteViewController+OptionColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+OptionColors.swift"; sourceTree = "<group>"; };
 		A8B59183289E74B400CF50E3 /* ConfigNoteViewController+ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ConfigNoteViewController+ViewDelegate.swift"; sourceTree = "<group>"; };
 		A8B9BBCB28AB677500937AC3 /* SettingUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingUseCase.swift; sourceTree = "<group>"; };
+		A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordUseCase.swift; sourceTree = "<group>"; };
 		A8BAB49F28A3ADA100D0397B /* ScrollView+Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScrollView+Loading.swift"; sourceTree = "<group>"; };
 		A8BAB4A928A3AE3800D0397B /* ScrollLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollLoadingView.swift; sourceTree = "<group>"; };
 		A8BAB4AD28A3AE4900D0397B /* ScrollLoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollLoadingView.xib; sourceTree = "<group>"; };
@@ -1270,6 +1274,7 @@
 				A8FA63E6289FB46B00BC3490 /* ChangePasswordViewController.xib */,
 				A8FA63F1289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift */,
 				A8FA63ED289FB4B800BC3490 /* ChangePasswordViewModel.swift */,
+				A8B9BBCF28AB743600937AC3 /* ChangePasswordUseCase.swift */,
 			);
 			path = ChangePassword;
 			sourceTree = "<group>";
@@ -1713,6 +1718,7 @@
 				A8649D3728A4D6CC00DE3312 /* LoginUseCase.swift in Sources */,
 				A8FA63F2289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B184289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
+				A8B9BBD028AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */,
 				A81E698E28A7BE630068431A /* NoteRepository.swift in Sources */,
 				A8B59162289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A85E226628A0F28F00FB00EB /* LanguageCell.swift in Sources */,
@@ -1839,6 +1845,7 @@
 				A8649D3828A4D6CC00DE3312 /* LoginUseCase.swift in Sources */,
 				A8FA63F3289FB67800BC3490 /* ChangePasswordViewController+NavigationBar.swift in Sources */,
 				A8B4B185289B4CF800F2E8E1 /* SettingViewController.swift in Sources */,
+				A8B9BBD128AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */,
 				A81E698F28A7BE630068431A /* NoteRepository.swift in Sources */,
 				A8B59163289E536F00CF50E3 /* ConfigNoteViewModel.swift in Sources */,
 				A85E226728A0F28F00FB00EB /* LanguageCell.swift in Sources */,
@@ -1980,6 +1987,7 @@
 				A80A95F62893D4CF00F044D9 /* ApiError.swift in Sources */,
 				A80A95F82893D4CF00F044D9 /* BaseAFNetwork.swift in Sources */,
 				A8161A1528AA5470002FBEE9 /* NoteDetailUseCase.swift in Sources */,
+				A8B9BBD228AB743600937AC3 /* ChangePasswordUseCase.swift in Sources */,
 				A85E228428A0FA0100FB00EB /* AppearancesViewController.swift in Sources */,
 				A8649D4E28A4DE1D00DE3312 /* UseCasesAssembly.swift in Sources */,
 				A8B5916A289E604D00CF50E3 /* PaletteColorCell.swift in Sources */,

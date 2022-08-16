@@ -17,8 +17,8 @@ protocol NoteRepository {
 }
 
 final class NoteRepositoryImpl: NoteRepository {
-    var network: NoteNetwork!
-    var local: NoteLocal!
+    private var network: NoteNetwork!
+    private var local: NoteLocal!
     
     var tempNoteWhenInsert: Note? {
         get {

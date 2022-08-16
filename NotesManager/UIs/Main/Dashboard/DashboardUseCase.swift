@@ -12,7 +12,7 @@ protocol DashboardUseCase {
 }
 
 final class DashboardUseCaseImpl: DashboardUseCase {
-    var noteRepository: NoteRepository!
+    private var noteRepository: NoteRepository!
     
     init(noteRepository: NoteRepository) {
         self.noteRepository = noteRepository

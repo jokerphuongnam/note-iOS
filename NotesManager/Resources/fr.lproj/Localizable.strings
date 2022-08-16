@@ -55,3 +55,4 @@
 "success" = "Succès";
 "delete" = "Effacer";
 "delete_description" = "Supprimer Cette Note ?";
+"error_password_not_same" = "Le Mot De Passe Et Le Mot De Passe Répété Ne Sont Pas Les Mêmes";

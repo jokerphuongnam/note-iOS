@@ -55,3 +55,4 @@
 "success" = "Thành Công";
 "delete" = "Xóa";
 "delete_description" = "Xóa Ghi Chú Này?";
+"error_password_not_same" = "Mật khẩu và nhập lại mật khẩu không giống nhau";
