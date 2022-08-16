@@ -11,16 +11,6 @@
 
 struct LocalAssembly: Assembly {
     func assemble(container: Container) {
-        container.register(Realm?.self) { resolve in
-            do {
-                return try Realm()
-            } catch {
-                print(error)
-                return nil
-            }
-        }
-        .inObjectScope(.container)
-        
         container.register(UserDefaults.self) { resolve in
             UserDefaults.standard
         }

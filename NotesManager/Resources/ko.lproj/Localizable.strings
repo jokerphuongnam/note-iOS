@@ -56,3 +56,5 @@
 "delete" = "삭제";
 "delete_description" = "이 메모를 삭제하시겠습니까?";
 "error_password_not_same" = "비밀번호 및 비밀번호 반복이 동일하지 않음";
+"need_great_than" = "%d개 이상의 문자 필요";
+"email_not_valid" = "이메일이 유효하지 않음";

@@ -44,7 +44,10 @@ final class TokenInterceptor: RequestInterceptor {
                     urlRequest.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
                     completion(.success(urlRequest))
                 case .failure(let error):
-                    self.changeRootViewToLoginViewController()
+                    DispatchQueue.main.async { [weak self] in
+                        guard let self = self else { return }
+                        self.changeRootViewToLoginViewController()
+                    }
                     completion(.failure(error))
                 }
             }

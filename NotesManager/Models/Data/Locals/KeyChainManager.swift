@@ -12,7 +12,6 @@ import Security
 protocol KeyChainManager {
     func saveToken(token: String) throws
     func getToken() throws -> String
-    func updateToken(token: String) throws
     func deleteToken() throws
     
     func saveAccount(email: String, password: String) throws
@@ -23,15 +22,15 @@ protocol KeyChainManager {
 
 final class KeyChainManagerImpl: KeyChainManager {
     func saveToken(token: String) throws {
-        try save(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+        do {
+            try save(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+        } catch let error as KeyChainError where error == .duplicateEntry {
+            try update(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
+        }
     }
     
     func getToken() throws -> String {
         try get(type: .token, account: KeyChainServiceType.token.rawValue)
-    }
-    
-    func updateToken(token: String) throws {
-        try update(type: .token, account: KeyChainServiceType.token.rawValue, value: token)
     }
     
     func deleteToken() throws {
@@ -147,7 +146,7 @@ private extension KeyChainManagerImpl {
 }
 
 extension KeyChainManagerImpl {
-    enum KeyChainError: Error {
+    enum KeyChainError: Error, Equatable {
         case duplicateEntry
         case message(String)
         case unknown(OSStatus)

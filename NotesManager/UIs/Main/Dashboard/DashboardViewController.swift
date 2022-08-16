@@ -92,7 +92,7 @@ final class DashboardViewController: UICollectionViewController {
     
     private func setupLiveData() {
         viewModel.notesObserver
-            .subscribe(on: SerialDispatchQueueScheduler.init(qos: .utility))
+            .subscribe(on: MainScheduler.instance)
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] resource in
                 guard let self = self else { return }

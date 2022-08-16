@@ -30,5 +30,8 @@ struct UseCasesAssembly: Assembly {
         
         container.autoregister(EditProfileUseCase.self, initializer: EditProfileUseCaseImpl.init)
             .inObjectScope(.container)
+        
+        container.autoregister(RegisterUseCase.self, initializer: RegisterUseCaseImpl.init)
+            .inObjectScope(.container)
     }
 }

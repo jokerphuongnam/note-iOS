@@ -11,6 +11,7 @@ protocol UserRepository {
     var emails: [String] { get }
     var user: User? { get set }
     func login(email: String, password: String) -> Completable
+    func register(email: String, password: String) -> Completable
     func deleteEmail(email: String)
     func updatePasswordInLocal(email: String, password: String) -> Completable
     func getLogin(email: String) throws -> Login
@@ -52,8 +53,14 @@ final class UserRepositoryImpl: UserRepository {
                 guard let self = self else {
                     throw NError.ownerNil
                 }
+                try self.local.saveLoginToken(token: loginResponse.token)
                 return self.local.login(email: email, password: password, user: loginResponse.user, token: loginResponse.token)
             }
+    }
+    
+    func register(email: String, password: String) -> Completable {
+        network.register(email: email, password: email)
+            .asCompletable()
     }
     
     func deleteEmail(email: String) {
