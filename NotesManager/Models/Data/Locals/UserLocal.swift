@@ -95,7 +95,7 @@ final class UserLocalImpl: UserLocal {
                     if let keyChainPassword = try? self.keyChainManager.getAccount(email: email), keyChainPassword != password {
                         throw UserLocalError.duplicate
                     } else {
-                        return Completable.empty()
+                        return .empty()
                     }
                 }
                 throw error

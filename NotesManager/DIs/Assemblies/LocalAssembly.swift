@@ -16,6 +16,9 @@ struct LocalAssembly: Assembly {
         }
         .inObjectScope(.container)
         
+        container.autoregister(RealmManager.self, initializer: RealmManagerImpl.init)
+            .inObjectScope(.container)
+        
         container.autoregister(UserDefaultsManager.self, initializer: UserDefaultsManagerImpl.init)
             .inObjectScope(.container)
         

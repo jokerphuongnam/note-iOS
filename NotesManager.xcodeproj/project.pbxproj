@@ -1057,9 +1057,9 @@
 				A8B9BBE328AB8E6B00937AC3 /* Models */,
 				A8649D6128A4E16200DE3312 /* KeyChainManager.swift */,
 				A814474928A5FDC1006628ED /* UserDefaultsManager.swift */,
+				A8B9BBDF28AB8D5500937AC3 /* RealmManager.swift */,
 				A8649D5D28A4E07900DE3312 /* UserLocal.swift */,
 				A8161A1A28AA5C59002FBEE9 /* NoteLocal.swift */,
-				A8B9BBDF28AB8D5500937AC3 /* RealmManager.swift */,
 			);
 			path = Locals;
 			sourceTree = "<group>";
