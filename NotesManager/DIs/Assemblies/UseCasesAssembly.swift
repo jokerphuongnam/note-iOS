@@ -24,5 +24,8 @@ struct UseCasesAssembly: Assembly {
         
         container.autoregister(SettingUseCase.self, initializer: SettingUseCaseImpl.init)
             .inObjectScope(.container)
+        
+        container.autoregister(ChangePasswordUseCase.self, initializer: ChangePasswordUseCaseImpl.init)
+            .inObjectScope(.container)
     }
 }

@@ -15,7 +15,7 @@ protocol ConfigNoteUseCase {
 }
 
 final class ConfigNoteUseCaseImpl: ConfigNoteUseCase {
-    var noteRepository: NoteRepository!
+    private var noteRepository: NoteRepository!
     
     var tempNoteWhenInsert: Note? {
         get {

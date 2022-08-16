@@ -5,16 +5,24 @@
 //  Created by pnam on 07/08/2022.
 //
 
-import Foundation
+@_implementationOnly import RxSwift
 
 protocol ChangePasswordViewModel {
-    var user: User { get set }
+    func changePassword(oldPassword:String, newPassword: String) -> Completable
 }
 
 final class ChangePasswordViewModelImpl: ChangePasswordViewModel {
-    var user: User
+    private var useCase: ChangePasswordUseCase!
     
-    init(user: User) {
-        self.user = user
+    init(useCase: ChangePasswordUseCase) {
+        self.useCase = useCase
+    }
+    
+    deinit {
+        useCase = nil
+    }
+    
+    func changePassword(oldPassword: String, newPassword: String) -> Completable {
+        useCase.changePassword(oldPassword: oldPassword, newPassword: newPassword)
     }
 }

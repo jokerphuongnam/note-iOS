@@ -16,7 +16,7 @@ protocol LoginUseCase {
 }
 
 final class LoginUseCaseImpl: LoginUseCase {
-    var userRepository: UserRepository!
+    private var userRepository: UserRepository!
     
     var emails: [String] {
         userRepository.emails

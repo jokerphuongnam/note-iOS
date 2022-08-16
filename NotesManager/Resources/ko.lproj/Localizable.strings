@@ -55,3 +55,4 @@
 "success" = "성공";
 "delete" = "삭제";
 "delete_description" = "이 메모를 삭제하시겠습니까?";
+"error_password_not_same" = "비밀번호 및 비밀번호 반복이 동일하지 않음";

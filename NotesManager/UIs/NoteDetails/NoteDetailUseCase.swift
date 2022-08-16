@@ -12,7 +12,7 @@ protocol NoteDetailUseCase {
 }
 
 final class NoteDetailUseCaseImpl: NoteDetailUseCase {
-    var noteRepository: NoteRepository!
+    private var noteRepository: NoteRepository!
     
     init(noteRepository: NoteRepository) {
         self.noteRepository = noteRepository

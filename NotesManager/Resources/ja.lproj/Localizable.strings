@@ -55,3 +55,4 @@
 "success" = "成功";
 "delete" = "消去";
 "delete_description" = "このメモを削除しますか？";
+"error_password_not_same" = "パスワードとパスワードの繰り返しが同じではありません";

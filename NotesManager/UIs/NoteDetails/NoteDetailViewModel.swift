@@ -16,7 +16,7 @@ protocol NoteDetailViewModel {
 }
 
 final class NoteDetailViewModelImpl: NoteDetailViewModel {
-    var useCase: NoteDetailUseCase!
+    private var useCase: NoteDetailUseCase!
     var noteObserver: BehaviorRelay<Note>
     var note: Note {
         noteObserver.value

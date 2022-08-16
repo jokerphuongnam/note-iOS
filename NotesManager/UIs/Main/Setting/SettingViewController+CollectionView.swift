@@ -64,6 +64,7 @@ extension SettingViewController {
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if let v = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: Self.logoutViewName, for: indexPath) as? LogoutView {
             v.delegate = self
+            v.logoutButton.setTitle(viewModel.user == nil ? Strings.login : Strings.logout, for: .normal)
             return v
         }
         fatalError()
@@ -91,7 +92,7 @@ extension SettingViewController {
             let viewController = EditProfileViewController(viewModel: viewModel)
             navigationController?.pushViewController(viewController, animated: true)
         case .changePassword:
-            let viewModel: ChangePasswordViewModel = ChangePasswordViewModelImpl(user: viewModel.user)
+            let viewModel: ChangePasswordViewModel = ChangePasswordViewModelImpl(useCase: NoteManagerAssembler.inject())
             let viewController = ChangePasswordViewController(viewModel: viewModel)
             navigationController?.pushViewController(viewController, animated: true)
         }

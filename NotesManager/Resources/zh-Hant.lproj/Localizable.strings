@@ -55,3 +55,4 @@
 "success" = "成功";
 "delete" = "刪除";
 "delete_description" = "刪除這條筆記？";
+"error_password_not_same" = "密码和重复密码不相同";
