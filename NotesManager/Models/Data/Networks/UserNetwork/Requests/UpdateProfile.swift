@@ -41,3 +41,9 @@ extension UpdateProfileResponse: Codable {
         case email, name, gender
     }
 }
+
+extension UpdateProfileResponse {
+    var user: User {
+        .init(id: id, email: email, name: name, gender: .init(gender: gender))
+    }
+}
